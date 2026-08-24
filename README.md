@@ -83,6 +83,19 @@ java -jar android-build/bundletool.jar version  # نسخه bundletool
 
 ---
 
+## 🔤 fonts/
+
+پک منتخب ۵۰ فونت انگلیسی و فارسی/عربی که از بسته‌های npm دریافت شده‌اند.
+
+- `fonts/english/` — ۲۵ خانوادهٔ انگلیسی، از جمله Inter، Roboto، Montserrat، Poppins و فونت‌های monospace
+- `fonts/persian/` — ۲۵ خانوادهٔ فارسی/عربیِ منتخب، از جمله Vazirmatn، Estedad، Shabnam، Sahel، IBM Plex Sans Arabic و Noto Arabic
+- `fonts/README.md` — فهرست نسخه‌ها، حجم‌ها، منبع و نکات مجوز
+- `fonts/manifest.json` — مسیر، اندازه و SHA-256 همهٔ فایل‌های فونت برای صحت‌سنجی
+
+برای هر خانواده، فایل `SOURCE.md` و مجوز موجود از بستهٔ اصلی در همان پوشه نگه‌داری شده است.
+
+---
+
 ## 🔒 امنیت
 
 > ⚠️ **این مخزن عمومی است.**
