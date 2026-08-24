@@ -1,0 +1,10 @@
+# Keep vendored font assets and upstream license files byte-for-byte.
+# Some upstream files intentionally use CRLF or trailing spaces.
+fonts/** -text -whitespace
+
+# Curated repository metadata remains regular checked text.
+fonts/README.md text whitespace
+# JSON uses conventional space indentation; do not apply the repository's tab-only rule.
+fonts/manifest.json text -whitespace
+fonts/**/SOURCE.md text whitespace
+fonts/**/LICENSE-METADATA.md text whitespace
