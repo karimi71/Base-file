@@ -1,0 +1,17 @@
+# SHA256 Checksums for Android Build Toolchain
+# Generated: 2026-08-24
+
+# Framework Classes
+6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad  android-34.jar
+
+# Build Tools
+e4dff6060827a3e401bce376e47916f2f93a89602af54973ffd3fdfc2528be3f  aapt2
+
+# Bundletool (contains D8/dex and apksig)
+2d4ad908faea64047c1cc9cb747e6aa667c6ab192e09607bd16b67246a8cd6ae  bundletool.jar
+
+# Java Compiler
+ecc2a3108bd75ccab6bcd9df90bffbf4ffe36c1f036562da2ae0e860fef3dee3  ecj.jar
+
+# Java Runtime (custom build from jdk4py)
+ea5ef0780c46b1cd2bf3a27b74586bb07d644f60d99e412156b52b54ba00d3a0  openjdk25-linux-x64.tar.gz
