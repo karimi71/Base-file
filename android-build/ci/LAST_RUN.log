@@ -1,4 +1,4 @@
-Preparing SDK packages with Gradle 8.9 on openjdk version "17.0.20.1" 2026-08-18
+Preparing SDK packages with Gradle 8.9 on openjdk version "17.0.20" 2026-07-21
 yes: standard output: Broken pipe
 Loading package information...                                                  Loading local repository...                                                     [                                       ] 3% Loading local repository...        [                                       ] 3% Fetch remote repository...         [=                                      ] 3% Fetch remote repository...         [=                                      ] 4% Fetch remote repository...         [=                                      ] 5% Fetch remote repository...         [==                                     ] 5% Fetch remote repository...         [==                                     ] 6% Fetch remote repository...         [==                                     ] 7% Fetch remote repository...         [==                                     ] 7% Computing updates...               [===                                    ] 8% Computing updates...               [===                                    ] 10% Computing updates...              [=======================================] 100% Computing updates...             
 
@@ -21,40 +21,44 @@ Daemon will be stopped at the end of the build
 > Task :app:parseDebugLocalResources
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
-> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
 > Task :app:compressDebugAssets
-> Task :app:processDebugResources
 > Task :app:desugarDebugFileDependencies
-> Task :app:mergeDebugJniLibFolders
+> Task :app:processDebugManifestForPackage
 > Task :app:checkDebugDuplicateClasses
-> Task :app:mergeDebugNativeLibs
-> Task :app:compileDebugKotlin
+> Task :app:processDebugResources
 > Task :app:mergeExtDexDebug
-> Task :app:compileDebugJavaWithJavac NO-SOURCE
-> Task :app:dexBuilderDebug
-> Task :app:mergeDebugGlobalSynthetics
-> Task :app:processDebugJavaRes
+> Task :app:mergeDebugJniLibFolders
 > Task :app:mergeLibDexDebug
-> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugNativeLibs
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
 
 > Task :app:stripDebugDebugSymbols
 Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so.
 
-> Task :app:mergeDebugJavaResource
-> Task :app:validateSigningDebug
-> Task :app:writeDebugAppMetadata
 > Task :app:writeDebugSigningConfigVersions
+
+> Task :app:compileDebugKotlin
+e: The daemon has terminated unexpectedly on startup attempt #1 with error code: 0. The daemon process output:
+    1. Kotlin compile daemon is ready
+
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:processDebugJavaRes
+> Task :app:mergeProjectDexDebug
+> Task :app:mergeDebugJavaResource
 > Task :app:packageDebug
 > Task :app:createDebugApkListingFileRedirect
 > Task :app:assembleDebug
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787743738068.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787744199693.json
 
-BUILD SUCCESSFUL in 2m 5s
+BUILD SUCCESSFUL in 2m 10s
 35 actionable tasks: 35 executed
 Verifies
 Verified using v1 scheme (JAR signing): true
@@ -65,14 +69,14 @@ Verified using v4 scheme (APK Signature Scheme v4): false
 Verified for SourceStamp: false
 Number of signers: 1
 Signer #1 certificate DN: C=US, O=Android, CN=Android Debug
-Signer #1 certificate SHA-256 digest: 4506958e0ae02106e7015022a79fc5eb18d30d6e5f3f80cccee4e9c68914acbd
-Signer #1 certificate SHA-1 digest: 008a2f4d268e65ad3704fdf156d3cdd63c501ce1
-Signer #1 certificate MD5 digest: 2c9360bab6c420e599cb8bec98508b44
+Signer #1 certificate SHA-256 digest: 45f43ede46acffde914ed020cc7dfc255140b36e22dbced6c380362cf2648701
+Signer #1 certificate SHA-1 digest: 8bacd4a6454cd834b8c18636c02de514a89005ca
+Signer #1 certificate MD5 digest: 378899657db448d74f12926fcaa7f008
 Signer #1 key algorithm: RSA
 Signer #1 key size (bits): 2048
-Signer #1 public key SHA-256 digest: 89f053eee411029610d65d1d43e03e62078e93d741ca2dfcb3051aae0edd64e7
-Signer #1 public key SHA-1 digest: 34a654045b2039227f6e027baf3e00f611f5726f
-Signer #1 public key MD5 digest: 34ac28f44987929cca2f6765ce870588
+Signer #1 public key SHA-256 digest: bf54b4246c3960be2641b8b6c2d32ba7f948742f57a8eeec810de2396b58f66a
+Signer #1 public key SHA-1 digest: 795bba8fb2432847ef4551bd4a61cde0610dc925
+Signer #1 public key MD5 digest: 15f261c771cb8778e2d601f1820e9911
 WARNING: META-INF/com/android/build/gradle/app-metadata.properties not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/androidx.activity_activity-compose.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/androidx.activity_activity-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
@@ -120,7 +124,7 @@ WARNING: META-INF/kotlinx_coroutines_android.version not protected by signature.
 WARNING: META-INF/kotlinx_coroutines_core.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
-7f5b71ea7b826b057bb5ff4104e56421f6bd934129b641ad8040750b40058aa9  /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
+81a68ffc78d3505f1a37a3996ebca32b1c6dc6877c07b04caa2c9e21703c4f76  /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
 Resolved Gradle module cache size:
 228M	/tmp/base-file-gradle-home/caches/modules-2
 58272093 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/2.0.21/79346ed53db48b18312a472602eb5c057070c54d/kotlin-compiler-embeddable-2.0.21.jar
@@ -251,9 +255,9 @@ Daemon will be stopped at the end of the build
 > Task :app:packageDebug UP-TO-DATE
 > Task :app:createDebugApkListingFileRedirect UP-TO-DATE
 > Task :app:assembleDebug UP-TO-DATE
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787743874896.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787744341187.json
 
-BUILD SUCCESSFUL in 11s
+BUILD SUCCESSFUL in 12s
 35 actionable tasks: 35 up-to-date
 Packaging the audited toolchain for repository publication
 Local Maven repository: 314 coordinates, 656 files, 239.3 MiB
@@ -261,7 +265,7 @@ Legal inventory: 314 coordinates, 25 unique NOTICE texts
 Largest repository artifacts before publication:
 60171055 /home/runner/work/Base-file/Base-file/android-build/gradle/gradle-8.9/lib/kotlin-compiler-embeddable-1.9.23.jar
 58272093 /home/runner/work/Base-file/Base-file/android-build/maven/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.0.21/kotlin-compiler-embeddable-2.0.21.jar
-54453341 /home/runner/work/Base-file/Base-file/android-build/jdk/openjdk17-gradle-linux-x64.tar.gz
+54452170 /home/runner/work/Base-file/Base-file/android-build/jdk/openjdk17-gradle-linux-x64.tar.gz
 51649632 /home/runner/work/Base-file/Base-file/android-build/sdk/android-sdk-platform-35.tar.xz
 43307524 /home/runner/work/Base-file/Base-file/android-build/sdk/android-sdk-build-tools-34.0.0.tar.xz
 35145479 /home/runner/work/Base-file/Base-file/android-build/openjdk25-linux-x64.tar.gz
@@ -273,7 +277,7 @@ Largest repository artifacts before publication:
 14904556 /home/runner/work/Base-file/Base-file/android-build/maven/org/jetbrains/kotlin/kotlin-gradle-plugin/2.0.21/kotlin-gradle-plugin-2.0.21-gradle85.jar
 13265484 /home/runner/work/Base-file/Base-file/android-build/maven/com/android/tools/build/bundletool/1.17.1/bundletool-1.17.1.jar
 12429787 /home/runner/work/Base-file/Base-file/android-build/maven/com/android/tools/build/gradle/8.7.3/gradle-8.7.3.jar
-8752820 /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
+8752817 /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
 8372360 /home/runner/work/Base-file/Base-file/android-build/maven/org/bouncycastle/bcprov-jdk18on/1.77/bcprov-jdk18on-1.77.jar
 8324412 /home/runner/work/Base-file/Base-file/android-build/gradle/gradle-8.9/lib/plugins/bcprov-jdk18on-1.78.1.jar
 8315241 /home/runner/work/Base-file/Base-file/android-build/maven/com/android/tools/analytics-library/protos/31.7.3/protos-31.7.3.jar
@@ -297,7 +301,7 @@ Offline toolchain is ready:
   JAVA_HOME=/home/runner/work/_temp/published-cache/jdk17-gradle
   ANDROID_SDK_ROOT=/home/runner/work/_temp/published-cache/android-sdk
   GRADLE_HOME=/home/runner/work/Base-file/Base-file/android-build/gradle/gradle-8.9
-info: kotlinc-jvm 2.0.21 (JRE 17.0.20.1+1)
+info: kotlinc-jvm 2.0.21 (JRE 17.0.20+8)
 Building /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test with Gradle 8.9, AGP 8.7.3, Kotlin 2.0.21, API 35 (strictly offline)
 
 Welcome to Gradle 8.9!
@@ -321,15 +325,15 @@ WARNING: platform-tools package is not installed.
 > Task :app:mapDebugSourceSetPaths
 > Task :app:generateDebugResources
 > Task :app:packageDebugResources
-> Task :app:mergeDebugResources
 > Task :app:createDebugCompatibleScreenManifests
 > Task :app:extractDeepLinksDebug
 > Task :app:parseDebugLocalResources
+> Task :app:mergeDebugResources
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
-> Task :app:processDebugManifestForPackage
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
@@ -359,19 +363,277 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:createDebugApkListingFileRedirect
 > Task :app:assembleDebug
 
-BUILD SUCCESSFUL in 1m 52s
+BUILD SUCCESSFUL in 1m 56s
 35 actionable tasks: 35 executed
-/home/runner/work/_temp/published-cache/android-sdk/build-tools/34.0.0/zipalign: invalid option -- 'P'
-ERROR: unknown flag -?
-Zip alignment utility
-Copyright (C) 2009 The Android Open Source Project
+Verifies
+Verified using v1 scheme (JAR signing): true
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: C=US, O=Android, CN=Android Debug
+Signer #1 certificate SHA-256 digest: 5124f31e315390acbbfbac84b6b37e54a088b31ef3df7e85ea712bbad64a595c
+Signer #1 certificate SHA-1 digest: ca9c32ebcc1b0b19248e982b7f0daddf20137ca1
+Signer #1 certificate MD5 digest: 0b6ee828789c67f6074bb028d92f1b4f
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: 92a4f6c41c0bc8c5eb4cd000acbbb1186c2a288301bebd7810a6ab99ad9a552a
+Signer #1 public key SHA-1 digest: 8d07bf6045fd083f4b564a4b5ab77f40af1209f8
+Signer #1 public key MD5 digest: ba3ca155de6eccf9780a47d013452a0f
+WARNING: META-INF/com/android/build/gradle/app-metadata.properties not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.activity_activity-compose.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.activity_activity-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.activity_activity.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.annotation_annotation-experimental.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.arch.core_core-runtime.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.autofill_autofill.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.animation_animation-core.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.animation_animation.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.foundation_foundation-layout.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.foundation_foundation.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.material3_material3.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.material_material-icons-core.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.material_material-ripple.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.runtime_runtime-saveable.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.runtime_runtime.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.ui_ui-geometry.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.ui_ui-graphics.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.ui_ui-text.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.ui_ui-tooling-preview.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.ui_ui-unit.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.ui_ui-util.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.ui_ui.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.core_core-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.core_core.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.customview_customview-poolingcontainer.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.emoji2_emoji2.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.graphics_graphics-path.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.interpolator_interpolator.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.lifecycle_lifecycle-livedata-core.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.lifecycle_lifecycle-process.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.lifecycle_lifecycle-runtime-compose.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.lifecycle_lifecycle-runtime-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.lifecycle_lifecycle-runtime.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.lifecycle_lifecycle-viewmodel-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.lifecycle_lifecycle-viewmodel-savedstate.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.lifecycle_lifecycle-viewmodel.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.profileinstaller_profileinstaller.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.savedstate_savedstate-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.savedstate_savedstate.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.startup_startup-runtime.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.tracing_tracing.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.versionedparcelable_versionedparcelable.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/kotlinx_coroutines_android.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/kotlinx_coroutines_core.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+APK: /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
+cc3bc3422b941c762bd7cfcf5469fe81a9d757ce75be804c4c455b1ab90b7a41  /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
+        6  1981-01-01 01:01   META-INF/androidx.compose.runtime_runtime.version
+Building /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test with Gradle 8.9, AGP 8.7.3, Kotlin 2.0.21, API 35 (strictly offline)
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+WARNING: platform-tools package is not installed.
+> Task :app:buildKotlinToolingMetadata
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:generateReleaseResValues
+> Task :app:checkReleaseAarMetadata
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:generateReleaseResources
+> Task :app:packageReleaseResources
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease
+> Task :app:parseReleaseLocalResources
+> Task :app:mergeReleaseResources
+> Task :app:processReleaseMainManifest
+> Task :app:processReleaseManifest
+> Task :app:javaPreCompileRelease
+> Task :app:extractProguardFiles
+> Task :app:mergeReleaseJniLibFolders
+> Task :app:mergeReleaseNativeLibs
+> Task :app:processReleaseManifestForPackage
+> Task :app:checkReleaseDuplicateClasses
 
-Usage: zipalign [-f] [-p] [-v] [-z] <align> infile.zip outfile.zip
-       zipalign -c [-p] [-v] <align> infile.zip
+> Task :app:stripReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so.
 
-  <align>: alignment in bytes, e.g. '4' provides 32-bit alignment
-  -c: check alignment only (does not modify file)
-  -f: overwrite existing outfile.zip
-  -p: page-align uncompressed .so files
-  -v: verbose output
-  -z: recompress using Zopfli
+> Task :app:desugarReleaseFileDependencies
+> Task :app:mergeReleaseStartupProfile
+> Task :app:extractReleaseNativeSymbolTables
+> Task :app:processReleaseResources
+> Task :app:mergeExtDexRelease
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:mergeReleaseArtProfile
+> Task :app:mergeReleaseShaders
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseAssets
+> Task :app:compressReleaseAssets
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:collectReleaseDependencies
+> Task :app:optimizeReleaseResources
+> Task :app:sdkReleaseDependencyData
+> Task :app:writeReleaseAppMetadata
+> Task :app:writeReleaseSigningConfigVersions
+> Task :app:compileReleaseKotlin
+> Task :app:compileReleaseJavaWithJavac NO-SOURCE
+> Task :app:generateReleaseLintVitalReportModel
+> Task :app:lintVitalAnalyzeRelease FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:lintVitalAnalyzeRelease'.
+> Could not resolve all files for configuration ':app:detachedConfiguration1'.
+   > Could not find com.android.tools.lint:lint-gradle:31.7.3.
+     Searched in the following locations:
+       - file:/home/runner/work/Base-file/Base-file/android-build/maven/com/android/tools/lint/lint-gradle/31.7.3/lint-gradle-31.7.3.module
+       - file:/home/runner/work/Base-file/Base-file/android-build/maven/com/android/tools/lint/lint-gradle/31.7.3/lint-gradle-31.7.3.pom
+       - file:/home/runner/work/Base-file/Base-file/android-build/maven/com/android/tools/lint/lint-gradle/31.7.3/lint-gradle-31.7.3.jar
+     Required by:
+         project :app
+
+* Try:
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:lintVitalAnalyzeRelease'.
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:38)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+Caused by: org.gradle.api.internal.artifacts.ivyservice.TypedResolveException: Could not resolve all files for configuration ':app:detachedConfiguration1'.
+	at org.gradle.api.internal.artifacts.ResolveExceptionMapper.mapFailure(ResolveExceptionMapper.java:68)
+	at org.gradle.api.internal.artifacts.ResolveExceptionMapper.mapFailures(ResolveExceptionMapper.java:60)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$DefaultResolutionHost.mapFailure(DefaultConfiguration.java:1988)
+	at org.gradle.api.internal.artifacts.configurations.ResolutionHost.rethrowFailure(ResolutionHost.java:48)
+	at org.gradle.api.internal.artifacts.configurations.ResolutionBackedFileCollection.maybeThrowResolutionFailures(ResolutionBackedFileCollection.java:84)
+	at org.gradle.api.internal.artifacts.configurations.ResolutionBackedFileCollection.visitContents(ResolutionBackedFileCollection.java:74)
+	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:360)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.visitContents(DefaultConfiguration.java:541)
+	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:360)
+	at org.gradle.api.internal.file.collections.DefaultConfigurableFileCollection.lambda$calculateFinalizedValue$1(DefaultConfigurableFileCollection.java:391)
+	at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:67)
+	at org.gradle.api.internal.file.collections.DefaultConfigurableFileCollection$UnresolvedItemsCollector.visitContents(DefaultConfigurableFileCollection.java:594)
+	at org.gradle.api.internal.file.collections.DefaultConfigurableFileCollection.calculateFinalizedValue(DefaultConfigurableFileCollection.java:391)
+	at org.gradle.api.internal.file.collections.DefaultConfigurableFileCollection.finalizeNow(DefaultConfigurableFileCollection.java:120)
+	at org.gradle.api.internal.file.collections.DefaultConfigurableFileCollection.lambda$visitChildren$2(DefaultConfigurableFileCollection.java:415)
+	at org.gradle.api.internal.provider.ValueState.finalizeOnReadIfNeeded(ValueState.java:139)
+	at org.gradle.api.internal.file.collections.DefaultConfigurableFileCollection.visitChildren(DefaultConfigurableFileCollection.java:415)
+	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:113)
+	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:360)
+	at org.gradle.api.internal.file.CompositeFileCollection.lambda$visitContents$0(CompositeFileCollection.java:113)
+	at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:67)
+	at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:92)
+	at org.gradle.api.internal.file.DefaultFileCollectionFactory$ResolvingFileCollection.visitChildren(DefaultFileCollectionFactory.java:306)
+	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:113)
+	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:360)
+	at org.gradle.api.internal.file.CompositeFileCollection.lambda$visitContents$0(CompositeFileCollection.java:113)
+	at org.gradle.api.internal.tasks.PropertyFileCollection.visitChildren(PropertyFileCollection.java:48)
+	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:113)
+	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:360)
+	at org.gradle.internal.fingerprint.impl.DefaultFileCollectionSnapshotter.snapshot(DefaultFileCollectionSnapshotter.java:47)
+	at org.gradle.internal.execution.impl.DefaultInputFingerprinter$InputCollectingVisitor.visitInputFileProperty(DefaultInputFingerprinter.java:133)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.visitRegularInputs(TaskExecution.java:324)
+	at org.gradle.internal.execution.impl.DefaultInputFingerprinter.fingerprintInputProperties(DefaultInputFingerprinter.java:63)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.captureExecutionStateWithOutputs(AbstractCaptureStateBeforeExecutionStep.java:109)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.lambda$captureExecutionState$0(AbstractCaptureStateBeforeExecutionStep.java:74)
+	at org.gradle.internal.execution.steps.BuildOperationStep$1.call(BuildOperationStep.java:37)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.execution.steps.BuildOperationStep.operation(BuildOperationStep.java:34)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.captureExecutionState(AbstractCaptureStateBeforeExecutionStep.java:69)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:62)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:43)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:125)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:56)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:75)
+	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:41)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:289)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
+	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
+	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:48)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
+	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:61)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+Caused by: org.gradle.internal.resolve.ModuleVersionNotFoundException: Could not find com.android.tools.lint:lint-gradle:31.7.3.
+Searched in the following locations:
+  - file:/home/runner/work/Base-file/Base-file/android-build/maven/com/android/tools/lint/lint-gradle/31.7.3/lint-gradle-31.7.3.module
+  - file:/home/runner/work/Base-file/Base-file/android-build/maven/com/android/tools/lint/lint-gradle/31.7.3/lint-gradle-31.7.3.pom
+  - file:/home/runner/work/Base-file/Base-file/android-build/maven/com/android/tools/lint/lint-gradle/31.7.3/lint-gradle-31.7.3.jar
+Required by:
+    project :app
+
+
+BUILD FAILED in 1m 11s
+37 actionable tasks: 37 executed
