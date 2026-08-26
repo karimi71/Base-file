@@ -3,6 +3,29 @@
 set -euo pipefail
 
 ROOT="$(git rev-parse --show-toplevel)"
+LOG="$ROOT/android-build/ci/LAST_RUN.log"
+: > "$LOG"
+exec > >(tee "$LOG") 2>&1
+
+record_run_log() {
+  local status=$?
+  trap - EXIT
+  if [[ "${GITHUB_ACTIONS:-}" == true ]]; then
+    # Persist diagnostics through ordinary Git transport because this sandbox
+    # cannot download the Actions log archive host.
+    sleep 1
+    git -C "$ROOT" config user.name "github-actions[bot]"
+    git -C "$ROOT" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+    git -C "$ROOT" add -f android-build/ci/LAST_RUN.log
+    if ! git -C "$ROOT" diff --cached --quiet; then
+      git -C "$ROOT" commit -m "Record offline toolchain CI diagnostics"
+      git -C "$ROOT" push origin "HEAD:${GITHUB_REF_NAME}"
+    fi
+  fi
+  exit "$status"
+}
+trap record_run_log EXIT
+
 REQUESTED_MODE="${1:-}"
 MODE="${REQUESTED_MODE:-$(tr -d '[:space:]' < "$ROOT/android-build/ci/trigger-mode")}"
 SMOKE="$ROOT/android-build/compose-smoke-test"
