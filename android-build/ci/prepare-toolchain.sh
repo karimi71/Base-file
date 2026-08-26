@@ -45,7 +45,9 @@ du -sh "$ANDROID_HOME/platforms/android-35" "$ANDROID_HOME/build-tools/34.0.0"
 
 # This is a real Kotlin 2.0.21 + Compose compiler build. It also warms only
 # the dependency graph that the local Maven repository will eventually contain.
-gradle -p "$SMOKE" --no-daemon --stacktrace :app:assembleDebug
+# Resolve both the required debug graph and release-only AGP tooling (notably
+# lint vital) before converting the fresh cache into the offline Maven layout.
+gradle -p "$SMOKE" --no-daemon --stacktrace :app:assembleDebug :app:assembleRelease
 APK="$SMOKE/app/build/outputs/apk/debug/app-debug.apk"
 test -s "$APK"
 "$ANDROID_HOME/build-tools/34.0.0/apksigner" verify --verbose --print-certs "$APK"
