@@ -54,6 +54,18 @@ def main() -> int:
                         copied += 1
                         copied_bytes += item.stat().st_size
 
+                # Google Maven sometimes serves an AAR with Content-Disposition
+                # `*-release.aar` while Maven/Gradle resolves the canonical URL
+                # `<artifact>-<version>.aar`. Gradle's cache keeps the response
+                # filename, so provide the canonical identical alias as well.
+                canonical_aar = target_dir / f"{artifact_dir.name}-{version_dir.name}.aar"
+                aar_files = sorted(target_dir.glob("*.aar")) if target_dir.exists() else []
+                if not canonical_aar.exists() and len(aar_files) == 1:
+                    shutil.copyfile(aar_files[0], canonical_aar)
+                    coordinates.setdefault(coordinate, set()).add(canonical_aar.name)
+                    copied += 1
+                    copied_bytes += canonical_aar.stat().st_size
+
     manifest = destination / "BASE_FILE_COORDINATES.tsv"
     with manifest.open("w", encoding="utf-8", newline="\n") as out:
         out.write("group\tartifact\tversion\tfiles\n")
