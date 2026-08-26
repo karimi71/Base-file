@@ -33,11 +33,13 @@ jars=(
     "$(pick_one "$MAVEN/org/jetbrains/kotlin/kotlin-script-runtime/$KOTLIN_VERSION/*.jar")"
     "$(pick_one "$MAVEN/org/jetbrains/kotlin/kotlin-reflect/1.6.10/*.jar")"
     "$(pick_one "$MAVEN/org/jetbrains/intellij/deps/trove4j/1.0.20200330/*.jar")"
+    "$(pick_one "$MAVEN/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.6.4/*.jar")"
 )
 
 classpath="$(IFS=:; echo "${jars[*]}")"
 exec "$JAVA_HOME/bin/java" \
     ${JAVA_OPTS:-} \
+    -Dkotlin.home="$KOTLIN_DIR" \
     -cp "$classpath" \
     org.jetbrains.kotlin.cli.jvm.K2JVMCompiler \
     "$@"

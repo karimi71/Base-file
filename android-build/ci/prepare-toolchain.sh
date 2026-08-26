@@ -28,7 +28,7 @@ record_run_log() {
 trap record_run_log EXIT
 
 REQUESTED_MODE="${1:-}"
-MODE="${REQUESTED_MODE:-$(tr -d '[:space:]' < "$ROOT/android-build/ci/trigger-mode")}"
+MODE="${REQUESTED_MODE:-$(sed 's/#.*//' "$ROOT/android-build/ci/trigger-mode" | tr -d '[:space:]')}"
 SMOKE="$ROOT/android-build/compose-smoke-test"
 SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
 
