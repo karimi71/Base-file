@@ -2,8 +2,9 @@
 # SPDX-License-Identifier: Apache-2.0
 set -euo pipefail
 
-MODE="${1:-audit}"
 ROOT="$(git rev-parse --show-toplevel)"
+REQUESTED_MODE="${1:-}"
+MODE="${REQUESTED_MODE:-$(tr -d '[:space:]' < "$ROOT/android-build/ci/trigger-mode")}"
 SMOKE="$ROOT/android-build/compose-smoke-test"
 SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
 

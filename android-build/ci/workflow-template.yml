@@ -4,6 +4,14 @@
 name: Prepare offline Android toolchain
 
 on:
+  # A push trigger is required because the Arena GitHub App cannot dispatch
+  # workflows. Changing trigger-mode starts a run on the session branch.
+  push:
+    branches:
+      - arena/01a03d9c-base-file
+    paths:
+      - .github/workflows/prepare-offline-android.yml
+      - android-build/ci/trigger-mode
   workflow_dispatch:
     inputs:
       mode:
