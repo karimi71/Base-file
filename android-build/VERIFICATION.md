@@ -1,7 +1,7 @@
 # Offline verification report
 
-- GitHub Actions run: https://github.com/karimi71/Base-file/actions/runs/32964884428
-- Source revision: 16a5868fee37caa88c9f4b6d19c89cf103d5a0f3
+- GitHub Actions run: https://github.com/karimi71/Base-file/actions/runs/32966199806
+- Source revision: 43b73915f5f2953e17756e5c6c92730a81332c93
 - Runner: ubuntu-24.04 / Linux x86_64
 - Gradle: 8.9
 - Android Gradle Plugin: 8.7.3
@@ -22,8 +22,8 @@
    source uses Compose `setContent`, Material3, runtime state, layout, graphics,
    and `@Preview`; this is not an Android Views substitution.
 
-Debug APK SHA-256 (CI output, not committed): `ba12f601488e649296e31ceaef57a729b294a6cfbb7f0f604415052a162d91de`
+Debug APK SHA-256 (CI output, not committed): `76e83d5d504059ee1caf61defc85fe821ce2dcd4795b6aced69ed74f6001f267`
 
-Explicitly signed test APK SHA-256 (CI output, not committed): `54212ae69fcb2041646db7ba3f9fd031aa50b002f35d1a51f81cc1b299c25f2c`
+Explicitly signed test APK SHA-256 (CI output, not committed): `2ed5ee8488da9c1c8b41480c753e2780784c7669628aacbf3731f1409c7e0cc6`
 
-Ephemeral signer certificate SHA-256: `ff275b9c1e1816ecbbfdfac0986bcaaea6aaf48e1ad3fbd62376823275b349a5`
+Ephemeral signer certificate SHA-256: `8019b39a4e5e4dd52218afab9b9cb8af0e15042e13886bd27d7d9081c0b020da`

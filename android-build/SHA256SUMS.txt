@@ -1,7 +1,7 @@
 # SHA-256 checksums for every committed toolchain file (text and binary).
 # Paths are relative to android-build/. Generated deterministically.
 38eddd4e36f616efd57663049ba7640b6dcb3d06b0322961fa3438e5c4b077e3  ./PROVENANCE.md
-a887dfde183236ee2de8d544e1bc6b7cbccdc2b9762d6c770269fbfa9acbdfeb  ./VERIFICATION.md
+7f7356aa5c9733020080966a04ae0338b4b465641931af0be6a1106c375a3aab  ./VERIFICATION.md
 e4dff6060827a3e401bce376e47916f2f93a89602af54973ffd3fdfc2528be3f  ./aapt2
 6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad  ./android-34.jar
 e76fb7007e6af88d069b3cce4870977ce4ce912f666f56ae74874a08ecb0a26a  ./build-compose-apk.sh
