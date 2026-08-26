@@ -12,7 +12,7 @@ trap 'rm -f "$tmp"' EXIT
         ! -path './SHA256SUMS.txt' \
         ! -path './ci/LAST_RUN.log' \
         ! -path './.cache/*' \
-        ! -path '*/build/*' \
+        \( ! -path '*/build/*' -o -path './maven/*' \) \
         ! -path '*/.gradle/*' \
         -print0 \
         | LC_ALL=C sort -z \

@@ -217,6 +217,8 @@ release unsigned APK با `zipalign` هم‌تراز، با `apksigner` و یک 
 
 - `android-build/SHA256SUMS.txt`: SHA-256 تمام فایل‌های committed زیر
   `android-build/` (binary و text)، به‌جز log متغیر CI و output/cache.
+- `android-build/ADDED_FILES.txt`: فهرست دقیق ۱۰۱۹ فایل افزوده‌شده نسبت به commit
+  مبنا (`a978940c92297269142c10614bc992793f8d788f`)، هر مسیر در یک سطر.
 - `android-build/PROVENANCE.md`: منبع و روش reproducible تهیهٔ هر جزء.
 - `android-build/licenses/Apache-2.0.txt`: متن کامل Apache License 2.0.
 - `android-build/licenses/MAVEN_ARTIFACTS.tsv`: coordinate و license هر artifact.

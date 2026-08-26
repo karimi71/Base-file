@@ -5,6 +5,7 @@ android-build/.gradle-home/
 # Gradle/Android/Python build output
 .gradle/
 **/.gradle/
+**/.kotlin/
 **/build/
 # Maven group com.android.tools.build maps to a legitimate /build/ path.
 !android-build/maven/**/build/
