@@ -1,8 +1,8 @@
-Preparing SDK packages with Gradle 8.9 on openjdk version "17.0.20" 2026-07-21
+Preparing SDK packages with Gradle 8.9 on openjdk version "17.0.20.1" 2026-08-18
 yes: standard output: Broken pipe
 Loading package information...                                                  Loading local repository...                                                     [                                       ] 3% Loading local repository...        [                                       ] 3% Fetch remote repository...         [=                                      ] 3% Fetch remote repository...         [=                                      ] 4% Fetch remote repository...         [=                                      ] 5% Fetch remote repository...         [==                                     ] 5% Fetch remote repository...         [==                                     ] 6% Fetch remote repository...         [==                                     ] 7% Fetch remote repository...         [==                                     ] 7% Computing updates...               [===                                    ] 8% Computing updates...               [===                                    ] 10% Computing updates...              [=======================================] 100% Computing updates...             
 
-139M	/usr/local/lib/android/sdk/platforms/android-34
+142M	/usr/local/lib/android/sdk/platforms/android-35
 151M	/usr/local/lib/android/sdk/build-tools/34.0.0
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
@@ -11,299 +11,247 @@ Daemon will be stopped at the end of the build
 > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
 > Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :app:generateDebugResValues
-> Task :app:checkDebugAarMetadata FAILED
+> Task :app:checkDebugAarMetadata
 > Task :app:mapDebugSourceSetPaths
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787742253492.json
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:parseDebugLocalResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:javaPreCompileDebug
+> Task :app:processDebugManifestForPackage
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :app:processDebugResources
+> Task :app:desugarDebugFileDependencies
+> Task :app:mergeDebugJniLibFolders
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugNativeLibs
+> Task :app:compileDebugKotlin
+> Task :app:mergeExtDexDebug
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:processDebugJavaRes
+> Task :app:mergeLibDexDebug
+> Task :app:mergeProjectDexDebug
 
-FAILURE: Build failed with an exception.
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so.
 
-* What went wrong:
-Execution failed for task ':app:checkDebugAarMetadata'.
-> A failure occurred while executing com.android.build.gradle.internal.tasks.CheckAarMetadataWorkAction
-   > 3 issues were found when checking AAR metadata:
-     
-       1.  Dependency 'androidx.activity:activity:1.10.0' requires libraries and applications that
-           depend on it to compile against version 35 or later of the
-           Android APIs.
-     
-           :app is currently compiled against android-34.
-     
-           Recommended action: Update this project to use a newer compileSdk
-           of at least 35, for example 35.
-     
-           Note that updating a library or application's compileSdk (which
-           allows newer APIs to be used) can be done separately from updating
-           targetSdk (which opts the app in to new runtime behavior) and
-           minSdk (which determines which devices the app can be installed
-           on).
-     
-       2.  Dependency 'androidx.activity:activity-ktx:1.10.0' requires libraries and applications that
-           depend on it to compile against version 35 or later of the
-           Android APIs.
-     
-           :app is currently compiled against android-34.
-     
-           Recommended action: Update this project to use a newer compileSdk
-           of at least 35, for example 35.
-     
-           Note that updating a library or application's compileSdk (which
-           allows newer APIs to be used) can be done separately from updating
-           targetSdk (which opts the app in to new runtime behavior) and
-           minSdk (which determines which devices the app can be installed
-           on).
-     
-       3.  Dependency 'androidx.activity:activity-compose:1.10.0' requires libraries and applications that
-           depend on it to compile against version 35 or later of the
-           Android APIs.
-     
-           :app is currently compiled against android-34.
-     
-           Recommended action: Update this project to use a newer compileSdk
-           of at least 35, for example 35.
-     
-           Note that updating a library or application's compileSdk (which
-           allows newer APIs to be used) can be done separately from updating
-           targetSdk (which opts the app in to new runtime behavior) and
-           minSdk (which determines which devices the app can be installed
-           on).
+> Task :app:mergeDebugJavaResource
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787742403870.json
 
-* Try:
-> Run with --info or --debug option to get more log output.
-> Run with --scan to get full insights.
-> Get more help at https://help.gradle.org.
+BUILD SUCCESSFUL in 2m 17s
+35 actionable tasks: 35 executed
+Verifies
+Verified using v1 scheme (JAR signing): true
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: C=US, O=Android, CN=Android Debug
+Signer #1 certificate SHA-256 digest: c6de25e007394eb84091a17f2e2ea04782e9fc46bc1a0e558219b464e1883d61
+Signer #1 certificate SHA-1 digest: 622c2766ce720d8c4831d61d587addb99e32eb29
+Signer #1 certificate MD5 digest: 819fff9b4e0945bd372e02e88c465796
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: 9abd7856e2620f8756685ea0e66e582ddee692dba5b60782d9d98df9b4483449
+Signer #1 public key SHA-1 digest: 04db6caf27f8d8e05c3a3ec49f8d561fd36232a6
+Signer #1 public key MD5 digest: 776230570437fded1137b8f20e229925
+WARNING: META-INF/com/android/build/gradle/app-metadata.properties not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.activity_activity-compose.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.activity_activity-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.activity_activity.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.annotation_annotation-experimental.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.arch.core_core-runtime.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.autofill_autofill.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.animation_animation-core.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.animation_animation.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.foundation_foundation-layout.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.foundation_foundation.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.material3_material3.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.material_material-icons-core.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.material_material-ripple.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.runtime_runtime-saveable.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.runtime_runtime.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.ui_ui-geometry.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.ui_ui-graphics.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.ui_ui-text.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.ui_ui-tooling-preview.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.ui_ui-unit.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.ui_ui-util.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.compose.ui_ui.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.core_core-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.core_core.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.customview_customview-poolingcontainer.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.emoji2_emoji2.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.graphics_graphics-path.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.interpolator_interpolator.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.lifecycle_lifecycle-livedata-core.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.lifecycle_lifecycle-process.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.lifecycle_lifecycle-runtime-compose.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.lifecycle_lifecycle-runtime-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.lifecycle_lifecycle-runtime.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.lifecycle_lifecycle-viewmodel-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.lifecycle_lifecycle-viewmodel-savedstate.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.lifecycle_lifecycle-viewmodel.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.profileinstaller_profileinstaller.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.savedstate_savedstate-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.savedstate_savedstate.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.startup_startup-runtime.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.tracing_tracing.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/androidx.versionedparcelable_versionedparcelable.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/kotlinx_coroutines_android.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/kotlinx_coroutines_core.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+WARNING: META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
+e781a8dd67ec8d10bc41dd6ddd3651b12cab88761a0b9618535d8af8cf6a3349  /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
+Resolved Gradle module cache size:
+228M	/tmp/base-file-gradle-home/caches/modules-2
+58272093 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/2.0.21/79346ed53db48b18312a472602eb5c057070c54d/kotlin-compiler-embeddable-2.0.21.jar
+15067552 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.build/builder/8.7.3/8d3e529cc87e89552433c8337bd0b616ef545fa1/builder-8.7.3.jar
+14904556 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/2.0.21/ea69d8de091115a98ce7f3901994b2fb3432480b/kotlin-gradle-plugin-2.0.21-gradle85.jar
+13265484 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.build/bundletool/1.17.1/267feb0f9bcff527cdf35a3544d77ad4d3e636dd/bundletool-1.17.1.jar
+12429787 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.build/gradle/8.7.3/557c0eaed243df7b293d8b1f2c252d97fcc71dda/gradle-8.7.3.jar
+8372360 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk18on/1.77/2cc971b6c20949c1ff98d1a4bc741ee848a09523/bcprov-jdk18on-1.77.jar
+8315241 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.analytics-library/protos/31.7.3/71afde62826a0dd766603edb6ff96d291c138083/protos-31.7.3.jar
+5031134 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.ui/ui-android/1.7.6/50f44a3b5cd79ed21f7c02e48b30129702200a56/ui-release.aar
+4965333 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.material3/material3-android/1.3.1/98016d623b96c25adbc6498aabf07507de258a62/material3-release.aar
+4843523 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.foundation/foundation-android/1.7.6/a8d820c38cbfea353ef8766fc96b7c6918c23e87/foundation-release.aar
+3222101 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.9.23/ab01e1cc8428c2140891318838ad7039f6fa389a/kotlin-reflect-1.9.23.jar
+3038560 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.6.10/1cbe9c92c12a94eea200d23c2bbaedaf3daf5132/kotlin-reflect-1.6.10.jar
+3037368 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.guava/guava/32.0.1-jre/6e5d51a72d142f2d40a57dfb897188b36a95b489/guava-32.0.1-jre.jar
+2735878 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/net.java.dev.jna/jna-platform/5.6.0/d18424ffb8bbfd036d71bcaab9b546858f2ef986/jna-platform-5.6.0.jar
+2415630 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.runtime/runtime-android/1.7.6/4a413ce3ef6d1c1e9f8fdc47613154bbd6780ede/runtime-release.aar
+2405227 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-idea-proto/2.0.21/7ee6324747edb846bb869955000c513797eaf6d7/kotlin-gradle-plugin-idea-proto-2.0.21.jar
+2303812 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.build/aapt2/8.7.3-12006047/52a897991b1646c2ca31ada48a86cf4b3e6d3a92/aapt2-8.7.3-12006047-linux.jar
+1950990 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.api.grpc/proto-google-common-protos/2.17.0/7edf1e3aa96dc3861f7a8f24556c714e9c5b292/proto-google-common-protos-2.17.0.jar
+1814861 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.crypto.tink/tink/1.7.0/668b57f109d32349b2870448f06ae6f202713edc/tink-1.7.0.jar
+1747660 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.0.21/618b539767b4899b4660a83006e052b63f1db551/kotlin-stdlib-2.0.21.jar
+1724128 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools/sdklib/31.7.3/adb7cac2ab282100e2b8b6d66b997a69ed06adf/sdklib-31.7.3.jar
+1718956 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.9.23/dbaadea1f5e68f790d242a91a38355a83ec38747/kotlin-stdlib-1.9.23.jar
+1676712 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.22.3/fdee98b8f6abab73f146a4edb4c09e56f8278d03/protobuf-java-3.22.3.jar
+1636819 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.ui/ui-graphics-android/1.7.6/150850a5fa820d8d57f71ea7c69b28b98f641ffc/ui-graphics-release.aar
+1551152 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.7.3/2b09627576f0989a436a00a4a54b55fa5026fb86/kotlinx-coroutines-core-jvm-1.7.3.jar
+1509440 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.6.0/330f2244e9030119ab3030fc3fededc86713d9cc/jna-5.6.0.jar
+1491331 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools/sdk-common/31.7.3/d17c3d28724a5f3e90a5ae053714627b740ff80c/sdk-common-31.7.3.jar
+1478224 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.animation/animation-android/1.7.6/9341480b1a3691ae5cf25e3bc011f440bf180803/animation-release.aar
+1476653 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.6.4/2c997cd1c0ef33f3e751d3831929aeff1390cb30/kotlinx-coroutines-core-jvm-1.6.4.jar
+1473987 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.animation/animation-core-android/1.7.6/20531684a1e98ea78069aba642e4bdc644826538/animation-core-release.aar
+1270406 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.core/core/1.13.1/4606d420282fe1e5c8d5c4e647ec188e1045b7be/core-1.13.1.aar
+1126123 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.testing.platform/core-proto/0.0.9-alpha02/ee54219cbb4a7fb83cdc528e9a85e0383f3ee726/core-proto-0.0.9-alpha02.jar
+1116233 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.runtime/runtime-saveable-android/1.7.6/9fcb67c0ad7fa69d4dc19e2ebac3516f23896b1b/runtime-saveable-release.aar
+1113643 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk18on/1.77/ed953791ba0229747dd0fd9911e3d76a462acfd3/bcpkix-jdk18on-1.77.jar
+1061220 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.activity/activity-compose/1.10.0/5710201ea181d6917a4cb53f19d8e2c233306b86/activity-compose-1.10.0.aar
+1018316 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.21/4ec95b60d4e86b5c95a0e919cb172a0af98011ef/commons-compress-1.21.jar
+1013367 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-runtime/2.3.2/5528bc882ea499a09d720b42af11785c4fc6be2a/jaxb-runtime-2.3.2.jar
+922731 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compose-compiler-plugin-embeddable/2.0.21/e14f003d962fb25693b461de59490c91072a7979/kotlin-compose-compiler-plugin-embeddable-2.0.21.jar
+839919 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.ui/ui-text-android/1.7.6/a180631cb396954bed7aa72e0728f9bb7dd06d5a/ui-text-release.aar
+838871 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.databinding/databinding-compiler-common/8.7.3/72f4e6aa81b849277d5601b88a4c94b4ac73d3a2/databinding-compiler-common-8.7.3.jar
+823515 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.material/material-icons-core-android/1.7.6/57538d4c99063937529d9daa0746247b6f90bd1c/material-icons-core-release.aar
+789471 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.collection/collection-jvm/1.4.4/da13a7e557c430276b8cb490420effebc1398c0d/collection-jvm-1.4.4.jar
+785639 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.14/1194890e6f56ec29177673f2f12d0b8e627dec98/httpclient-4.5.14.jar
+742649 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/io.grpc/grpc-core/1.57.0/2b6ef5166f31315098fff9bb85f33ab5fed58f6b/grpc-core-1.57.0.jar
+711278 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.build/aapt2-proto/8.7.3-12006047/605bc2d642e5812469ff0333df1b65ead289ccd8/aapt2-proto-8.7.3-12006047.jar
+681002 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.bouncycastle/bcutil-jdk18on/1.77/de3eaef351545fe8562cf29ddff4a403a45b49b7/bcutil-jdk18on-1.77.jar
+671730 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.ddms/ddmlib/31.7.3/525b44de6936a7c487095652f014d0bfc84bb9ad/ddmlib-31.7.3.jar
+659312 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/io.netty/netty-common/4.1.93.Final/1cfc49b91b0d3ddb30c9f7d8467e5d02ae8babdf/netty-common-4.1.93.Final.jar
+656555 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/io.netty/netty-codec-http/4.1.93.Final/36acf0c94d03eb6ecef78a749a32cbb7dc0c57b4/netty-codec-http-4.1.93.Final.jar
+645951 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.foundation/foundation-layout-android/1.7.6/5070b561ed137298ca0567eed09ac8d303549185/foundation-layout-release.aar
+572985 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20200330/3afb14d5f9ceb459d724e907a21145e8ff394f02/trove4j-1.0.20200330.jar
+569070 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools/common/31.7.3/c3df7b51ee1a72acf051e0e5efbeb8023fb4ea57/common-31.7.3.jar
+554189 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/io.netty/netty-handler/4.1.93.Final/10f7ed9d8e1bfcba416074c70e5388be96116bfc/netty-handler-4.1.93.Final.jar
+529062 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-build-common/2.0.21/24fae92b31b11b156444814a7fdfffc6c0fca4c1/kotlin-build-common-2.0.21.jar
+506969 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.build/apksig/8.7.3/f005788487574c7d6ba23dea63bf8cb3a4f164a6/apksig-8.7.3.jar
+499730 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.build/aaptcompiler/8.7.3/899fa2a76cb7447343d3701de123186b65d63e92/aaptcompiler-8.7.3.jar
+488587 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/io.netty/netty-transport/4.1.93.Final/1a0894915c8027ce83b4d6a811c4e765955efd15/netty-transport-4.1.93.Final.jar
+483954 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/commons-io/commons-io/2.13.0/8bb2bc9b4df17e2411533a0708a69f983bf5e83b/commons-io-2.13.0.jar
+483282 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/io.netty/netty-codec-http2/4.1.93.Final/f1625b43bde13ec057da0d2fe381ded2547a70e/netty-codec-http2-4.1.93.Final.jar
+442914 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-native-utils/2.0.21/ccdbc49a5d23f7ab782fbdff20c9426cf074f2d7/kotlin-native-utils-2.0.21.jar
+391748 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-compiler-embeddable/2.0.21/ac0c290312174e309c3e65711ab29fed1442532a/kotlin-scripting-compiler-embeddable-2.0.21.jar
+349257 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.build/gradle-api/8.7.3/7b90ce26dc62c0748b6de923ed76c50a91ab9b26/gradle-api-8.7.3.jar
+348389 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.tensorflow/tensorflow-lite-metadata/0.1.0-rc2/7aa9b3e16d85c2aae5eff741265315a37c9f731a/tensorflow-lite-metadata-0.1.0-rc2.jar
+345878 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/2.0.21/c9e933b23287de9b5a17e2116b4657bb91aea72c/kotlin-daemon-embeddable-2.0.21.jar
+345166 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/io.netty/netty-codec/4.1.93.Final/503badb458b6586632be8d1f81aa4e5ab99a80fc/netty-codec-4.1.93.Final.jar
+335042 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/commons-codec/commons-codec/1.11/3acb4705652e16236558f0f4f2192cc33c3bd189/commons-codec-1.11.jar
+327891 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.16/51cf043c87253c9f58b539c9f7e44c8894223850/httpcore-4.4.16.jar
+317195 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.sun.xml.fastinfoset/FastInfoset/1.2.16/4eb6a0adad553bf759ffe86927df6f3b848c8bea/FastInfoset-1.2.16.jar
+305449 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/io.netty/netty-buffer/4.1.93.Final/87fac21f4ef95157866b07b48e3c707a2f13c581/netty-buffer-4.1.93.Final.jar
+304924 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.6/6f14738ec2e9dd0011e343717fa624a10f8aab64/jdom2-2.0.6.jar
+298683 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.bitbucket.b_c/jose4j/0.9.5/e4ca26802488e6f16e24558d74ac8775a955fdd3/jose4j-0.9.5.jar
+292600 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/io.grpc/grpc-api/1.57.0/768ab3e583b213a3672ec776e70765b594e8bbe5/grpc-api-1.57.0.jar
+284862 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/io.grpc/grpc-netty/1.57.0/99cc01516c2fd1d134bf2585c2b38fa400804986/grpc-netty-1.57.0.jar
+283367 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.code.gson/gson/2.10.1/b3add478d4382b78ea20b1671390a858002feb6c/gson-2.10.1.jar
+283114 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-util-klib/2.0.21/cc042c4a50a1ee46695a8f2f928c196223bdd7dc/kotlin-util-klib-2.0.21.jar
+256510 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.build/manifest-merger/31.7.3/d0489e76e4eb785336317add6b65d57b928a429/manifest-merger-31.7.3.jar
+250707 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/2.0.21/2fe6828d39788b439f1a44576c4fd2d98862e77b/kotlin-gradle-plugin-api-2.0.21.jar
+250707 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/2.0.21/2fe6828d39788b439f1a44576c4fd2d98862e77b/kotlin-gradle-plugin-api-2.0.21-gradle85.jar
+241446 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-client/2.0.21/10cbd364d0703452050d9c4925fd24a6fec7e8d9/kotlin-daemon-client-2.0.21.jar
+240565 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools/repository/31.7.3/97e2e59d682d3f40706ec140f74e784bca0dc6dc/repository-31.7.3.jar
+sort: write failed: 'standard output': Broken pipe
+sort: write error
+77M	/home/runner/work/_temp/jdk17-gradle
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :app:compileDebugKotlin UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:mergeDebugShaders UP-TO-DATE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets UP-TO-DATE
+> Task :app:compressDebugAssets UP-TO-DATE
+> Task :app:desugarDebugFileDependencies UP-TO-DATE
+> Task :app:dexBuilderDebug UP-TO-DATE
+> Task :app:mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :app:processDebugJavaRes UP-TO-DATE
+> Task :app:mergeDebugJavaResource UP-TO-DATE
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :app:mergeExtDexDebug UP-TO-DATE
+> Task :app:mergeLibDexDebug UP-TO-DATE
+> Task :app:mergeProjectDexDebug UP-TO-DATE
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :app:mergeDebugNativeLibs UP-TO-DATE
+> Task :app:stripDebugDebugSymbols UP-TO-DATE
+> Task :app:validateSigningDebug UP-TO-DATE
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :app:packageDebug UP-TO-DATE
+> Task :app:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :app:assembleDebug UP-TO-DATE
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787742555226.json
 
-* Exception is:
-org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:checkDebugAarMetadata'.
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:130)
-	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:293)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:128)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
-	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
-	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
-	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
-	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
-	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
-	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
-Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing com.android.build.gradle.internal.tasks.CheckAarMetadataWorkAction
-	at org.gradle.workers.internal.DefaultWorkerExecutor$WorkItemExecution.waitForCompletion(DefaultWorkerExecutor.java:287)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.lambda$waitForItemsAndGatherFailures$2(DefaultAsyncWorkTracker.java:130)
-	at org.gradle.internal.Factories$1.create(Factories.java:31)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:339)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:322)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLock(DefaultWorkerLeaseService.java:327)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:126)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:92)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForAll(DefaultAsyncWorkTracker.java:78)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForCompletion(DefaultAsyncWorkTracker.java:66)
-	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:252)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:229)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:212)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:195)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:162)
-	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:105)
-	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:44)
-	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:59)
-	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:56)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:56)
-	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:44)
-	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:42)
-	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:75)
-	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
-	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:50)
-	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:28)
-	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:67)
-	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:37)
-	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:61)
-	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:26)
-	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:69)
-	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:46)
-	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:40)
-	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:29)
-	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:189)
-	at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:75)
-	at org.gradle.internal.Either$Right.fold(Either.java:175)
-	at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:62)
-	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:73)
-	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:48)
-	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:46)
-	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:35)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:75)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:53)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:53)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:35)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
-	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:49)
-	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:27)
-	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:71)
-	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:39)
-	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:65)
-	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:36)
-	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:105)
-	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:54)
-	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:64)
-	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:43)
-	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:125)
-	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:56)
-	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
-	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
-	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
-	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:75)
-	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:41)
-	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
-	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:289)
-	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
-	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
-	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
-	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
-	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
-	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
-	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:48)
-	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
-	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:61)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
-	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
-	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
-	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
-	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
-	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
-	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
-Caused by: java.lang.RuntimeException: 3 issues were found when checking AAR metadata:
-
-  1.  Dependency 'androidx.activity:activity:1.10.0' requires libraries and applications that
-      depend on it to compile against version 35 or later of the
-      Android APIs.
-
-      :app is currently compiled against android-34.
-
-      Recommended action: Update this project to use a newer compileSdk
-      of at least 35, for example 35.
-
-      Note that updating a library or application's compileSdk (which
-      allows newer APIs to be used) can be done separately from updating
-      targetSdk (which opts the app in to new runtime behavior) and
-      minSdk (which determines which devices the app can be installed
-      on).
-
-  2.  Dependency 'androidx.activity:activity-ktx:1.10.0' requires libraries and applications that
-      depend on it to compile against version 35 or later of the
-      Android APIs.
-
-      :app is currently compiled against android-34.
-
-      Recommended action: Update this project to use a newer compileSdk
-      of at least 35, for example 35.
-
-      Note that updating a library or application's compileSdk (which
-      allows newer APIs to be used) can be done separately from updating
-      targetSdk (which opts the app in to new runtime behavior) and
-      minSdk (which determines which devices the app can be installed
-      on).
-
-  3.  Dependency 'androidx.activity:activity-compose:1.10.0' requires libraries and applications that
-      depend on it to compile against version 35 or later of the
-      Android APIs.
-
-      :app is currently compiled against android-34.
-
-      Recommended action: Update this project to use a newer compileSdk
-      of at least 35, for example 35.
-
-      Note that updating a library or application's compileSdk (which
-      allows newer APIs to be used) can be done separately from updating
-      targetSdk (which opts the app in to new runtime behavior) and
-      minSdk (which determines which devices the app can be installed
-      on).
-	at com.android.build.gradle.internal.tasks.CheckAarMetadataWorkAction.execute(CheckAarMetadataTask.kt:288)
-	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
-	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
-	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
-	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
-	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:174)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:195)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:128)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:170)
-	at org.gradle.internal.Factories$1.create(Factories.java:31)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:136)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:165)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:134)
-	... 2 more
-
-
-BUILD FAILED in 1m 18s
-3 actionable tasks: 3 executed
+BUILD SUCCESSFUL in 12s
+35 actionable tasks: 35 up-to-date
