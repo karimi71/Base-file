@@ -1,0 +1,16 @@
+# Offline toolchain extraction/cache
+android-build/.cache/
+android-build/.gradle-home/
+
+# Gradle/Android build output
+.gradle/
+**/.gradle/
+**/build/
+local.properties
+
+# Generated signing material must never be committed
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
