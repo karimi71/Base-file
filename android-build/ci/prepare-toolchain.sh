@@ -38,9 +38,9 @@ fi
 
 printf 'Preparing SDK packages with %s on %s\n' "$(gradle --version | sed -n 's/^Gradle /Gradle /p')" "$(java -version 2>&1 | head -1)"
 yes | "$SDKMANAGER" --licenses >/dev/null || true
-"$SDKMANAGER" 'platforms;android-34' 'build-tools;34.0.0'
+"$SDKMANAGER" 'platforms;android-35' 'build-tools;34.0.0'
 
-du -sh "$ANDROID_HOME/platforms/android-34" "$ANDROID_HOME/build-tools/34.0.0"
+du -sh "$ANDROID_HOME/platforms/android-35" "$ANDROID_HOME/build-tools/34.0.0"
 
 # This is a real Kotlin 2.0.21 + Compose compiler build. It also warms only
 # the dependency graph that the local Maven repository will eventually contain.

@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "io.github.karimi71.basefile.smoke"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "io.github.karimi71.basefile.smoke"
         minSdk = 23
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
     }
