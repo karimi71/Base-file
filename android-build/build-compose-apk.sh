@@ -68,6 +68,7 @@ fi
 "$TOOL_DIR/prepare-offline-toolchain.sh" >/dev/null
 CACHE_DIR="${BASE_FILE_CACHE:-$TOOL_DIR/.cache}"
 export JAVA_HOME="$CACHE_DIR/jdk17-gradle"
+export PATH="$JAVA_HOME/bin:$PATH"
 export ANDROID_HOME="$CACHE_DIR/android-sdk"
 export ANDROID_SDK_ROOT="$ANDROID_HOME"
 GRADLE="$TOOL_DIR/gradle/gradle-${GRADLE_VERSION}/bin/gradle"

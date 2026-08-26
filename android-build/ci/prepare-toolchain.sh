@@ -223,18 +223,26 @@ EOF
   # Push in bounded groups so GitHub receives manageable packfiles.
   git -C "$ROOT" add android-build/gradle android-build/jdk android-build/sdk
   git -C "$ROOT" reset -- android-build/ci/LAST_RUN.log || true
-  git -C "$ROOT" commit -m "Vendor Gradle, JDK 17 and complete Android SDK 35"
-  git -C "$ROOT" push origin "HEAD:${GITHUB_REF_NAME}"
+  if ! git -C "$ROOT" diff --cached --quiet; then
+    git -C "$ROOT" commit -m "Vendor Gradle, JDK 17 and complete Android SDK 35"
+    git -C "$ROOT" push origin "HEAD:${GITHUB_REF_NAME}"
+  fi
 
-  git -C "$ROOT" add android-build/maven
+  # -f is deliberate: the Maven group com.android.tools.build maps to a path
+  # segment named "build", which must never be confused with project output.
+  git -C "$ROOT" add -f android-build/maven
   git -C "$ROOT" reset -- android-build/ci/LAST_RUN.log || true
-  git -C "$ROOT" commit -m "Vendor exact offline AGP Kotlin and Compose Maven graph"
-  git -C "$ROOT" push origin "HEAD:${GITHUB_REF_NAME}"
+  if ! git -C "$ROOT" diff --cached --quiet; then
+    git -C "$ROOT" commit -m "Vendor exact offline AGP Kotlin and Compose Maven graph"
+    git -C "$ROOT" push origin "HEAD:${GITHUB_REF_NAME}"
+  fi
 
   git -C "$ROOT" add android-build
   git -C "$ROOT" reset -- android-build/ci/LAST_RUN.log || true
-  git -C "$ROOT" commit -m "Document and verify reproducible offline Compose builds"
-  git -C "$ROOT" push origin "HEAD:${GITHUB_REF_NAME}"
+  if ! git -C "$ROOT" diff --cached --quiet; then
+    git -C "$ROOT" commit -m "Document and verify reproducible offline Compose builds"
+    git -C "$ROOT" push origin "HEAD:${GITHUB_REF_NAME}"
+  fi
 
   PUBLISH_SUCCEEDED=1
   export PUBLISH_SUCCEEDED

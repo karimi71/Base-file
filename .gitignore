@@ -6,6 +6,9 @@ android-build/.gradle-home/
 .gradle/
 **/.gradle/
 **/build/
+# Maven group com.android.tools.build maps to a legitimate /build/ path.
+!android-build/maven/**/build/
+!android-build/maven/**/build/**
 __pycache__/
 *.py[cod]
 local.properties

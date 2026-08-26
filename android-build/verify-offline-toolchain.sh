@@ -14,6 +14,7 @@ source "$TOOL_DIR/versions.env"
 "$TOOL_DIR/prepare-offline-toolchain.sh" >/dev/null
 CACHE_DIR="${BASE_FILE_CACHE:-$TOOL_DIR/.cache}"
 export JAVA_HOME="$CACHE_DIR/jdk17-gradle"
+export PATH="$JAVA_HOME/bin:$PATH"
 export ANDROID_HOME="$CACHE_DIR/android-sdk"
 export ANDROID_SDK_ROOT="$ANDROID_HOME"
 BUILD_TOOLS="$ANDROID_HOME/build-tools/$ANDROID_BUILD_TOOLS_VERSION"
@@ -26,7 +27,8 @@ PLATFORM="$ANDROID_HOME/platforms/android-$ANDROID_COMPILE_SDK"
 "$BUILD_TOOLS/d8" --version
 "$BUILD_TOOLS/apksigner" version
 "$BUILD_TOOLS/aapt2" dump resources "$PLATFORM/framework-res.apk" >/dev/null
-"$BUILD_TOOLS/zipalign" -h >/dev/null 2>&1 || [[ $? -eq 1 ]]
+ZIPALIGN_HELP="$("$BUILD_TOOLS/zipalign" -h 2>&1 || true)"
+grep -q 'Zip alignment utility' <<< "$ZIPALIGN_HELP"
 
 test -d "$PLATFORM/data/res"
 test -s "$PLATFORM/android.jar"
