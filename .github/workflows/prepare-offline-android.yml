@@ -1,0 +1,45 @@
+# Copy this file verbatim to .github/workflows/prepare-offline-android.yml.
+# It is intentionally kept here as the reviewed source of the workflow because
+# the Arena GitHub App cannot itself create files under .github/workflows.
+name: Prepare offline Android toolchain
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Preparation mode"
+        required: true
+        default: audit
+        type: choice
+        options:
+          - audit
+          - publish
+
+permissions:
+  contents: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      GRADLE_USER_HOME: ${{ runner.temp }}/base-file-gradle-home
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+          cache-disabled: true
+
+      - name: Prepare and verify toolchain
+        shell: bash
+        run: bash android-build/ci/prepare-toolchain.sh "${{ inputs.mode }}"
