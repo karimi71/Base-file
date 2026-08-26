@@ -1,4 +1,4 @@
-Preparing SDK packages with Gradle 8.9 on openjdk version "17.0.20.1" 2026-08-18
+Preparing SDK packages with Gradle 8.9 on openjdk version "17.0.20" 2026-07-21
 yes: standard output: Broken pipe
 Loading package information...                                                  Loading local repository...                                                     [                                       ] 3% Loading local repository...        [                                       ] 3% Fetch remote repository...         [=                                      ] 3% Fetch remote repository...         [=                                      ] 4% Fetch remote repository...         [=                                      ] 5% Fetch remote repository...         [==                                     ] 5% Fetch remote repository...         [==                                     ] 6% Fetch remote repository...         [==                                     ] 7% Fetch remote repository...         [==                                     ] 7% Computing updates...               [===                                    ] 8% Computing updates...               [===                                    ] 10% Computing updates...              [=======================================] 100% Computing updates...             
 
@@ -21,8 +21,8 @@ Daemon will be stopped at the end of the build
 > Task :app:parseDebugLocalResources
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
-> Task :app:javaPreCompileDebug
 > Task :app:processDebugManifestForPackage
+> Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
@@ -34,7 +34,6 @@ Daemon will be stopped at the end of the build
 > Task :app:checkDebugDuplicateClasses
 > Task :app:mergeDebugNativeLibs
 > Task :app:compileDebugKotlin
-> Task :app:mergeExtDexDebug
 > Task :app:compileDebugJavaWithJavac NO-SOURCE
 > Task :app:dexBuilderDebug
 > Task :app:mergeDebugGlobalSynthetics
@@ -49,12 +48,13 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:validateSigningDebug
 > Task :app:writeDebugAppMetadata
 > Task :app:writeDebugSigningConfigVersions
+> Task :app:mergeExtDexDebug
 > Task :app:packageDebug
 > Task :app:createDebugApkListingFileRedirect
 > Task :app:assembleDebug
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787742403870.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787743030959.json
 
-BUILD SUCCESSFUL in 2m 17s
+BUILD SUCCESSFUL in 1m 32s
 35 actionable tasks: 35 executed
 Verifies
 Verified using v1 scheme (JAR signing): true
@@ -65,14 +65,14 @@ Verified using v4 scheme (APK Signature Scheme v4): false
 Verified for SourceStamp: false
 Number of signers: 1
 Signer #1 certificate DN: C=US, O=Android, CN=Android Debug
-Signer #1 certificate SHA-256 digest: c6de25e007394eb84091a17f2e2ea04782e9fc46bc1a0e558219b464e1883d61
-Signer #1 certificate SHA-1 digest: 622c2766ce720d8c4831d61d587addb99e32eb29
-Signer #1 certificate MD5 digest: 819fff9b4e0945bd372e02e88c465796
+Signer #1 certificate SHA-256 digest: 2a05cfd5b786b676497d32259427e798b5dc7db59aba8810deb8ad160fd84a2d
+Signer #1 certificate SHA-1 digest: 34d8ef35f812b2bfbc904476527c9ec7c6d450c4
+Signer #1 certificate MD5 digest: 555adc658b774dbbc693273e13b63f3a
 Signer #1 key algorithm: RSA
 Signer #1 key size (bits): 2048
-Signer #1 public key SHA-256 digest: 9abd7856e2620f8756685ea0e66e582ddee692dba5b60782d9d98df9b4483449
-Signer #1 public key SHA-1 digest: 04db6caf27f8d8e05c3a3ec49f8d561fd36232a6
-Signer #1 public key MD5 digest: 776230570437fded1137b8f20e229925
+Signer #1 public key SHA-256 digest: e1fc60c4fa7d2ec6822786e8c59c5c6308d9b9607d3da397b9fcee5b223b5d04
+Signer #1 public key SHA-1 digest: d4b6a5cfb2a2b99ea94c7b4074b988254ac3f343
+Signer #1 public key MD5 digest: 2a9aa89ec42ae8eb287038960c972c59
 WARNING: META-INF/com/android/build/gradle/app-metadata.properties not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/androidx.activity_activity-compose.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/androidx.activity_activity-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
@@ -120,7 +120,7 @@ WARNING: META-INF/kotlinx_coroutines_android.version not protected by signature.
 WARNING: META-INF/kotlinx_coroutines_core.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
-e781a8dd67ec8d10bc41dd6ddd3651b12cab88761a0b9618535d8af8cf6a3349  /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
+7f920428da17a458ce8ad47dd9996c66774d9f4de32277804547ad78546fbed2  /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
 Resolved Gradle module cache size:
 228M	/tmp/base-file-gradle-home/caches/modules-2
 58272093 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/2.0.21/79346ed53db48b18312a472602eb5c057070c54d/kotlin-compiler-embeddable-2.0.21.jar
@@ -251,7 +251,83 @@ Daemon will be stopped at the end of the build
 > Task :app:packageDebug UP-TO-DATE
 > Task :app:createDebugApkListingFileRedirect UP-TO-DATE
 > Task :app:assembleDebug UP-TO-DATE
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787742555226.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787743134802.json
 
-BUILD SUCCESSFUL in 12s
+BUILD SUCCESSFUL in 7s
 35 actionable tasks: 35 up-to-date
+Packaging the audited toolchain for repository publication
+Local Maven repository: 314 coordinates, 636 files, 214.7 MiB
+Legal inventory: 314 coordinates, 25 unique NOTICE texts
+Largest repository artifacts before publication:
+60171055 /home/runner/work/Base-file/Base-file/android-build/gradle/gradle-8.9/lib/kotlin-compiler-embeddable-1.9.23.jar
+58272093 /home/runner/work/Base-file/Base-file/android-build/maven/org/jetbrains/kotlin/kotlin-compiler-embeddable/2.0.21/kotlin-compiler-embeddable-2.0.21.jar
+54452170 /home/runner/work/Base-file/Base-file/android-build/jdk/openjdk17-gradle-linux-x64.tar.gz
+51649632 /home/runner/work/Base-file/Base-file/android-build/sdk/android-sdk-platform-35.tar.xz
+43307524 /home/runner/work/Base-file/Base-file/android-build/sdk/android-sdk-build-tools-34.0.0.tar.xz
+35145479 /home/runner/work/Base-file/Base-file/android-build/openjdk25-linux-x64.tar.gz
+32519278 /home/runner/work/Base-file/Base-file/android-build/bundletool.jar
+26361808 /home/runner/work/Base-file/Base-file/android-build/android-34.jar
+21709971 /home/runner/work/Base-file/Base-file/android-build/sdk/framework-res-api35.apk
+16989260 /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+15067552 /home/runner/work/Base-file/Base-file/android-build/maven/com/android/tools/build/builder/8.7.3/builder-8.7.3.jar
+14904556 /home/runner/work/Base-file/Base-file/android-build/maven/org/jetbrains/kotlin/kotlin-gradle-plugin/2.0.21/kotlin-gradle-plugin-2.0.21-gradle85.jar
+13265484 /home/runner/work/Base-file/Base-file/android-build/maven/com/android/tools/build/bundletool/1.17.1/bundletool-1.17.1.jar
+12429787 /home/runner/work/Base-file/Base-file/android-build/maven/com/android/tools/build/gradle/8.7.3/gradle-8.7.3.jar
+8752814 /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
+8372360 /home/runner/work/Base-file/Base-file/android-build/maven/org/bouncycastle/bcprov-jdk18on/1.77/bcprov-jdk18on-1.77.jar
+8324412 /home/runner/work/Base-file/Base-file/android-build/gradle/gradle-8.9/lib/plugins/bcprov-jdk18on-1.78.1.jar
+8315241 /home/runner/work/Base-file/Base-file/android-build/maven/com/android/tools/analytics-library/protos/31.7.3/protos-31.7.3.jar
+8047697 /home/runner/work/Base-file/Base-file/android-build/gradle/gradle-8.9/lib/groovy-3.0.21.jar
+6272680 /home/runner/work/Base-file/Base-file/android-build/aapt2
+5031134 /home/runner/work/Base-file/Base-file/android-build/maven/androidx/compose/ui/ui-android/1.7.6/ui-release.aar
+4965333 /home/runner/work/Base-file/Base-file/android-build/maven/androidx/compose/material3/material3-android/1.3.1/material3-release.aar
+4856460 /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+4843523 /home/runner/work/Base-file/Base-file/android-build/maven/androidx/compose/foundation/foundation-android/1.7.6/foundation-release.aar
+4116117 /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/FG67g3oAeXDk431yPJRqkKkYu4c=
+3985343 /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/intermediates/incremental/debug-mergeJavaRes/zip-cache/cj7PfPxLRf6oEUsCUUDDBaXsTZQ=
+3376609 /home/runner/work/Base-file/Base-file/android-build/ecj.jar
+3222101 /home/runner/work/Base-file/Base-file/android-build/maven/org/jetbrains/kotlin/kotlin-reflect/1.9.23/kotlin-reflect-1.9.23.jar
+3222101 /home/runner/work/Base-file/Base-file/android-build/gradle/gradle-8.9/lib/kotlin-reflect-1.9.23.jar
+3173298 /home/runner/work/Base-file/Base-file/android-build/gradle/gradle-8.9/lib/gradle-core-8.9.jar
+sort: write failed: 'standard output': Broken pipe
+sort: write error
+Starting clean-room offline verification from packaged files
+Extracting pinned JDK and Android SDK into /home/runner/work/_temp/published-cache
+Offline toolchain is ready:
+  JAVA_HOME=/home/runner/work/_temp/published-cache/jdk17-gradle
+  ANDROID_SDK_ROOT=/home/runner/work/_temp/published-cache/android-sdk
+  GRADLE_HOME=/home/runner/work/Base-file/Base-file/android-build/gradle/gradle-8.9
+info: kotlinc-jvm 2.0.21 (JRE 17.0.20+8)
+warning: unable to find kotlin-stdlib.jar in the Kotlin home directory. Pass either '-no-stdlib' to prevent adding it to the classpath, or the correct '-kotlin-home'
+warning: unable to find kotlin-script-runtime.jar in the Kotlin home directory. Pass either '-no-stdlib' to prevent adding it to the classpath, or the correct '-kotlin-home'
+warning: unable to find kotlin-reflect.jar in the Kotlin home directory. Pass either '-no-reflect' or '-no-stdlib' to prevent adding it to the classpath, or the correct '-kotlin-home'
+exception: java.lang.NoClassDefFoundError: kotlinx/coroutines/CoroutineScope
+	at org.jetbrains.kotlin.com.intellij.core.CoreApplicationEnvironment.createApplication(CoreApplicationEnvironment.java:127)
+	at org.jetbrains.kotlin.cli.jvm.compiler.KotlinCoreApplicationEnvironment.createApplication(KotlinCoreApplicationEnvironment.kt:55)
+	at org.jetbrains.kotlin.com.intellij.core.CoreApplicationEnvironment.<init>(CoreApplicationEnvironment.java:81)
+	at org.jetbrains.kotlin.com.intellij.core.JavaCoreApplicationEnvironment.<init>(JavaCoreApplicationEnvironment.java:48)
+	at org.jetbrains.kotlin.cli.jvm.compiler.KotlinCoreApplicationEnvironment.<init>(KotlinCoreApplicationEnvironment.kt:43)
+	at org.jetbrains.kotlin.cli.jvm.compiler.KotlinCoreApplicationEnvironment.<init>(KotlinCoreApplicationEnvironment.kt)
+	at org.jetbrains.kotlin.cli.jvm.compiler.KotlinCoreApplicationEnvironment$Companion.create(KotlinCoreApplicationEnvironment.kt:108)
+	at org.jetbrains.kotlin.cli.jvm.compiler.KotlinCoreEnvironment$Companion.createApplicationEnvironment(KotlinCoreEnvironment.kt:673)
+	at org.jetbrains.kotlin.cli.jvm.compiler.KotlinCoreEnvironment$Companion.getOrCreateApplicationEnvironment(KotlinCoreEnvironment.kt:558)
+	at org.jetbrains.kotlin.cli.jvm.compiler.KotlinCoreEnvironment$Companion.getOrCreateApplicationEnvironmentForProduction(KotlinCoreEnvironment.kt:534)
+	at org.jetbrains.kotlin.cli.jvm.compiler.pipeline.JvmCompilerPipelineKt.createProjectEnvironment(jvmCompilerPipeline.kt:394)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:141)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.doExecute(K2JVMCompiler.kt:43)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:103)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.execImpl(CLICompiler.kt:49)
+	at org.jetbrains.kotlin.cli.common.CLITool.exec(CLITool.kt:101)
+	at org.jetbrains.kotlin.cli.common.CLITool.exec(CLITool.kt:79)
+	at org.jetbrains.kotlin.cli.common.CLITool.exec(CLITool.kt:43)
+	at org.jetbrains.kotlin.cli.common.CLITool$Companion.doMainNoExit(CLITool.kt:180)
+	at org.jetbrains.kotlin.cli.common.CLITool$Companion.doMainNoExit$default(CLITool.kt:173)
+	at org.jetbrains.kotlin.cli.common.CLITool$Companion.doMain(CLITool.kt:167)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler$Companion.main(K2JVMCompiler.kt:255)
+	at org.jetbrains.kotlin.cli.jvm.K2JVMCompiler.main(K2JVMCompiler.kt)
+Caused by: java.lang.ClassNotFoundException: kotlinx.coroutines.CoroutineScope
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 23 more
+
