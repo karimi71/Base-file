@@ -31,7 +31,8 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 120
     env:
-      GRADLE_USER_HOME: ${{ runner.temp }}/base-file-gradle-home
+      # The runner context is unavailable while job-level env is evaluated.
+      GRADLE_USER_HOME: /tmp/base-file-gradle-home
     steps:
       - uses: actions/checkout@v4
         with:
@@ -43,14 +44,6 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - uses: gradle/actions/setup-gradle@v4
-        with:
-          gradle-version: '8.9'
-          cache-disabled: true
-
-      - name: Prepare and verify toolchain
-        shell: bash
-        run: bash android-build/ci/prepare-toolchain.sh "${{ inputs.mode }}"
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.9'
