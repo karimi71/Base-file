@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# Kotlin/JVM 2.0.21 CLI backed by the vendored compiler-embeddable artifacts.
+set -euo pipefail
+
+KOTLIN_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+TOOL_DIR="$(cd "$KOTLIN_DIR/.." && pwd)"
+# shellcheck disable=SC1091
+source "$TOOL_DIR/versions.env"
+MAVEN="$TOOL_DIR/maven"
+CACHE_DIR="${BASE_FILE_CACHE:-$TOOL_DIR/.cache}"
+
+if [[ -z "${JAVA_HOME:-}" || ! -x "${JAVA_HOME:-}/bin/java" ]]; then
+    "$TOOL_DIR/prepare-offline-toolchain.sh" >/dev/null
+    JAVA_HOME="$CACHE_DIR/jdk17-gradle"
+fi
+
+pick_one() {
+    local pattern="$1"
+    local matches=()
+    shopt -s nullglob
+    matches=( $pattern )
+    shopt -u nullglob
+    if ((${#matches[@]} != 1)); then
+        echo "Expected exactly one compiler file for: $pattern (found ${#matches[@]})" >&2
+        exit 1
+    fi
+    printf '%s' "${matches[0]}"
+}
+
+jars=(
+    "$(pick_one "$MAVEN/org/jetbrains/kotlin/kotlin-compiler-embeddable/$KOTLIN_VERSION/*.jar")"
+    "$(pick_one "$MAVEN/org/jetbrains/kotlin/kotlin-stdlib/$KOTLIN_VERSION/*.jar")"
+    "$(pick_one "$MAVEN/org/jetbrains/kotlin/kotlin-script-runtime/$KOTLIN_VERSION/*.jar")"
+    "$(pick_one "$MAVEN/org/jetbrains/kotlin/kotlin-reflect/1.6.10/*.jar")"
+    "$(pick_one "$MAVEN/org/jetbrains/intellij/deps/trove4j/1.0.20200330/*.jar")"
+)
+
+classpath="$(IFS=:; echo "${jars[*]}")"
+exec "$JAVA_HOME/bin/java" \
+    ${JAVA_OPTS:-} \
+    -cp "$classpath" \
+    org.jetbrains.kotlin.cli.jvm.K2JVMCompiler \
+    "$@"

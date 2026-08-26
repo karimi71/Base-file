@@ -2,10 +2,12 @@
 android-build/.cache/
 android-build/.gradle-home/
 
-# Gradle/Android build output
+# Gradle/Android/Python build output
 .gradle/
 **/.gradle/
 **/build/
+__pycache__/
+*.py[cod]
 local.properties
 
 # Generated signing material must never be committed

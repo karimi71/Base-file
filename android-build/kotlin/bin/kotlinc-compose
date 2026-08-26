@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Kotlin/JVM 2.0.21 CLI with the matching K2 Compose compiler plugin enabled.
+set -euo pipefail
+
+KOTLIN_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+TOOL_DIR="$(cd "$KOTLIN_DIR/.." && pwd)"
+# shellcheck disable=SC1091
+source "$TOOL_DIR/versions.env"
+plugin_dir="$TOOL_DIR/maven/org/jetbrains/kotlin/kotlin-compose-compiler-plugin-embeddable/$KOTLIN_VERSION"
+shopt -s nullglob
+plugins=("$plugin_dir"/*.jar)
+shopt -u nullglob
+if ((${#plugins[@]} != 1)); then
+    echo "Expected one Compose compiler plugin in $plugin_dir; found ${#plugins[@]}" >&2
+    exit 1
+fi
+exec "$KOTLIN_DIR/bin/kotlinc" -Xplugin="${plugins[0]}" "$@"
