@@ -157,7 +157,7 @@ if [[ "$MODE" == publish ]]; then
     -keypass:env SIGNING_PASSWORD -alias offline-test -keyalg RSA -keysize 2048 \
     -validity 1 -dname 'CN=Ephemeral Base-file CI Test,O=Base-file,C=NO'
   BUILDTOOLS="$BASE_FILE_CACHE/android-sdk/build-tools/$ANDROID_BUILD_TOOLS_VERSION"
-  "$BUILDTOOLS/zipalign" -f -P 16 4 "$UNSIGNED_APK" "$SIGNING_DIR/aligned.apk"
+  "$BUILDTOOLS/zipalign" -f -p 4 "$UNSIGNED_APK" "$SIGNING_DIR/aligned.apk"
   "$BUILDTOOLS/apksigner" sign \
     --ks "$SIGNING_DIR/test.jks" --ks-key-alias offline-test \
     --ks-pass env:SIGNING_PASSWORD --key-pass env:SIGNING_PASSWORD \

@@ -112,7 +112,7 @@ if [[ "$TASK" == *assembleDebug* ]]; then
     [[ -s "$APK" ]] || { echo "Expected APK was not produced: $APK" >&2; exit 1; }
     APKSIGNER="$ANDROID_HOME/build-tools/${ANDROID_BUILD_TOOLS_VERSION}/apksigner"
     ZIPALIGN="$ANDROID_HOME/build-tools/${ANDROID_BUILD_TOOLS_VERSION}/zipalign"
-    "$ZIPALIGN" -c -P 16 4 "$APK"
+    "$ZIPALIGN" -c -p 4 "$APK"
     "$APKSIGNER" verify --verbose --print-certs "$APK"
     echo "APK: $APK"
     sha256sum "$APK"
