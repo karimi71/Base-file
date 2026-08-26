@@ -1,0 +1,327 @@
+group	artifact	version	license	binary_files
+androidx.activity	activity	1.10.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	activity-1.10.0.aar
+androidx.activity	activity-compose	1.10.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	activity-compose-1.10.0.aar
+androidx.activity	activity-ktx	1.10.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	activity-ktx-1.10.0.aar
+androidx.annotation	annotation	1.1.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.annotation	annotation	1.8.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.annotation	annotation	1.8.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.annotation	annotation-experimental	1.4.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.annotation	annotation-experimental	1.4.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	annotation-experimental-1.4.1.aar
+androidx.annotation	annotation-jvm	1.8.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	annotation-jvm-1.8.1.jar
+androidx.arch.core	core-common	2.1.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.arch.core	core-common	2.2.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	core-common-2.2.0.jar
+androidx.arch.core	core-runtime	2.2.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	core-runtime-2.2.0.aar
+androidx.autofill	autofill	1.0.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	autofill-1.0.0.aar
+androidx.collection	collection	1.4.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.collection	collection	1.4.4	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.collection	collection-jvm	1.4.4	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	collection-jvm-1.4.4.jar
+androidx.collection	collection-ktx	1.2.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.collection	collection-ktx	1.4.4	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	collection-ktx-1.4.4.jar
+androidx.compose	compose-bom	2024.12.01	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.animation	animation	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.animation	animation-android	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	animation-android-1.7.6.aar,animation-release.aar
+androidx.compose.animation	animation-core	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.animation	animation-core-android	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	animation-core-android-1.7.6.aar,animation-core-release.aar
+androidx.compose.foundation	foundation	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.foundation	foundation-android	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	foundation-android-1.7.6.aar,foundation-release.aar
+androidx.compose.foundation	foundation-layout	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.foundation	foundation-layout-android	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	foundation-layout-android-1.7.6.aar,foundation-layout-release.aar
+androidx.compose.material	material-icons-core	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.material	material-icons-core-android	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	material-icons-core-android-1.7.6.aar,material-icons-core-release.aar
+androidx.compose.material	material-ripple	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.material	material-ripple-android	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	material-ripple-android-1.7.6.aar,material-ripple-release.aar
+androidx.compose.material3	material3	1.3.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.material3	material3-android	1.3.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	material3-android-1.3.1.aar,material3-release.aar
+androidx.compose.runtime	runtime	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.runtime	runtime-android	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	runtime-android-1.7.6.aar,runtime-release.aar
+androidx.compose.runtime	runtime-saveable	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.runtime	runtime-saveable-android	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	runtime-saveable-android-1.7.6.aar,runtime-saveable-release.aar
+androidx.compose.ui	ui	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.ui	ui-android	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	ui-android-1.7.6.aar,ui-release.aar
+androidx.compose.ui	ui-geometry	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.ui	ui-geometry-android	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	ui-geometry-android-1.7.6.aar,ui-geometry-release.aar
+androidx.compose.ui	ui-graphics	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.ui	ui-graphics-android	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	ui-graphics-android-1.7.6.aar,ui-graphics-release.aar
+androidx.compose.ui	ui-text	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.ui	ui-text-android	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	ui-text-android-1.7.6.aar,ui-text-release.aar
+androidx.compose.ui	ui-tooling-preview	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.ui	ui-tooling-preview-android	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	ui-tooling-preview-android-1.7.6.aar,ui-tooling-preview-release.aar
+androidx.compose.ui	ui-unit	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.ui	ui-unit-android	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	ui-unit-android-1.7.6.aar,ui-unit-release.aar
+androidx.compose.ui	ui-util	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.compose.ui	ui-util-android	1.7.6	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	ui-util-android-1.7.6.aar,ui-util-release.aar
+androidx.concurrent	concurrent-futures	1.0.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.concurrent	concurrent-futures	1.1.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	concurrent-futures-1.1.0.jar
+androidx.core	core	1.13.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.core	core	1.13.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	core-1.13.1.aar
+androidx.core	core-ktx	1.13.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.core	core-ktx	1.13.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	core-ktx-1.13.1.aar
+androidx.customview	customview-poolingcontainer	1.0.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	customview-poolingcontainer-1.0.0.aar
+androidx.databinding	databinding-common	8.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	databinding-common-8.7.3.jar
+androidx.databinding	databinding-compiler-common	8.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	databinding-compiler-common-8.7.3.jar
+androidx.emoji2	emoji2	1.2.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.emoji2	emoji2	1.3.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	emoji2-1.3.0.aar
+androidx.graphics	graphics-path	1.0.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	graphics-path-1.0.1.aar
+androidx.interpolator	interpolator	1.0.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	interpolator-1.0.0.aar
+androidx.lifecycle	lifecycle-common	2.6.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.lifecycle	lifecycle-common	2.8.7	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.lifecycle	lifecycle-common-java8	2.8.7	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	lifecycle-common-java8-2.8.7.jar
+androidx.lifecycle	lifecycle-common-jvm	2.8.7	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	lifecycle-common-jvm-2.8.7.jar
+androidx.lifecycle	lifecycle-livedata-core	2.8.7	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	lifecycle-livedata-core-2.8.7.aar
+androidx.lifecycle	lifecycle-process	2.8.7	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	lifecycle-process-2.8.7.aar
+androidx.lifecycle	lifecycle-runtime	2.6.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.lifecycle	lifecycle-runtime	2.8.7	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.lifecycle	lifecycle-runtime-android	2.8.7	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	lifecycle-runtime-android-2.8.7.aar,lifecycle-runtime-release.aar
+androidx.lifecycle	lifecycle-runtime-compose	2.8.7	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.lifecycle	lifecycle-runtime-compose-android	2.8.7	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	lifecycle-runtime-compose-android-2.8.7.aar,lifecycle-runtime-compose-release.aar
+androidx.lifecycle	lifecycle-runtime-ktx	2.8.7	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.lifecycle	lifecycle-runtime-ktx-android	2.8.7	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	lifecycle-runtime-ktx-android-2.8.7.aar,lifecycle-runtime-ktx-release.aar
+androidx.lifecycle	lifecycle-viewmodel	2.6.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.lifecycle	lifecycle-viewmodel	2.8.7	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.lifecycle	lifecycle-viewmodel-android	2.8.7	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	lifecycle-viewmodel-android-2.8.7.aar,lifecycle-viewmodel-release.aar
+androidx.lifecycle	lifecycle-viewmodel-ktx	2.6.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.lifecycle	lifecycle-viewmodel-ktx	2.8.7	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	lifecycle-viewmodel-ktx-2.8.7.aar
+androidx.lifecycle	lifecycle-viewmodel-savedstate	2.8.7	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	lifecycle-viewmodel-savedstate-2.8.7.aar
+androidx.profileinstaller	profileinstaller	1.3.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.profileinstaller	profileinstaller	1.3.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.profileinstaller	profileinstaller	1.4.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	profileinstaller-1.4.0.aar
+androidx.savedstate	savedstate	1.2.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	savedstate-1.2.1.aar
+androidx.savedstate	savedstate-ktx	1.2.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	savedstate-ktx-1.2.1.aar
+androidx.startup	startup-runtime	1.0.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+androidx.startup	startup-runtime	1.1.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	startup-runtime-1.1.1.aar
+androidx.tracing	tracing	1.0.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	tracing-1.0.0.aar
+androidx.versionedparcelable	versionedparcelable	1.1.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	versionedparcelable-1.1.1.aar
+com.android	signflinger	8.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	signflinger-8.7.3.jar
+com.android	zipflinger	8.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	zipflinger-8.7.3.jar
+com.android.application	com.android.application.gradle.plugin	8.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+com.android.databinding	baseLibrary	8.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	baseLibrary-8.7.3.jar
+com.android.tools	annotations	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	annotations-31.7.3.jar
+com.android.tools	common	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	common-31.7.3.jar
+com.android.tools	dvlib	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	dvlib-31.7.3.jar
+com.android.tools	play-sdk-proto	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	play-sdk-proto-31.7.3.jar
+com.android.tools	repository	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	repository-31.7.3.jar
+com.android.tools	sdk-common	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	sdk-common-31.7.3.jar
+com.android.tools	sdklib	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	sdklib-31.7.3.jar
+com.android.tools.analytics-library	crash	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	crash-31.7.3.jar
+com.android.tools.analytics-library	protos	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	protos-31.7.3.jar
+com.android.tools.analytics-library	shared	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	shared-31.7.3.jar
+com.android.tools.analytics-library	tracker	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	tracker-31.7.3.jar
+com.android.tools.build	aapt2	8.7.3-12006047	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	aapt2-8.7.3-12006047-linux.jar
+com.android.tools.build	aapt2-proto	8.7.3-12006047	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	aapt2-proto-8.7.3-12006047.jar
+com.android.tools.build	aaptcompiler	8.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	aaptcompiler-8.7.3.jar
+com.android.tools.build	apksig	8.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	apksig-8.7.3.jar
+com.android.tools.build	apkzlib	8.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	apkzlib-8.7.3.jar
+com.android.tools.build	builder	8.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	builder-8.7.3.jar
+com.android.tools.build	builder-model	8.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	builder-model-8.7.3.jar
+com.android.tools.build	builder-test-api	8.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	builder-test-api-8.7.3.jar
+com.android.tools.build	bundletool	1.17.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	bundletool-1.17.1.jar
+com.android.tools.build	gradle	8.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	gradle-8.7.3.jar
+com.android.tools.build	gradle-api	8.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	gradle-api-8.7.3.jar
+com.android.tools.build	gradle-settings-api	8.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	gradle-settings-api-8.7.3.jar
+com.android.tools.build	manifest-merger	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	manifest-merger-31.7.3.jar
+com.android.tools.build	transform-api	2.0.0-deprecated-use-gradle-api	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	transform-api-2.0.0-deprecated-use-gradle-api.jar
+com.android.tools.build.jetifier	jetifier-core	1.0.0-beta10	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	jetifier-core-1.0.0-beta10.jar
+com.android.tools.build.jetifier	jetifier-processor	1.0.0-beta10	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	jetifier-processor-1.0.0-beta10.jar
+com.android.tools.ddms	ddmlib	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	ddmlib-31.7.3.jar
+com.android.tools.external.com-intellij	intellij-core	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	intellij-core-31.7.3.jar
+com.android.tools.external.com-intellij	kotlin-compiler	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-compiler-31.7.3.jar
+com.android.tools.external.org-jetbrains	uast	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	uast-31.7.3.jar
+com.android.tools.layoutlib	layoutlib-api	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	layoutlib-api-31.7.3.jar
+com.android.tools.lint	lint	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	lint-31.7.3.jar
+com.android.tools.lint	lint-api	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	lint-api-31.7.3.jar
+com.android.tools.lint	lint-checks	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	lint-checks-31.7.3.jar
+com.android.tools.lint	lint-gradle	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	lint-gradle-31.7.3.jar
+com.android.tools.lint	lint-model	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	lint-model-31.7.3.jar
+com.android.tools.lint	lint-typedef-remover	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	lint-typedef-remover-31.7.3.jar
+com.android.tools.utp	android-device-provider-ddmlib-proto	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	android-device-provider-ddmlib-proto-31.7.3.jar
+com.android.tools.utp	android-device-provider-gradle-proto	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	android-device-provider-gradle-proto-31.7.3.jar
+com.android.tools.utp	android-device-provider-profile-proto	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	android-device-provider-profile-proto-31.7.3.jar
+com.android.tools.utp	android-test-plugin-host-additional-test-output-proto	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	android-test-plugin-host-additional-test-output-proto-31.7.3.jar
+com.android.tools.utp	android-test-plugin-host-apk-installer-proto	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	android-test-plugin-host-apk-installer-proto-31.7.3.jar
+com.android.tools.utp	android-test-plugin-host-coverage-proto	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	android-test-plugin-host-coverage-proto-31.7.3.jar
+com.android.tools.utp	android-test-plugin-host-emulator-control-proto	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	android-test-plugin-host-emulator-control-proto-31.7.3.jar
+com.android.tools.utp	android-test-plugin-host-logcat-proto	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	android-test-plugin-host-logcat-proto-31.7.3.jar
+com.android.tools.utp	android-test-plugin-host-retention-proto	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	android-test-plugin-host-retention-proto-31.7.3.jar
+com.android.tools.utp	android-test-plugin-result-listener-gradle-proto	31.7.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	android-test-plugin-result-listener-gradle-proto-31.7.3.jar
+com.google.android	annotations	4.1.1.4	Apache 2.0 (http://www.apache.org/licenses/LICENSE-2.0)	annotations-4.1.1.4.jar
+com.google.api.grpc	proto-google-common-protos	2.17.0	Apache-2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	proto-google-common-protos-2.17.0.jar
+com.google.auto	auto-parent	6	Apache 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+com.google.auto.value	auto-value-annotations	1.6.2	UNKNOWN - inspect embedded metadata/NOTICE	auto-value-annotations-1.6.2.jar
+com.google.auto.value	auto-value-parent	1.6.2	UNKNOWN - inspect embedded metadata/NOTICE	
+com.google.code.findbugs	jsr305	3.0.2	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	jsr305-3.0.2.jar
+com.google.code.gson	gson	2.10.1	Apache-2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	gson-2.10.1.jar
+com.google.code.gson	gson-parent	2.10.1	Apache-2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	
+com.google.crypto.tink	tink	1.7.0	Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	tink-1.7.0.jar
+com.google.dagger	dagger	2.28.3	Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	dagger-2.28.3.jar
+com.google.errorprone	error_prone_annotations	2.11.0	Apache 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+com.google.errorprone	error_prone_annotations	2.18.0	Apache 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	error_prone_annotations-2.18.0.jar
+com.google.errorprone	error_prone_annotations	2.3.1	Apache 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+com.google.errorprone	error_prone_parent	2.11.0	Apache 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+com.google.errorprone	error_prone_parent	2.18.0	Apache 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+com.google.errorprone	error_prone_parent	2.3.1	Apache 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+com.google.flatbuffers	flatbuffers-java	1.12.0	Apache License V2.0 (https://raw.githubusercontent.com/google/flatbuffers/master/LICENSE.txt)	flatbuffers-java-1.12.0.jar
+com.google.guava	failureaccess	1.0.1	UNKNOWN - inspect embedded metadata/NOTICE	failureaccess-1.0.1.jar
+com.google.guava	guava	32.0.1-jre	UNKNOWN - inspect embedded metadata/NOTICE	guava-32.0.1-jre.jar
+com.google.guava	guava-parent	26.0-android	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+com.google.guava	guava-parent	32.0.1-jre	Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+com.google.guava	listenablefuture	1.0	UNKNOWN - inspect embedded metadata/NOTICE	listenablefuture-1.0.jar
+com.google.guava	listenablefuture	9999.0-empty-to-avoid-conflict-with-guava	UNKNOWN - inspect embedded metadata/NOTICE	listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+com.google.j2objc	j2objc-annotations	1.3	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+com.google.j2objc	j2objc-annotations	2.8	Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	j2objc-annotations-2.8.jar
+com.google.jimfs	jimfs	1.1	UNKNOWN - inspect embedded metadata/NOTICE	jimfs-1.1.jar
+com.google.jimfs	jimfs-parent	1.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+com.google.protobuf	protobuf-bom	3.22.3	BSD-3-Clause (https://opensource.org/licenses/BSD-3-Clause)	
+com.google.protobuf	protobuf-java	3.22.3	UNKNOWN - inspect embedded metadata/NOTICE	protobuf-java-3.22.3.jar
+com.google.protobuf	protobuf-java-util	3.22.3	UNKNOWN - inspect embedded metadata/NOTICE	protobuf-java-util-3.22.3.jar
+com.google.protobuf	protobuf-parent	3.22.3	BSD-3-Clause (https://opensource.org/licenses/BSD-3-Clause)	
+com.google.testing.platform	core-proto	0.0.9-alpha02	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	core-proto-0.0.9-alpha02.jar
+com.googlecode.juniversalchardet	juniversalchardet	1.0.3	Mozilla Public License 1.1 (MPL 1.1) (http://www.mozilla.org/MPL/MPL-1.1.html)	juniversalchardet-1.0.3.jar
+com.squareup	javapoet	1.10.0	Apache 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	javapoet-1.10.0.jar
+com.squareup	javawriter	2.5.0	Apache 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	javawriter-2.5.0.jar
+com.sun.activation	all	1.2.0	CDDL/GPLv2+CE (https://github.com/javaee/activation/blob/master/LICENSE.txt)	
+com.sun.activation	all	1.2.1	EDL 1.0 (http://www.eclipse.org/org/documents/edl-v10.php)	
+com.sun.activation	javax.activation	1.2.0	UNKNOWN - inspect embedded metadata/NOTICE	javax.activation-1.2.0.jar
+com.sun.istack	istack-commons	3.0.8	Eclipse Distribution License - v 1.0 (http://www.eclipse.org/org/documents/edl-v10.php)	
+com.sun.istack	istack-commons-runtime	3.0.8	UNKNOWN - inspect embedded metadata/NOTICE	istack-commons-runtime-3.0.8.jar
+com.sun.xml.bind	jaxb-bom-ext	2.3.2	UNKNOWN - inspect embedded metadata/NOTICE	
+com.sun.xml.bind.mvn	jaxb-parent	2.3.2	Eclipse Distribution License - v 1.0 (http://www.eclipse.org/org/documents/edl-v10.php)	
+com.sun.xml.bind.mvn	jaxb-runtime-parent	2.3.2	UNKNOWN - inspect embedded metadata/NOTICE	
+com.sun.xml.bind.mvn	jaxb-txw-parent	2.3.2	UNKNOWN - inspect embedded metadata/NOTICE	
+com.sun.xml.fastinfoset	FastInfoset	1.2.16	UNKNOWN - inspect embedded metadata/NOTICE	FastInfoset-1.2.16.jar
+com.sun.xml.fastinfoset	fastinfoset-project	1.2.16	Apache License, Version 2.0 (http://www.opensource.org/licenses/apache2.0.php); Eclipse Distribution License - v 1.0 (http://www.eclipse.org/org/documents/edl-v10.php)	
+commons-codec	commons-codec	1.10	UNKNOWN - inspect embedded metadata/NOTICE	commons-codec-1.10.jar
+commons-codec	commons-codec	1.11	UNKNOWN - inspect embedded metadata/NOTICE	commons-codec-1.11.jar
+commons-io	commons-io	2.13.0	UNKNOWN - inspect embedded metadata/NOTICE	commons-io-2.13.0.jar
+commons-logging	commons-logging	1.2	UNKNOWN - inspect embedded metadata/NOTICE	commons-logging-1.2.jar
+io.grpc	grpc-api	1.57.0	Apache 2.0 (https://opensource.org/licenses/Apache-2.0)	grpc-api-1.57.0.jar
+io.grpc	grpc-context	1.57.0	Apache 2.0 (https://opensource.org/licenses/Apache-2.0)	grpc-context-1.57.0.jar
+io.grpc	grpc-core	1.57.0	Apache 2.0 (https://opensource.org/licenses/Apache-2.0)	grpc-core-1.57.0.jar
+io.grpc	grpc-netty	1.57.0	Apache 2.0 (https://opensource.org/licenses/Apache-2.0)	grpc-netty-1.57.0.jar
+io.grpc	grpc-protobuf	1.57.0	Apache 2.0 (https://opensource.org/licenses/Apache-2.0)	grpc-protobuf-1.57.0.jar
+io.grpc	grpc-protobuf-lite	1.57.0	Apache 2.0 (https://opensource.org/licenses/Apache-2.0)	grpc-protobuf-lite-1.57.0.jar
+io.grpc	grpc-stub	1.57.0	Apache 2.0 (https://opensource.org/licenses/Apache-2.0)	grpc-stub-1.57.0.jar
+io.netty	netty-buffer	4.1.93.Final	UNKNOWN - inspect embedded metadata/NOTICE	netty-buffer-4.1.93.Final.jar
+io.netty	netty-codec	4.1.93.Final	UNKNOWN - inspect embedded metadata/NOTICE	netty-codec-4.1.93.Final.jar
+io.netty	netty-codec-http	4.1.93.Final	UNKNOWN - inspect embedded metadata/NOTICE	netty-codec-http-4.1.93.Final.jar
+io.netty	netty-codec-http2	4.1.93.Final	UNKNOWN - inspect embedded metadata/NOTICE	netty-codec-http2-4.1.93.Final.jar
+io.netty	netty-codec-socks	4.1.93.Final	UNKNOWN - inspect embedded metadata/NOTICE	netty-codec-socks-4.1.93.Final.jar
+io.netty	netty-common	4.1.93.Final	UNKNOWN - inspect embedded metadata/NOTICE	netty-common-4.1.93.Final.jar
+io.netty	netty-handler	4.1.93.Final	UNKNOWN - inspect embedded metadata/NOTICE	netty-handler-4.1.93.Final.jar
+io.netty	netty-handler-proxy	4.1.93.Final	UNKNOWN - inspect embedded metadata/NOTICE	netty-handler-proxy-4.1.93.Final.jar
+io.netty	netty-parent	4.1.93.Final	Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0)	
+io.netty	netty-resolver	4.1.93.Final	UNKNOWN - inspect embedded metadata/NOTICE	netty-resolver-4.1.93.Final.jar
+io.netty	netty-transport	4.1.93.Final	UNKNOWN - inspect embedded metadata/NOTICE	netty-transport-4.1.93.Final.jar
+io.netty	netty-transport-native-unix-common	4.1.93.Final	UNKNOWN - inspect embedded metadata/NOTICE	netty-transport-native-unix-common-4.1.93.Final.jar
+io.perfmark	perfmark-api	0.26.0	Apache 2.0 (https://opensource.org/licenses/Apache-2.0)	perfmark-api-0.26.0.jar
+jakarta.activation	jakarta.activation-api	1.2.1	UNKNOWN - inspect embedded metadata/NOTICE	jakarta.activation-api-1.2.1.jar
+jakarta.xml.bind	jakarta.xml.bind-api	2.3.2	UNKNOWN - inspect embedded metadata/NOTICE	jakarta.xml.bind-api-2.3.2.jar
+jakarta.xml.bind	jakarta.xml.bind-api-parent	2.3.2	Eclipse Distribution License - v 1.0 (http://www.eclipse.org/org/documents/edl-v10.php)	
+javax.annotation	javax.annotation-api	1.3.2	CDDL + GPLv2 with classpath exception (https://github.com/javaee/javax.annotation/blob/master/LICENSE)	javax.annotation-api-1.3.2.jar
+javax.inject	javax.inject	1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	javax.inject-1.jar
+net.java	jvnet-parent	1	UNKNOWN - inspect embedded metadata/NOTICE	
+net.java	jvnet-parent	3	UNKNOWN - inspect embedded metadata/NOTICE	
+net.java.dev.jna	jna	5.6.0	LGPL, version 2.1 (http://www.gnu.org/licenses/licenses.html); Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	jna-5.6.0.jar
+net.java.dev.jna	jna-platform	5.6.0	LGPL, version 2.1 (http://www.gnu.org/licenses/licenses.html); Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	jna-platform-5.6.0.jar
+net.sf.jopt-simple	jopt-simple	4.9	The MIT License (http://www.opensource.org/licenses/mit-license.php)	jopt-simple-4.9.jar
+net.sf.kxml	kxml2	2.3.0	BSD style (http://kxml.cvs.sourceforge.net/viewvc/kxml/kxml2/license.txt?view=markup); Public Domain (http://creativecommons.org/licenses/publicdomain)	kxml2-2.3.0.jar
+org.apache	apache	13	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.apache	apache	15	Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.apache	apache	18	Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.apache	apache	21	Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.apache	apache	23	Apache License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.apache	apache	29	Apache-2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.apache.commons	commons-compress	1.21	UNKNOWN - inspect embedded metadata/NOTICE	commons-compress-1.21.jar
+org.apache.commons	commons-parent	34	UNKNOWN - inspect embedded metadata/NOTICE	
+org.apache.commons	commons-parent	35	UNKNOWN - inspect embedded metadata/NOTICE	
+org.apache.commons	commons-parent	42	UNKNOWN - inspect embedded metadata/NOTICE	
+org.apache.commons	commons-parent	52	UNKNOWN - inspect embedded metadata/NOTICE	
+org.apache.commons	commons-parent	58	UNKNOWN - inspect embedded metadata/NOTICE	
+org.apache.httpcomponents	httpclient	4.5.14	UNKNOWN - inspect embedded metadata/NOTICE	httpclient-4.5.14.jar
+org.apache.httpcomponents	httpclient	4.5.6	UNKNOWN - inspect embedded metadata/NOTICE	httpclient-4.5.6.jar
+org.apache.httpcomponents	httpcomponents-client	4.5.14	Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.apache.httpcomponents	httpcomponents-client	4.5.6	Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.apache.httpcomponents	httpcomponents-core	4.4.16	Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.apache.httpcomponents	httpcomponents-parent	10	UNKNOWN - inspect embedded metadata/NOTICE	
+org.apache.httpcomponents	httpcomponents-parent	11	UNKNOWN - inspect embedded metadata/NOTICE	
+org.apache.httpcomponents	httpcore	4.4.16	UNKNOWN - inspect embedded metadata/NOTICE	httpcore-4.4.16.jar
+org.apache.httpcomponents	httpmime	4.5.6	UNKNOWN - inspect embedded metadata/NOTICE	httpmime-4.5.6.jar
+org.bitbucket.b_c	jose4j	0.9.5	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	jose4j-0.9.5.jar
+org.bouncycastle	bcpkix-jdk18on	1.77	Bouncy Castle Licence (https://www.bouncycastle.org/licence.html)	bcpkix-jdk18on-1.77.jar
+org.bouncycastle	bcprov-jdk18on	1.77	Bouncy Castle Licence (https://www.bouncycastle.org/licence.html)	bcprov-jdk18on-1.77.jar
+org.bouncycastle	bcutil-jdk18on	1.77	Bouncy Castle Licence (https://www.bouncycastle.org/licence.html)	bcutil-jdk18on-1.77.jar
+org.checkerframework	checker-qual	2.5.8	The MIT License (http://opensource.org/licenses/MIT)	
+org.checkerframework	checker-qual	3.33.0	The MIT License (http://opensource.org/licenses/MIT)	checker-qual-3.33.0.jar
+org.codehaus.groovy	groovy	3.0.21	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	groovy-3.0.21.jar
+org.codehaus.mojo	animal-sniffer-annotations	1.23	UNKNOWN - inspect embedded metadata/NOTICE	animal-sniffer-annotations-1.23.jar
+org.codehaus.mojo	animal-sniffer-parent	1.23	MIT license (https://spdx.org/licenses/MIT.txt)	
+org.codehaus.mojo	mojo-parent	74	The Apache Software License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.eclipse.ee4j	project	1.0.2	Eclipse Public License v. 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt); GNU General Public License, version 2 with the GNU Classpath Exception (https://www.gnu.org/software/classpath/license.html)	
+org.eclipse.ee4j	project	1.0.5	Eclipse Public License v. 2.0 (https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt); GNU General Public License, version 2 with the GNU Classpath Exception (https://www.gnu.org/software/classpath/license.html)	
+org.glassfish.jaxb	jaxb-bom	2.3.2	UNKNOWN - inspect embedded metadata/NOTICE	
+org.glassfish.jaxb	jaxb-runtime	2.3.2	UNKNOWN - inspect embedded metadata/NOTICE	jaxb-runtime-2.3.2.jar
+org.glassfish.jaxb	txw2	2.3.2	UNKNOWN - inspect embedded metadata/NOTICE	txw2-2.3.2.jar
+org.jdom	jdom2	2.0.6	Similar to Apache License but with the acknowledgment clause removed (https://raw.github.com/hunterhacker/jdom/master/LICENSE.txt)	jdom2-2.0.6.jar
+org.jetbrains	annotations	13.0	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	annotations-13.0.jar
+org.jetbrains	annotations	23.0.0	The Apache Software License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	annotations-23.0.0.jar
+org.jetbrains.intellij.deps	trove4j	1.0.20200330	GNU LESSER GENERAL PUBLIC LICENSE 2.1 (https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html)	trove4j-1.0.20200330.jar
+org.jetbrains.kotlin	compose-compiler-gradle-plugin	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	compose-compiler-gradle-plugin-2.0.21-gradle85.jar
+org.jetbrains.kotlin	kotlin-build-common	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-build-common-2.0.21.jar
+org.jetbrains.kotlin	kotlin-build-statistics	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-build-statistics-2.0.21.jar
+org.jetbrains.kotlin	kotlin-build-tools-api	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-build-tools-api-2.0.21.jar
+org.jetbrains.kotlin	kotlin-build-tools-impl	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-build-tools-impl-2.0.21.jar
+org.jetbrains.kotlin	kotlin-compiler-embeddable	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-compiler-embeddable-2.0.21.jar
+org.jetbrains.kotlin	kotlin-compiler-runner	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-compiler-runner-2.0.21.jar
+org.jetbrains.kotlin	kotlin-compose-compiler-plugin-embeddable	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-compose-compiler-plugin-embeddable-2.0.21.jar
+org.jetbrains.kotlin	kotlin-daemon-client	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-daemon-client-2.0.21.jar
+org.jetbrains.kotlin	kotlin-daemon-embeddable	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-daemon-embeddable-2.0.21.jar
+org.jetbrains.kotlin	kotlin-gradle-plugin	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-gradle-plugin-2.0.21-gradle85.jar
+org.jetbrains.kotlin	kotlin-gradle-plugin-annotations	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-gradle-plugin-annotations-2.0.21.jar
+org.jetbrains.kotlin	kotlin-gradle-plugin-api	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-gradle-plugin-api-2.0.21-gradle85.jar,kotlin-gradle-plugin-api-2.0.21.jar
+org.jetbrains.kotlin	kotlin-gradle-plugin-idea	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-gradle-plugin-idea-2.0.21.jar
+org.jetbrains.kotlin	kotlin-gradle-plugin-idea-proto	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-gradle-plugin-idea-proto-2.0.21.jar
+org.jetbrains.kotlin	kotlin-gradle-plugin-model	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-gradle-plugin-model-2.0.21.jar
+org.jetbrains.kotlin	kotlin-gradle-plugins-bom	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.jetbrains.kotlin	kotlin-klib-commonizer-api	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-klib-commonizer-api-2.0.21.jar
+org.jetbrains.kotlin	kotlin-native-utils	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-native-utils-2.0.21.jar
+org.jetbrains.kotlin	kotlin-reflect	1.6.10	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-reflect-1.6.10.jar
+org.jetbrains.kotlin	kotlin-reflect	1.9.20	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-reflect-1.9.20.jar
+org.jetbrains.kotlin	kotlin-reflect	1.9.23	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-reflect-1.9.23.jar
+org.jetbrains.kotlin	kotlin-script-runtime	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-script-runtime-2.0.21.jar
+org.jetbrains.kotlin	kotlin-scripting-common	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-scripting-common-2.0.21.jar
+org.jetbrains.kotlin	kotlin-scripting-compiler-embeddable	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-scripting-compiler-embeddable-2.0.21.jar
+org.jetbrains.kotlin	kotlin-scripting-compiler-impl-embeddable	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-scripting-compiler-impl-embeddable-2.0.21.jar
+org.jetbrains.kotlin	kotlin-scripting-jvm	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-scripting-jvm-2.0.21.jar
+org.jetbrains.kotlin	kotlin-stdlib	1.9.20	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-stdlib-1.9.20.jar
+org.jetbrains.kotlin	kotlin-stdlib	1.9.23	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-stdlib-1.9.23.jar
+org.jetbrains.kotlin	kotlin-stdlib	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-stdlib-2.0.21.jar
+org.jetbrains.kotlin	kotlin-stdlib-common	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.jetbrains.kotlin	kotlin-stdlib-jdk7	1.8.20	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-stdlib-jdk7-1.8.20.jar
+org.jetbrains.kotlin	kotlin-stdlib-jdk7	1.9.20	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-stdlib-jdk7-1.9.20.jar
+org.jetbrains.kotlin	kotlin-stdlib-jdk8	1.8.20	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-stdlib-jdk8-1.8.20.jar
+org.jetbrains.kotlin	kotlin-stdlib-jdk8	1.9.20	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-stdlib-jdk8-1.9.20.jar
+org.jetbrains.kotlin	kotlin-tooling-core	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-tooling-core-2.0.21.jar
+org.jetbrains.kotlin	kotlin-util-io	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-util-io-2.0.21.jar
+org.jetbrains.kotlin	kotlin-util-klib	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	kotlin-util-klib-2.0.21.jar
+org.jetbrains.kotlin.android	org.jetbrains.kotlin.android.gradle.plugin	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.jetbrains.kotlin.plugin.compose	org.jetbrains.kotlin.plugin.compose.gradle.plugin	2.0.21	The Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.jetbrains.kotlinx	kotlinx-coroutines-android	1.6.4	The Apache Software License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.jetbrains.kotlinx	kotlinx-coroutines-android	1.7.3	The Apache Software License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	kotlinx-coroutines-android-1.7.3.jar
+org.jetbrains.kotlinx	kotlinx-coroutines-bom	1.6.4	The Apache Software License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.jetbrains.kotlinx	kotlinx-coroutines-bom	1.7.3	The Apache Software License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.jetbrains.kotlinx	kotlinx-coroutines-core	1.7.3	The Apache Software License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.jetbrains.kotlinx	kotlinx-coroutines-core-jvm	1.6.4	The Apache Software License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	kotlinx-coroutines-core-jvm-1.6.4.jar
+org.jetbrains.kotlinx	kotlinx-coroutines-core-jvm	1.7.3	The Apache Software License, Version 2.0 (https://www.apache.org/licenses/LICENSE-2.0.txt)	kotlinx-coroutines-core-jvm-1.7.3.jar
+org.junit	junit-bom	5.9.2	Eclipse Public License v2.0 (https://www.eclipse.org/legal/epl-v20.html)	
+org.junit	junit-bom	5.9.3	Eclipse Public License v2.0 (https://www.eclipse.org/legal/epl-v20.html)	
+org.jvnet.staxex	stax-ex	1.8.1	Eclipse Distribution License - v 1.0 (http://www.eclipse.org/org/documents/edl-v10.php)	stax-ex-1.8.1.jar
+org.ow2	ow2	1.5.1	The Apache Software License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.txt)	
+org.ow2.asm	asm	9.6	BSD-3-Clause (https://asm.ow2.io/license.html)	asm-9.6.jar
+org.ow2.asm	asm-analysis	9.6	BSD-3-Clause (https://asm.ow2.io/license.html)	asm-analysis-9.6.jar
+org.ow2.asm	asm-commons	9.6	BSD-3-Clause (https://asm.ow2.io/license.html)	asm-commons-9.6.jar
+org.ow2.asm	asm-tree	9.6	BSD-3-Clause (https://asm.ow2.io/license.html)	asm-tree-9.6.jar
+org.ow2.asm	asm-util	9.6	BSD-3-Clause (https://asm.ow2.io/license.html)	asm-util-9.6.jar
+org.slf4j	slf4j-api	1.7.30	UNKNOWN - inspect embedded metadata/NOTICE	slf4j-api-1.7.30.jar
+org.slf4j	slf4j-parent	1.7.30	MIT License (http://www.opensource.org/licenses/mit-license.php)	
+org.sonatype.oss	oss-parent	7	UNKNOWN - inspect embedded metadata/NOTICE	
+org.sonatype.oss	oss-parent	9	UNKNOWN - inspect embedded metadata/NOTICE	
+org.tensorflow	tensorflow-lite-metadata	0.1.0-rc2	UNKNOWN - inspect embedded metadata/NOTICE	tensorflow-lite-metadata-0.1.0-rc2.jar
