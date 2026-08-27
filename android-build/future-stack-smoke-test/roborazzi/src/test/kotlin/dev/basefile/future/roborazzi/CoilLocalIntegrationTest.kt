@@ -7,6 +7,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import coil3.ColorImage
 import coil3.ImageLoader
 import coil3.decode.DataSource
+import coil3.gif.AnimatedImageDecoder
 import coil3.gif.GifDecoder
 import coil3.network.okhttp.OkHttpNetworkFetcherFactory
 import coil3.request.ErrorResult
@@ -39,11 +40,17 @@ class CoilLocalIntegrationTest {
             writeText("""<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><rect width="32" height="32" fill="#005a9c"/></svg>""")
         }
         val gif = File(context.cacheDir, "fixture.gif").apply {
-            writeBytes(Base64.getDecoder().decode("R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="))
+            // Two 4x4 frames (red then blue); GifDecoder requires an animated stream.
+            writeBytes(
+                Base64.getDecoder().decode(
+                    "R0lGODlhBAAEAPAAAP8AAAAAACH5BAAAAAAAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAABAAEAAACBISPCQUAIfkEAAAAAAAsAAAAAAQABACAAAD/AAAAAgSEjwkFADs=",
+                ),
+            )
         }
         val loader = ImageLoader.Builder(context)
             .components {
                 add(SvgDecoder.Factory())
+                add(AnimatedImageDecoder.Factory())
                 add(GifDecoder.Factory())
                 add(VideoFrameDecoder.Factory())
                 add(OkHttpNetworkFetcherFactory())
