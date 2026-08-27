@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tikaro offline stack</string>
+    <string name="widget_description">Tikaro Glance smoke widget</string>
+    <string name="widget_loading">Loading Tikaro…</string>
+</resources>

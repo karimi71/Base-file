@@ -12,14 +12,18 @@ resolution disabled. No generated signing key is copied into this repository.
 | Android SDK Platform | API 35 | Google's `sdkmanager` package `platforms;android-35` |
 | Android SDK Build Tools | 34.0.0 | Google's `sdkmanager` package `build-tools;34.0.0` |
 | Compose BOM | 2024.12.01 | Google Maven |
+| KSP / Room / DataStore | 2.0.21-1.0.28 / 2.7.2 / 1.1.7 | Maven Central and Google Maven |
+| Navigation / WorkManager / Glance | 2.8.9 / 2.10.0 / 1.1.1 | Google Maven |
+| AndroidX Test / Benchmark / Baseline Profile | pinned in `tikaro-stack-smoke-test/REQUESTED_COORDINATES.tsv` | Google Maven |
+| Paparazzi / Detekt / Ktlint / Dependency Analysis | pinned in `TIKARO_STACK.md` | Maven Central and Gradle Plugin Portal |
 | JDK used to run Gradle | compact OpenJDK/Temurin 17 image | generated with `jlink` from `actions/setup-java` Temurin 17 |
 
 The local Maven repository is not a copy of a global Gradle cache. It is rebuilt
-from a fresh `GRADLE_USER_HOME` after resolving only the committed Compose smoke
-project. `ci/cache_to_maven.py` converts those exact coordinates and their POM /
-Gradle Module Metadata into Maven layout. A second build starts with another
-empty Gradle user home and resolves exclusively from `android-build/maven` with
-Gradle's `--offline` flag.
+from a fresh `GRADLE_USER_HOME` after resolving only the committed base Compose,
+Tikaro-stack, Paparazzi, and quality smoke projects. `ci/cache_to_maven.py`
+converts those exact coordinates and their POM / Gradle Module Metadata into
+Maven layout. A second build starts with another empty Gradle user home and
+resolves exclusively from `android-build/maven` with Gradle's `--offline` flag.
 
 `SHA256SUMS.txt` records every committed file below `android-build/` except the
 mutable CI diagnostic log and generated build/cache directories. The checksum

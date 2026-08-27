@@ -1,0 +1,118 @@
+group	artifact	version	purpose
+com.google.devtools.ksp	com.google.devtools.ksp.gradle.plugin	2.0.21-1.0.28	KSP plugin marker
+com.google.devtools.ksp	symbol-processing-gradle-plugin	2.0.21-1.0.28	KSP Gradle implementation
+com.google.devtools.ksp	symbol-processing-api	2.0.21-1.0.28	KSP processor API
+com.google.devtools.ksp	symbol-processing-common-deps	2.0.21-1.0.28	KSP common dependencies
+org.jetbrains.kotlin.plugin.serialization	org.jetbrains.kotlin.plugin.serialization.gradle.plugin	2.0.21	Serialization plugin marker
+org.jetbrains.kotlin	kotlin-serialization	2.0.21	Serialization Gradle implementation
+androidx.room	room-runtime	2.7.2	Room runtime
+androidx.room	room-ktx	2.7.2	Room Kotlin extensions
+androidx.room	room-compiler	2.7.2	Room KSP compiler
+androidx.room	room-testing	2.7.2	Room Android tests
+androidx.datastore	datastore-preferences	1.1.7	Preferences DataStore
+androidx.datastore	datastore-preferences-core	1.1.7	Preferences core
+androidx.datastore	datastore-core	1.1.7	DataStore core
+androidx.datastore	datastore-core-okio	1.1.7	DataStore Okio storage
+org.jetbrains.kotlinx	kotlinx-coroutines-core	1.9.0	Coroutines common metadata
+org.jetbrains.kotlinx	kotlinx-coroutines-core-jvm	1.9.0	Coroutines JVM runtime
+org.jetbrains.kotlinx	kotlinx-coroutines-android	1.9.0	Coroutines Android dispatcher
+org.jetbrains.kotlinx	kotlinx-coroutines-test	1.9.0	Coroutine test utilities
+androidx.lifecycle	lifecycle-runtime	2.8.7	Lifecycle runtime
+androidx.lifecycle	lifecycle-runtime-ktx	2.8.7	Lifecycle runtime Kotlin extensions
+androidx.lifecycle	lifecycle-runtime-compose	2.8.7	Lifecycle Compose state
+androidx.lifecycle	lifecycle-viewmodel	2.8.7	ViewModel
+androidx.lifecycle	lifecycle-viewmodel-ktx	2.8.7	ViewModel Kotlin extensions
+androidx.lifecycle	lifecycle-viewmodel-compose	2.8.7	Compose ViewModel integration
+androidx.lifecycle	lifecycle-viewmodel-savedstate	2.8.7	SavedState ViewModel
+androidx.lifecycle	lifecycle-process	2.8.7	Process lifecycle
+androidx.lifecycle	lifecycle-common	2.8.7	Lifecycle common
+androidx.lifecycle	lifecycle-common-java8	2.8.7	Lifecycle Java 8 adapters
+androidx.lifecycle	lifecycle-livedata-core	2.8.7	Transitive LiveData core
+androidx.lifecycle	lifecycle-service	2.8.7	Lifecycle service
+androidx.navigation	navigation-compose	2.8.9	Compose navigation
+androidx.navigation	navigation-runtime	2.8.9	Navigation runtime
+androidx.navigation	navigation-runtime-ktx	2.8.9	Navigation runtime Kotlin extensions
+androidx.navigation	navigation-common	2.8.9	Navigation common
+androidx.navigation	navigation-common-ktx	2.8.9	Navigation common Kotlin extensions
+androidx.navigation	navigation-testing	2.8.9	Navigation tests
+androidx.activity	activity	1.10.0	Activity runtime
+androidx.activity	activity-ktx	1.10.0	Activity Kotlin extensions
+androidx.activity	activity-compose	1.10.0	Compose Activity
+androidx.core	core	1.15.0	AndroidX core
+androidx.core	core-ktx	1.15.0	AndroidX core Kotlin extensions
+androidx.savedstate	savedstate	1.2.1	Saved state
+androidx.savedstate	savedstate-ktx	1.2.1	Saved state Kotlin extensions
+androidx.compose	compose-bom	2024.12.01	Compose version alignment
+androidx.compose.runtime	runtime	1.7.6	Compose runtime
+androidx.compose.runtime	runtime-saveable	1.7.6	Saveable Compose state
+androidx.compose.ui	ui	1.7.6	Compose UI
+androidx.compose.ui	ui-graphics	1.7.6	Compose graphics
+androidx.compose.ui	ui-text	1.7.6	Compose text
+androidx.compose.ui	ui-unit	1.7.6	Compose units
+androidx.compose.ui	ui-util	1.7.6	Compose utilities
+androidx.compose.ui	ui-geometry	1.7.6	Compose geometry
+androidx.compose.ui	ui-tooling-preview	1.7.6	Preview annotations
+androidx.compose.ui	ui-tooling	1.7.6	Debug tooling
+androidx.compose.ui	ui-test-manifest	1.7.6	Debug test manifest
+androidx.compose.ui	ui-test	1.7.6	Compose test API
+androidx.compose.ui	ui-test-junit4	1.7.6	Compose JUnit 4 tests
+androidx.compose.ui	ui-test-junit4-android	1.7.6	Android variant for Compose JUnit 4 tests
+androidx.compose.foundation	foundation	1.7.6	Compose foundation
+androidx.compose.foundation	foundation-layout	1.7.6	Compose layouts
+androidx.compose.animation	animation	1.7.6	Compose animation
+androidx.compose.animation	animation-core	1.7.6	Animation core
+androidx.compose.material3	material3	1.3.1	Material 3
+androidx.compose.material	material-ripple	1.7.6	Material ripple
+androidx.compose.material	material-icons-core	1.7.6	Core Material icons
+androidx.work	work-runtime	2.10.0	WorkManager runtime
+androidx.work	work-runtime-ktx	2.10.0	Coroutine WorkManager API
+androidx.work	work-testing	2.10.0	WorkManager tests
+androidx.glance	glance	1.1.1	Glance runtime
+androidx.glance	glance-appwidget	1.1.1	Glance app widgets
+androidx.glance	glance-material3	1.1.1	Glance Material 3
+androidx.glance	glance-appwidget-testing	1.1.1	Glance widget tests
+androidx.glance	glance-testing	1.1.1	Glance test API
+androidx.startup	startup-runtime	1.2.0	AndroidX Startup
+androidx.tracing	tracing	1.2.0	Android tracing
+androidx.tracing	tracing-ktx	1.2.0	Tracing Kotlin extensions
+androidx.biometric	biometric	1.1.0	Stable biometric API
+androidx.documentfile	documentfile	1.0.1	Storage Access Framework files
+androidx.exifinterface	exifinterface	1.3.7	Image EXIF orientation
+org.jetbrains.kotlinx	kotlinx-serialization-core	1.7.3	Serialization common metadata
+org.jetbrains.kotlinx	kotlinx-serialization-core-jvm	1.7.3	Serialization JVM runtime
+org.jetbrains.kotlinx	kotlinx-serialization-json	1.7.3	JSON common metadata
+org.jetbrains.kotlinx	kotlinx-serialization-json-jvm	1.7.3	JSON JVM runtime
+junit	junit	4.13.2	JUnit 4
+org.hamcrest	hamcrest-core	1.3	JUnit assertions
+com.google.truth	truth	1.4.4	Readable assertions
+app.cash.turbine	turbine	1.2.0	Flow tests
+androidx.test	core	1.6.1	Android test core
+androidx.test	core-ktx	1.6.1	Android test core Kotlin extensions
+androidx.test	runner	1.6.2	Instrumentation runner
+androidx.test	rules	1.6.1	Instrumentation rules
+androidx.test	monitor	1.7.2	Instrumentation monitor
+androidx.test.ext	junit	1.2.1	AndroidX JUnit
+androidx.test.ext	junit-ktx	1.2.1	AndroidX JUnit Kotlin extensions
+androidx.test.espresso	espresso-core	3.6.1	Espresso
+androidx.test.espresso	espresso-intents	3.6.1	Espresso intents
+androidx.test.espresso	espresso-idling-resource	3.6.1	Espresso idling resources
+androidx.test.uiautomator	uiautomator	2.3.0	UI Automator
+androidx.profileinstaller	profileinstaller	1.4.1	Baseline profile installer
+androidx.benchmark	benchmark-common	1.3.3	Benchmark common
+androidx.benchmark	benchmark-junit4	1.3.3	Benchmark JUnit 4
+androidx.benchmark	benchmark-macro-junit4	1.3.3	Macrobenchmark
+androidx.baselineprofile	androidx.baselineprofile.gradle.plugin	1.3.3	Baseline Profile plugin marker
+androidx.baselineprofile	baselineprofile-gradle-plugin	1.3.3	Baseline Profile plugin implementation
+app.cash.paparazzi	app.cash.paparazzi.gradle.plugin	1.3.5	Paparazzi plugin marker
+app.cash.paparazzi	paparazzi-gradle-plugin	1.3.5	Paparazzi Gradle implementation
+app.cash.paparazzi	paparazzi	1.3.5	Paparazzi JVM renderer
+com.squareup.leakcanary	leakcanary-android	2.14	Debug leak detection
+io.gitlab.arturbosch.detekt	io.gitlab.arturbosch.detekt.gradle.plugin	1.23.7	Detekt plugin marker
+io.gitlab.arturbosch.detekt	detekt-gradle-plugin	1.23.7	Detekt Gradle implementation
+io.gitlab.arturbosch.detekt	detekt-cli	1.23.7	Detekt CLI
+io.gitlab.arturbosch.detekt	detekt-formatting	1.23.7	Detekt formatting rules
+org.jlleitschuh.gradle.ktlint	org.jlleitschuh.gradle.ktlint.gradle.plugin	12.1.2	Ktlint plugin marker
+org.jlleitschuh.gradle	ktlint-gradle	12.1.2	Ktlint Gradle implementation
+com.pinterest.ktlint	ktlint-cli	1.3.1	Pinned Ktlint engine
+com.autonomousapps	com.autonomousapps.dependency-analysis.gradle.plugin	2.2.0	Dependency analysis plugin marker
+com.autonomousapps	dependency-analysis-gradle-plugin	2.2.0	Dependency analysis implementation

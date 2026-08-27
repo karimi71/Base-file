@@ -30,6 +30,10 @@ trap record_run_log EXIT
 REQUESTED_MODE="${1:-}"
 MODE="${REQUESTED_MODE:-$(sed 's/#.*//' "$ROOT/android-build/ci/trigger-mode" | tr -d '[:space:]')}"
 SMOKE="$ROOT/android-build/compose-smoke-test"
+TIKARO_SMOKE="$ROOT/android-build/tikaro-stack-smoke-test"
+PAPARAZZI_SMOKE="$ROOT/android-build/paparazzi-smoke-test"
+QUALITY_SMOKE="$ROOT/android-build/quality-smoke-test"
+TIKARO_REQUESTS="$TIKARO_SMOKE/REQUESTED_COORDINATES.tsv"
 SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
 
 if [[ "$MODE" != audit && "$MODE" != publish ]]; then
@@ -52,6 +56,28 @@ APK="$SMOKE/app/build/outputs/apk/debug/app-debug.apk"
 test -s "$APK"
 "$ANDROID_HOME/build-tools/34.0.0/apksigner" verify --verbose --print-certs "$APK"
 sha256sum "$APK"
+
+# Resolve and execute the pinned Tikaro application, test, screenshot, benchmark,
+# and build-quality graphs. --write-locks records the exact family-wide choices
+# that the subsequent clean-room builds must reproduce without a network.
+gradle -p "$TIKARO_SMOKE" --no-daemon --stacktrace --write-locks \
+  :app:assembleDebug \
+  :app:assembleRelease \
+  :app:testDebugUnitTest \
+  :app:assembleDebugAndroidTest \
+  :benchmark:assemble
+gradle -p "$PAPARAZZI_SMOKE" --no-daemon --stacktrace --write-locks \
+  :screenshot:testDebugUnitTest
+gradle -p "$QUALITY_SMOKE" --no-daemon --stacktrace --write-locks \
+  classes resolveQualityTools
+
+test -s "$TIKARO_SMOKE/app/build/outputs/apk/debug/app-debug.apk"
+test -s "$TIKARO_SMOKE/app/build/outputs/apk/release/app-release-unsigned.apk"
+find "$TIKARO_SMOKE/app/build/outputs/apk/androidTest" -type f -name '*.apk' -size +0c -print -quit \
+  | grep -q .
+find "$TIKARO_SMOKE/benchmark/build/outputs/apk" -type f -name '*.apk' -size +0c -print -quit \
+  | grep -q .
+test -d "$PAPARAZZI_SMOKE/screenshot/build/reports/paparazzi"
 
 echo "Resolved Gradle module cache size:"
 du -sh "$GRADLE_USER_HOME/caches/modules-2" || true
@@ -111,6 +137,16 @@ if [[ "$MODE" == publish ]]; then
   python3 "$ROOT/android-build/ci/cache_to_maven.py" \
     "$GRADLE_USER_HOME/caches/modules-2/files-2.1" \
     "$ROOT/android-build/maven"
+  python3 "$ROOT/android-build/ci/verify_requested_coordinates.py" \
+    "$TIKARO_REQUESTS" \
+    "$ROOT/android-build/maven/BASE_FILE_COORDINATES.tsv"
+  for sqlite_artifact in sqlite sqlite-framework; do
+    grep -q $'^androidx.sqlite\t'"$sqlite_artifact"$'\t' \
+      "$ROOT/android-build/maven/BASE_FILE_COORDINATES.tsv" || {
+        echo "Room-selected transitive is missing: androidx.sqlite:$sqlite_artifact" >&2
+        exit 1
+      }
+  done
   python3 "$ROOT/android-build/ci/generate_legal_inventory.py" \
     "$ROOT/android-build/maven" \
     "$ROOT/android-build/licenses/MAVEN_ARTIFACTS.tsv" \
@@ -119,17 +155,33 @@ if [[ "$MODE" == publish ]]; then
   chmod +x \
     "$ROOT/android-build/build-compose-apk.sh" \
     "$ROOT/android-build/prepare-offline-toolchain.sh" \
+    "$ROOT/android-build/update-added-files.sh" \
     "$ROOT/android-build/update-checksums.sh" \
     "$ROOT/android-build/verify-offline-toolchain.sh" \
+    "$ROOT/android-build/verify-tikaro-stack.sh" \
     "$ROOT/android-build/kotlin/bin/kotlinc" \
     "$ROOT/android-build/kotlin/bin/kotlinc-compose" \
     "$ROOT/android-build/gradle/gradle-$GRADLE_VERSION/bin/gradle"
 
   echo "Largest repository artifacts before publication:"
-  find "$ROOT/android-build" -type f -printf '%s %p\n' | sort -nr | head -30 || true
-  if find "$ROOT/android-build" -type f -size +95M -print -quit | grep -q .; then
-    echo "A generated file exceeds the conservative 95 MiB GitHub limit:" >&2
-    find "$ROOT/android-build" -type f -size +95M -print >&2
+  find "$ROOT/android-build" -type f \
+    ! -path '*/compose-smoke-test/*/build/*' \
+    ! -path '*/tikaro-stack-smoke-test/*/build/*' \
+    ! -path '*/paparazzi-smoke-test/*/build/*' \
+    ! -path '*/quality-smoke-test/build/*' \
+    -printf '%s %p\n' | sort -nr | head -30 || true
+  if find "$ROOT/android-build" -type f -size +95M \
+    ! -path '*/compose-smoke-test/*/build/*' \
+    ! -path '*/tikaro-stack-smoke-test/*/build/*' \
+    ! -path '*/paparazzi-smoke-test/*/build/*' \
+    ! -path '*/quality-smoke-test/build/*' \
+    -print -quit | grep -q .; then
+    echo "A generated repository file exceeds the conservative 95 MiB GitHub limit:" >&2
+    find "$ROOT/android-build" -type f -size +95M \
+      ! -path '*/compose-smoke-test/*/build/*' \
+      ! -path '*/tikaro-stack-smoke-test/*/build/*' \
+      ! -path '*/paparazzi-smoke-test/*/build/*' \
+      ! -path '*/quality-smoke-test/build/*' -print >&2
     exit 1
   fi
 
@@ -144,6 +196,11 @@ if [[ "$MODE" == publish ]]; then
   DEBUG_APK="$SMOKE/app/build/outputs/apk/debug/app-debug.apk"
   test -s "$DEBUG_APK"
   unzip -l "$DEBUG_APK" | grep 'META-INF/androidx.compose.runtime_runtime.version'
+
+  echo "Running Tikaro stack, Paparazzi, benchmark, and quality checks offline"
+  "$ROOT/android-build/verify-tikaro-stack.sh"
+  TIKARO_DEBUG_APK="$TIKARO_SMOKE/app/build/outputs/apk/debug/app-debug.apk"
+  TIKARO_DEBUG_SHA="$(sha256sum "$TIKARO_DEBUG_APK" | cut -d' ' -f1)"
 
   # Build an unsigned release, align it, and explicitly sign it with apksigner.
   # The random key and password remain under RUNNER_TEMP and are destroyed.
@@ -171,6 +228,8 @@ if [[ "$MODE" == publish ]]; then
     's/^Signer #1 certificate SHA-256 digest: //p' | head -1)"
   DEBUG_SHA="$(sha256sum "$DEBUG_APK" | cut -d' ' -f1)"
   SIGNED_SHA="$(sha256sum "$SIGNING_DIR/compose-smoke-signed.apk" | cut -d' ' -f1)"
+  REQUESTED_COUNT="$(tail -n +2 "$TIKARO_REQUESTS" | wc -l | tr -d ' ')"
+  MAVEN_COORDINATE_COUNT="$(tail -n +2 "$ROOT/android-build/maven/BASE_FILE_COORDINATES.tsv" | wc -l | tr -d ' ')"
   rm -rf "$SIGNING_DIR"
   unset SIGNING_PASSWORD
 
@@ -182,24 +241,40 @@ if [[ "$MODE" == publish ]]; then
 - Runner: ubuntu-24.04 / Linux x86_64
 - Gradle: $GRADLE_VERSION
 - Android Gradle Plugin: $ANDROID_GRADLE_PLUGIN_VERSION
-- Kotlin and K2 Compose compiler plugin: $KOTLIN_VERSION
+- Kotlin and K2 Compose/serialization plugins: $KOTLIN_VERSION
+- KSP / Room / DataStore: $KSP_VERSION / $ROOM_VERSION / $DATASTORE_VERSION
+- Coroutines / Navigation / WorkManager / Glance: $COROUTINES_VERSION / $NAVIGATION_VERSION / $WORK_VERSION / $GLANCE_VERSION
 - Compose BOM: $COMPOSE_BOM_VERSION (UI/Foundation/Runtime 1.7.6; Material3 1.3.1)
 - Android SDK: Platform 35; Build Tools $ANDROID_BUILD_TOOLS_VERSION
-- Dependency mode: local file Maven repository plus Gradle \`--offline\`, using an empty Gradle user home
+- Dependency mode: local file Maven repository plus Gradle \`--offline\`, starting with an empty Gradle user home
+- Pinned Tikaro direct coordinates: $REQUESTED_COUNT; complete selected Maven graph: $MAVEN_COORDINATE_COUNT coordinates
 
 ## Results
 
-1. A clean Kotlin/Jetpack Compose debug APK was built successfully at
-   \`compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk\`.
-2. \`apksigner verify --verbose --print-certs\` accepted the Gradle-signed debug APK.
-3. A clean unsigned release APK was aligned with \`zipalign\`, signed explicitly
-   by Build Tools \`apksigner\` using a one-day ephemeral CI key, and verified.
-4. The ephemeral JKS and random password were deleted and were never added to Git.
-5. The APK contains \`META-INF/androidx.compose.runtime_runtime.version\`, and the
-   source uses Compose \`setContent\`, Material3, runtime state, layout, graphics,
-   and \`@Preview\`; this is not an Android Views substitution.
+1. The minimal Kotlin/Jetpack Compose fixture produced a clean debug APK.
+2. The Tikaro stack fixture compiled real Room entities/DAO/database through KSP,
+   Preferences DataStore, kotlinx.serialization, Navigation Compose, WorkManager,
+   Glance, stable Biometric, DocumentFile, and ExifInterface into debug and release.
+3. Tikaro JVM tests executed with Coroutines Test, Truth, and Turbine. Its AndroidX
+   Test/Compose/Espresso/UI Automator APK and Macrobenchmark APK were compiled;
+   device-only tests were not executed on the host-only runner.
+4. Paparazzi $PAPARAZZI_VERSION rendered the Compose screenshot test on the JVM,
+   proving compatibility with AGP $ANDROID_GRADLE_PLUGIN_VERSION. Detekt, Ktlint,
+   and Dependency Analysis plugins loaded, and their pinned engines resolved.
+5. The Tikaro release APK contains \`assets/dexopt/baseline.prof\`; the Benchmark
+   and Baseline Profile plugin graph is available offline. Runtime profile capture
+   itself requires a physical or managed Android device.
+6. \`apksigner verify\` accepted both Gradle-signed debug APKs. A clean unsigned
+   release APK was also aligned with \`zipalign\`, signed explicitly with a
+   one-day ephemeral CI key, and verified.
+7. Gradle lockfiles were generated online, then all fixtures were rebuilt with
+   network repositories removed, \`--offline\`, and an initially empty cache.
+8. The ephemeral JKS/password were deleted and never added to Git. Coordinate,
+   SHA-256, provenance, license, and embedded NOTICE inventories were regenerated.
 
-Debug APK SHA-256 (CI output, not committed): \`$DEBUG_SHA\`
+Minimal Compose debug APK SHA-256 (CI output, not committed): \`$DEBUG_SHA\`
+
+Tikaro stack debug APK SHA-256 (CI output, not committed): \`$TIKARO_DEBUG_SHA\`
 
 Explicitly signed test APK SHA-256 (CI output, not committed): \`$SIGNED_SHA\`
 
@@ -237,10 +312,20 @@ EOF
     git -C "$ROOT" push origin "HEAD:${GITHUB_REF_NAME}"
   fi
 
+  # Stage generated lockfiles/reports first so the base-to-index inventory is
+  # exact, then checksum the final inventory and restage both generated files.
   git -C "$ROOT" add android-build
   git -C "$ROOT" reset -- android-build/ci/LAST_RUN.log || true
+  "$ROOT/android-build/update-added-files.sh"
+  "$ROOT/android-build/update-checksums.sh"
+  git -C "$ROOT" add android-build
+  git -C "$ROOT" reset -- android-build/ci/LAST_RUN.log || true
+  (
+    cd "$ROOT/android-build"
+    sha256sum --check SHA256SUMS.txt
+  )
   if ! git -C "$ROOT" diff --cached --quiet; then
-    git -C "$ROOT" commit -m "Document and verify reproducible offline Compose builds"
+    git -C "$ROOT" commit -m "Verify and document the offline Tikaro dependency stack"
     git -C "$ROOT" push origin "HEAD:${GITHUB_REF_NAME}"
   fi
 

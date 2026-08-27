@@ -41,6 +41,8 @@ cd Base-file
 
 ```bash
 ./android-build/verify-offline-toolchain.sh
+# بررسی جامع Room/KSP/DataStore/Navigation/Test/Paparazzi/Benchmark:
+./android-build/verify-tikaro-stack.sh
 # فقط بررسی ابزارها و checksumها، بدون build:
 ./android-build/verify-offline-toolchain.sh --tools-only
 ```
@@ -58,6 +60,9 @@ cd Base-file
 | Compose Material3 | 1.3.1 |
 | `activity-compose` | 1.10.0 |
 | `lifecycle-runtime-ktx` | 2.8.7 |
+| KSP / Room / DataStore | 2.0.21-1.0.28 / 2.7.2 / 1.1.7 |
+| Coroutines / Navigation / WorkManager | 1.9.0 / 2.8.9 / 2.10.0 |
+| Glance / Benchmark / Baseline Profile | 1.1.1 / 1.3.3 / 1.3.3 |
 | Android SDK Platform / compileSdk | 35 |
 | Android SDK Build Tools | 34.0.0 |
 | JVM اجرای Gradle/AGP | OpenJDK 17 compact image |
@@ -92,7 +97,11 @@ android-build/
 │   ├── kotlinc                        # CLI واقعی compiler-embeddable 2.0.21
 │   └── kotlinc-compose                # همان compiler همراه K2 Compose plugin
 ├── maven/                             # Maven repository دقیق و حداقلی پروژه
-├── compose-smoke-test/                # اپ واقعی Jetpack Compose
+├── compose-smoke-test/                # اپ پایهٔ واقعی Jetpack Compose
+├── tikaro-stack-smoke-test/           # Room/KSP/DataStore/Navigation/Widget/Test
+├── paparazzi-smoke-test/              # Golden screenshot روی JVM
+├── quality-smoke-test/                # Detekt/Ktlint/Dependency Analysis
+├── TIKARO_STACK.md                    # محدوده، نسخه‌ها و موارد عمداً حذف‌شده
 ├── licenses/                          # Apache-2.0، inventory و NOTICEهای upstream
 ├── PROVENANCE.md
 └── VERIFICATION.md
@@ -129,8 +138,14 @@ Kotlin 2.0.21، artifactهای runtime/compile موردنیاز این مجمو�
 - `androidx.core`, `savedstate`, `collection`, `annotation`, `customview`
 - `kotlinx.coroutines`
 - `kotlin-stdlib:2.0.21`
+- پشتهٔ ضروری تیکارو: KSP/Room/DataStore، Navigation، WorkManager، Glance،
+  Biometric، Serialization، AndroidX/Compose Test، Benchmark، Paparazzi و
+  ابزارهای کیفیت build-time
 - تمام dependencyهای transitive انتخاب‌شده توسط Gradle Module Metadata/POM
 
+محدوده و موارد اختیاریِ عمداً حذف‌شده در `android-build/TIKARO_STACK.md` و
+فهرست directهای pinned در
+`android-build/tikaro-stack-smoke-test/REQUESTED_COORDINATES.tsv` آمده است.
 فهرست دقیق coordinateها و فایل‌های binary در
 `android-build/licenses/MAVEN_ARTIFACTS.tsv` ثبت شده است.
 
@@ -151,8 +166,9 @@ resource merge، manifest merge، Compose compiler، D8، zipalign و signing ه
 ## قرارداد پروژهٔ Animator
 
 اسکریپت یک پروژهٔ استاندارد Gradle با module به نام `app` را انتظار دارد. نسخه‌های
-پروژه باید با جدول بالا سازگار باشند؛ نمونهٔ صحیح در
-`android-build/compose-smoke-test/` موجود است. حداقل نکات:
+پروژه باید با جدول بالا سازگار باشند؛ نمونهٔ پایه در
+`android-build/compose-smoke-test/` و نمونهٔ کامل‌تر تیکارو در
+`android-build/tikaro-stack-smoke-test/` موجود است. حداقل نکات:
 
 ```kotlin
 plugins {
@@ -217,8 +233,9 @@ release unsigned APK با `zipalign` هم‌تراز، با `apksigner` و یک 
 
 - `android-build/SHA256SUMS.txt`: SHA-256 تمام فایل‌های committed زیر
   `android-build/` (binary و text)، به‌جز log متغیر CI و output/cache.
-- `android-build/ADDED_FILES.txt`: فهرست دقیق ۱۰۱۹ فایل افزوده‌شده نسبت به commit
-  مبنا (`a978940c92297269142c10614bc992793f8d788f`)، هر مسیر در یک سطر.
+- `android-build/ADDED_FILES.txt`: فهرست دقیق فایل‌های افزوده‌شده نسبت به commit
+  مبنا (`a978940c92297269142c10614bc992793f8d788f`)، هر مسیر در یک سطر؛ این فایل
+  هنگام انتشار به‌صورت خودکار بازتولید می‌شود.
 - `android-build/PROVENANCE.md`: منبع و روش reproducible تهیهٔ هر جزء.
 - `android-build/licenses/Apache-2.0.txt`: متن کامل Apache License 2.0.
 - `android-build/licenses/MAVEN_ARTIFACTS.tsv`: coordinate و license هر artifact.
