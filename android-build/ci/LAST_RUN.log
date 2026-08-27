@@ -21,32 +21,25 @@ Daemon will be stopped at the end of the build
 > Task :app:parseDebugLocalResources
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
-> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
 > Task :app:compressDebugAssets
-> Task :app:processDebugResources
 > Task :app:desugarDebugFileDependencies
 > Task :app:mergeDebugJniLibFolders
 > Task :app:checkDebugDuplicateClasses
 > Task :app:mergeDebugNativeLibs
-> Task :app:compileDebugKotlin
-> Task :app:mergeExtDexDebug
-> Task :app:compileDebugJavaWithJavac NO-SOURCE
-> Task :app:dexBuilderDebug
-> Task :app:mergeDebugGlobalSynthetics
-> Task :app:processDebugJavaRes
+> Task :app:processDebugManifestForPackage
 > Task :app:mergeLibDexDebug
-> Task :app:mergeProjectDexDebug
 
 > Task :app:stripDebugDebugSymbols
 Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so.
 
-> Task :app:mergeDebugJavaResource
+> Task :app:processDebugResources
 > Task :app:validateSigningDebug
+> Task :app:mergeExtDexDebug
 > Task :app:writeDebugAppMetadata
 > Task :app:writeDebugSigningConfigVersions
 > Task :app:buildKotlinToolingMetadata
@@ -59,42 +52,49 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:createReleaseCompatibleScreenManifests
 > Task :app:extractDeepLinksRelease
 > Task :app:processReleaseMainManifest
-> Task :app:processReleaseManifest
 > Task :app:parseReleaseLocalResources
+> Task :app:processReleaseManifest
 > Task :app:processReleaseManifestForPackage
 > Task :app:javaPreCompileRelease
 > Task :app:extractProguardFiles
 > Task :app:mergeReleaseJniLibFolders
 > Task :app:mergeReleaseNativeLibs
+> Task :app:checkReleaseDuplicateClasses
 
 > Task :app:stripReleaseDebugSymbols
 Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so.
 
-> Task :app:checkReleaseDuplicateClasses
 > Task :app:mergeReleaseResources
+> Task :app:desugarReleaseFileDependencies
 > Task :app:extractReleaseNativeSymbolTables
 > Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
-> Task :app:desugarReleaseFileDependencies
 > Task :app:mergeReleaseStartupProfile
 > Task :app:processReleaseResources
+> Task :app:compileDebugKotlin
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:processDebugJavaRes
+> Task :app:mergeProjectDexDebug
 > Task :app:mergeReleaseArtProfile
-> Task :app:packageDebug
-> Task :app:createDebugApkListingFileRedirect
-> Task :app:assembleDebug
 > Task :app:mergeReleaseShaders
 > Task :app:compileReleaseShaders NO-SOURCE
 > Task :app:generateReleaseAssets UP-TO-DATE
 > Task :app:mergeReleaseAssets
+> Task :app:mergeDebugJavaResource
 > Task :app:compressReleaseAssets
 > Task :app:extractReleaseVersionControlInfo
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
 > Task :app:collectReleaseDependencies
 > Task :app:sdkReleaseDependencyData
 > Task :app:optimizeReleaseResources
 > Task :app:writeReleaseAppMetadata
 > Task :app:writeReleaseSigningConfigVersions
-> Task :app:mergeExtDexRelease
 > Task :app:compileReleaseKotlin
 > Task :app:compileReleaseJavaWithJavac NO-SOURCE
+> Task :app:mergeExtDexRelease
 > Task :app:generateReleaseLintVitalReportModel
 > Task :app:dexBuilderRelease
 > Task :app:processReleaseJavaRes
@@ -108,9 +108,9 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:lintVitalReportRelease
 > Task :app:lintVitalRelease
 > Task :app:assembleRelease
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787842128038.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787843145076.json
 
-BUILD SUCCESSFUL in 3m 10s
+BUILD SUCCESSFUL in 1m 59s
 82 actionable tasks: 82 executed
 Verifies
 Verified using v1 scheme (JAR signing): true
@@ -121,14 +121,14 @@ Verified using v4 scheme (APK Signature Scheme v4): false
 Verified for SourceStamp: false
 Number of signers: 1
 Signer #1 certificate DN: C=US, O=Android, CN=Android Debug
-Signer #1 certificate SHA-256 digest: 93589ab2c279d8be74836e11272579fc021829f873a1e99310ee83fa830536ba
-Signer #1 certificate SHA-1 digest: 23e3564ed0c9dcb786cc8473a8950805a318d626
-Signer #1 certificate MD5 digest: 0c347c7bee85d47d971ddc9c11cd8ac2
+Signer #1 certificate SHA-256 digest: caddf733b9d4d4cc50cf87caa218f1b57b5fd1274f17d7701f94a17dff8b15a9
+Signer #1 certificate SHA-1 digest: c98baab342bc6bd15c5211206e4a0c3bda832a22
+Signer #1 certificate MD5 digest: b402d29db64ad42adcdc58dc12e2bf8b
 Signer #1 key algorithm: RSA
 Signer #1 key size (bits): 2048
-Signer #1 public key SHA-256 digest: e5f2c7b99702ed753ab59951235a1c7123773397200e561204482ed86b2ae826
-Signer #1 public key SHA-1 digest: 05098079b7f10ad66dd0959f926a739d5e49bc76
-Signer #1 public key MD5 digest: 3333a36cd68c539c661ab205f60bc6d3
+Signer #1 public key SHA-256 digest: 927972fd7981c8a77e4a796de28dceb0d174ee5d1d4b3248928bc13b6760bdbe
+Signer #1 public key SHA-1 digest: a414688f8a80f94075aea52ece2eb7fb9276f460
+Signer #1 public key MD5 digest: 40fd0e07d5542069e1f3debd2d4eb386
 WARNING: META-INF/com/android/build/gradle/app-metadata.properties not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/androidx.activity_activity-compose.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/androidx.activity_activity-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
@@ -176,7 +176,7 @@ WARNING: META-INF/kotlinx_coroutines_android.version not protected by signature.
 WARNING: META-INF/kotlinx_coroutines_core.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
-07cee8deea6515a49467cd77af3ce9a7e2ac4ac505f49fe08749ffe647addfcb  /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
+1554b48547c3daaffef7652c5e37ad0556cd94db5b1be14f6ae1cde2828ff4b6  /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
 > Task :app:preBuild UP-TO-DATE
@@ -188,9 +188,9 @@ Daemon will be stopped at the end of the build
 > Task :app:mapDebugSourceSetPaths
 > Task :app:generateDebugResources
 > Task :app:packageDebugResources
-> Task :app:mergeDebugResources
 > Task :app:createDebugCompatibleScreenManifests
 > Task :app:extractDeepLinksDebug
+> Task :app:mergeDebugResources
 > Task :app:parseDebugLocalResources
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
@@ -201,20 +201,18 @@ Daemon will be stopped at the end of the build
 > Task :app:mergeDebugAssets
 > Task :app:compressDebugAssets
 > Task :app:desugarDebugFileDependencies
-> Task :app:processDebugManifestForPackage
 > Task :app:mergeDebugJniLibFolders
-> Task :app:processDebugResources
 > Task :app:checkDebugDuplicateClasses
 > Task :app:mergeDebugNativeLibs
-> Task :app:kspDebugKotlin
+> Task :app:processDebugManifestForPackage
 > Task :app:mergeExtDexDebug
 > Task :app:mergeLibDexDebug
-> Task :app:validateSigningDebug
-> Task :app:writeDebugAppMetadata
 
 > Task :app:stripDebugDebugSymbols
 Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libdatastore_shared_counter.so.
 
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
 > Task :app:writeDebugSigningConfigVersions
 > Task :app:buildKotlinToolingMetadata
 > Task :app:preReleaseBuild UP-TO-DATE
@@ -223,96 +221,105 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:mapReleaseSourceSetPaths
 > Task :app:generateReleaseResources
 > Task :app:packageReleaseResources
+> Task :app:processDebugResources
+> Task :app:mergeReleaseResources
 > Task :app:parseReleaseLocalResources
 > Task :app:createReleaseCompatibleScreenManifests
 > Task :app:extractDeepLinksRelease
-> Task :app:mergeReleaseResources
 > Task :app:processReleaseMainManifest
 > Task :app:processReleaseManifest
-> Task :app:processReleaseManifestForPackage
 > Task :app:javaPreCompileRelease
+> Task :app:processReleaseManifestForPackage
 > Task :app:extractProguardFiles
 > Task :app:mergeReleaseJniLibFolders
 > Task :app:mergeReleaseNativeLibs
-> Task :app:processReleaseResources
 
 > Task :app:stripReleaseDebugSymbols
 Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libdatastore_shared_counter.so.
 
-> Task :app:extractReleaseNativeSymbolTables
-> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
 > Task :app:checkReleaseDuplicateClasses
+> Task :app:extractReleaseNativeSymbolTables
 > Task :app:desugarReleaseFileDependencies
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
 > Task :app:mergeReleaseStartupProfile
+> Task :app:processReleaseResources
+> Task :app:kspDebugKotlin
 > Task :app:kspReleaseKotlin
-> Task :app:compileDebugKotlin
-> Task :app:mergeExtDexRelease
-> Task :app:compileDebugJavaWithJavac NO-SOURCE
-> Task :app:dexBuilderDebug
-> Task :app:mergeDebugGlobalSynthetics
-> Task :app:processDebugJavaRes
-> Task :app:mergeProjectDexDebug
 > Task :app:mergeReleaseArtProfile
 > Task :app:mergeReleaseShaders
 > Task :app:compileReleaseShaders NO-SOURCE
 > Task :app:generateReleaseAssets UP-TO-DATE
-> Task :app:mergeDebugJavaResource
 > Task :app:mergeReleaseAssets
 > Task :app:compressReleaseAssets
 > Task :app:extractReleaseVersionControlInfo
+> Task :app:mergeExtDexRelease
+> Task :app:collectReleaseDependencies
+> Task :app:sdkReleaseDependencyData
+> Task :app:writeReleaseAppMetadata
+> Task :app:optimizeReleaseResources
+> Task :app:writeReleaseSigningConfigVersions
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:packageDebugUnitTestForUnitTest
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:generateDebugUnitTestConfig
+> Task :app:compileDebugKotlin
+> Task :app:compileReleaseKotlin
+> Task :app:checkDebugAndroidTestAarMetadata
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:processDebugJavaRes
+> Task :app:compileReleaseJavaWithJavac NO-SOURCE
+> Task :app:mergeProjectDexDebug
+> Task :app:generateReleaseLintVitalReportModel
+> Task :app:mergeDebugJavaResource
+> Task :app:dexBuilderRelease
+> Task :app:mergeReleaseGlobalSynthetics
 > Task :app:packageDebug
 > Task :app:createDebugApkListingFileRedirect
 > Task :app:assembleDebug
-> Task :app:collectReleaseDependencies
-> Task :app:compileReleaseKotlin
-> Task :app:sdkReleaseDependencyData
-> Task :app:compileReleaseJavaWithJavac NO-SOURCE
-> Task :app:optimizeReleaseResources
-> Task :app:generateReleaseLintVitalReportModel
-> Task :app:dexBuilderRelease
 > Task :app:processReleaseJavaRes
-> Task :app:mergeReleaseGlobalSynthetics
-> Task :app:writeReleaseAppMetadata
-> Task :app:writeReleaseSigningConfigVersions
 > Task :app:bundleDebugClassesToRuntimeJar
 > Task :app:bundleDebugClassesToCompileJar
 > Task :app:mergeReleaseJavaResource
 > Task :app:mergeDexRelease
-> Task :app:preDebugUnitTestBuild UP-TO-DATE
-> Task :app:javaPreCompileDebugUnitTest
-> Task :app:packageDebugUnitTestForUnitTest
-> Task :app:generateDebugUnitTestConfig
-> Task :app:preDebugAndroidTestBuild SKIPPED
-> Task :app:kspDebugUnitTestKotlin
-> Task :app:compileReleaseArtProfile
-> Task :app:checkDebugAndroidTestAarMetadata
 > Task :app:generateDebugAndroidTestResValues
 > Task :app:mapDebugAndroidTestSourceSetPaths
 > Task :app:generateDebugAndroidTestResources
+> Task :app:kspDebugUnitTestKotlin
 > Task :app:mergeDebugAndroidTestResources
 > Task :app:processDebugAndroidTestManifest
-> Task :app:packageRelease
-> Task :app:createReleaseApkListingFileRedirect
-> Task :app:javaPreCompileDebugAndroidTest
-> Task :app:mergeDebugAndroidTestShaders
-> Task :app:compileDebugAndroidTestShaders NO-SOURCE
-> Task :app:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :app:compileReleaseArtProfile
+> Task :app:processDebugAndroidTestResources
 > Task :app:compileDebugUnitTestKotlin
-> Task :app:mergeDebugAndroidTestAssets
 > Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
 > Task :app:processDebugUnitTestJavaRes
-> Task :app:processDebugAndroidTestResources
+> Task :app:kspDebugAndroidTestKotlin
 > Task :app:testDebugUnitTest
+> Task :app:packageRelease
+> Task :app:createReleaseApkListingFileRedirect
+> Task :app:mergeDebugAndroidTestShaders
+> Task :app:javaPreCompileDebugAndroidTest
+> Task :app:compileDebugAndroidTestShaders NO-SOURCE
+> Task :app:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :app:mergeDebugAndroidTestAssets
 > Task :app:compressDebugAndroidTestAssets
 > Task :app:desugarDebugAndroidTestFileDependencies
+> Task :app:compileDebugAndroidTestKotlin
 > Task :app:checkDebugAndroidTestDuplicateClasses
-> Task :app:mergeDebugAndroidTestJniLibFolders
+> Task :app:compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :app:dexBuilderDebugAndroidTest
 > Task :app:lintVitalAnalyzeRelease
-> Task :app:kspDebugAndroidTestKotlin
+> Task :app:mergeDebugAndroidTestGlobalSynthetics
+> Task :app:processDebugAndroidTestJavaRes
 > Task :app:lintVitalReportRelease
 > Task :app:lintVitalRelease
 > Task :app:assembleRelease
 > Task :app:mergeLibDexDebugAndroidTest
+> Task :app:mergeDebugAndroidTestJavaResource
+> Task :app:mergeDebugAndroidTestJniLibFolders
+> Task :app:mergeProjectDexDebugAndroidTest
 > Task :app:mergeDebugAndroidTestNativeLibs NO-SOURCE
 > Task :app:stripDebugAndroidTestDebugSymbols NO-SOURCE
 > Task :app:validateSigningDebugAndroidTest
@@ -320,25 +327,18 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :benchmark:preBuild UP-TO-DATE
 > Task :benchmark:preNonMinifiedBenchmarkBuild UP-TO-DATE
 > Task :app:mergeExtDexDebugAndroidTest
-> Task :app:compileDebugAndroidTestKotlin
 > Task :benchmark:checkTestedAppObfuscationNonMinifiedBenchmark
-> Task :app:compileDebugAndroidTestJavaWithJavac NO-SOURCE
-> Task :app:dexBuilderDebugAndroidTest
-> Task :app:mergeDebugAndroidTestGlobalSynthetics
-> Task :app:processDebugAndroidTestJavaRes
 > Task :benchmark:checkKotlinGradlePluginConfigurationErrors SKIPPED
-> Task :app:mergeDebugAndroidTestJavaResource
-> Task :app:mergeProjectDexDebugAndroidTest
 > Task :benchmark:checkNonMinifiedBenchmarkAarMetadata
-> Task :benchmark:generateNonMinifiedBenchmarkResValues
-> Task :benchmark:mapNonMinifiedBenchmarkSourceSetPaths
-> Task :benchmark:generateNonMinifiedBenchmarkResources
-> Task :benchmark:processNonMinifiedBenchmarkManifest
-> Task :benchmark:mergeNonMinifiedBenchmarkResources
-> Task :benchmark:javaPreCompileNonMinifiedBenchmark
 > Task :app:packageDebugAndroidTest
 > Task :app:createDebugAndroidTestApkListingFileRedirect
 > Task :app:assembleDebugAndroidTest
+> Task :benchmark:generateNonMinifiedBenchmarkResValues
+> Task :benchmark:mapNonMinifiedBenchmarkSourceSetPaths
+> Task :benchmark:generateNonMinifiedBenchmarkResources
+> Task :benchmark:mergeNonMinifiedBenchmarkResources
+> Task :benchmark:processNonMinifiedBenchmarkManifest
+> Task :benchmark:javaPreCompileNonMinifiedBenchmark
 > Task :benchmark:mergeNonMinifiedBenchmarkShaders
 > Task :benchmark:compileNonMinifiedBenchmarkShaders NO-SOURCE
 > Task :benchmark:generateNonMinifiedBenchmarkAssets UP-TO-DATE
@@ -346,8 +346,8 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :benchmark:processNonMinifiedBenchmarkResources
 > Task :benchmark:compressNonMinifiedBenchmarkAssets
 > Task :benchmark:checkNonMinifiedBenchmarkDuplicateClasses
-> Task :benchmark:compileNonMinifiedBenchmarkKotlin
 > Task :benchmark:desugarNonMinifiedBenchmarkFileDependencies
+> Task :benchmark:compileNonMinifiedBenchmarkKotlin
 > Task :benchmark:compileNonMinifiedBenchmarkJavaWithJavac NO-SOURCE
 > Task :benchmark:mergeLibDexNonMinifiedBenchmark
 > Task :benchmark:dexBuilderNonMinifiedBenchmark
@@ -367,12 +367,12 @@ Unable to strip the following libraries, packaging them as they are: libbenchmar
 > Task :benchmark:packageNonMinifiedBenchmark
 > Task :benchmark:createNonMinifiedBenchmarkApkListingFileRedirect
 > Task :benchmark:assembleNonMinifiedBenchmark
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787842315519.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787843262152.json
 Persisted dependency lock state for buildscript of project ':'
 Persisted dependency lock state for project ':app'
 Persisted dependency lock state for project ':benchmark'
 
-BUILD SUCCESSFUL in 3m 26s
+BUILD SUCCESSFUL in 2m 8s
 149 actionable tasks: 149 executed
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
@@ -392,8 +392,8 @@ Daemon will be stopped at the end of the build
 > Task :screenshot:compileDebugJavaWithJavac NO-SOURCE
 > Task :screenshot:bundleLibRuntimeToJarDebug
 > Task :screenshot:processDebugJavaRes NO-SOURCE
-> Task :screenshot:bundleLibCompileToJarDebug
 > Task :screenshot:generateDebugUnitTestStubRFile
+> Task :screenshot:bundleLibCompileToJarDebug
 > Task :screenshot:compileDebugUnitTestKotlin
 > Task :screenshot:processDebugUnitTestJavaRes
 > Task :screenshot:compileDebugUnitTestJavaWithJavac NO-SOURCE
@@ -401,11 +401,11 @@ Daemon will be stopped at the end of the build
 
 > Task :screenshot:testDebugUnitTest
 See the Paparazzi report at: file:///home/runner/work/Base-file/Base-file/android-build/paparazzi-smoke-test/screenshot/build/reports/paparazzi/debug/index.html
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787842522399.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787843390792.json
 Persisted dependency lock state for buildscript of project ':'
 Persisted dependency lock state for project ':screenshot'
 
-BUILD SUCCESSFUL in 58s
+BUILD SUCCESSFUL in 40s
 15 actionable tasks: 15 executed
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
@@ -418,11 +418,11 @@ Resolved 67 Detekt/KtLint quality-tool artifacts
 
 > Task :compileJava NO-SOURCE
 > Task :classes UP-TO-DATE
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787842581394.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787843431568.json
 Persisted dependency lock state for buildscript of project ':'
 Persisted dependency lock state for project ':'
 
-BUILD SUCCESSFUL in 28s
+BUILD SUCCESSFUL in 22s
 2 actionable tasks: 2 executed
 Resolved Gradle module cache size:
 710M	/tmp/base-file-gradle-home/caches/modules-2
@@ -554,12 +554,12 @@ Daemon will be stopped at the end of the build
 > Task :app:packageDebug UP-TO-DATE
 > Task :app:createDebugApkListingFileRedirect UP-TO-DATE
 > Task :app:assembleDebug UP-TO-DATE
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787842623420.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787843469011.json
 
-BUILD SUCCESSFUL in 11s
+BUILD SUCCESSFUL in 7s
 35 actionable tasks: 35 up-to-date
 Packaging the audited toolchain for repository publication
-Local Maven repository: 728 coordinates, 1670 files, 709.9 MiB
+Local Maven repository: 728 coordinates, 1674 files, 711.6 MiB
 Tikaro coordinate audit: all 117 pinned direct coordinates are present in a 728-coordinate offline graph
 Legal inventory: 728 coordinates, 37 unique NOTICE texts
 Largest repository artifacts before publication:
@@ -591,7 +591,7 @@ Largest repository artifacts before publication:
 8047697 /home/runner/work/Base-file/Base-file/android-build/maven/org/codehaus/groovy/groovy/3.0.21/groovy-3.0.21.jar
 8047697 /home/runner/work/Base-file/Base-file/android-build/gradle/gradle-8.9/lib/groovy-3.0.21.jar
 7697566 /home/runner/work/Base-file/Base-file/android-build/maven/com/android/tools/analytics-library/protos/31.4.2/protos-31.4.2.jar
-6826845 /home/runner/work/Base-file/Base-file/android-build/tikaro-stack-smoke-test/.gradle/8.9/executionHistory/executionHistory.bin
+6826838 /home/runner/work/Base-file/Base-file/android-build/tikaro-stack-smoke-test/.gradle/8.9/executionHistory/executionHistory.bin
 6428331 /home/runner/work/Base-file/Base-file/android-build/maven/it/unimi/dsi/fastutil-core/8.5.12/fastutil-core-8.5.12.jar
 sort: write failed: 'standard output': Broken pipe
 sort: write error
@@ -627,43 +627,47 @@ WARNING: platform-tools package is not installed.
 > Task :app:packageDebugResources
 > Task :app:createDebugCompatibleScreenManifests
 > Task :app:extractDeepLinksDebug
-> Task :app:mergeDebugResources
 > Task :app:parseDebugLocalResources
+> Task :app:mergeDebugResources
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
 > Task :app:compressDebugAssets
+> Task :app:processDebugResources
 > Task :app:desugarDebugFileDependencies
 > Task :app:mergeDebugJniLibFolders
 > Task :app:checkDebugDuplicateClasses
-> Task :app:processDebugManifestForPackage
 > Task :app:mergeDebugNativeLibs
-> Task :app:processDebugResources
-> Task :app:mergeExtDexDebug
-> Task :app:mergeLibDexDebug
 
-> Task :app:stripDebugDebugSymbols
-Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so.
-
-> Task :app:validateSigningDebug
-> Task :app:writeDebugAppMetadata
-> Task :app:writeDebugSigningConfigVersions
 > Task :app:compileDebugKotlin
+e: The daemon has terminated unexpectedly on startup attempt #1 with error code: 0. The daemon process output:
+    1. Kotlin compile daemon is ready
+
 > Task :app:compileDebugJavaWithJavac NO-SOURCE
 > Task :app:dexBuilderDebug
 > Task :app:mergeDebugGlobalSynthetics
 > Task :app:processDebugJavaRes
+> Task :app:mergeLibDexDebug
 > Task :app:mergeProjectDexDebug
+
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so.
+
 > Task :app:mergeDebugJavaResource
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:mergeExtDexDebug
 > Task :app:packageDebug
 > Task :app:createDebugApkListingFileRedirect
 > Task :app:assembleDebug
 
-BUILD SUCCESSFUL in 1m 50s
+BUILD SUCCESSFUL in 1m 10s
 35 actionable tasks: 35 executed
 Verifies
 Verified using v1 scheme (JAR signing): true
@@ -674,14 +678,14 @@ Verified using v4 scheme (APK Signature Scheme v4): false
 Verified for SourceStamp: false
 Number of signers: 1
 Signer #1 certificate DN: C=US, O=Android, CN=Android Debug
-Signer #1 certificate SHA-256 digest: c831a5d2083a3a66589987ddfa023b2571bd24ffc5caf25240592ad6a97c63d2
-Signer #1 certificate SHA-1 digest: e1966b93c80c9de726dcf0d0b91533dd0ba45ea0
-Signer #1 certificate MD5 digest: 83632b6bc9904df5ebff8e9ab71de987
+Signer #1 certificate SHA-256 digest: 6df214f8641c5642efb6ae1e97066d2848e6e8ca50a72e2c2c4eb0f8368d749f
+Signer #1 certificate SHA-1 digest: 411cc24027164ab21c86a6e64d5bca4fec57375a
+Signer #1 certificate MD5 digest: 082d56428a4996b2ef5916f9cf39c64c
 Signer #1 key algorithm: RSA
 Signer #1 key size (bits): 2048
-Signer #1 public key SHA-256 digest: e653dd271cc9307845ce5d4c0b724969910cc06984910013d279471e9a30fb96
-Signer #1 public key SHA-1 digest: 9c40093ea527d88c859888346bc5319e7ad56d61
-Signer #1 public key MD5 digest: ee32af47b709cafc13d82768416873ba
+Signer #1 public key SHA-256 digest: 56962016b94a7622ef69bfada6c45b0ea11bfa3f93cb18ef20e544fe4b1f0905
+Signer #1 public key SHA-1 digest: d08d540cdeba7a3ce087662012eea0dda0f7b5f3
+Signer #1 public key MD5 digest: a7f43e21d552f415e5475d4601b816df
 WARNING: META-INF/com/android/build/gradle/app-metadata.properties not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/androidx.activity_activity-compose.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/androidx.activity_activity-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
@@ -730,7 +734,7 @@ WARNING: META-INF/kotlinx_coroutines_core.version not protected by signature. Un
 WARNING: META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 APK: /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
-dd357ee2f37a801a52fb1e0a9ff611f60cc791f4d6d777c06e2d16a8337a9ad8  /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
+85607c40fb0917553e9ba61963e453ea664cad018288490ae61a19720d6ddc8d  /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
         6  1981-01-01 01:01   META-INF/androidx.compose.runtime_runtime.version
 Running Tikaro stack, Paparazzi, benchmark, and quality checks offline
 Tikaro coordinate audit: all 117 pinned direct coordinates are present in a 728-coordinate offline graph
@@ -752,13 +756,13 @@ WARNING: platform-tools package is not installed.
 > Task :app:mergeDebugResources
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
 > Task :app:compressDebugAssets
-> Task :app:processDebugManifestForPackage
 > Task :app:processDebugResources
 > Task :app:desugarDebugFileDependencies
 > Task :app:mergeDebugJniLibFolders
@@ -776,8 +780,8 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:writeDebugSigningConfigVersions
 > Task :app:buildKotlinToolingMetadata
 > Task :app:preReleaseBuild UP-TO-DATE
-> Task :app:generateReleaseResValues
 > Task :app:checkReleaseAarMetadata
+> Task :app:generateReleaseResValues
 > Task :app:mapReleaseSourceSetPaths
 > Task :app:generateReleaseResources
 > Task :app:packageReleaseResources
@@ -804,7 +808,6 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:mergeReleaseStartupProfile
 > Task :app:kspReleaseKotlin
 > Task :app:compileDebugKotlin
-> Task :app:mergeExtDexRelease
 > Task :app:compileDebugJavaWithJavac NO-SOURCE
 > Task :app:dexBuilderDebug
 > Task :app:mergeDebugGlobalSynthetics
@@ -831,18 +834,137 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:bundleDebugClassesToCompileJar
 > Task :app:javaPreCompileDebugUnitTest
 > Task :app:compileReleaseKotlin
-> Task :app:kspDebugUnitTestKotlin FAILED
+> Task :app:mergeExtDexRelease
+> Task :app:compileReleaseJavaWithJavac NO-SOURCE
+> Task :app:kspDebugUnitTestKotlin
+> Task :app:generateReleaseLintVitalReportModel
+> Task :app:dexBuilderRelease
+> Task :app:processReleaseJavaRes
+> Task :app:mergeReleaseGlobalSynthetics
+> Task :app:mergeReleaseJavaResource
+> Task :app:packageDebugUnitTestForUnitTest
+> Task :app:generateDebugUnitTestConfig
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:checkDebugAndroidTestAarMetadata
+> Task :app:processDebugUnitTestJavaRes
+> Task :app:mergeDexRelease
+> Task :app:testDebugUnitTest
+> Task :app:generateDebugAndroidTestResValues
+> Task :app:mapDebugAndroidTestSourceSetPaths
+> Task :app:generateDebugAndroidTestResources
+> Task :app:processDebugAndroidTestManifest
+> Task :app:javaPreCompileDebugAndroidTest
+> Task :app:mergeDebugAndroidTestResources
+> Task :app:mergeDebugAndroidTestShaders
+> Task :app:compileDebugAndroidTestShaders NO-SOURCE
+> Task :app:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :app:mergeDebugAndroidTestAssets
+> Task :app:compressDebugAndroidTestAssets
+> Task :app:processDebugAndroidTestResources
+> Task :app:desugarDebugAndroidTestFileDependencies
+> Task :app:compileReleaseArtProfile
+> Task :app:checkDebugAndroidTestDuplicateClasses
+> Task :app:kspDebugAndroidTestKotlin
+> Task :app:lintVitalAnalyzeRelease
+> Task :app:packageRelease
+> Task :app:createReleaseApkListingFileRedirect
+> Task :app:lintVitalReportRelease
+> Task :app:mergeLibDexDebugAndroidTest
+> Task :app:lintVitalRelease
+> Task :app:assembleRelease
+> Task :app:mergeDebugAndroidTestJniLibFolders
+> Task :app:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebugAndroidTest
+> Task :app:writeDebugAndroidTestSigningConfigVersions
+> Task :benchmark:preBuild UP-TO-DATE
+> Task :benchmark:preNonMinifiedBenchmarkBuild UP-TO-DATE
+> Task :benchmark:checkTestedAppObfuscationNonMinifiedBenchmark
+> Task :benchmark:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:mergeExtDexDebugAndroidTest
+> Task :app:compileDebugAndroidTestKotlin
+> Task :benchmark:checkNonMinifiedBenchmarkAarMetadata
+> Task :app:compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :app:dexBuilderDebugAndroidTest
+> Task :app:mergeDebugAndroidTestGlobalSynthetics
+> Task :app:processDebugAndroidTestJavaRes
+> Task :benchmark:generateNonMinifiedBenchmarkResValues
+> Task :app:mergeProjectDexDebugAndroidTest
+> Task :benchmark:mapNonMinifiedBenchmarkSourceSetPaths
+> Task :benchmark:generateNonMinifiedBenchmarkResources
+> Task :app:mergeDebugAndroidTestJavaResource
+> Task :benchmark:mergeNonMinifiedBenchmarkResources
+> Task :benchmark:processNonMinifiedBenchmarkManifest
+> Task :app:packageDebugAndroidTest
+> Task :app:createDebugAndroidTestApkListingFileRedirect
+> Task :app:assembleDebugAndroidTest
+> Task :benchmark:javaPreCompileNonMinifiedBenchmark
+> Task :benchmark:mergeNonMinifiedBenchmarkShaders
+> Task :benchmark:compileNonMinifiedBenchmarkShaders NO-SOURCE
+> Task :benchmark:generateNonMinifiedBenchmarkAssets UP-TO-DATE
+> Task :benchmark:processNonMinifiedBenchmarkResources
+> Task :benchmark:mergeNonMinifiedBenchmarkAssets
+> Task :benchmark:compileNonMinifiedBenchmarkKotlin
+> Task :benchmark:compileNonMinifiedBenchmarkJavaWithJavac NO-SOURCE
+> Task :benchmark:checkNonMinifiedBenchmarkDuplicateClasses
+> Task :benchmark:compressNonMinifiedBenchmarkAssets
+> Task :benchmark:desugarNonMinifiedBenchmarkFileDependencies
+> Task :benchmark:mergeLibDexNonMinifiedBenchmark
+> Task :benchmark:dexBuilderNonMinifiedBenchmark
+> Task :benchmark:mergeNonMinifiedBenchmarkGlobalSynthetics
+> Task :benchmark:processNonMinifiedBenchmarkJavaRes
+> Task :benchmark:mergeNonMinifiedBenchmarkJniLibFolders
+> Task :benchmark:mergeProjectDexNonMinifiedBenchmark
+> Task :benchmark:validateSigningNonMinifiedBenchmark
+> Task :benchmark:writeNonMinifiedBenchmarkSigningConfigVersions
+> Task :benchmark:mergeNonMinifiedBenchmarkNativeLibs
+> Task :benchmark:mergeNonMinifiedBenchmarkJavaResource
+
+> Task :benchmark:stripNonMinifiedBenchmarkDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libbenchmarkNative.so, libtracing_perfetto.so.
+
+> Task :benchmark:mergeExtDexNonMinifiedBenchmark
+> Task :benchmark:packageNonMinifiedBenchmark
+> Task :benchmark:createNonMinifiedBenchmarkApkListingFileRedirect
+> Task :benchmark:assembleNonMinifiedBenchmark
+
+BUILD SUCCESSFUL in 2m 2s
+149 actionable tasks: 149 executed
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+WARNING: platform-tools package is not installed.
+> Task :screenshot:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :screenshot:preBuild UP-TO-DATE
+> Task :screenshot:preDebugBuild UP-TO-DATE
+> Task :screenshot:generateDebugResValues
+> Task :screenshot:generateDebugResources
+> Task :screenshot:packageDebugResources
+> Task :screenshot:preDebugUnitTestBuild UP-TO-DATE
+> Task :screenshot:javaPreCompileDebug
+> Task :screenshot:parseDebugLocalResources
+> Task :screenshot:preparePaparazziDebugResources
+> Task :screenshot:javaPreCompileDebugUnitTest
+> Task :screenshot:generateDebugRFile
+> Task :screenshot:compileDebugKotlin NO-SOURCE
+> Task :screenshot:compileDebugJavaWithJavac NO-SOURCE
+> Task :screenshot:bundleLibRuntimeToJarDebug
+> Task :screenshot:generateDebugUnitTestStubRFile
+> Task :screenshot:processDebugJavaRes NO-SOURCE
+> Task :screenshot:bundleLibCompileToJarDebug
+> Task :screenshot:compileDebugUnitTestKotlin FAILED
 
 FAILURE: Build failed with an exception.
 
 * What went wrong:
-Execution failed for task ':app:kspDebugUnitTestKotlin'.
-> Error while evaluating property 'friendPathsSet$kotlin_gradle_plugin_common' of task ':app:kspDebugUnitTestKotlin'.
-   > Could not resolve all files for configuration ':app:debugUnitTestCompileClasspath'.
-      > Failed to transform Turbine-jvm.jar (app.cash.turbine:turbine-jvm:1.2.0) to match attributes {artifactType=android-classes-jar, org.gradle.category=library, org.gradle.jvm.environment=standard-jvm, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-api, org.jetbrains.kotlin.platform.type=jvm}.
-         > Could not find Turbine-jvm.jar (app.cash.turbine:turbine-jvm:1.2.0).
+Execution failed for task ':screenshot:compileDebugUnitTestKotlin'.
+> Error while evaluating property 'friendPathsSet$kotlin_gradle_plugin_common' of task ':screenshot:compileDebugUnitTestKotlin'.
+   > Could not resolve all files for configuration ':screenshot:debugUnitTestCompileClasspath'.
+      > Failed to transform guava-33.3.1-android.jar (com.google.guava:guava:33.3.1-jre) to match attributes {artifactType=android-classes-jar, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.jvm.environment=android, org.gradle.jvm.version=8, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-api}.
+         > Could not find guava-33.3.1-android.jar (com.google.guava:guava:33.3.1-jre).
            Searched in the following locations:
-               file:/home/runner/work/Base-file/Base-file/android-build/maven/app/cash/turbine/turbine-jvm/1.2.0/turbine-jvm-1.2.0.jar
+               file:/home/runner/work/Base-file/Base-file/android-build/maven/com/google/guava/guava/33.3.1-android/guava-33.3.1-android.jar
 
 * Try:
 > Run with --info or --debug option to get more log output.
@@ -850,7 +972,7 @@ Execution failed for task ':app:kspDebugUnitTestKotlin'.
 > Get more help at https://help.gradle.org.
 
 * Exception is:
-org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:kspDebugUnitTestKotlin'.
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':screenshot:compileDebugUnitTestKotlin'.
 	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:38)
 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
@@ -874,7 +996,7 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:ksp
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
-Caused by: org.gradle.api.internal.tasks.properties.PropertyEvaluationException: Error while evaluating property 'friendPathsSet$kotlin_gradle_plugin_common' of task ':app:kspDebugUnitTestKotlin'.
+Caused by: org.gradle.api.internal.tasks.properties.PropertyEvaluationException: Error while evaluating property 'friendPathsSet$kotlin_gradle_plugin_common' of task ':screenshot:compileDebugUnitTestKotlin'.
 	at org.gradle.api.internal.tasks.properties.InputParameterUtils.prepareInputParameterValue(InputParameterUtils.java:32)
 	at org.gradle.api.internal.tasks.execution.TaskExecution.lambda$visitRegularInputs$1(TaskExecution.java:317)
 	at org.gradle.internal.execution.impl.DefaultInputFingerprinter$InputCollectingVisitor.visitInputProperty(DefaultInputFingerprinter.java:103)
@@ -945,7 +1067,7 @@ Caused by: org.gradle.api.internal.tasks.properties.PropertyEvaluationException:
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
-Caused by: org.gradle.api.internal.artifacts.ivyservice.TypedResolveException: Could not resolve all files for configuration ':app:debugUnitTestCompileClasspath'.
+Caused by: org.gradle.api.internal.artifacts.ivyservice.TypedResolveException: Could not resolve all files for configuration ':screenshot:debugUnitTestCompileClasspath'.
 	at org.gradle.api.internal.artifacts.ResolveExceptionMapper.mapFailure(ResolveExceptionMapper.java:68)
 	at org.gradle.api.internal.artifacts.ResolveExceptionMapper.mapFailures(ResolveExceptionMapper.java:60)
 	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$DefaultResolutionHost.mapFailure(DefaultConfiguration.java:1988)
@@ -1015,7 +1137,7 @@ Caused by: org.gradle.api.internal.artifacts.ivyservice.TypedResolveException: C
 	at org.gradle.api.internal.tasks.properties.InputParameterUtils.prepareInputParameterValue(InputParameterUtils.java:38)
 	at org.gradle.api.internal.tasks.properties.InputParameterUtils.prepareInputParameterValue(InputParameterUtils.java:30)
 	... 69 more
-Caused by: org.gradle.api.internal.artifacts.transform.TransformException: Failed to transform Turbine-jvm.jar (app.cash.turbine:turbine-jvm:1.2.0) to match attributes {artifactType=android-classes-jar, org.gradle.category=library, org.gradle.jvm.environment=standard-jvm, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-api, org.jetbrains.kotlin.platform.type=jvm}.
+Caused by: org.gradle.api.internal.artifacts.transform.TransformException: Failed to transform guava-33.3.1-android.jar (com.google.guava:guava:33.3.1-jre) to match attributes {artifactType=android-classes-jar, org.gradle.category=library, org.gradle.dependency.bundling=external, org.gradle.jvm.environment=android, org.gradle.jvm.version=8, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-api}.
 	at org.gradle.api.internal.artifacts.transform.TransformingAsyncArtifactListener$TransformedArtifact.lambda$visit$4(TransformingAsyncArtifactListener.java:243)
 	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:293)
 	at org.gradle.api.internal.artifacts.transform.TransformingAsyncArtifactListener$TransformedArtifact.visit(TransformingAsyncArtifactListener.java:235)
@@ -1037,9 +1159,9 @@ Caused by: org.gradle.api.internal.artifacts.transform.TransformException: Faile
 	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.artifact.SelectedArtifactSet.visitFiles(SelectedArtifactSet.java:34)
 	at org.gradle.api.internal.artifacts.configurations.ResolutionBackedFileCollection.visitContents(ResolutionBackedFileCollection.java:73)
 	... 131 more
-Caused by: org.gradle.internal.resolve.ArtifactNotFoundException: Could not find Turbine-jvm.jar (app.cash.turbine:turbine-jvm:1.2.0).
+Caused by: org.gradle.internal.resolve.ArtifactNotFoundException: Could not find guava-33.3.1-android.jar (com.google.guava:guava:33.3.1-jre).
 Searched in the following locations:
-    file:/home/runner/work/Base-file/Base-file/android-build/maven/app/cash/turbine/turbine-jvm/1.2.0/turbine-jvm-1.2.0.jar
+    file:/home/runner/work/Base-file/Base-file/android-build/maven/com/google/guava/guava/33.3.1-android/guava-33.3.1-android.jar
 	at org.gradle.internal.resolve.result.DefaultBuildableArtifactFileResolveResult.notFound(DefaultBuildableArtifactFileResolveResult.java:28)
 	at org.gradle.api.internal.artifacts.repositories.resolver.ExternalResourceResolver$RemoteRepositoryAccess.resolveArtifact(ExternalResourceResolver.java:479)
 	at org.gradle.api.internal.artifacts.ivyservice.ivyresolve.CachingModuleComponentRepository$ResolveAndCacheRepositoryAccess.resolveArtifact(CachingModuleComponentRepository.java:463)
@@ -1069,12 +1191,77 @@ Searched in the following locations:
 	at org.gradle.internal.resources.AbstractResourceLockRegistry.whileDisallowingLockChanges(AbstractResourceLockRegistry.java:50)
 	at org.gradle.internal.work.DefaultWorkerLeaseService.whileDisallowingProjectLockChanges(DefaultWorkerLeaseService.java:239)
 	at org.gradle.internal.operations.DefaultBuildOperationQueue$WorkerRunnable.lambda$runBatch$1(DefaultBuildOperationQueue.java:238)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:129)
 	at org.gradle.internal.operations.DefaultBuildOperationQueue$WorkerRunnable.runBatch(DefaultBuildOperationQueue.java:224)
 	at org.gradle.internal.operations.DefaultBuildOperationQueue$WorkerRunnable.run(DefaultBuildOperationQueue.java:192)
+	at org.gradle.internal.operations.DefaultBuildOperationQueue.waitForCompletion(DefaultBuildOperationQueue.java:105)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.executeInParallel(DefaultBuildOperationExecutor.java:106)
+	at org.gradle.internal.operations.DefaultBuildOperationExecutor.runAll(DefaultBuildOperationExecutor.java:65)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.artifact.ParallelResolveArtifactSet$VisitingSet.visit(ParallelResolveArtifactSet.java:66)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.artifact.ResolvedArtifactSetResolver$1.run(ResolvedArtifactSetResolver.java:65)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.artifact.ResolvedArtifactSetResolver.visitArtifacts(ResolvedArtifactSetResolver.java:62)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.artifact.ResolvedArtifactSetResolver.lambda$visitInUnmanagedWorkerThread$0(ResolvedArtifactSetResolver.java:58)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsUnmanagedWorkerThread(DefaultWorkerLeaseService.java:143)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.artifact.ResolvedArtifactSetResolver.visitInUnmanagedWorkerThread(ResolvedArtifactSetResolver.java:58)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.artifact.DefaultSelectedArtifactSet.visitArtifacts(DefaultSelectedArtifactSet.java:59)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.artifact.SelectedArtifactSet.visitFiles(SelectedArtifactSet.java:34)
+	at org.gradle.api.internal.artifacts.configurations.ResolutionBackedFileCollection.visitContents(ResolutionBackedFileCollection.java:73)
+	at org.gradle.api.internal.file.AbstractFileCollection.getFiles(AbstractFileCollection.java:123)
+	at org.gradle.api.internal.artifacts.transform.DefaultTransformUpstreamDependenciesResolver$FinalizeTransformDependencies.calculateValue(DefaultTransformUpstreamDependenciesResolver.java:224)
+	at org.gradle.api.internal.artifacts.transform.DefaultTransformUpstreamDependenciesResolver$FinalizeTransformDependencies.calculateValue(DefaultTransformUpstreamDependenciesResolver.java:217)
+	at org.gradle.internal.model.CalculatedValueContainer$CalculationState.lambda$attachValue$0(CalculatedValueContainer.java:228)
+	at org.gradle.internal.Try.ofFailable(Try.java:50)
+	at org.gradle.internal.model.CalculatedValueContainer$CalculationState.attachValue(CalculatedValueContainer.java:223)
+	at org.gradle.internal.model.CalculatedValueContainer.finalizeIfNotAlready(CalculatedValueContainer.java:194)
+	at org.gradle.internal.model.CalculatedValueContainer.run(CalculatedValueContainer.java:180)
+	at org.gradle.execution.plan.ActionNode.execute(ActionNode.java:94)
+	at org.gradle.execution.plan.WorkNodeExecutor.execute(WorkNodeExecutor.java:27)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
+	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	... 2 more
 
 
-BUILD FAILED in 2m 31s
-76 actionable tasks: 76 executed
+BUILD FAILED in 14s
+12 actionable tasks: 12 executed
