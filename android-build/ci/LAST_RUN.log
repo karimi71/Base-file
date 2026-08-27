@@ -27,20 +27,27 @@ Daemon will be stopped at the end of the build
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
 > Task :app:compressDebugAssets
-> Task :app:desugarDebugFileDependencies
 > Task :app:processDebugManifestForPackage
-> Task :app:checkDebugDuplicateClasses
 > Task :app:processDebugResources
-> Task :app:mergeExtDexDebug
-> Task :app:mergeLibDexDebug
+> Task :app:desugarDebugFileDependencies
 > Task :app:mergeDebugJniLibFolders
+> Task :app:checkDebugDuplicateClasses
 > Task :app:mergeDebugNativeLibs
-> Task :app:validateSigningDebug
-> Task :app:writeDebugAppMetadata
+> Task :app:compileDebugKotlin
+> Task :app:mergeExtDexDebug
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:processDebugJavaRes
+> Task :app:mergeLibDexDebug
+> Task :app:mergeProjectDexDebug
 
 > Task :app:stripDebugDebugSymbols
 Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so.
 
+> Task :app:mergeDebugJavaResource
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
 > Task :app:writeDebugSigningConfigVersions
 > Task :app:buildKotlinToolingMetadata
 > Task :app:preReleaseBuild UP-TO-DATE
@@ -51,38 +58,30 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:packageReleaseResources
 > Task :app:createReleaseCompatibleScreenManifests
 > Task :app:extractDeepLinksRelease
-> Task :app:parseReleaseLocalResources
 > Task :app:processReleaseMainManifest
 > Task :app:processReleaseManifest
-> Task :app:javaPreCompileRelease
+> Task :app:parseReleaseLocalResources
 > Task :app:processReleaseManifestForPackage
+> Task :app:javaPreCompileRelease
 > Task :app:extractProguardFiles
 > Task :app:mergeReleaseJniLibFolders
-> Task :app:mergeReleaseResources
 > Task :app:mergeReleaseNativeLibs
 
 > Task :app:stripReleaseDebugSymbols
 Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so.
 
 > Task :app:checkReleaseDuplicateClasses
-> Task :app:extractReleaseNativeSymbolTables
 > Task :app:desugarReleaseFileDependencies
+> Task :app:extractReleaseNativeSymbolTables
 > Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
 > Task :app:mergeReleaseStartupProfile
+> Task :app:mergeReleaseResources
 > Task :app:processReleaseResources
-> Task :app:compileDebugKotlin
-> Task :app:mergeExtDexRelease
-> Task :app:compileDebugJavaWithJavac NO-SOURCE
-> Task :app:dexBuilderDebug
-> Task :app:mergeDebugGlobalSynthetics
-> Task :app:processDebugJavaRes
-> Task :app:mergeProjectDexDebug
 > Task :app:mergeReleaseArtProfile
 > Task :app:mergeReleaseShaders
 > Task :app:compileReleaseShaders NO-SOURCE
 > Task :app:generateReleaseAssets UP-TO-DATE
 > Task :app:mergeReleaseAssets
-> Task :app:mergeDebugJavaResource
 > Task :app:compressReleaseAssets
 > Task :app:extractReleaseVersionControlInfo
 > Task :app:packageDebug
@@ -95,10 +94,11 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:writeReleaseSigningConfigVersions
 > Task :app:compileReleaseKotlin
 > Task :app:compileReleaseJavaWithJavac NO-SOURCE
+> Task :app:mergeExtDexRelease
 > Task :app:generateReleaseLintVitalReportModel
 > Task :app:dexBuilderRelease
-> Task :app:processReleaseJavaRes
 > Task :app:mergeReleaseGlobalSynthetics
+> Task :app:processReleaseJavaRes
 > Task :app:mergeReleaseJavaResource
 > Task :app:mergeDexRelease
 > Task :app:compileReleaseArtProfile
@@ -108,9 +108,9 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:lintVitalReportRelease
 > Task :app:lintVitalRelease
 > Task :app:assembleRelease
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787861392645.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787861888658.json
 
-BUILD SUCCESSFUL in 3m
+BUILD SUCCESSFUL in 3m 10s
 82 actionable tasks: 82 executed
 Verifies
 Verified using v1 scheme (JAR signing): true
@@ -121,14 +121,14 @@ Verified using v4 scheme (APK Signature Scheme v4): false
 Verified for SourceStamp: false
 Number of signers: 1
 Signer #1 certificate DN: C=US, O=Android, CN=Android Debug
-Signer #1 certificate SHA-256 digest: 9444772d5330922394e9f95b1f981019cd94af9b3ed5d4081ac9e7f9f082622e
-Signer #1 certificate SHA-1 digest: c2f1350a80021cc7fdf51799aeb0f8304bc8f189
-Signer #1 certificate MD5 digest: 749fc978d17701c194a25ceaa539fef1
+Signer #1 certificate SHA-256 digest: 50df609d3718cd1b62c80f41814d6482ca3df077ed1ba420058bdd6a18df24ea
+Signer #1 certificate SHA-1 digest: 496da7a95e9454a6b5c17d9ba11b1a575a9eb8b8
+Signer #1 certificate MD5 digest: 04bca1b2358e7d637e8528151520cba5
 Signer #1 key algorithm: RSA
 Signer #1 key size (bits): 2048
-Signer #1 public key SHA-256 digest: 04ed5560c348731f74d4aed7ce529fec9e15a32adb6846d08b0b60babdea9a3c
-Signer #1 public key SHA-1 digest: 270f05a59ab1fcd79d46abafc78b3e813cc60dad
-Signer #1 public key MD5 digest: 007dff3f77f5a308e9e6e876f9fcf902
+Signer #1 public key SHA-256 digest: 968e77a8b5b6daa36ff6665f913af8338a90fa87eec1119e77a3febfbfadf77a
+Signer #1 public key SHA-1 digest: 81bd1e18fbf540b06fc3a846670602d7326a4df7
+Signer #1 public key MD5 digest: 9efa3385ee29aa43785f521a9c5df1d0
 WARNING: META-INF/com/android/build/gradle/app-metadata.properties not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/androidx.activity_activity-compose.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/androidx.activity_activity-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
@@ -176,7 +176,7 @@ WARNING: META-INF/kotlinx_coroutines_android.version not protected by signature.
 WARNING: META-INF/kotlinx_coroutines_core.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
-3fc3f30859818ef6d8d10afcd0ef433a61009fd1e4b559dc1217fa1964bab317  /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
+621f30835eabeab423b1ad7245e2ecc96055861e55c3f892801a03801466f892  /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
 
@@ -251,7 +251,7 @@ To learn more, see the documentation of the '@ConsistentCopyVisibility' and '@Ex
 This will become an error in Kotlin 2.1.
 
 > Task :roborazzi:compileDebugUnitTestKotlin
-w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/src/test/kotlin/dev/basefile/future/roborazzi/CoilLocalIntegrationTest.kt:73:32 This declaration needs opt-in. Its usage should be marked with '@coil3.annotation.ExperimentalCoilApi' or '@OptIn(coil3.annotation.ExperimentalCoilApi::class)'
+w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/src/test/kotlin/dev/basefile/future/roborazzi/CoilLocalIntegrationTest.kt:80:32 This declaration needs opt-in. Its usage should be marked with '@coil3.annotation.ExperimentalCoilApi' or '@OptIn(coil3.annotation.ExperimentalCoilApi::class)'
 w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/src/test/kotlin/dev/basefile/future/roborazzi/RoborazziVisualMatrixTest.kt:73:51 This declaration needs opt-in. Its usage should be marked with '@com.github.takahirom.roborazzi.ExperimentalRoborazziApi' or '@OptIn(com.github.takahirom.roborazzi.ExperimentalRoborazziApi::class)'
 w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/src/test/kotlin/dev/basefile/future/roborazzi/RoborazziVisualMatrixTest.kt:74:71 This declaration needs opt-in. Its usage should be marked with '@com.github.takahirom.roborazzi.ExperimentalRoborazziApi' or '@OptIn(com.github.takahirom.roborazzi.ExperimentalRoborazziApi::class)'
 w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/src/test/kotlin/dev/basefile/future/roborazzi/RoborazziVisualMatrixTest.kt:74:87 This declaration needs opt-in. Its usage should be marked with '@com.github.takahirom.roborazzi.ExperimentalRoborazziApi' or '@OptIn(com.github.takahirom.roborazzi.ExperimentalRoborazziApi::class)'
@@ -262,8 +262,7 @@ w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke
 
 > Task :roborazzi:testDebugUnitTest
 
-CoilLocalIntegrationTest > local SVG and GIF decode and second SVG load hits memory cache FAILED
-    java.lang.AssertionError at CoilLocalIntegrationTest.kt:37
+CoilLocalIntegrationTest > local SVG and GIF decode and second SVG load hits memory cache PASSED
 
 CoilLocalIntegrationTest > network-shaped request stays fake and cancellation disposes work PASSED
 
@@ -289,419 +288,596 @@ RoomMigrationIntegrationTest > Room migrates real framework SQLite file then enf
 
 SecurityMigrationIntegrationTest > legacy preferences migrate to authenticated file before source is cleared PASSED
 
-13 tests completed, 1 failed
-
-> Task :roborazzi:testDebugUnitTest FAILED
 > Task :roborazzi:finalizeTestRoborazziDebug
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787861570158.json
+> Task :roborazzi:recordRoborazziDebug
+> Task :jvm:processResources
+> Task :jvm:classes
+> Task :jvm:jar
+> Task :jvm:extractIncludeTestProto
+> Task :jvm:extractTestProto
+> Task :jvm:generateTestProto NO-SOURCE
 
-FAILURE: Build failed with an exception.
+> Task :jvm:verifyGeneratedSources
+Verified protobuf lite and Moshi KSP generated sources
 
-* What went wrong:
-Execution failed for task ':roborazzi:testDebugUnitTest'.
-> There were failing tests. See the report at: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/build/reports/tests/testDebugUnitTest/index.html
+> Task :android:preBuild UP-TO-DATE
+> Task :android:preDebugBuild UP-TO-DATE
+> Task :android:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :android:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :jvm:kspTestKotlin
+> Task :android:checkDebugAarMetadata
+> Task :jvm:processTestResources NO-SOURCE
+> Task :android:generateDebugResValues
+> Task :android:mapDebugSourceSetPaths
+> Task :android:generateDebugResources
+> Task :android:mergeDebugResources
+> Task :android:packageDebugResources
+> Task :android:parseDebugLocalResources
+> Task :android:createDebugCompatibleScreenManifests
+> Task :android:extractDeepLinksDebug
+> Task :android:processDebugMainManifest
+> Task :android:processDebugManifest
+> Task :android:processDebugManifestForPackage
+> Task :android:processDebugResources
+> Task :jvm:compileTestKotlin
+> Task :jvm:compileTestJava NO-SOURCE
+> Task :jvm:testClasses UP-TO-DATE
+> Task :android:compileDebugKotlin
 
-* Try:
-> Run with --scan to get full insights.
+> Task :jvm:test
 
-* Exception is:
-org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':roborazzi:testDebugUnitTest'.
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:130)
-	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:293)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:128)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
-	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
-	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
-	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
-	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
-	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
-	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
-	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
-	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
-	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
-	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
-	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
-	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
-	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
-	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
-	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
-Caused by: org.gradle.api.internal.exceptions.MarkedVerificationException: There were failing tests. See the report at: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/build/reports/tests/testDebugUnitTest/index.html
-	at org.gradle.api.tasks.testing.AbstractTestTask.handleTestFailures(AbstractTestTask.java:705)
-	at org.gradle.api.tasks.testing.AbstractTestTask.handleCollectedResults(AbstractTestTask.java:539)
-	at org.gradle.api.tasks.testing.AbstractTestTask.executeTests(AbstractTestTask.java:534)
-	at org.gradle.api.tasks.testing.Test.executeTests(Test.java:715)
-	at com.android.build.gradle.tasks.factory.AndroidUnitTest.executeTests(AndroidUnitTest.java:171)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:125)
-	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.doExecute(StandardTaskAction.java:58)
-	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:51)
-	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:29)
-	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:244)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:229)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:212)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:195)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:162)
-	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:105)
-	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:44)
-	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:59)
-	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:56)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:56)
-	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:44)
-	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:42)
-	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:75)
-	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
-	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:50)
-	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:28)
-	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:67)
-	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:37)
-	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:61)
-	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:26)
-	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:69)
-	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:46)
-	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:40)
-	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:29)
-	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:189)
-	at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:75)
-	at org.gradle.internal.Either$Right.fold(Either.java:175)
-	at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:62)
-	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:73)
-	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:48)
-	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:46)
-	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:35)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:75)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:53)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:53)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:35)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
-	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:49)
-	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:27)
-	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:71)
-	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:39)
-	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:65)
-	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:36)
-	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:105)
-	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:54)
-	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:64)
-	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:43)
-	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:125)
-	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:61)
-	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
-	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
-	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
-	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:75)
-	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:41)
-	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
-	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:289)
-	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
-	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
-	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
-	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
-	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
-	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
-	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:48)
-	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
-	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:61)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
-	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
-	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
-	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
-	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
-	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
-	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
-	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
-	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
-	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
-	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
-	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
-	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
-	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
-	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
-	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+BundledSQLiteTest > bundled driver persists transactions constraints and cascades() PASSED
 
+CryptoVaultTest > encrypted keyset survives file persistence and detects tampering() PASSED
 
-BUILD FAILED in 2m 35s
-42 actionable tasks: 42 executed
+MockKAndKotestPropertyTest > Kotest custom range round trips with a fixed seed() PASSED
 
-===== FAILED TEST: dev.basefile.future.roborazzi.CoilLocalIntegrationTest.local SVG and GIF decode and second SVG load hits memory cache =====
-java.lang.AssertionError: GIF decode failed: java.lang.IllegalStateException: Failed to decode GIF.
-	at coil3.gif.GifDecoder.decode$lambda$2(GifDecoder.kt:41)
-	at kotlinx.coroutines.InterruptibleKt.runInterruptibleInExpectedContext(Interruptible.kt:48)
-	at kotlinx.coroutines.InterruptibleKt.access$runInterruptibleInExpectedContext(Interruptible.kt:1)
-	at kotlinx.coroutines.InterruptibleKt$runInterruptible$2.invokeSuspend(Interruptible.kt:40)
-	at kotlinx.coroutines.InterruptibleKt$runInterruptible$2.invoke(Interruptible.kt)
-	at kotlinx.coroutines.InterruptibleKt$runInterruptible$2.invoke(Interruptible.kt)
-	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
-	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:157)
-	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
-	at kotlinx.coroutines.InterruptibleKt.runInterruptible(Interruptible.kt:39)
-	at kotlinx.coroutines.InterruptibleKt.runInterruptible$default(Interruptible.kt:36)
-	at coil3.gif.GifDecoder.decode(GifDecoder.kt:37)
-	at coil3.intercept.EngineInterceptor.decode(EngineInterceptor.kt:203)
-	at coil3.intercept.EngineInterceptor.access$decode(EngineInterceptor.kt:43)
-	at coil3.intercept.EngineInterceptor$execute$executeResult$1.invokeSuspend(EngineInterceptor.kt:131)
-	at coil3.intercept.EngineInterceptor$execute$executeResult$1.invoke(EngineInterceptor.kt)
-	at coil3.intercept.EngineInterceptor$execute$executeResult$1.invoke(EngineInterceptor.kt)
-	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
-	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:166)
-	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
-	at coil3.intercept.EngineInterceptor.execute(EngineInterceptor.kt:130)
-	at coil3.intercept.EngineInterceptor.access$execute(EngineInterceptor.kt:43)
-	at coil3.intercept.EngineInterceptor$intercept$2.invokeSuspend(EngineInterceptor.kt:77)
-	at _COROUTINE._BOUNDARY._(CoroutineDebugging.kt:42)
-	at coil3.intercept.EngineInterceptor.decode(EngineInterceptor.kt:203)
-	at coil3.intercept.EngineInterceptor$execute$executeResult$1.invokeSuspend(EngineInterceptor.kt:131)
-	at coil3.intercept.EngineInterceptor.execute(EngineInterceptor.kt:130)
-	at coil3.intercept.EngineInterceptor$intercept$2.invokeSuspend(EngineInterceptor.kt:77)
-	at coil3.intercept.EngineInterceptor.intercept(EngineInterceptor.kt:75)
-	at coil3.intercept.RealInterceptorChain.proceed(RealInterceptorChain.kt:31)
-	at coil3.RealImageLoader$execute$result$1.invokeSuspend(RealImageLoader.kt:142)
-	at coil3.RealImageLoader.execute(RealImageLoader.kt:133)
-	at dev.basefile.future.roborazzi.CoilLocalIntegrationTest$local SVG and GIF decode and second SVG load hits memory cache$1.invokeSuspend(CoilLocalIntegrationTest.kt:62)
-	at kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$1.invokeSuspend(TestBuilders.kt:317)
-Caused by: java.lang.IllegalStateException: Failed to decode GIF.
-	at coil3.gif.GifDecoder.decode$lambda$2(GifDecoder.kt:41)
-	at kotlinx.coroutines.InterruptibleKt.runInterruptibleInExpectedContext(Interruptible.kt:48)
-	at kotlinx.coroutines.InterruptibleKt.access$runInterruptibleInExpectedContext(Interruptible.kt:1)
-	at kotlinx.coroutines.InterruptibleKt$runInterruptible$2.invokeSuspend(Interruptible.kt:40)
-	at kotlinx.coroutines.InterruptibleKt$runInterruptible$2.invoke(Interruptible.kt)
-	at kotlinx.coroutines.InterruptibleKt$runInterruptible$2.invoke(Interruptible.kt)
-	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
-	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:157)
-	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
-	at kotlinx.coroutines.InterruptibleKt.runInterruptible(Interruptible.kt:39)
-	at kotlinx.coroutines.InterruptibleKt.runInterruptible$default(Interruptible.kt:36)
-	at coil3.gif.GifDecoder.decode(GifDecoder.kt:37)
-	at coil3.intercept.EngineInterceptor.decode(EngineInterceptor.kt:203)
-	at coil3.intercept.EngineInterceptor.access$decode(EngineInterceptor.kt:43)
-	at coil3.intercept.EngineInterceptor$execute$executeResult$1.invokeSuspend(EngineInterceptor.kt:131)
-	at coil3.intercept.EngineInterceptor$execute$executeResult$1.invoke(EngineInterceptor.kt)
-	at coil3.intercept.EngineInterceptor$execute$executeResult$1.invoke(EngineInterceptor.kt)
-	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
-	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:166)
-	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
-	at coil3.intercept.EngineInterceptor.execute(EngineInterceptor.kt:130)
-	at coil3.intercept.EngineInterceptor.access$execute(EngineInterceptor.kt:43)
-	at coil3.intercept.EngineInterceptor$intercept$2.invokeSuspend(EngineInterceptor.kt:77)
-	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
-	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
-	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:113)
-	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
-	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
-	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
-	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
-	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
-java.lang.AssertionError: GIF decode failed: java.lang.IllegalStateException: Failed to decode GIF.
-	at coil3.gif.GifDecoder.decode$lambda$2(GifDecoder.kt:41)
-	at kotlinx.coroutines.InterruptibleKt.runInterruptibleInExpectedContext(Interruptible.kt:48)
-	at kotlinx.coroutines.InterruptibleKt.access$runInterruptibleInExpectedContext(Interruptible.kt:1)
-	at kotlinx.coroutines.InterruptibleKt$runInterruptible$2.invokeSuspend(Interruptible.kt:40)
-	at kotlinx.coroutines.InterruptibleKt$runInterruptible$2.invoke(Interruptible.kt)
-	at kotlinx.coroutines.InterruptibleKt$runInterruptible$2.invoke(Interruptible.kt)
-	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
-	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:157)
-	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
-	at kotlinx.coroutines.InterruptibleKt.runInterruptible(Interruptible.kt:39)
-	at kotlinx.coroutines.InterruptibleKt.runInterruptible$default(Interruptible.kt:36)
-	at coil3.gif.GifDecoder.decode(GifDecoder.kt:37)
-	at coil3.intercept.EngineInterceptor.decode(EngineInterceptor.kt:203)
-	at coil3.intercept.EngineInterceptor.access$decode(EngineInterceptor.kt:43)
-	at coil3.intercept.EngineInterceptor$execute$executeResult$1.invokeSuspend(EngineInterceptor.kt:131)
-	at coil3.intercept.EngineInterceptor$execute$executeResult$1.invoke(EngineInterceptor.kt)
-	at coil3.intercept.EngineInterceptor$execute$executeResult$1.invoke(EngineInterceptor.kt)
-	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
-	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:166)
-	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
-	at coil3.intercept.EngineInterceptor.execute(EngineInterceptor.kt:130)
-	at coil3.intercept.EngineInterceptor.access$execute(EngineInterceptor.kt:43)
-	at coil3.intercept.EngineInterceptor$intercept$2.invokeSuspend(EngineInterceptor.kt:77)
-	at _COROUTINE._BOUNDARY._(CoroutineDebugging.kt:42)
-	at coil3.intercept.EngineInterceptor.decode(EngineInterceptor.kt:203)
-	at coil3.intercept.EngineInterceptor$execute$executeResult$1.invokeSuspend(EngineInterceptor.kt:131)
-	at coil3.intercept.EngineInterceptor.execute(EngineInterceptor.kt:130)
-	at coil3.intercept.EngineInterceptor$intercept$2.invokeSuspend(EngineInterceptor.kt:77)
-	at coil3.intercept.EngineInterceptor.intercept(EngineInterceptor.kt:75)
-	at coil3.intercept.RealInterceptorChain.proceed(RealInterceptorChain.kt:31)
-	at coil3.RealImageLoader$execute$result$1.invokeSuspend(RealImageLoader.kt:142)
-	at coil3.RealImageLoader.execute(RealImageLoader.kt:133)
-	at dev.basefile.future.roborazzi.CoilLocalIntegrationTest$local SVG and GIF decode and second SVG load hits memory cache$1.invokeSuspend(CoilLocalIntegrationTest.kt:62)
-	at kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$1.invokeSuspend(TestBuilders.kt:317)
-Caused by: java.lang.IllegalStateException: Failed to decode GIF.
-	at coil3.gif.GifDecoder.decode$lambda$2(GifDecoder.kt:41)
-	at kotlinx.coroutines.InterruptibleKt.runInterruptibleInExpectedContext(Interruptible.kt:48)
-	at kotlinx.coroutines.InterruptibleKt.access$runInterruptibleInExpectedContext(Interruptible.kt:1)
-	at kotlinx.coroutines.InterruptibleKt$runInterruptible$2.invokeSuspend(Interruptible.kt:40)
-	at kotlinx.coroutines.InterruptibleKt$runInterruptible$2.invoke(Interruptible.kt)
-	at kotlinx.coroutines.InterruptibleKt$runInterruptible$2.invoke(Interruptible.kt)
-	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
-	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:157)
-	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
-	at kotlinx.coroutines.InterruptibleKt.runInterruptible(Interruptible.kt:39)
-	at kotlinx.coroutines.InterruptibleKt.runInterruptible$default(Interruptible.kt:36)
-	at coil3.gif.GifDecoder.decode(GifDecoder.kt:37)
-	at coil3.intercept.EngineInterceptor.decode(EngineInterceptor.kt:203)
-	at coil3.intercept.EngineInterceptor.access$decode(EngineInterceptor.kt:43)
-	at coil3.intercept.EngineInterceptor$execute$executeResult$1.invokeSuspend(EngineInterceptor.kt:131)
-	at coil3.intercept.EngineInterceptor$execute$executeResult$1.invoke(EngineInterceptor.kt)
-	at coil3.intercept.EngineInterceptor$execute$executeResult$1.invoke(EngineInterceptor.kt)
-	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:43)
-	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:166)
-	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
-	at coil3.intercept.EngineInterceptor.execute(EngineInterceptor.kt:130)
-	at coil3.intercept.EngineInterceptor.access$execute(EngineInterceptor.kt:43)
-	at coil3.intercept.EngineInterceptor$intercept$2.invokeSuspend(EngineInterceptor.kt:77)
-	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
-	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
-	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:113)
-	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
-	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
-	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
-	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
-	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
 
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at dev.basefile.future.roborazzi.CoilLocalIntegrationTest$local SVG and GIF decode and second SVG load hits memory cache$1.invokeSuspend(CoilLocalIntegrationTest.kt:65)
-	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
-	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:35)
-	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:101)
-	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
-	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:98)
-	at kotlinx.coroutines.test.TestDispatcher.processEvent$kotlinx_coroutines_test(TestDispatcher.kt:24)
-	at kotlinx.coroutines.test.TestCoroutineScheduler.tryRunNextTaskUnless$kotlinx_coroutines_test(TestCoroutineScheduler.kt:99)
-	at kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt$runTest$2$1$workRunner$1.invokeSuspend(TestBuilders.kt:326)
-	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
-	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
-	at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
-	at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:95)
-	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:69)
-	at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
-	at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:47)
-	at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
-	at kotlinx.coroutines.test.TestBuildersJvmKt.createTestResult(TestBuildersJvm.kt:10)
-	at kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:309)
-	at kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)
-	at kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:167)
-	at kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)
-	at kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0$default(TestBuilders.kt:159)
-	at kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0$default(Unknown Source)
-	at dev.basefile.future.roborazzi.CoilLocalIntegrationTest.local SVG and GIF decode and second SVG load hits memory cache(CoilLocalIntegrationTest.kt:37)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:502)
-	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:285)
-	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:104)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:840)
+> Task :jvm:test
+
+MockKAndKotestPropertyTest > MockK JVM agent records a typed interaction() PASSED
+
+ProtoDataStoreTest > protobuf values persist migrate and recover from corruption() PASSED
+
+SerializationAndTimeTest > generated Moshi adapter and Gson round trip the same profile() PASSED
+
+SerializationAndTimeTest > datetime serialization preserves an Oslo daylight-saving boundary() PASSED
+
+JqwikShrinkingPropertyTest > jqwik generated domain values round trip and remain shrinkable PASSED
+
+> Task :android:javaPreCompileDebug
+> Task :android:mergeDebugShaders
+> Task :android:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:compileDebugShaders NO-SOURCE
+> Task :android:generateDebugAssets UP-TO-DATE
+> Task :android:mergeDebugAssets
+> Task :android:compressDebugAssets
+> Task :android:desugarDebugFileDependencies
+> Task :android:dexBuilderDebug
+> Task :android:l8DexDesugarLibDebug
+> Task :android:mergeDebugGlobalSynthetics
+> Task :android:processDebugJavaRes
+> Task :android:checkDebugDuplicateClasses
+> Task :android:mergeDebugJavaResource
+> Task :android:mergeLibDexDebug
+> Task :android:mergeProjectDexDebug
+> Task :android:mergeDebugJniLibFolders
+> Task :android:mergeExtDexDebug
+> Task :android:mergeDebugNativeLibs
+> Task :android:validateSigningDebug
+> Task :android:writeDebugAppMetadata
+
+> Task :android:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libdatastore_shared_counter.so.
+
+> Task :android:writeDebugSigningConfigVersions
+> Task :android:buildKotlinToolingMetadata
+> Task :android:preReleaseBuild UP-TO-DATE
+> Task :android:checkReleaseAarMetadata
+> Task :android:generateReleaseResValues
+> Task :android:mapReleaseSourceSetPaths
+> Task :android:generateReleaseResources
+> Task :android:mergeReleaseResources
+> Task :android:packageReleaseResources
+> Task :android:parseReleaseLocalResources
+> Task :android:createReleaseCompatibleScreenManifests
+> Task :android:extractDeepLinksRelease
+> Task :android:processReleaseMainManifest
+> Task :android:processReleaseManifest
+> Task :android:processReleaseManifestForPackage
+> Task :android:processReleaseResources
+> Task :android:packageDebug
+> Task :android:createDebugApkListingFileRedirect
+> Task :android:assembleDebug
+> Task :android:javaPreCompileRelease
+> Task :android:extractProguardFiles
+> Task :android:mergeReleaseJniLibFolders
+> Task :android:mergeReleaseNativeLibs
+
+> Task :android:stripReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libdatastore_shared_counter.so.
+
+> Task :android:extractReleaseNativeSymbolTables
+> Task :android:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :android:mergeReleaseArtProfile
+> Task :android:compileReleaseKotlin
+> Task :android:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:expandReleaseL8ArtProfileWildcards
+> Task :android:generateReleaseLintVitalReportModel
+> Task :android:checkReleaseDuplicateClasses
+> Task :android:expandReleaseArtProfileWildcards
+> Task :android:mergeReleaseGeneratedProguardFiles
+> Task :android:processReleaseJavaRes
+> Task :android:mergeReleaseJavaResource
+> Task :android:mergeReleaseStartupProfile
+> Task :android:lintVitalAnalyzeRelease
+> Task :android:lintVitalReportRelease
+> Task :android:lintVitalRelease
+> Task :android:mergeReleaseShaders
+> Task :android:compileReleaseShaders NO-SOURCE
+> Task :android:generateReleaseAssets UP-TO-DATE
+> Task :android:mergeReleaseAssets
+> Task :android:compressReleaseAssets
+> Task :android:extractReleaseVersionControlInfo
+> Task :android:convertLinkedResourcesToProtoRelease
+> Task :android:collectReleaseDependencies
+> Task :android:sdkReleaseDependencyData
+> Task :android:writeReleaseAppMetadata
+> Task :android:writeReleaseSigningConfigVersions
+> Task :android:bundleDebugClassesToRuntimeJar
+> Task :android:bundleDebugClassesToCompileJar
+> Task :android:compileDebugUnitTestKotlin
+> Task :android:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:javaPreCompileDebugUnitTest
+> Task :android:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :android:processDebugUnitTestJavaRes
+> Task :android:testDebugUnitTest
+> Task :android:preDebugAndroidTestBuild SKIPPED
+> Task :android:checkDebugAndroidTestAarMetadata
+> Task :android:generateDebugAndroidTestResValues
+> Task :android:writeFiltersDebugAndroidTest
+> Task :android:mapDebugAndroidTestSourceSetPaths
+> Task :android:generateDebugAndroidTestResources
+> Task :android:mergeDebugAndroidTestResources
+> Task :android:processDebugAndroidTestManifest
+> Task :android:processDebugAndroidTestResources
+> Task :android:compileDebugAndroidTestKotlin
+> Task :android:javaPreCompileDebugAndroidTest
+> Task :android:compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :android:mergeDebugAndroidTestShaders
+> Task :android:compileDebugAndroidTestShaders NO-SOURCE
+> Task :android:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :android:mergeDebugAndroidTestAssets
+> Task :android:compressDebugAndroidTestAssets
+> Task :android:desugarDebugAndroidTestFileDependencies
+> Task :android:dexBuilderDebugAndroidTest
+> Task :android:minifyReleaseWithR8
+> Task :android:mergeDebugAndroidTestGlobalSynthetics
+> Task :android:processDebugAndroidTestJavaRes
+> Task :android:mergeDebugAndroidTestJavaResource
+> Task :android:checkDebugAndroidTestDuplicateClasses
+> Task :android:mergeExtDexDebugAndroidTest
+> Task :android:mergeLibDexDebugAndroidTest
+> Task :android:mergeProjectDexDebugAndroidTest
+> Task :android:mergeDebugAndroidTestJniLibFolders
+> Task :android:mergeDebugAndroidTestNativeLibs
+
+> Task :android:stripDebugAndroidTestDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libmockkjvmtiagent.so.
+
+> Task :android:validateSigningDebugAndroidTest
+> Task :android:writeDebugAndroidTestSigningConfigVersions
+> Task :android:packageDebugAndroidTest
+> Task :android:createDebugAndroidTestApkListingFileRedirect
+> Task :android:assembleDebugAndroidTest
+> Task :android:l8DexDesugarLibRelease
+> Task :android:compileReleaseArtProfile
+> Task :android:shrinkReleaseRes
+> Task :android:convertShrunkResourcesToBinaryRelease
+> Task :android:optimizeReleaseResources
+> Task :android:packageRelease
+> Task :android:createReleaseApkListingFileRedirect
+> Task :android:assembleRelease
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787862077964.json
+Persisted dependency lock state for buildscript of project ':'
+Persisted dependency lock state for project ':'
+Persisted dependency lock state for project ':android'
+Persisted dependency lock state for project ':jvm'
+Persisted dependency lock state for project ':roborazzi'
+
+BUILD SUCCESSFUL in 6m 6s
+171 actionable tasks: 171 executed
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:generateDebugResValues
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :app:parseDebugLocalResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:javaPreCompileDebug
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets
+> Task :app:processDebugResources
+> Task :app:desugarDebugFileDependencies
+> Task :app:mergeDebugJniLibFolders
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugNativeLibs
+> Task :app:kspDebugKotlin
+> Task :app:mergeExtDexDebug
+> Task :app:mergeLibDexDebug
+
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libdatastore_shared_counter.so.
+
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:buildKotlinToolingMetadata
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:generateReleaseResValues
+> Task :app:checkReleaseAarMetadata
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:generateReleaseResources
+> Task :app:packageReleaseResources
+> Task :app:parseReleaseLocalResources
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease
+> Task :app:mergeReleaseResources
+> Task :app:processReleaseMainManifest
+> Task :app:processReleaseManifest
+> Task :app:processReleaseManifestForPackage
+> Task :app:javaPreCompileRelease
+> Task :app:extractProguardFiles
+> Task :app:mergeReleaseJniLibFolders
+> Task :app:mergeReleaseNativeLibs
+> Task :app:processReleaseResources
+
+> Task :app:stripReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libdatastore_shared_counter.so.
+
+> Task :app:kspReleaseKotlin
+> Task :app:extractReleaseNativeSymbolTables
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:checkReleaseDuplicateClasses
+> Task :app:desugarReleaseFileDependencies
+> Task :app:mergeReleaseStartupProfile
+> Task :app:compileReleaseKotlin
+> Task :app:compileDebugKotlin
+> Task :app:mergeExtDexRelease
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:dexBuilderDebug
+> Task :app:mergeDebugGlobalSynthetics
+> Task :app:processDebugJavaRes
+> Task :app:compileReleaseJavaWithJavac NO-SOURCE
+> Task :app:mergeProjectDexDebug
+> Task :app:generateReleaseLintVitalReportModel
+> Task :app:mergeDebugJavaResource
+> Task :app:dexBuilderRelease
+> Task :app:mergeReleaseArtProfile
+> Task :app:packageDebug
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
+> Task :app:mergeReleaseShaders
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseAssets
+> Task :app:mergeReleaseGlobalSynthetics
+> Task :app:compressReleaseAssets
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:processReleaseJavaRes
+> Task :app:optimizeReleaseResources
+> Task :app:collectReleaseDependencies
+> Task :app:sdkReleaseDependencyData
+> Task :app:writeReleaseAppMetadata
+> Task :app:mergeReleaseJavaResource
+> Task :app:writeReleaseSigningConfigVersions
+> Task :app:bundleDebugClassesToRuntimeJar
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:javaPreCompileDebugUnitTest
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:packageDebugUnitTestForUnitTest
+> Task :app:kspDebugUnitTestKotlin
+> Task :app:generateDebugUnitTestConfig
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:mergeDexRelease
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:checkDebugAndroidTestAarMetadata
+> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :app:processDebugUnitTestJavaRes
+> Task :app:compileReleaseArtProfile
+> Task :app:testDebugUnitTest
+> Task :app:generateDebugAndroidTestResValues
+> Task :app:mapDebugAndroidTestSourceSetPaths
+> Task :app:generateDebugAndroidTestResources
+> Task :app:mergeDebugAndroidTestResources
+> Task :app:processDebugAndroidTestManifest
+> Task :app:javaPreCompileDebugAndroidTest
+> Task :app:mergeDebugAndroidTestShaders
+> Task :app:compileDebugAndroidTestShaders NO-SOURCE
+> Task :app:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :app:mergeDebugAndroidTestAssets
+> Task :app:compressDebugAndroidTestAssets
+> Task :app:desugarDebugAndroidTestFileDependencies
+> Task :app:packageRelease
+> Task :app:createReleaseApkListingFileRedirect
+> Task :app:processDebugAndroidTestResources
+> Task :app:checkDebugAndroidTestDuplicateClasses
+> Task :app:lintVitalAnalyzeRelease
+> Task :app:kspDebugAndroidTestKotlin
+> Task :app:lintVitalReportRelease
+> Task :app:lintVitalRelease
+> Task :app:assembleRelease
+> Task :app:mergeLibDexDebugAndroidTest
+> Task :app:mergeDebugAndroidTestJniLibFolders
+> Task :app:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :app:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebugAndroidTest
+> Task :app:writeDebugAndroidTestSigningConfigVersions
+> Task :benchmark:preBuild UP-TO-DATE
+> Task :benchmark:preNonMinifiedBenchmarkBuild UP-TO-DATE
+> Task :app:mergeExtDexDebugAndroidTest
+> Task :app:compileDebugAndroidTestKotlin
+> Task :benchmark:checkTestedAppObfuscationNonMinifiedBenchmark
+> Task :app:compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :app:dexBuilderDebugAndroidTest
+> Task :app:mergeDebugAndroidTestGlobalSynthetics
+> Task :app:processDebugAndroidTestJavaRes
+> Task :benchmark:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:mergeDebugAndroidTestJavaResource
+> Task :app:mergeProjectDexDebugAndroidTest
+> Task :benchmark:checkNonMinifiedBenchmarkAarMetadata
+> Task :benchmark:generateNonMinifiedBenchmarkResValues
+> Task :benchmark:mapNonMinifiedBenchmarkSourceSetPaths
+> Task :benchmark:generateNonMinifiedBenchmarkResources
+> Task :benchmark:processNonMinifiedBenchmarkManifest
+> Task :benchmark:javaPreCompileNonMinifiedBenchmark
+> Task :benchmark:mergeNonMinifiedBenchmarkShaders
+> Task :benchmark:compileNonMinifiedBenchmarkShaders NO-SOURCE
+> Task :benchmark:generateNonMinifiedBenchmarkAssets UP-TO-DATE
+> Task :benchmark:mergeNonMinifiedBenchmarkResources
+> Task :benchmark:mergeNonMinifiedBenchmarkAssets
+> Task :benchmark:processNonMinifiedBenchmarkResources
+> Task :benchmark:compressNonMinifiedBenchmarkAssets
+> Task :benchmark:checkNonMinifiedBenchmarkDuplicateClasses
+> Task :benchmark:compileNonMinifiedBenchmarkKotlin
+> Task :benchmark:desugarNonMinifiedBenchmarkFileDependencies
+> Task :benchmark:compileNonMinifiedBenchmarkJavaWithJavac NO-SOURCE
+> Task :benchmark:mergeLibDexNonMinifiedBenchmark
+> Task :benchmark:dexBuilderNonMinifiedBenchmark
+> Task :benchmark:mergeNonMinifiedBenchmarkGlobalSynthetics
+> Task :app:packageDebugAndroidTest
+> Task :app:createDebugAndroidTestApkListingFileRedirect
+> Task :app:assembleDebugAndroidTest
+> Task :benchmark:processNonMinifiedBenchmarkJavaRes
+> Task :benchmark:mergeNonMinifiedBenchmarkJniLibFolders
+> Task :benchmark:mergeProjectDexNonMinifiedBenchmark
+> Task :benchmark:validateSigningNonMinifiedBenchmark
+> Task :benchmark:writeNonMinifiedBenchmarkSigningConfigVersions
+> Task :benchmark:mergeNonMinifiedBenchmarkNativeLibs
+> Task :benchmark:mergeNonMinifiedBenchmarkJavaResource
+
+> Task :benchmark:stripNonMinifiedBenchmarkDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libbenchmarkNative.so, libtracing_perfetto.so.
+
+> Task :benchmark:mergeExtDexNonMinifiedBenchmark
+> Task :benchmark:packageNonMinifiedBenchmark
+> Task :benchmark:createNonMinifiedBenchmarkApkListingFileRedirect
+> Task :benchmark:assembleNonMinifiedBenchmark
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787862444795.json
+Persisted dependency lock state for buildscript of project ':'
+Persisted dependency lock state for project ':app'
+Persisted dependency lock state for project ':benchmark'
+
+BUILD SUCCESSFUL in 3m 8s
+149 actionable tasks: 149 executed
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :screenshot:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :screenshot:preBuild UP-TO-DATE
+> Task :screenshot:preDebugBuild UP-TO-DATE
+> Task :screenshot:generateDebugResValues
+> Task :screenshot:generateDebugResources
+> Task :screenshot:packageDebugResources
+> Task :screenshot:preDebugUnitTestBuild UP-TO-DATE
+> Task :screenshot:javaPreCompileDebug
+> Task :screenshot:parseDebugLocalResources
+> Task :screenshot:preparePaparazziDebugResources
+> Task :screenshot:javaPreCompileDebugUnitTest
+> Task :screenshot:generateDebugRFile
+> Task :screenshot:compileDebugKotlin NO-SOURCE
+> Task :screenshot:compileDebugJavaWithJavac NO-SOURCE
+> Task :screenshot:bundleLibRuntimeToJarDebug
+> Task :screenshot:processDebugJavaRes NO-SOURCE
+> Task :screenshot:bundleLibCompileToJarDebug
+> Task :screenshot:generateDebugUnitTestStubRFile
+> Task :screenshot:compileDebugUnitTestKotlin
+> Task :screenshot:processDebugUnitTestJavaRes
+> Task :screenshot:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :screenshot:transformDebugUnitTestClassesWithAsm
+
+> Task :screenshot:testDebugUnitTest
+See the Paparazzi report at: file:///home/runner/work/Base-file/Base-file/android-build/paparazzi-smoke-test/screenshot/build/reports/paparazzi/debug/index.html
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787862633917.json
+Persisted dependency lock state for buildscript of project ':'
+Persisted dependency lock state for project ':screenshot'
+
+BUILD SUCCESSFUL in 55s
+15 actionable tasks: 15 executed
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :processResources NO-SOURCE
+
+> Task :compileKotlin
+e: The daemon has terminated unexpectedly on startup attempt #1 with error code: 0. The daemon process output:
+    1. Kotlin compile daemon is ready
+
+> Task :resolveQualityTools
+Resolved 67 Detekt/KtLint quality-tool artifacts
+
+> Task :compileJava NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :generateLicenseReport
+
+> Task :verifyLicenseReport
+Verified 1 generated dependency-license report files
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787862690160.json
+Persisted dependency lock state for buildscript of project ':'
+Persisted dependency lock state for project ':'
+
+BUILD SUCCESSFUL in 32s
+4 actionable tasks: 4 executed
+Resolved Gradle module cache size:
+1.3G	/tmp/base-file-gradle-home/caches/modules-2
+199527464 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.robolectric/android-all-instrumented/15-robolectric-12650502-i7/4a72756411af462a4ca89b355b0834799dc8258e/android-all-instrumented-15-robolectric-12650502-i7.jar
+157996126 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.robolectric/nativeruntime-dist-compat/1.0.16/ef05f75ca93873db8afb4642c32ba816e67856bc/nativeruntime-dist-compat-1.0.16.jar
+76695759 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-runtime/14.0.11/ecd0e1be5624fde6ecd17fdc7e1e262abfc6a5ed/layoutlib-runtime-14.0.11-linux.jar
+58272093 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/2.0.21/79346ed53db48b18312a472602eb5c057070c54d/kotlin-compiler-embeddable-2.0.21.jar
+57150845 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/2.0.10/40d7b56154061d2ec6a95159417af03940e8679e/kotlin-compiler-embeddable-2.0.10.jar
+51062433 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.external.com-intellij/kotlin-compiler/31.7.3/c45cdfa841c3f0faf60296689df38e870471c1b4/kotlin-compiler-31.7.3.jar
+50566171 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib/14.0.11/1c2e551118aeeb0712ae3c7663deb449bee6ca11/layoutlib-14.0.11.jar
+35721003 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.material/material-icons-extended-android/1.7.6/bfe16888e8a4ea407d82aeb38d8cf1a5e6c3b4b4/material-icons-extended-release.aar
+34491430 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.external.com-intellij/intellij-core/31.7.3/b6c1edd0e1a008b89a805adb41d7b3930f818221/intellij-core-31.7.3.jar
+33176496 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.layoutlib/layoutlib-resources/14.0.11/78cc95d5f729fc5e80fb51949ab3d6949d784dda/layoutlib-resources-14.0.11.jar
+15067552 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.build/builder/8.7.3/8d3e529cc87e89552433c8337bd0b616ef545fa1/builder-8.7.3.jar
+14904556 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin/2.0.21/ea69d8de091115a98ce7f3901994b2fb3432480b/kotlin-gradle-plugin-2.0.21-gradle85.jar
+14727302 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.benchmark/benchmark-macro/1.3.3/48ac7b3f1be37e267a5d662b0cc0e5d9db212f52/benchmark-macro-1.3.3.aar
+14312248 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.ibm.icu/icu4j/75.1/e8f8dcc2967f5ec2cfae185172293adfa5599b78/icu4j-75.1.jar
+13265484 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.build/bundletool/1.17.1/267feb0f9bcff527cdf35a3544d77ad4d3e636dd/bundletool-1.17.1.jar
+12851127 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.xerial/sqlite-jdbc/3.41.2.2/ddeb8d3a3004f412ed19b4c98b3aec11d9452ab5/sqlite-jdbc-3.41.2.2.jar
+12429787 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.build/gradle/8.7.3/557c0eaed243df7b293d8b1f2c252d97fcc71dda/gradle-8.7.3.jar
+9623664 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.protobuf/protoc/4.29.3/77dba3a241462d70d9f161be94a270e714f38663/protoc-4.29.3-linux-x86_64.exe
+9621840 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.protobuf/protoc/4.29.3/1662daa3b6223061e0b273eba94d54cff6e1081f/protoc-4.29.3-linux-aarch_64.exe
+9342484 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15to18/1.72/1c53885369e89f9798974bf63b55a764c54b5c61/bcprov-jdk15to18-1.72.jar
+8470015 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.15.10/635c873fadd853c084f84fdc3cbd58c5dd8537f9/byte-buddy-1.15.10.jar
+8372360 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk18on/1.77/2cc971b6c20949c1ff98d1a4bc741ee848a09523/bcprov-jdk18on-1.77.jar
+8324412 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk18on/1.78.1/39e9e45359e20998eb79c1828751f94a818d25f8/bcprov-jdk18on-1.78.1.jar
+8315241 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.analytics-library/protos/31.7.3/71afde62826a0dd766603edb6ff96d291c138083/protos-31.7.3.jar
+8047697 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/3.0.21/f82650a717344fd094bfb72d6aadf3b8e19b0582/groovy-3.0.21.jar
+7697566 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.analytics-library/protos/31.4.2/596428d03e5684c609d079187d641c8c5ddeca60/protos-31.4.2.jar
+6428331 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/it.unimi.dsi/fastutil-core/8.5.12/d07afc8c78d4ab62240fc53cc4809f07af8b72b8/fastutil-core-8.5.12.jar
+6113073 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools/desugar_jdk_libs/2.1.5/2aa1e5e7eb1f9082b4d88990c5f7aea7e95efc0a/desugar_jdk_libs-2.1.5.jar
+6087735 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.lint/lint-checks/31.7.3/257aa4a2148c9a6e13057b8a6da228a2645f03bb/lint-checks-31.7.3.jar
+5664317 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.sqlite/sqlite-bundled-jvm/2.5.2/f22b58b09135ad6f985fa380a0f9dc27e8e9d2ee/sqlite-bundled-jvm-2.5.2.jar
+5031134 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.ui/ui-android/1.7.6/50f44a3b5cd79ed21f7c02e48b30129702200a56/ui-release.aar
+4965333 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.material3/material3-android/1.3.1/98016d623b96c25adbc6498aabf07507de258a62/material3-release.aar
+4843523 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.foundation/foundation-android/1.7.6/a8d820c38cbfea353ef8766fc96b7c6918c23e87/foundation-release.aar
+4766936 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.robolectric/shadows-framework/4.14.1/fb42ece6c8802d425aa4e52c3041b9a3c780f1ae/shadows-framework-4.14.1.jar
+4534256 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.conscrypt/conscrypt-openjdk-uber/2.5.2/d858f142ea189c62771c505a6548d8606ac098fe/conscrypt-openjdk-uber-2.5.2.jar
+4358726 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.benchmark/benchmark-common/1.3.3/c62557d04fc2fafc49b98c5b2dba1a57640680cf/benchmark-common-1.3.3.aar
+4340343 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.tracing/tracing-perfetto-binary/1.0.0/292f4d9975794b5d77f2eec902512b2db8230c84/tracing-perfetto-binary-1.0.0.aar
+4215024 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.14.17/a8d08f3c1e75ecc7f38a8cfd7e9fa47919096373/byte-buddy-1.14.17.jar
+3885225 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-debug/1.9.0/87ba44ab265cb6421d8b26f2d117c3649d577f81/kotlinx-coroutines-debug-1.9.0.jar
+3859702 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.autonomousapps/antlr/4.10.1.6/8a33e0d1664e24bcf6e2764a257278b19628d7a3/antlr-4.10.1.6.jar
+3254019 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.tom-roush/pdfbox-android/2.0.27.0/65a2f2b106b3d4ee37c5044cfc72384138bd60d4/pdfbox-android-2.0.27.0.aar
+3222101 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.9.24/767f8e3d382a98e2d5a465abe36be2b7019a7be4/kotlin-reflect-1.9.24.jar
+3222101 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.9.23/ab01e1cc8428c2140891318838ad7039f6fa389a/kotlin-reflect-1.9.23.jar
+3222056 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.9.20/34eeb4eed5f493cdbb760ef50a5653ec414006bf/kotlin-reflect-1.9.20.jar
+3180995 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.8.21/662838019bc1141f8a311180d93b9e13765c7f55/kotlin-reflect-1.8.21.jar
+3065230 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/2.0.10/6b4bbabe20bdb258246f711da4bd87263391a292/kotlin-reflect-2.0.10.jar
+3064567 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/2.0.21/669e1d35e4ca1797f9ddb2830dd6c36c0ca531e4/kotlin-reflect-2.0.21.jar
+3056424 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/2.0.0/9c3d75110945233bf77d2e1a90604b100884db94/kotlin-reflect-2.0.0.jar
+3053247 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.guava/guava/33.1.0-jre/9b7ed39143d59e8eabcc6f91ffe4d23db2efe558/guava-33.1.0-jre.jar
+3051356 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.guava/guava/33.2.1-jre/818e780da2c66c63bbb6480fef1f3855eeafa3e4/guava-33.2.1-jre.jar
+3038560 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.6.10/1cbe9c92c12a94eea200d23c2bbaedaf3daf5132/kotlin-reflect-1.6.10.jar
+3037368 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.guava/guava/32.0.1-jre/6e5d51a72d142f2d40a57dfb897188b36a95b489/guava-32.0.1-jre.jar
+2942018 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.material/material-android/1.7.6/f7c99ea929501d363364b5a76b2759c52a1a8ae0/material-release.aar
+2918070 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.guava/guava/33.3.1-jre/36162b3b4e9df67dae90db62a2c54616ca42c1bd/guava-33.3.1-android.jar
+2891559 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.guava/guava/33.2.1-android/e4b6190e40480888763b7ba80b4912a3eb03a3f4/guava-33.2.1-android.jar
+2874025 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.guava/guava/30.1.1-jre/87e0fd1df874ea3cbe577702fe6f17068b790fd8/guava-30.1.1-jre.jar
+2804059 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.guava/guava/31.0.1-android/b400db548e748a1a60ba18543ad4fbb44a675a69/guava-31.0.1-android.jar
+2735878 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/net.java.dev.jna/jna-platform/5.6.0/d18424ffb8bbfd036d71bcaab9b546858f2ef986/jna-platform-5.6.0.jar
+2677754 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.crypto.tink/tink-android/1.15.0/cd8d571b18972f8a0c81c8f1a26caf12564ca9ab/tink-android-1.15.0.jar
+2464746 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.crypto.tink/tink/1.15.0/10e8c89e93e60f04b7d23efeadaec80f7c8e1b85/tink-1.15.0.jar
+2433123 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/io.kotest/kotest-property-jvm/5.9.1/54a1b9a75721c21269d992e2f3d91057b2aa5244/kotest-property-jvm-5.9.1.jar
+2415630 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.compose.runtime/runtime-android/1.7.6/4a413ce3ef6d1c1e9f8fdc47613154bbd6780ede/runtime-release.aar
+2405227 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-idea-proto/2.0.21/7ee6324747edb846bb869955000c513797eaf6d7/kotlin-gradle-plugin-idea-proto-2.0.21.jar
+2303812 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.build/aapt2/8.7.3-12006047/52a897991b1646c2ca31ada48a86cf4b3e6d3a92/aapt2-8.7.3-12006047-linux.jar
+2293036 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jlleitschuh.gradle/ktlint-gradle/12.1.2/4769e37dd0c27cf32698a798069b915c6066c3f2/ktlint-gradle-12.1.2.jar
+2215968 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/io.kotest/kotest-assertions-core-jvm/5.9.1/d6f96b394f62aca42516da97f7d1c63927d8331e/kotest-assertions-core-jvm-5.9.1.jar
+2179203 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.room/room-external-antlr/2.7.2/3a36903b00b7659c59ed12a115b1b9e00a5ce26/room-external-antlr-2.7.2.jar
+2018104 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools.external.org-jetbrains/uast/31.7.3/8ce7f3aca281a6e943fbb13d20e753680a72cd3/uast-31.7.3.jar
+2013569 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/androidx.work/work-runtime/2.10.0/21650ae67cd0ea71cc92103b94758848f908f9a/work-runtime-2.10.0.aar
+1950990 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.api.grpc/proto-google-common-protos/2.17.0/7edf1e3aa96dc3861f7a8f24556c714e9c5b292/proto-google-common-protos-2.17.0.jar
+1878533 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.14.0/67bf3eaea4f0718cb376a181a629e5f88fa1c9dd/jna-5.14.0.jar
+1875070 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.25.3/d3200261955f3298e0d85c9892201e70492ce8eb/protobuf-java-3.25.3.jar
+1814861 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.google.crypto.tink/tink/1.7.0/668b57f109d32349b2870448f06ae6f202713edc/tink-1.7.0.jar
+1747660 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.0.21/618b539767b4899b4660a83006e052b63f1db551/kotlin-stdlib-2.0.21.jar
+1729733 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.0.10/9120f9dd349d5c67fa6710c4049c3128ef6b51db/kotlin-stdlib-2.0.10.jar
+1729586 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.9.0/8f503e6d9b500ceff299052d6be75b38c7257758/jna-5.9.0.jar
+1724128 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/com.android.tools/sdklib/31.7.3/adb7cac2ab282100e2b8b6d66b997a69ed06adf/sdklib-31.7.3.jar
+1718956 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.9.23/dbaadea1f5e68f790d242a91a38355a83ec38747/kotlin-stdlib-1.9.23.jar
+1718949 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.9.20/e58b4816ac517e9cc5df1db051120c63d4cde669/kotlin-stdlib-1.9.20.jar
+1718945 /tmp/base-file-gradle-home/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.9.21/17ee3e873d439566c7d8354403b5f3d9744c4c9c/kotlin-stdlib-1.9.21.jar
+sort: write failed: 'standard output': Broken pipe
+sort: write error
+77M	/home/runner/work/_temp/jdk17-gradle
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :app:compileDebugKotlin UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+> Task :app:mergeDebugShaders UP-TO-DATE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets UP-TO-DATE
+> Task :app:compressDebugAssets UP-TO-DATE
+> Task :app:desugarDebugFileDependencies UP-TO-DATE
+> Task :app:dexBuilderDebug UP-TO-DATE
+> Task :app:mergeDebugGlobalSynthetics UP-TO-DATE
+> Task :app:processDebugJavaRes UP-TO-DATE
+> Task :app:mergeDebugJavaResource UP-TO-DATE
+> Task :app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :app:mergeExtDexDebug UP-TO-DATE
+> Task :app:mergeLibDexDebug UP-TO-DATE
+> Task :app:mergeProjectDexDebug UP-TO-DATE
+> Task :app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :app:mergeDebugNativeLibs UP-TO-DATE
+> Task :app:stripDebugDebugSymbols UP-TO-DATE
+> Task :app:validateSigningDebug UP-TO-DATE
+> Task :app:writeDebugAppMetadata UP-TO-DATE
+> Task :app:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :app:packageDebug UP-TO-DATE
+> Task :app:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :app:assembleDebug UP-TO-DATE
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787862736732.json
+
+BUILD SUCCESSFUL in 10s
+35 actionable tasks: 35 up-to-date
+Packaging the audited toolchain for repository publication
+Local Maven repository: 1026 coordinates, 2365 files, 1267.4 MiB
+Tikaro coordinate audit: all 117 pinned direct coordinates are present in a 1026-coordinate offline graph
+Tikaro coordinate audit: all 80 pinned direct coordinates are present in a 1026-coordinate offline graph
+Mixed future-family version in /home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/android/gradle.lockfile: androidx.room:room-common:2.6.1, expected 2.7.2
