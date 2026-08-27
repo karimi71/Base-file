@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import json
 import shutil
 import sys
 from pathlib import Path
@@ -53,6 +54,37 @@ def main() -> int:
                         coordinates.setdefault(coordinate, set()).add(item.name)
                         copied += 1
                         copied_bytes += item.stat().st_size
+
+                # Gradle module metadata distinguishes a display `name` from the
+                # repository `url`. Gradle's cache keeps the response/display
+                # filename (for example `Turbine-jvm.jar`), while a file Maven
+                # repository must expose the URL filename
+                # (`turbine-jvm-1.2.0.jar`). Materialize every such alias.
+                for module_file in sorted(target_dir.glob("*.module")) if target_dir.exists() else []:
+                    try:
+                        module_data = json.loads(module_file.read_text(encoding="utf-8"))
+                    except (json.JSONDecodeError, OSError, UnicodeDecodeError):
+                        continue
+                    for variant in module_data.get("variants", []):
+                        for declared_file in variant.get("files", []):
+                            cache_name = Path(str(declared_file.get("name", ""))).name
+                            url_name = Path(str(declared_file.get("url", ""))).name
+                            if not cache_name or not url_name or cache_name == url_name:
+                                continue
+                            cached_file = target_dir / cache_name
+                            url_file = target_dir / url_name
+                            if not cached_file.is_file():
+                                continue
+                            if url_file.exists():
+                                if digest(url_file) != digest(cached_file):
+                                    raise RuntimeError(
+                                        f"conflicting metadata URL alias for {coordinate}: {url_name}"
+                                    )
+                                continue
+                            shutil.copyfile(cached_file, url_file)
+                            coordinates.setdefault(coordinate, set()).add(url_name)
+                            copied += 1
+                            copied_bytes += url_file.stat().st_size
 
                 # Google Maven sometimes serves an AAR with Content-Disposition
                 # `*-release.aar` while Maven/Gradle resolves the canonical URL
