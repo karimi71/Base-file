@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Color
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import coil3.ColorImage
 import coil3.ImageLoader
 import coil3.decode.DataSource
 import coil3.gif.GifDecoder
@@ -11,7 +12,6 @@ import coil3.network.okhttp.OkHttpNetworkFetcherFactory
 import coil3.request.ImageRequest
 import coil3.request.SuccessResult
 import coil3.svg.SvgDecoder
-import coil3.test.ColorImage
 import coil3.test.FakeImageLoaderEngine
 import coil3.video.VideoFrameDecoder
 import java.io.File

@@ -73,12 +73,15 @@ class PdfIntegrationTest {
         PDDocument.load(protected, "reader-secret").use { assertEquals(1, it.numberOfPages) }
 
         val frameworkFile = File(context.cacheDir, "framework.pdf")
-        PdfDocument().use { document ->
+        val document = PdfDocument()
+        try {
             val page = document.startPage(PdfDocument.PageInfo.Builder(300, 300, 1).create())
             page.canvas.drawColor(Color.WHITE)
             page.canvas.drawText("Framework PDF", 24f, 80f, Paint().apply { color = Color.BLACK })
             document.finishPage(page)
             frameworkFile.outputStream().use(document::writeTo)
+        } finally {
+            document.close()
         }
         assertTrue(frameworkFile.length() > 100)
     }

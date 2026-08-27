@@ -29,7 +29,7 @@ class SecurityMigrationIntegrationTest {
             .getPrimitive(Aead::class.java)
         val destination = File(context.cacheDir, "migrated-preferences.aead").apply { delete() }
 
-        LegacySecurePreferencesMigration.migrate(source, destination, aead)
+        SecurePreferenceFileMigration.migrate(source, destination, aead)
 
         assertTrue(destination.length() > 20)
         assertTrue(source.all.isEmpty())
