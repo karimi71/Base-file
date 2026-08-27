@@ -1,7 +1,4 @@
-import com.google.protobuf.gradle.builtins
-import com.google.protobuf.gradle.generateProtoTasks
 import com.google.protobuf.gradle.id
-import com.google.protobuf.gradle.protoc
 
 plugins {
     id("org.jetbrains.kotlin.jvm")
