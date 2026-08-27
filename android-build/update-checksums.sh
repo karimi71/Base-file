@@ -3,6 +3,11 @@
 set -euo pipefail
 TOOL_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$TOOL_DIR"
+# Reconstructed oversized Maven artifacts are derived working-tree files. Their
+# committed chunks and original SHA-256 are covered by this manifest instead.
+if [[ -d maven && -f ci/split_maven_artifacts.py ]]; then
+    python3 ci/split_maven_artifacts.py clean maven
+fi
 tmp="$(mktemp)"
 trap 'rm -f "$tmp"' EXIT
 {

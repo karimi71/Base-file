@@ -43,6 +43,8 @@ cd Base-file
 ./android-build/verify-offline-toolchain.sh
 # بررسی جامع Room/KSP/DataStore/Navigation/Test/Paparazzi/Benchmark:
 ./android-build/verify-tikaro-stack.sh
+# بررسی قابلیت‌های future، R8، Roborazzi، Proto، crypto، PDF و license:
+./android-build/verify-future-stack.sh
 # فقط بررسی ابزارها و checksumها، بدون build:
 ./android-build/verify-offline-toolchain.sh --tools-only
 ```
@@ -63,6 +65,11 @@ cd Base-file
 | KSP / Room / DataStore | 2.0.21-1.0.28 / 2.7.2 / 1.1.7 |
 | Coroutines / Navigation / WorkManager | 1.9.0 / 2.8.9 / 2.10.0 |
 | Glance / Benchmark / Baseline Profile | 1.1.1 / 1.3.3 / 1.3.3 |
+| SQLite / protobuf lite + protoc | 2.5.2 / 4.29.3 |
+| MockK / JUnit 5 + Platform | 1.13.13 / 5.11.4 + 1.11.4 |
+| Roborazzi / Coil 3 | 1.39.0 / 3.1.0 |
+| Tink / PDFBox Android / kotlinx-datetime | 1.15.0 / 2.0.27.0 / 0.6.1 |
+| Moshi / Gson / License Report | 1.15.2 / 2.11.0 / 2.9 |
 | Android SDK Platform / compileSdk | 35 |
 | Android SDK Build Tools | 34.0.0 |
 | JVM اجرای Gradle/AGP | OpenJDK 17 compact image |
@@ -99,9 +106,11 @@ android-build/
 ├── maven/                             # Maven repository دقیق و حداقلی پروژه
 ├── compose-smoke-test/                # اپ پایهٔ واقعی Jetpack Compose
 ├── tikaro-stack-smoke-test/           # Room/KSP/DataStore/Navigation/Widget/Test
-├── paparazzi-smoke-test/              # Golden screenshot روی JVM
-├── quality-smoke-test/                # Detekt/Ktlint/Dependency Analysis
-├── TIKARO_STACK.md                    # محدوده، نسخه‌ها و موارد عمداً حذف‌شده
+├── paparazzi-smoke-test/              # Golden screenshot روی JVM (حفظ شده)
+├── future-stack-smoke-test/           # JVM/Android/R8/Roborazzi future fixtures
+├── quality-smoke-test/                # Detekt/Ktlint/Dependency Analysis/License
+├── TIKARO_STACK.md                    # محدودهٔ dependencyهای ضروری Tikaro
+├── FUTURE_STACK.md                    # ۱۷ گروه اختیاری و شواهد تست واقعی
 ├── licenses/                          # Apache-2.0، inventory و NOTICEهای upstream
 ├── PROVENANCE.md
 └── VERIFICATION.md
@@ -141,13 +150,22 @@ Kotlin 2.0.21، artifactهای runtime/compile موردنیاز این مجمو�
 - پشتهٔ ضروری تیکارو: KSP/Room/DataStore، Navigation، WorkManager، Glance،
   Biometric، Serialization، AndroidX/Compose Test، Benchmark، Paparazzi و
   ابزارهای کیفیت build-time
+- لایهٔ future ایزوله: SQLite bundled/framework 2.5.2، Proto DataStore/protoc،
+  MockK/JUnit 5، Roborazzi، Coil 3، Tink/Security، PDFBox، datetime، Moshi/Gson،
+  icons-extended، Work multiprocess، accessibility/property tests و License Report
 - تمام dependencyهای transitive انتخاب‌شده توسط Gradle Module Metadata/POM
 
-محدوده و موارد اختیاریِ عمداً حذف‌شده در `android-build/TIKARO_STACK.md` و
-فهرست directهای pinned در
-`android-build/tikaro-stack-smoke-test/REQUESTED_COORDINATES.tsv` آمده است.
+محدودهٔ ضروری در `android-build/TIKARO_STACK.md` و قابلیت‌های اختیاری در
+`android-build/FUTURE_STACK.md` مستند شده‌اند. فهرست directهای pinned در
+`android-build/tikaro-stack-smoke-test/REQUESTED_COORDINATES.tsv` و
+`android-build/future-stack-smoke-test/REQUESTED_COORDINATES.tsv` آمده است.
 فهرست دقیق coordinateها و فایل‌های binary در
 `android-build/licenses/MAVEN_ARTIFACTS.tsv` ثبت شده است.
+
+JAR رسمی Android 15 برای Robolectric از محدودیت تک‌فایل GitHub بزرگ‌تر است؛ به
+همین دلیل به قطعه‌های binary واقعی تقسیم و مسیر/اندازه/SHA-256 اصلی آن در
+`maven/BASE_FILE_SPLIT_ARTIFACTS.tsv` ثبت می‌شود. اسکریپت آماده‌سازی آن را پیش از
+build به‌صورت byte-for-byte بازسازی و hash را بررسی می‌کند؛ placeholder نیست.
 
 ## استفادهٔ مستقیم از Kotlin compiler
 

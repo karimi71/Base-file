@@ -10,10 +10,20 @@ JDK_ARCHIVE="$TOOL_DIR/jdk/openjdk17-gradle-linux-x64.tar.gz"
 PLATFORM_ARCHIVE="$TOOL_DIR/sdk/android-sdk-platform-35.tar.xz"
 BUILD_TOOLS_ARCHIVE="$TOOL_DIR/sdk/android-sdk-build-tools-34.0.0.tar.xz"
 FRAMEWORK_APK="$TOOL_DIR/sdk/framework-res-api35.apk"
+SPLIT_ARTIFACT_TOOL="$TOOL_DIR/ci/split_maven_artifacts.py"
 
 if [[ "${1:-}" == --clean ]]; then
+    if [[ -d "$TOOL_DIR/maven" && -f "$SPLIT_ARTIFACT_TOOL" ]]; then
+        python3 "$SPLIT_ARTIFACT_TOOL" clean "$TOOL_DIR/maven"
+    fi
     rm -rf "$CACHE_DIR"
     exit 0
+fi
+
+# Robolectric's official Android 15 runtime exceeds GitHub's per-file limit.
+# It is stored as SHA-256-verified chunks and reconstructed before any build.
+if [[ -d "$TOOL_DIR/maven" && -f "$SPLIT_ARTIFACT_TOOL" ]]; then
+    python3 "$SPLIT_ARTIFACT_TOOL" restore "$TOOL_DIR/maven"
 fi
 
 for required in "$JDK_ARCHIVE" "$PLATFORM_ARCHIVE" "$BUILD_TOOLS_ARCHIVE" "$FRAMEWORK_APK"; do

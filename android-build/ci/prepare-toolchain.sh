@@ -33,7 +33,10 @@ SMOKE="$ROOT/android-build/compose-smoke-test"
 TIKARO_SMOKE="$ROOT/android-build/tikaro-stack-smoke-test"
 PAPARAZZI_SMOKE="$ROOT/android-build/paparazzi-smoke-test"
 QUALITY_SMOKE="$ROOT/android-build/quality-smoke-test"
+FUTURE_SMOKE="$ROOT/android-build/future-stack-smoke-test"
 TIKARO_REQUESTS="$TIKARO_SMOKE/REQUESTED_COORDINATES.tsv"
+FUTURE_REQUESTS="$FUTURE_SMOKE/REQUESTED_COORDINATES.tsv"
+FUTURE_CLASSIFIERS="$FUTURE_SMOKE/NATIVE_CLASSIFIERS.tsv"
 SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
 
 if [[ "$MODE" != audit && "$MODE" != publish ]]; then
@@ -69,7 +72,20 @@ gradle -p "$TIKARO_SMOKE" --no-daemon --stacktrace --write-locks \
 gradle -p "$PAPARAZZI_SMOKE" --no-daemon --stacktrace --write-locks \
   :screenshot:testDebugUnitTest
 gradle -p "$QUALITY_SMOKE" --no-daemon --stacktrace --write-locks \
-  classes resolveQualityTools
+  classes resolveQualityTools verifyLicenseReport
+
+# Resolve every future coordinate in isolation, execute host-capable behavior,
+# compile Android device tests, run R8, and record deterministic Roborazzi goldens.
+gradle -p "$FUTURE_SMOKE" --no-daemon --stacktrace --write-locks \
+  resolveFutureCoordinates \
+  generateDependencyReports \
+  :jvm:test \
+  :jvm:verifyGeneratedSources \
+  :android:assembleDebug \
+  :android:assembleRelease \
+  :android:testDebugUnitTest \
+  :android:assembleDebugAndroidTest \
+  :roborazzi:recordRoborazziDebug
 
 test -s "$TIKARO_SMOKE/app/build/outputs/apk/debug/app-debug.apk"
 test -s "$TIKARO_SMOKE/app/build/outputs/apk/release/app-release-unsigned.apk"
@@ -78,6 +94,13 @@ find "$TIKARO_SMOKE/app/build/outputs/apk/androidTest" -type f -name '*.apk' -si
 find "$TIKARO_SMOKE/benchmark/build/outputs/apk" -type f -name '*.apk' -size +0c -print -quit \
   | grep -q .
 test -d "$PAPARAZZI_SMOKE/screenshot/build/reports/paparazzi"
+test -s "$FUTURE_SMOKE/android/build/outputs/apk/debug/android-debug.apk"
+test -s "$FUTURE_SMOKE/android/build/outputs/apk/release/android-release-unsigned.apk"
+test -s "$FUTURE_SMOKE/android/build/outputs/mapping/release/mapping.txt"
+find "$FUTURE_SMOKE/android/build/outputs/apk/androidTest" \
+  -type f -name '*.apk' -size +0c -print -quit | grep -q .
+find "$FUTURE_SMOKE/roborazzi/src/test/snapshots" \
+  -type f -name '*.png' -size +0c | awk 'END { exit(NR >= 6 ? 0 : 1) }'
 
 echo "Resolved Gradle module cache size:"
 du -sh "$GRADLE_USER_HOME/caches/modules-2" || true
@@ -140,6 +163,16 @@ if [[ "$MODE" == publish ]]; then
   python3 "$ROOT/android-build/ci/verify_requested_coordinates.py" \
     "$TIKARO_REQUESTS" \
     "$ROOT/android-build/maven/BASE_FILE_COORDINATES.tsv"
+  python3 "$ROOT/android-build/ci/verify_requested_coordinates.py" \
+    "$FUTURE_REQUESTS" \
+    "$ROOT/android-build/maven/BASE_FILE_COORDINATES.tsv"
+  mapfile -t future_locks < <(find "$FUTURE_SMOKE" -name gradle.lockfile -type f | LC_ALL=C sort)
+  python3 "$ROOT/android-build/ci/verify_future_coordinates.py" \
+    "$FUTURE_REQUESTS" \
+    "$FUTURE_CLASSIFIERS" \
+    "$ROOT/android-build/maven/BASE_FILE_COORDINATES.tsv" \
+    "$ROOT/android-build/maven" \
+    "${future_locks[@]}"
   for sqlite_artifact in sqlite sqlite-framework; do
     grep -q $'^androidx.sqlite\t'"$sqlite_artifact"$'\t' \
       "$ROOT/android-build/maven/BASE_FILE_COORDINATES.tsv" || {
@@ -152,6 +185,12 @@ if [[ "$MODE" == publish ]]; then
     "$ROOT/android-build/licenses/MAVEN_ARTIFACTS.tsv" \
     "$ROOT/android-build/licenses/THIRD_PARTY_NOTICES.txt"
 
+  # The official Robolectric API-35 runtime is about 199 MiB. Preserve it
+  # losslessly as Git-safe 64 MiB chunks, with original size and SHA-256 in a
+  # committed reconstruction manifest. prepare-offline-toolchain restores it.
+  python3 "$ROOT/android-build/ci/split_maven_artifacts.py" split \
+    "$ROOT/android-build/maven"
+
   chmod +x \
     "$ROOT/android-build/build-compose-apk.sh" \
     "$ROOT/android-build/prepare-offline-toolchain.sh" \
@@ -159,6 +198,9 @@ if [[ "$MODE" == publish ]]; then
     "$ROOT/android-build/update-checksums.sh" \
     "$ROOT/android-build/verify-offline-toolchain.sh" \
     "$ROOT/android-build/verify-tikaro-stack.sh" \
+    "$ROOT/android-build/verify-future-stack.sh" \
+    "$ROOT/android-build/ci/split_maven_artifacts.py" \
+    "$ROOT/android-build/ci/verify_future_coordinates.py" \
     "$ROOT/android-build/kotlin/bin/kotlinc" \
     "$ROOT/android-build/kotlin/bin/kotlinc-compose" \
     "$ROOT/android-build/gradle/gradle-$GRADLE_VERSION/bin/gradle"
@@ -168,12 +210,14 @@ if [[ "$MODE" == publish ]]; then
     ! -path '*/compose-smoke-test/*/build/*' \
     ! -path '*/tikaro-stack-smoke-test/*/build/*' \
     ! -path '*/paparazzi-smoke-test/*/build/*' \
+    ! -path '*/future-stack-smoke-test/*/build/*' \
     ! -path '*/quality-smoke-test/build/*' \
     -printf '%s %p\n' | sort -nr | head -30 || true
   if find "$ROOT/android-build" -type f -size +95M \
     ! -path '*/compose-smoke-test/*/build/*' \
     ! -path '*/tikaro-stack-smoke-test/*/build/*' \
     ! -path '*/paparazzi-smoke-test/*/build/*' \
+    ! -path '*/future-stack-smoke-test/*/build/*' \
     ! -path '*/quality-smoke-test/build/*' \
     -print -quit | grep -q .; then
     echo "A generated repository file exceeds the conservative 95 MiB GitHub limit:" >&2
@@ -181,15 +225,18 @@ if [[ "$MODE" == publish ]]; then
       ! -path '*/compose-smoke-test/*/build/*' \
       ! -path '*/tikaro-stack-smoke-test/*/build/*' \
       ! -path '*/paparazzi-smoke-test/*/build/*' \
+      ! -path '*/future-stack-smoke-test/*/build/*' \
       ! -path '*/quality-smoke-test/build/*' -print >&2
     exit 1
   fi
 
   echo "Starting clean-room offline verification from packaged files"
   rm -rf "$SMOKE/.gradle" "$SMOKE/app/build" \
-    "$RUNNER_TEMP/published-cache" "$RUNNER_TEMP/offline-gradle-home"
+    "$RUNNER_TEMP/published-cache" "$RUNNER_TEMP/offline-gradle-home" \
+    "$RUNNER_TEMP/offline-future-gradle-home"
   export BASE_FILE_CACHE="$RUNNER_TEMP/published-cache"
   export BASE_FILE_GRADLE_USER_HOME="$RUNNER_TEMP/offline-gradle-home"
+  export BASE_FILE_FUTURE_GRADLE_USER_HOME="$RUNNER_TEMP/offline-future-gradle-home"
   "$ROOT/android-build/prepare-offline-toolchain.sh"
   "$ROOT/android-build/kotlin/bin/kotlinc" -version
   "$ROOT/android-build/build-compose-apk.sh" "$SMOKE"
@@ -201,6 +248,13 @@ if [[ "$MODE" == publish ]]; then
   "$ROOT/android-build/verify-tikaro-stack.sh"
   TIKARO_DEBUG_APK="$TIKARO_SMOKE/app/build/outputs/apk/debug/app-debug.apk"
   TIKARO_DEBUG_SHA="$(sha256sum "$TIKARO_DEBUG_APK" | cut -d' ' -f1)"
+
+  echo "Running isolated future-stack behavior, R8, Roborazzi, and license checks offline"
+  "$ROOT/android-build/verify-future-stack.sh"
+  FUTURE_DEBUG_APK="$FUTURE_SMOKE/android/build/outputs/apk/debug/android-debug.apk"
+  FUTURE_RELEASE_APK="$FUTURE_SMOKE/android/build/outputs/apk/release/android-release-unsigned.apk"
+  FUTURE_DEBUG_SHA="$(sha256sum "$FUTURE_DEBUG_APK" | cut -d' ' -f1)"
+  FUTURE_RELEASE_SHA="$(sha256sum "$FUTURE_RELEASE_APK" | cut -d' ' -f1)"
 
   # Build an unsigned release, align it, and explicitly sign it with apksigner.
   # The random key and password remain under RUNNER_TEMP and are destroyed.
@@ -229,7 +283,9 @@ if [[ "$MODE" == publish ]]; then
   DEBUG_SHA="$(sha256sum "$DEBUG_APK" | cut -d' ' -f1)"
   SIGNED_SHA="$(sha256sum "$SIGNING_DIR/compose-smoke-signed.apk" | cut -d' ' -f1)"
   REQUESTED_COUNT="$(tail -n +2 "$TIKARO_REQUESTS" | wc -l | tr -d ' ')"
+  FUTURE_REQUESTED_COUNT="$(tail -n +2 "$FUTURE_REQUESTS" | wc -l | tr -d ' ')"
   MAVEN_COORDINATE_COUNT="$(tail -n +2 "$ROOT/android-build/maven/BASE_FILE_COORDINATES.tsv" | wc -l | tr -d ' ')"
+  ROBORAZZI_GOLDEN_COUNT="$(find "$FUTURE_SMOKE/roborazzi/src/test/snapshots" -type f -name '*.png' | wc -l | tr -d ' ')"
   rm -rf "$SIGNING_DIR"
   unset SIGNING_PASSWORD
 
@@ -247,7 +303,9 @@ if [[ "$MODE" == publish ]]; then
 - Compose BOM: $COMPOSE_BOM_VERSION (UI/Foundation/Runtime 1.7.6; Material3 1.3.1)
 - Android SDK: Platform 35; Build Tools $ANDROID_BUILD_TOOLS_VERSION
 - Dependency mode: local file Maven repository plus Gradle \`--offline\`, starting with an empty Gradle user home
-- Pinned Tikaro direct coordinates: $REQUESTED_COUNT; complete selected Maven graph: $MAVEN_COORDINATE_COUNT coordinates
+- Pinned Tikaro direct coordinates: $REQUESTED_COUNT; isolated future coordinates: $FUTURE_REQUESTED_COUNT; complete selected Maven graph: $MAVEN_COORDINATE_COUNT coordinates
+- Future pins: SQLite $SQLITE_VERSION; protobuf/protoc $PROTOBUF_VERSION; MockK $MOCKK_VERSION; JUnit Jupiter $JUNIT_JUPITER_VERSION / Platform $JUNIT_PLATFORM_VERSION
+- Rendering/image/security pins: Roborazzi $ROBORAZZI_VERSION; Coil $COIL_VERSION; Tink $TINK_VERSION; PDFBox Android $PDFBOX_ANDROID_VERSION
 
 ## Results
 
@@ -258,9 +316,9 @@ if [[ "$MODE" == publish ]]; then
 3. Tikaro JVM tests executed with Coroutines Test, Truth, and Turbine. Its AndroidX
    Test/Compose/Espresso/UI Automator APK and Macrobenchmark APK were compiled;
    device-only tests were not executed on the host-only runner.
-4. Paparazzi $PAPARAZZI_VERSION rendered the Compose screenshot test on the JVM,
-   proving compatibility with AGP $ANDROID_GRADLE_PLUGIN_VERSION. Detekt, Ktlint,
-   and Dependency Analysis plugins loaded, and their pinned engines resolved.
+4. Paparazzi $PAPARAZZI_VERSION remained intact and rendered its Compose test.
+   Detekt, Ktlint, Dependency Analysis, and Gradle License Report $LICENSE_REPORT_VERSION
+   loaded; the license task generated a non-empty report containing a real dependency.
 5. The Tikaro release APK contains \`assets/dexopt/baseline.prof\`; the Benchmark
    and Baseline Profile plugin graph is available offline. Runtime profile capture
    itself requires a physical or managed Android device.
@@ -271,10 +329,35 @@ if [[ "$MODE" == publish ]]; then
    network repositories removed, \`--offline\`, and an initially empty cache.
 8. The ephemeral JKS/password were deleted and never added to Git. Coordinate,
    SHA-256, provenance, license, and embedded NOTICE inventories were regenerated.
+9. Proto DataStore executed migration, restart persistence, and corruption recovery;
+   protoc generated lite Java/Kotlin sources and both Linux native classifiers resolved.
+   Moshi KSP generated an adapter. Bundled SQLite executed transaction, persistence,
+   uniqueness, foreign-key, and cascade behavior. JUnit 5, MockK, Kotest, jqwik,
+   datetime serialization, Gson/Moshi, and Tink AEAD/keyset tests all ran on Java 17.
+10. The isolated Android fixture built debug, minified release through R8, and a
+    device-test APK with core desugaring, Coil modules, Security Crypto, PDFBox,
+    extended Material icons, and WorkManager multiprocess. Instrumentation code was
+    compiled but not device-executed on this host-only runner.
+11. Roborazzi $ROBORAZZI_VERSION with Robolectric $ROBOLECTRIC_VERSION / API 35 native
+    graphics recorded and verified $ROBORAZZI_GOLDEN_COUNT Compose goldens covering
+    light, dark, RTL, large-font, and long-data variants. An intentional mismatch
+    produced Grid-style comparison PNG/JSON/report evidence.
+12. Host Android integration tests ran real ATF $ACCESSIBILITY_TEST_FRAMEWORK_VERSION
+    checks and suppression, Room $ROOM_VERSION migration over SQLite framework
+    $SQLITE_VERSION with constraints/cascade/downgrade rejection, local Coil decode,
+    cache/cancellation/no-network behavior, PDF creation/load/render/password/corrupt
+    handling, and authenticated preference migration.
+13. Robolectric's official Android 15 runtime exceeded GitHub's single-file limit;
+    it was losslessly split into committed chunks and was reconstructed with its
+    original recorded SHA-256 before the empty-cache offline build.
 
 Minimal Compose debug APK SHA-256 (CI output, not committed): \`$DEBUG_SHA\`
 
 Tikaro stack debug APK SHA-256 (CI output, not committed): \`$TIKARO_DEBUG_SHA\`
+
+Future fixture debug APK SHA-256 (CI output, not committed): \`$FUTURE_DEBUG_SHA\`
+
+Future fixture R8 release APK SHA-256 (CI output, not committed): \`$FUTURE_RELEASE_SHA\`
 
 Explicitly signed test APK SHA-256 (CI output, not committed): \`$SIGNED_SHA\`
 

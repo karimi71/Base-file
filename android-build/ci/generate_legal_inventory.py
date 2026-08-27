@@ -55,7 +55,12 @@ def main() -> int:
                 # UNKNOWN is intentional when upstream omitted POM license metadata.
                 license_text = "UNKNOWN - inspect embedded metadata/NOTICE"
             files = [f for f in sorted(directory.iterdir()) if f.is_file()]
-            binary_files = [f.name for f in files if f.suffix in {".jar", ".aar", ".klib", ".so"}]
+            binary_files = [
+                f.name
+                for f in files
+                if f.suffix
+                in {".jar", ".aar", ".klib", ".so", ".exe", ".dll", ".dylib"}
+            ]
             rows.append(
                 {
                     "group": group,

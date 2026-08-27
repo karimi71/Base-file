@@ -1,5 +1,7 @@
 # Offline toolchain extraction/cache
 android-build/.cache/
+# Reconstructed from committed, SHA-256-verified Git-safe chunks on demand.
+android-build/maven/org/robolectric/android-all-instrumented/**/*.jar
 android-build/.gradle-home/
 
 # Gradle/Android/Python build output

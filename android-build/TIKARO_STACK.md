@@ -40,18 +40,16 @@ network-disabled Gradle user home.
 - Detekt 1.23.7, Ktlint Gradle plugin 12.1.2 with pinned Ktlint CLI
   1.3.1, and Dependency Analysis plugin 2.2.0
 
-## Deliberately not included in this Tikaro-essential layer
+## Optional capabilities kept out of Tikaro's fixture graph
 
-The following were explicitly optional, intended only for a universal catalog,
-or require a demonstrated application need: SQLite bundled, Proto DataStore and
-the protobuf plugin, biometric alpha APIs, Security Crypto, Tink, Moshi/Gson as
-application JSON stacks, Coil, PDFBox, kotlinx-datetime, JUnit 5, MockK/Mockito,
-material-icons-extended, WorkManager multiprocess, and network/telemetry/payment
-SDKs. Core-library desugaring is also not enabled until Tikaro source actually
-uses an API that requires it.
+Future-facing capabilities such as SQLite bundled, Proto DataStore/protoc,
+Security Crypto/Tink, Moshi/Gson, Coil, PDFBox, kotlinx-datetime, JUnit 5, MockK,
+material-icons-extended, WorkManager multiprocess, Roborazzi/accessibility, and
+core-library desugaring are now vendored and tested in the isolated
+`future-stack-smoke-test`. They are intentionally **not** dependencies of this
+Tikaro-essential app. See `FUTURE_STACK.md` for the exact pins and evidence.
 
-These can be added later as isolated, pinned layers without changing Tikaro's
-runtime dependency graph.
+Network/telemetry/payment SDKs remain outside the requested graph.
 
 ## Smoke projects
 
