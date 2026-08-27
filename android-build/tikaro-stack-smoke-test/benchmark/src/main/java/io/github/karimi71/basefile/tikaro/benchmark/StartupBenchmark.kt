@@ -3,9 +3,9 @@ package io.github.karimi71.basefile.tikaro.benchmark
 import androidx.benchmark.macro.CompilationMode
 import androidx.benchmark.macro.StartupMode
 import androidx.benchmark.macro.junit4.MacrobenchmarkRule
-import androidx.benchmark.macro.measureRepeated
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.uiautomator.By
+import androidx.test.uiautomator.Until
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -25,6 +25,6 @@ class StartupBenchmark {
         setupBlock = { pressHome() }
     ) {
         startActivityAndWait()
-        device.waitForObject(By.text("Tikaro offline stack"), 5_000)
+        device.wait(Until.hasObject(By.text("Tikaro offline stack")), 5_000)
     }
 }
