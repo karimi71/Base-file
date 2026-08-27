@@ -1,6 +1,4 @@
 import org.gradle.api.artifacts.result.ResolvedDependencyResult
-import org.gradle.api.attributes.Category
-import org.gradle.api.attributes.Usage
 
 plugins {
     id("com.android.application") version "8.7.3" apply false
@@ -21,17 +19,9 @@ allprojects {
     }
 }
 
-// Resolve the complete, explicit future catalog independently of each fixture's
-// runtime graph. This proves availability without creating a production bundle
-// that carries every optional library.
-val futureCoordinates by configurations.creating {
-    isCanBeConsumed = false
-    isCanBeResolved = true
-    attributes {
-        attribute(Category.CATEGORY_ATTRIBUTE, objects.named(Category.LIBRARY))
-        attribute(Usage.USAGE_ATTRIBUTE, objects.named(Usage.JAVA_RUNTIME))
-    }
-}
+// Native classifiers have no ordinary JVM/Android variant, so resolve them in
+// a dedicated configuration. All libraries resolve in correctly attributed JVM
+// or Android fixture configurations (never one ambiguous mixed-platform graph).
 val nativeClassifiers by configurations.creating {
     isCanBeConsumed = false
     isCanBeResolved = true
@@ -43,12 +33,6 @@ fun readTsv(path: String): List<Map<String, String>> {
     return lines.drop(1).map { line -> headings.zip(line.split('\t')).toMap() }
 }
 
-readTsv("REQUESTED_COORDINATES.tsv").forEach { row ->
-    dependencies.add(
-        futureCoordinates.name,
-        "${row.getValue("group")}:${row.getValue("artifact")}:${row.getValue("version")}",
-    )
-}
 readTsv("NATIVE_CLASSIFIERS.tsv").forEach { row ->
     dependencies.add(
         nativeClassifiers.name,
@@ -59,12 +43,10 @@ readTsv("NATIVE_CLASSIFIERS.tsv").forEach { row ->
 
 tasks.register("resolveFutureCoordinates") {
     group = "verification"
-    description = "Resolves every pinned optional coordinate and native classifier."
-    inputs.files(futureCoordinates, nativeClassifiers)
+    description = "Resolves both pinned native protoc classifiers."
+    inputs.files(nativeClassifiers)
     doLast {
-        val catalogFiles = futureCoordinates.files
         val nativeFiles = nativeClassifiers.files
-        check(catalogFiles.isNotEmpty()) { "The future coordinate catalog resolved no files" }
         check(nativeFiles.map { it.name }.toSet().containsAll(
             setOf(
                 "protoc-4.29.3-linux-x86_64.exe",
@@ -74,7 +56,7 @@ tasks.register("resolveFutureCoordinates") {
         nativeFiles.forEach { executable ->
             check(executable.length() > 1_000_000) { "protoc artifact is not real: $executable" }
         }
-        println("Resolved ${catalogFiles.size} future catalog files and ${nativeFiles.size} protoc executables")
+        println("Resolved ${nativeFiles.size} pinned protoc executables")
     }
 }
 
@@ -87,7 +69,6 @@ tasks.register("generateDependencyReports") {
     outputs.upToDateWhen { false }
     doLast {
         val targets = listOf(
-            Triple(project, "futureCoordinates", true),
             Triple(project, "nativeClassifiers", true),
             Triple(project(":jvm"), "runtimeClasspath", true),
             Triple(project(":jvm"), "testRuntimeClasspath", true),

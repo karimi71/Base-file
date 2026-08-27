@@ -52,6 +52,8 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter:5.11.4")
     testImplementation("org.junit.jupiter:junit-jupiter-params:5.11.4")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.11.4")
+    testImplementation("org.junit.platform:junit-platform-suite-api:1.11.4")
+    testRuntimeOnly("org.junit.platform:junit-platform-suite-engine:1.11.4")
     testImplementation("io.kotest:kotest-runner-junit5:5.9.1")
     testImplementation("io.kotest:kotest-property:5.9.1")
     testImplementation("net.jqwik:jqwik:1.9.2")

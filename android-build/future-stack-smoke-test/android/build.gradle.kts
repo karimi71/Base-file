@@ -75,6 +75,7 @@ dependencies {
     implementation("io.coil-kt.coil3:coil-video:3.1.0")
     implementation("io.coil-kt.coil3:coil-network-okhttp:3.1.0")
 
+    implementation("androidx.datastore:datastore:1.1.7")
     implementation("androidx.work:work-runtime-ktx:2.10.0")
     implementation("androidx.work:work-multiprocess:2.10.0")
     implementation("androidx.sqlite:sqlite:2.5.2")
