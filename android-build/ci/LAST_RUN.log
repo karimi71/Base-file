@@ -28,19 +28,19 @@ Daemon will be stopped at the end of the build
 > Task :app:mergeDebugAssets
 > Task :app:compressDebugAssets
 > Task :app:desugarDebugFileDependencies
-> Task :app:processDebugManifestForPackage
+> Task :app:mergeDebugJniLibFolders
 > Task :app:checkDebugDuplicateClasses
-> Task :app:processDebugResources
+> Task :app:mergeDebugNativeLibs
+> Task :app:processDebugManifestForPackage
 > Task :app:mergeExtDexDebug
 > Task :app:mergeLibDexDebug
-> Task :app:mergeDebugJniLibFolders
-> Task :app:mergeDebugNativeLibs
-> Task :app:validateSigningDebug
-> Task :app:writeDebugAppMetadata
 
 > Task :app:stripDebugDebugSymbols
 Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so.
 
+> Task :app:processDebugResources
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
 > Task :app:writeDebugSigningConfigVersions
 > Task :app:buildKotlinToolingMetadata
 > Task :app:preReleaseBuild UP-TO-DATE
@@ -57,8 +57,8 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:processReleaseManifestForPackage
 > Task :app:javaPreCompileRelease
 > Task :app:extractProguardFiles
-> Task :app:mergeReleaseResources
 > Task :app:mergeReleaseJniLibFolders
+> Task :app:mergeReleaseResources
 > Task :app:mergeReleaseNativeLibs
 
 > Task :app:stripReleaseDebugSymbols
@@ -71,6 +71,7 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:mergeReleaseStartupProfile
 > Task :app:processReleaseResources
 > Task :app:compileDebugKotlin
+> Task :app:mergeExtDexRelease
 > Task :app:compileDebugJavaWithJavac NO-SOURCE
 > Task :app:dexBuilderDebug
 > Task :app:mergeDebugGlobalSynthetics
@@ -81,24 +82,23 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:compileReleaseShaders NO-SOURCE
 > Task :app:generateReleaseAssets UP-TO-DATE
 > Task :app:mergeReleaseAssets
-> Task :app:compressReleaseAssets
 > Task :app:mergeDebugJavaResource
+> Task :app:compressReleaseAssets
 > Task :app:extractReleaseVersionControlInfo
 > Task :app:packageDebug
 > Task :app:createDebugApkListingFileRedirect
 > Task :app:assembleDebug
-> Task :app:mergeExtDexRelease
-> Task :app:compileReleaseKotlin
 > Task :app:collectReleaseDependencies
+> Task :app:sdkReleaseDependencyData
+> Task :app:optimizeReleaseResources
+> Task :app:writeReleaseAppMetadata
+> Task :app:writeReleaseSigningConfigVersions
+> Task :app:compileReleaseKotlin
 > Task :app:compileReleaseJavaWithJavac NO-SOURCE
 > Task :app:generateReleaseLintVitalReportModel
 > Task :app:dexBuilderRelease
-> Task :app:optimizeReleaseResources
 > Task :app:processReleaseJavaRes
 > Task :app:mergeReleaseGlobalSynthetics
-> Task :app:sdkReleaseDependencyData
-> Task :app:writeReleaseAppMetadata
-> Task :app:writeReleaseSigningConfigVersions
 > Task :app:mergeReleaseJavaResource
 > Task :app:mergeDexRelease
 > Task :app:compileReleaseArtProfile
@@ -108,9 +108,9 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:lintVitalReportRelease
 > Task :app:lintVitalRelease
 > Task :app:assembleRelease
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787859341063.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787859957466.json
 
-BUILD SUCCESSFUL in 2m 42s
+BUILD SUCCESSFUL in 3m 18s
 82 actionable tasks: 82 executed
 Verifies
 Verified using v1 scheme (JAR signing): true
@@ -121,14 +121,14 @@ Verified using v4 scheme (APK Signature Scheme v4): false
 Verified for SourceStamp: false
 Number of signers: 1
 Signer #1 certificate DN: C=US, O=Android, CN=Android Debug
-Signer #1 certificate SHA-256 digest: c32bad594142dec0156528046119b169a91938e06ce352f51af00883ef4dc608
-Signer #1 certificate SHA-1 digest: fdb74c780e52f89f2108dfed37fcba24188d2147
-Signer #1 certificate MD5 digest: d16e556533b7897bfa43e35e2a483c5f
+Signer #1 certificate SHA-256 digest: a982aa43338b7b592e81a16e390ce2510e653c04c7dc4aa7d4924615b8f81660
+Signer #1 certificate SHA-1 digest: 15c11e1d2e4800b054a8071db687de058674390b
+Signer #1 certificate MD5 digest: d170df0c469b3511af30e4b019146b22
 Signer #1 key algorithm: RSA
 Signer #1 key size (bits): 2048
-Signer #1 public key SHA-256 digest: f70191aeb3630560a2068309a0fdb3be3c02a84e75e390048d84761668f64287
-Signer #1 public key SHA-1 digest: d1aedebe3fa11bce45c9012eee4610e190f060a3
-Signer #1 public key MD5 digest: 27a731b340b4b5a253dd789df80b1221
+Signer #1 public key SHA-256 digest: 9dba6043fab21132de8364faae85ac949ee050b99e34cb691f6f40dfe5b1f3d4
+Signer #1 public key SHA-1 digest: 104e562044fe7d45195a040c238d313fe3e72e9d
+Signer #1 public key MD5 digest: 2c0f72a2c596ae149b5c685513870bf7
 WARNING: META-INF/com/android/build/gradle/app-metadata.properties not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/androidx.activity_activity-compose.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/androidx.activity_activity-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
@@ -176,7 +176,7 @@ WARNING: META-INF/kotlinx_coroutines_android.version not protected by signature.
 WARNING: META-INF/kotlinx_coroutines_core.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
-2be68975b20a0d0b9ebc71a8f29c131d96792ff36f6e42d23b83f502f30edbbe  /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
+8942444fba04c9b3895afc4b1bed99a20fb83557ab515f5de4010afb1dfc7347  /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
 
@@ -309,7 +309,6 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :android:processReleaseMainManifest
 > Task :android:processReleaseManifest
 > Task :android:processReleaseManifestForPackage
-> Task :android:processReleaseResources
 > Task :android:packageDebug
 > Task :android:createDebugApkListingFileRedirect
 > Task :android:assembleDebug
@@ -323,21 +322,22 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 
 > Task :android:extractReleaseNativeSymbolTables
 > Task :android:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :android:processReleaseResources
 > Task :android:mergeReleaseArtProfile
 > Task :android:expandReleaseL8ArtProfileWildcards
-> Task :android:checkReleaseDuplicateClasses
-> Task :android:mergeReleaseStartupProfile
 > Task :android:compileReleaseKotlin
-> Task :android:mergeReleaseShaders
 > Task :android:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:checkReleaseDuplicateClasses
 > Task :android:generateReleaseLintVitalReportModel
 > Task :android:expandReleaseArtProfileWildcards
 > Task :android:mergeReleaseGeneratedProguardFiles
 > Task :android:processReleaseJavaRes
 > Task :android:mergeReleaseJavaResource
+> Task :android:mergeReleaseStartupProfile
 > Task :android:lintVitalAnalyzeRelease
 > Task :android:lintVitalReportRelease
 > Task :android:lintVitalRelease
+> Task :android:mergeReleaseShaders
 > Task :android:compileReleaseShaders NO-SOURCE
 > Task :android:generateReleaseAssets UP-TO-DATE
 > Task :android:mergeReleaseAssets
@@ -402,32 +402,31 @@ Unable to strip the following libraries, packaging them as they are: libmockkjvm
 > Task :roborazzi:packageDebugResources
 > Task :roborazzi:parseDebugLocalResources
 > Task :roborazzi:generateDebugRFile
+> Task :roborazzi:kspDebugKotlin
+> Task :roborazzi:compileDebugKotlin
+> Task :roborazzi:javaPreCompileDebug
+> Task :roborazzi:compileDebugJavaWithJavac NO-SOURCE
 > Task :android:l8DexDesugarLibRelease
+> Task :roborazzi:bundleLibRuntimeToJarDebug
 > Task :android:compileReleaseArtProfile
+> Task :roborazzi:bundleLibCompileToJarDebug
+> Task :roborazzi:preDebugUnitTestBuild UP-TO-DATE
+> Task :roborazzi:writeDebugAarMetadata
 > Task :android:shrinkReleaseRes
+> Task :roborazzi:checkDebugUnitTestAarMetadata
+> Task :roborazzi:compileDebugLibraryResources
 > Task :android:convertShrunkResourcesToBinaryRelease
+> Task :roborazzi:generateDebugUnitTestResValues
+> Task :roborazzi:mapDebugUnitTestSourceSetPaths
 > Task :android:optimizeReleaseResources
+> Task :roborazzi:generateDebugUnitTestResources
 > Task :android:packageRelease
 > Task :android:createReleaseApkListingFileRedirect
 > Task :android:assembleRelease
-> Task :roborazzi:javaPreCompileDebug
-> Task :roborazzi:preDebugUnitTestBuild UP-TO-DATE
-> Task :roborazzi:writeDebugAarMetadata
-> Task :roborazzi:kspDebugKotlin
-> Task :roborazzi:checkDebugUnitTestAarMetadata
-> Task :roborazzi:compileDebugLibraryResources
-> Task :roborazzi:generateDebugUnitTestResValues
-> Task :roborazzi:mapDebugUnitTestSourceSetPaths
-> Task :roborazzi:generateDebugUnitTestResources
-> Task :roborazzi:mergeDebugUnitTestResources
 > Task :roborazzi:extractDeepLinksDebug
 > Task :roborazzi:processDebugManifest
 > Task :roborazzi:processDebugUnitTestManifest
-> Task :roborazzi:compileDebugKotlin
-> Task :roborazzi:compileDebugJavaWithJavac NO-SOURCE
-> Task :roborazzi:processDebugUnitTestResources
-> Task :roborazzi:bundleLibRuntimeToJarDebug
-> Task :roborazzi:bundleLibCompileToJarDebug
+> Task :roborazzi:mergeDebugUnitTestResources
 > Task :roborazzi:javaPreCompileDebugUnitTest
 > Task :roborazzi:mergeDebugShaders
 > Task :roborazzi:compileDebugShaders NO-SOURCE
@@ -436,42 +435,65 @@ Unable to strip the following libraries, packaging them as they are: libmockkjvm
 > Task :roborazzi:generateDebugUnitTestAssets UP-TO-DATE
 > Task :roborazzi:packageDebugAssets
 > Task :roborazzi:mergeDebugUnitTestAssets
+> Task :roborazzi:processDebugJavaRes
+> Task :roborazzi:processDebugUnitTestResources
 > Task :roborazzi:packageDebugUnitTestForUnitTest
 > Task :roborazzi:generateDebugUnitTestConfig
-> Task :roborazzi:processDebugJavaRes
 > Task :roborazzi:kspDebugUnitTestKotlin
 
-> Task :roborazzi:compileDebugUnitTestKotlin FAILED
-e: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/src/test/kotlin/dev/basefile/future/roborazzi/CoilLocalIntegrationTest.kt:14:19 Unresolved reference 'ColorImage'.
-e: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/src/test/kotlin/dev/basefile/future/roborazzi/CoilLocalIntegrationTest.kt:66:32 Unresolved reference 'ColorImage'.
-e: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/src/test/kotlin/dev/basefile/future/roborazzi/PdfIntegrationTest.kt:76:23 Cannot infer type for this parameter. Please specify it explicitly.
-e: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/src/test/kotlin/dev/basefile/future/roborazzi/PdfIntegrationTest.kt:76:23 Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
-fun <T : Closeable?, R> T.use(block: (T) -> R): R
-    [R|Contract description]
-     <
-        CallsInPlace(block, EXACTLY_ONCE)
-    >
-e: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/src/test/kotlin/dev/basefile/future/roborazzi/RoborazziVisualMatrixTest.kt:73:51 None of the following candidates is applicable:
-constructor(imageComparator: ImageComparator = ..., resultValidator: (@ParameterName(...) ImageComparator.ComparisonResult) -> Boolean = ...): RoborazziOptions.CompareOptions
-constructor(outputDirectoryPath: String = ..., changeThreshold: Float, imageComparator: ImageComparator = ...): RoborazziOptions.CompareOptions
-constructor(outputDirectoryPath: String = ..., imageComparator: ImageComparator = ..., comparisonStyle: RoborazziOptions.CompareOptions.ComparisonStyle = ..., aiAssertionOptions: AiAssertionOptions? = ..., resultValidator: (@ParameterName(...) ImageComparator.ComparisonResult) -> Boolean = ...): RoborazziOptions.CompareOptions
-e: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/src/test/kotlin/dev/basefile/future/roborazzi/SecurityMigrationIntegrationTest.kt:32:9 Unresolved reference 'LegacySecurePreferencesMigration'.
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787859497833.json
+> Task :roborazzi:compileDebugUnitTestKotlin
+w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/src/test/kotlin/dev/basefile/future/roborazzi/CoilLocalIntegrationTest.kt:66:32 This declaration needs opt-in. Its usage should be marked with '@coil3.annotation.ExperimentalCoilApi' or '@OptIn(coil3.annotation.ExperimentalCoilApi::class)'
+
+> Task :roborazzi:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :roborazzi:processDebugUnitTestJavaRes
+
+> Task :roborazzi:testDebugUnitTest
+
+CoilLocalIntegrationTest > local SVG and GIF decode and second SVG load hits memory cache FAILED
+    java.lang.AssertionError at CoilLocalIntegrationTest.kt:35
+
+CoilLocalIntegrationTest > network-shaped request stays fake and cancellation disposes work PASSED
+
+PdfIntegrationTest > PDFBox creates loads inspects renders and rejects corruption PASSED
+
+PdfIntegrationTest > password protection and framework PdfDocument paths execute FAILED
+    java.lang.IllegalStateException at PdfIntegrationTest.kt:78
+
+RoborazziAccessibilityTest > API 35 native graphics checks semantics contrast and touch target PASSED
+
+RoborazziVisualMatrixTest > longData PASSED
+
+RoborazziVisualMatrixTest > largeFont PASSED
+
+RoborazziVisualMatrixTest > lightLtr PASSED
+
+RoborazziVisualMatrixTest > lightRtl PASSED
+
+RoborazziVisualMatrixTest > darkLtr PASSED
+
+RoborazziVisualMatrixTest > darkRtl PASSED
+
+RoomMigrationIntegrationTest > Room migrates real framework SQLite file then enforces constraints and cascade PASSED
+
+SecurityMigrationIntegrationTest > legacy preferences migrate to authenticated file before source is cleared PASSED
+
+13 tests completed, 2 failed
+
+> Task :roborazzi:testDebugUnitTest FAILED
+> Task :roborazzi:finalizeTestRoborazziDebug
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787860152482.json
 
 FAILURE: Build failed with an exception.
 
 * What went wrong:
-Execution failed for task ':roborazzi:compileDebugUnitTestKotlin'.
-> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
-   > Compilation error. See log for more details
+Execution failed for task ':roborazzi:testDebugUnitTest'.
+> There were failing tests. See the report at: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/build/reports/tests/testDebugUnitTest/index.html
 
 * Try:
-> Run with --info or --debug option to get more log output.
 > Run with --scan to get full insights.
-> Get more help at https://help.gradle.org.
 
 * Exception is:
-org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':roborazzi:compileDebugUnitTestKotlin'.
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':roborazzi:testDebugUnitTest'.
 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:130)
 	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:293)
 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:128)
@@ -532,18 +554,20 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':roboraz
 	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
-Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
-	at org.gradle.workers.internal.DefaultWorkerExecutor$WorkItemExecution.waitForCompletion(DefaultWorkerExecutor.java:287)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.lambda$waitForItemsAndGatherFailures$2(DefaultAsyncWorkTracker.java:130)
-	at org.gradle.internal.Factories$1.create(Factories.java:31)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:339)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:322)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLock(DefaultWorkerLeaseService.java:327)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:126)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:92)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForAll(DefaultAsyncWorkTracker.java:78)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForCompletion(DefaultAsyncWorkTracker.java:66)
-	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:252)
+Caused by: org.gradle.api.internal.exceptions.MarkedVerificationException: There were failing tests. See the report at: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/build/reports/tests/testDebugUnitTest/index.html
+	at org.gradle.api.tasks.testing.AbstractTestTask.handleTestFailures(AbstractTestTask.java:705)
+	at org.gradle.api.tasks.testing.AbstractTestTask.handleCollectedResults(AbstractTestTask.java:539)
+	at org.gradle.api.tasks.testing.AbstractTestTask.executeTests(AbstractTestTask.java:534)
+	at org.gradle.api.tasks.testing.Test.executeTests(Test.java:715)
+	at com.android.build.gradle.tasks.factory.AndroidUnitTest.executeTests(AndroidUnitTest.java:171)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:125)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.doExecute(StandardTaskAction.java:58)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:51)
+	at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:29)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:244)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
@@ -685,38 +709,7 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
-Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilation error. See log for more details
-	at org.jetbrains.kotlin.gradle.tasks.TasksUtilsKt.throwExceptionIfCompilationFailed(tasksUtils.kt:21)
-	at org.jetbrains.kotlin.compilerRunner.GradleKotlinCompilerWork.run(GradleKotlinCompilerWork.kt:119)
-	at org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction.execute(GradleCompilerRunnerWithWorkers.kt:76)
-	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
-	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
-	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
-	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
-	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:174)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:195)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:128)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:170)
-	at org.gradle.internal.Factories$1.create(Factories.java:31)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:136)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:165)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:134)
-	... 2 more
 
 
-BUILD FAILED in 4m 44s
-168 actionable tasks: 168 executed
+BUILD FAILED in 6m
+171 actionable tasks: 171 executed
