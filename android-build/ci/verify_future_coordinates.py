@@ -111,6 +111,7 @@ def main() -> int:
 
     lock_pattern = re.compile(r"^([^:#]+):([^:]+):([^=]+)=")
     checked_locks = 0
+    mismatches: list[str] = []
     for lock_path in lock_paths:
         if not lock_path.is_file():
             raise SystemExit(f"Expected dependency lockfile is missing: {lock_path}")
@@ -121,12 +122,13 @@ def main() -> int:
             group, artifact, selected = match.groups()
             expected = expected_version(group, artifact)
             if expected is not None and selected != expected:
-                raise SystemExit(
-                    f"Mixed future-family version in {lock_path}: "
-                    f"{group}:{artifact}:{selected}, expected {expected}"
+                mismatches.append(
+                    f"{lock_path}: {group}:{artifact}:{selected}, expected {expected}"
                 )
             if expected is not None:
                 checked_locks += 1
+    if mismatches:
+        raise SystemExit("Mixed future-family versions:\n  " + "\n  ".join(mismatches))
 
     print(
         f"Future coordinate audit: {len(requested)} requested coordinates, "

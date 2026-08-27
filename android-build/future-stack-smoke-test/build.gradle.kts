@@ -17,6 +17,42 @@ allprojects {
     dependencyLocking {
         lockAllConfigurations()
     }
+    configurations.configureEach {
+        resolutionStrategy.eachDependency {
+            val pinned = when {
+                requested.group == "androidx.sqlite" -> "2.5.2"
+                requested.group == "androidx.datastore" -> "1.1.7"
+                requested.group == "io.mockk" -> "1.13.13"
+                requested.group in setOf("org.junit.jupiter", "org.junit.vintage") -> "5.11.4"
+                requested.group == "org.junit.platform" -> "1.11.4"
+                requested.group == "io.github.takahirom.roborazzi" -> "1.39.0"
+                requested.group == "io.coil-kt.coil3" -> "3.1.0"
+                requested.group == "com.google.crypto.tink" -> "1.15.0"
+                requested.group == "androidx.security" -> "1.1.0-alpha06"
+                requested.group == "com.squareup.moshi" -> "1.15.2"
+                requested.group == "androidx.work" -> "2.10.0"
+                requested.group == "androidx.room" -> "2.7.2"
+                requested.group == "io.kotest" -> "5.9.1"
+                requested.group == "org.jetbrains.kotlinx" &&
+                    requested.name.startsWith("kotlinx-datetime") -> "0.6.1"
+                requested.group == "com.google.protobuf" &&
+                    requested.name != "protobuf-gradle-plugin" -> "4.29.3"
+                requested.group == "com.google.code.gson" && requested.name == "gson" -> "2.11.0"
+                requested.group == "androidx.compose.material" &&
+                    requested.name.startsWith("material-icons-extended") -> "1.7.6"
+                requested.group == "net.jqwik" && requested.name.startsWith("jqwik") -> "1.9.2"
+                requested.group ==
+                    "com.google.android.apps.common.testing.accessibility.framework" -> "4.1.1"
+                requested.group == "androidx.test.espresso" &&
+                    requested.name == "espresso-accessibility" -> "3.6.1"
+                else -> null
+            }
+            if (pinned != null) {
+                useVersion(pinned)
+                because("Base-file future families are intentionally aligned")
+            }
+        }
+    }
 }
 
 // Native classifiers have no ordinary JVM/Android variant, so resolve them in
