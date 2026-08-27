@@ -9,7 +9,9 @@ import coil3.ImageLoader
 import coil3.decode.DataSource
 import coil3.gif.GifDecoder
 import coil3.network.okhttp.OkHttpNetworkFetcherFactory
+import coil3.request.ErrorResult
 import coil3.request.ImageRequest
+import coil3.request.ImageResult
 import coil3.request.SuccessResult
 import coil3.svg.SvgDecoder
 import coil3.test.FakeImageLoaderEngine
@@ -52,12 +54,15 @@ class CoilLocalIntegrationTest {
             .size(64, 64)
             .memoryCacheKey("local-svg")
             .build()
-        assertTrue(loader.execute(svgRequest) is SuccessResult)
-        val cached = loader.execute(svgRequest) as SuccessResult
-        assertEquals(DataSource.MEMORY_CACHE, cached.dataSource)
-        assertTrue(
-            loader.execute(ImageRequest.Builder(context).data(gif.readBytes()).size(16, 16).build()) is SuccessResult,
+        val decodedSvg = loader.execute(svgRequest)
+        assertTrue(decodedSvg.failureMessage("SVG"), decodedSvg is SuccessResult)
+        val cachedSvg = loader.execute(svgRequest)
+        assertTrue(cachedSvg.failureMessage("cached SVG"), cachedSvg is SuccessResult)
+        assertEquals(DataSource.MEMORY_CACHE, (cachedSvg as SuccessResult).dataSource)
+        val decodedGif = loader.execute(
+            ImageRequest.Builder(context).data(gif.readBytes()).size(16, 16).build(),
         )
+        assertTrue(decodedGif.failureMessage("GIF"), decodedGif is SuccessResult)
         loader.shutdown()
     }
 
@@ -93,4 +98,9 @@ class CoilLocalIntegrationTest {
         assertTrue(disposable.job.isCancelled)
         cancellableLoader.shutdown()
     }
+}
+
+private fun ImageResult.failureMessage(label: String): String = when (this) {
+    is ErrorResult -> "$label decode failed: ${throwable.stackTraceToString()}"
+    is SuccessResult -> "$label decode succeeded from $dataSource"
 }

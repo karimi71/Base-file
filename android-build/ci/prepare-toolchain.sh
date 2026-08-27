@@ -10,6 +10,28 @@ exec > >(tee "$LOG") 2>&1
 record_run_log() {
   local status=$?
   trap - EXIT
+  if [[ "$status" != 0 ]]; then
+    # Gradle's console summary omits assertion messages and test stack traces.
+    # Include only failed JUnit cases in the persisted diagnostic log.
+    python3 - "$ROOT" <<'PY' || true
+import pathlib
+import sys
+import xml.etree.ElementTree as ET
+
+root = pathlib.Path(sys.argv[1])
+for report in sorted(root.glob("android-build/**/build/test-results/**/TEST-*.xml")):
+    try:
+        suite = ET.parse(report).getroot()
+    except ET.ParseError:
+        continue
+    for case in suite.findall("testcase"):
+        failures = list(case.findall("failure")) + list(case.findall("error"))
+        for failure in failures:
+            print(f"\n===== FAILED TEST: {case.get('classname')}.{case.get('name')} =====")
+            print((failure.get("message") or "").strip())
+            print((failure.text or "").strip()[:16000])
+PY
+  fi
   if [[ "${GITHUB_ACTIONS:-}" == true && "${PUBLISH_SUCCEEDED:-0}" != 1 ]]; then
     # Persist diagnostics through ordinary Git transport because this sandbox
     # cannot download the Actions log archive host. A successful publish has a
@@ -66,13 +88,13 @@ sha256sum "$APK"
 gradle -p "$FUTURE_SMOKE" --no-daemon --stacktrace --write-locks \
   resolveFutureCoordinates \
   generateDependencyReports \
+  :roborazzi:recordRoborazziDebug \
   :jvm:test \
   :jvm:verifyGeneratedSources \
   :android:assembleDebug \
   :android:assembleRelease \
   :android:testDebugUnitTest \
-  :android:assembleDebugAndroidTest \
-  :roborazzi:recordRoborazziDebug
+  :android:assembleDebugAndroidTest
 
 # Resolve and execute the pinned Tikaro application, test, screenshot, benchmark,
 # and build-quality graphs. --write-locks records the exact family-wide choices
