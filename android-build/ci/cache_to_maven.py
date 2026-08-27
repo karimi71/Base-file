@@ -58,8 +58,9 @@ def main() -> int:
                 # Gradle module metadata distinguishes a display `name` from the
                 # repository `url`. Gradle's cache keeps the response/display
                 # filename (for example `Turbine-jvm.jar`), while a file Maven
-                # repository must expose the URL filename
-                # (`turbine-jvm-1.2.0.jar`). Materialize every such alias.
+                # repository must expose the exact relative URL path (for example
+                # `turbine-jvm-1.2.0.jar` or Guava's adjacent `-android` version).
+                # Materialize every such alias.
                 for module_file in sorted(target_dir.glob("*.module")) if target_dir.exists() else []:
                     try:
                         module_data = json.loads(module_file.read_text(encoding="utf-8"))
@@ -68,21 +69,38 @@ def main() -> int:
                     for variant in module_data.get("variants", []):
                         for declared_file in variant.get("files", []):
                             cache_name = Path(str(declared_file.get("name", ""))).name
-                            url_name = Path(str(declared_file.get("url", ""))).name
-                            if not cache_name or not url_name or cache_name == url_name:
+                            declared_url = Path(str(declared_file.get("url", "")))
+                            if not cache_name or not declared_url.name or declared_url.is_absolute():
                                 continue
                             cached_file = target_dir / cache_name
-                            url_file = target_dir / url_name
-                            if not cached_file.is_file():
+                            url_file = (target_dir / declared_url).resolve()
+                            try:
+                                relative_url_file = url_file.relative_to(destination)
+                            except ValueError as error:
+                                raise RuntimeError(
+                                    f"metadata URL escapes Maven destination for {coordinate}: {declared_url}"
+                                ) from error
+                            if cached_file.resolve() == url_file or not cached_file.is_file():
                                 continue
                             if url_file.exists():
                                 if digest(url_file) != digest(cached_file):
                                     raise RuntimeError(
-                                        f"conflicting metadata URL alias for {coordinate}: {url_name}"
+                                        f"conflicting metadata URL alias for {coordinate}: {declared_url}"
                                     )
                                 continue
+                            url_file.parent.mkdir(parents=True, exist_ok=True)
                             shutil.copyfile(cached_file, url_file)
-                            coordinates.setdefault(coordinate, set()).add(url_name)
+                            relative_parts = relative_url_file.parts
+                            if len(relative_parts) < 4:
+                                raise RuntimeError(
+                                    f"cannot derive coordinate for metadata URL: {declared_url}"
+                                )
+                            url_coordinate = (
+                                ".".join(relative_parts[:-3]),
+                                relative_parts[-3],
+                                relative_parts[-2],
+                            )
+                            coordinates.setdefault(url_coordinate, set()).add(url_file.name)
                             copied += 1
                             copied_bytes += url_file.stat().st_size
 
