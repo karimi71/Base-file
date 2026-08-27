@@ -65,7 +65,7 @@ gradle -p "$TIKARO_SMOKE" --no-daemon --stacktrace --write-locks \
   :app:assembleRelease \
   :app:testDebugUnitTest \
   :app:assembleDebugAndroidTest \
-  :benchmark:assemble
+  :benchmark:assembleNonMinifiedBenchmark
 gradle -p "$PAPARAZZI_SMOKE" --no-daemon --stacktrace --write-locks \
   :screenshot:testDebugUnitTest
 gradle -p "$QUALITY_SMOKE" --no-daemon --stacktrace --write-locks \

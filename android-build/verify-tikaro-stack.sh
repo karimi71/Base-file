@@ -63,7 +63,7 @@ run_offline_gradle "$TIKARO_SMOKE" \
     :app:assembleRelease \
     :app:testDebugUnitTest \
     :app:assembleDebugAndroidTest \
-    :benchmark:assemble
+    :benchmark:assembleNonMinifiedBenchmark
 run_offline_gradle "$PAPARAZZI_SMOKE" :screenshot:testDebugUnitTest
 run_offline_gradle "$QUALITY_SMOKE" classes resolveQualityTools
 
