@@ -73,7 +73,7 @@ tasks.register("verifyGeneratedSources") {
     doLast {
         val generated = listOf(
             layout.buildDirectory.file("generated/source/proto/main/java/dev/basefile/future/proto/TikaroSettings.java").get().asFile,
-            layout.buildDirectory.file("generated/source/ksp/main/kotlin/dev/basefile/future/GeneratedProfileJsonAdapter.kt").get().asFile,
+            layout.buildDirectory.file("generated/ksp/main/kotlin/dev/basefile/future/GeneratedProfileJsonAdapter.kt").get().asFile,
         )
         generated.forEach { output ->
             check(output.isFile && output.length() > 100) { "Expected generated source is absent: $output" }
