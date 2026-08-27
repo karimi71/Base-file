@@ -21,19 +21,23 @@ Daemon will be stopped at the end of the build
 > Task :app:parseDebugLocalResources
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
 > Task :app:compressDebugAssets
-> Task :app:processDebugManifestForPackage
 > Task :app:processDebugResources
 > Task :app:desugarDebugFileDependencies
 > Task :app:mergeDebugJniLibFolders
 > Task :app:checkDebugDuplicateClasses
 > Task :app:mergeDebugNativeLibs
+
 > Task :app:compileDebugKotlin
+e: The daemon has terminated unexpectedly on startup attempt #1 with error code: 0. The daemon process output:
+    1. Kotlin compile daemon is ready
+
 > Task :app:mergeExtDexDebug
 > Task :app:compileDebugJavaWithJavac NO-SOURCE
 > Task :app:dexBuilderDebug
@@ -51,8 +55,8 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:writeDebugSigningConfigVersions
 > Task :app:buildKotlinToolingMetadata
 > Task :app:preReleaseBuild UP-TO-DATE
-> Task :app:checkReleaseAarMetadata
 > Task :app:generateReleaseResValues
+> Task :app:checkReleaseAarMetadata
 > Task :app:mapReleaseSourceSetPaths
 > Task :app:generateReleaseResources
 > Task :app:packageReleaseResources
@@ -60,8 +64,8 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:extractDeepLinksRelease
 > Task :app:processReleaseMainManifest
 > Task :app:processReleaseManifest
-> Task :app:parseReleaseLocalResources
 > Task :app:processReleaseManifestForPackage
+> Task :app:parseReleaseLocalResources
 > Task :app:javaPreCompileRelease
 > Task :app:extractProguardFiles
 > Task :app:mergeReleaseJniLibFolders
@@ -71,34 +75,34 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so.
 
 > Task :app:checkReleaseDuplicateClasses
+> Task :app:mergeReleaseResources
 > Task :app:desugarReleaseFileDependencies
 > Task :app:extractReleaseNativeSymbolTables
 > Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
 > Task :app:mergeReleaseStartupProfile
-> Task :app:mergeReleaseResources
 > Task :app:processReleaseResources
 > Task :app:mergeReleaseArtProfile
+> Task :app:packageDebug
+> Task :app:mergeExtDexRelease
+> Task :app:createDebugApkListingFileRedirect
+> Task :app:assembleDebug
 > Task :app:mergeReleaseShaders
 > Task :app:compileReleaseShaders NO-SOURCE
 > Task :app:generateReleaseAssets UP-TO-DATE
 > Task :app:mergeReleaseAssets
 > Task :app:compressReleaseAssets
 > Task :app:extractReleaseVersionControlInfo
-> Task :app:packageDebug
-> Task :app:createDebugApkListingFileRedirect
-> Task :app:assembleDebug
 > Task :app:collectReleaseDependencies
-> Task :app:optimizeReleaseResources
 > Task :app:sdkReleaseDependencyData
 > Task :app:writeReleaseAppMetadata
 > Task :app:writeReleaseSigningConfigVersions
+> Task :app:optimizeReleaseResources
 > Task :app:compileReleaseKotlin
 > Task :app:compileReleaseJavaWithJavac NO-SOURCE
-> Task :app:mergeExtDexRelease
 > Task :app:generateReleaseLintVitalReportModel
 > Task :app:dexBuilderRelease
-> Task :app:mergeReleaseGlobalSynthetics
 > Task :app:processReleaseJavaRes
+> Task :app:mergeReleaseGlobalSynthetics
 > Task :app:mergeReleaseJavaResource
 > Task :app:mergeDexRelease
 > Task :app:compileReleaseArtProfile
@@ -108,9 +112,9 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:lintVitalReportRelease
 > Task :app:lintVitalRelease
 > Task :app:assembleRelease
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787861888658.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787863019654.json
 
-BUILD SUCCESSFUL in 3m 10s
+BUILD SUCCESSFUL in 3m 17s
 82 actionable tasks: 82 executed
 Verifies
 Verified using v1 scheme (JAR signing): true
@@ -121,14 +125,14 @@ Verified using v4 scheme (APK Signature Scheme v4): false
 Verified for SourceStamp: false
 Number of signers: 1
 Signer #1 certificate DN: C=US, O=Android, CN=Android Debug
-Signer #1 certificate SHA-256 digest: 50df609d3718cd1b62c80f41814d6482ca3df077ed1ba420058bdd6a18df24ea
-Signer #1 certificate SHA-1 digest: 496da7a95e9454a6b5c17d9ba11b1a575a9eb8b8
-Signer #1 certificate MD5 digest: 04bca1b2358e7d637e8528151520cba5
+Signer #1 certificate SHA-256 digest: ba7b35004903b4fb2f3bc1f8b3aafed121c7aee5bcc20048247a3520ede7d307
+Signer #1 certificate SHA-1 digest: 09ecbc70b88ae8e461329d06ee7a4991c2f1c799
+Signer #1 certificate MD5 digest: 70641522c1a6e26b53b797ca1e516a1c
 Signer #1 key algorithm: RSA
 Signer #1 key size (bits): 2048
-Signer #1 public key SHA-256 digest: 968e77a8b5b6daa36ff6665f913af8338a90fa87eec1119e77a3febfbfadf77a
-Signer #1 public key SHA-1 digest: 81bd1e18fbf540b06fc3a846670602d7326a4df7
-Signer #1 public key MD5 digest: 9efa3385ee29aa43785f521a9c5df1d0
+Signer #1 public key SHA-256 digest: 61f9865989ffbd3cca817c484fe3908987b23a3c6092f52080d900076ab1332a
+Signer #1 public key SHA-1 digest: 38080d651b55018128a4fbb9a299fc889e8f9c64
+Signer #1 public key MD5 digest: 64de1f58a967a97b05607a6d928ae95d
 WARNING: META-INF/com/android/build/gradle/app-metadata.properties not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/androidx.activity_activity-compose.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/androidx.activity_activity-ktx.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
@@ -176,7 +180,7 @@ WARNING: META-INF/kotlinx_coroutines_android.version not protected by signature.
 WARNING: META-INF/kotlinx_coroutines_core.version not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
 WARNING: META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.
-621f30835eabeab423b1ad7245e2ecc96055861e55c3f892801a03801466f892  /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
+5a8e03f093a0106dff4fbf27b1f564a44f24af02321d75819833f7c54807e02b  /home/runner/work/Base-file/Base-file/android-build/compose-smoke-test/app/build/outputs/apk/debug/app-debug.apk
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
 
@@ -187,7 +191,7 @@ w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke
 Resolved 2 pinned protoc executables
 
 > Task :generateDependencyReports
-Wrote 1194 selected components and 1933 dependency edges
+Wrote 1204 selected components and 1930 dependency edges
 
 > Task :roborazzi:checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :roborazzi:preBuild UP-TO-DATE
@@ -200,6 +204,7 @@ Wrote 1194 selected components and 1933 dependency edges
 > Task :roborazzi:preDebugUnitTestBuild UP-TO-DATE
 > Task :roborazzi:writeDebugAarMetadata
 > Task :roborazzi:generateDebugRFile
+> Task :roborazzi:kspDebugKotlin
 > Task :roborazzi:checkDebugUnitTestAarMetadata
 > Task :roborazzi:compileDebugLibraryResources
 > Task :roborazzi:generateDebugUnitTestResValues
@@ -214,41 +219,22 @@ Wrote 1194 selected components and 1933 dependency edges
 > Task :roborazzi:mergeDebugShaders
 > Task :roborazzi:compileDebugShaders NO-SOURCE
 > Task :roborazzi:generateDebugAssets UP-TO-DATE
+> Task :roborazzi:compileDebugKotlin
 > Task :roborazzi:mergeDebugAssets
+> Task :roborazzi:compileDebugJavaWithJavac NO-SOURCE
+> Task :roborazzi:bundleLibRuntimeToJarDebug
 > Task :roborazzi:generateDebugUnitTestAssets UP-TO-DATE
+> Task :roborazzi:bundleLibCompileToJarDebug
 > Task :roborazzi:packageDebugAssets
 > Task :roborazzi:mergeDebugUnitTestAssets
 > Task :roborazzi:packageDebugUnitTestForUnitTest
 > Task :roborazzi:generateDebugUnitTestConfig
+> Task :roborazzi:processDebugJavaRes
 > Task :jvm:checkKotlinGradlePluginConfigurationErrors SKIPPED
-> Task :roborazzi:kspDebugKotlin
+> Task :roborazzi:kspDebugUnitTestKotlin
 > Task :jvm:extractIncludeProto
 > Task :jvm:extractProto
 > Task :jvm:generateProto
-> Task :roborazzi:compileDebugKotlin
-> Task :roborazzi:compileDebugJavaWithJavac NO-SOURCE
-> Task :roborazzi:bundleLibRuntimeToJarDebug
-> Task :roborazzi:bundleLibCompileToJarDebug
-> Task :jvm:kspKotlin
-> Task :roborazzi:processDebugJavaRes
-> Task :roborazzi:kspDebugUnitTestKotlin
-
-> Task :jvm:compileKotlin
-w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/jvm/src/main/kotlin/dev/basefile/future/CryptoVault.kt:19:41 'static fun withFile(file: File!): KeysetWriter!' is deprecated. Deprecated in Java.
-w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/jvm/src/main/kotlin/dev/basefile/future/CryptoVault.kt:23:46 'static fun withFile(file: File!): KeysetReader!' is deprecated. Deprecated in Java.
-w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/jvm/src/main/kotlin/dev/basefile/future/Models.kt:20:19 Non-public primary constructor is exposed via the generated 'copy()' method of the 'data' class.
-
-The generated 'copy()' will change its visibility in future releases.
-
-To suppress the warning do one of the following:
-- Annotate the data class with the '@ConsistentCopyVisibility' annotation.
-- Use the '-Xconsistent-data-class-copy-visibility' compiler flag.
-- Annotate the data class with the '@ExposedCopyVisibility' annotation 
-  (Discouraged, but can be used to keep binary compatibility).
-
-To learn more, see the documentation of the '@ConsistentCopyVisibility' and '@ExposedCopyVisibility' annotations.
-
-This will become an error in Kotlin 2.1.
 
 > Task :roborazzi:compileDebugUnitTestKotlin
 w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/src/test/kotlin/dev/basefile/future/roborazzi/CoilLocalIntegrationTest.kt:80:32 This declaration needs opt-in. Its usage should be marked with '@coil3.annotation.ExperimentalCoilApi' or '@OptIn(coil3.annotation.ExperimentalCoilApi::class)'
@@ -256,9 +242,9 @@ w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke
 w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/src/test/kotlin/dev/basefile/future/roborazzi/RoborazziVisualMatrixTest.kt:74:71 This declaration needs opt-in. Its usage should be marked with '@com.github.takahirom.roborazzi.ExperimentalRoborazziApi' or '@OptIn(com.github.takahirom.roborazzi.ExperimentalRoborazziApi::class)'
 w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/roborazzi/src/test/kotlin/dev/basefile/future/roborazzi/RoborazziVisualMatrixTest.kt:74:87 This declaration needs opt-in. Its usage should be marked with '@com.github.takahirom.roborazzi.ExperimentalRoborazziApi' or '@OptIn(com.github.takahirom.roborazzi.ExperimentalRoborazziApi::class)'
 
-> Task :jvm:compileJava
 > Task :roborazzi:compileDebugUnitTestJavaWithJavac NO-SOURCE
 > Task :roborazzi:processDebugUnitTestJavaRes
+> Task :jvm:kspKotlin
 
 > Task :roborazzi:testDebugUnitTest
 
@@ -291,9 +277,28 @@ SecurityMigrationIntegrationTest > legacy preferences migrate to authenticated f
 > Task :roborazzi:finalizeTestRoborazziDebug
 > Task :roborazzi:recordRoborazziDebug
 > Task :jvm:processResources
+
+> Task :jvm:compileKotlin
+w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/jvm/src/main/kotlin/dev/basefile/future/CryptoVault.kt:19:41 'static fun withFile(file: File!): KeysetWriter!' is deprecated. Deprecated in Java.
+w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/jvm/src/main/kotlin/dev/basefile/future/CryptoVault.kt:23:46 'static fun withFile(file: File!): KeysetReader!' is deprecated. Deprecated in Java.
+w: file:///home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/jvm/src/main/kotlin/dev/basefile/future/Models.kt:20:19 Non-public primary constructor is exposed via the generated 'copy()' method of the 'data' class.
+
+The generated 'copy()' will change its visibility in future releases.
+
+To suppress the warning do one of the following:
+- Annotate the data class with the '@ConsistentCopyVisibility' annotation.
+- Use the '-Xconsistent-data-class-copy-visibility' compiler flag.
+- Annotate the data class with the '@ExposedCopyVisibility' annotation 
+  (Discouraged, but can be used to keep binary compatibility).
+
+To learn more, see the documentation of the '@ConsistentCopyVisibility' and '@ExposedCopyVisibility' annotations.
+
+This will become an error in Kotlin 2.1.
+
+> Task :jvm:extractIncludeTestProto
+> Task :jvm:compileJava
 > Task :jvm:classes
 > Task :jvm:jar
-> Task :jvm:extractIncludeTestProto
 > Task :jvm:extractTestProto
 > Task :jvm:generateTestProto NO-SOURCE
 
@@ -318,11 +323,10 @@ Verified protobuf lite and Moshi KSP generated sources
 > Task :android:processDebugMainManifest
 > Task :android:processDebugManifest
 > Task :android:processDebugManifestForPackage
-> Task :android:processDebugResources
 > Task :jvm:compileTestKotlin
 > Task :jvm:compileTestJava NO-SOURCE
 > Task :jvm:testClasses UP-TO-DATE
-> Task :android:compileDebugKotlin
+> Task :android:processDebugResources
 
 > Task :jvm:test
 
@@ -348,11 +352,12 @@ JqwikShrinkingPropertyTest > jqwik generated domain values round trip and remain
 
 > Task :android:javaPreCompileDebug
 > Task :android:mergeDebugShaders
-> Task :android:compileDebugJavaWithJavac NO-SOURCE
 > Task :android:compileDebugShaders NO-SOURCE
 > Task :android:generateDebugAssets UP-TO-DATE
 > Task :android:mergeDebugAssets
 > Task :android:compressDebugAssets
+> Task :android:compileDebugKotlin
+> Task :android:compileDebugJavaWithJavac NO-SOURCE
 > Task :android:desugarDebugFileDependencies
 > Task :android:dexBuilderDebug
 > Task :android:l8DexDesugarLibDebug
@@ -367,11 +372,11 @@ JqwikShrinkingPropertyTest > jqwik generated domain values round trip and remain
 > Task :android:mergeDebugNativeLibs
 > Task :android:validateSigningDebug
 > Task :android:writeDebugAppMetadata
+> Task :android:writeDebugSigningConfigVersions
 
 > Task :android:stripDebugDebugSymbols
 Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libdatastore_shared_counter.so.
 
-> Task :android:writeDebugSigningConfigVersions
 > Task :android:buildKotlinToolingMetadata
 > Task :android:preReleaseBuild UP-TO-DATE
 > Task :android:checkReleaseAarMetadata
@@ -479,14 +484,14 @@ Unable to strip the following libraries, packaging them as they are: libmockkjvm
 > Task :android:packageRelease
 > Task :android:createReleaseApkListingFileRedirect
 > Task :android:assembleRelease
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787862077964.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787863215604.json
 Persisted dependency lock state for buildscript of project ':'
 Persisted dependency lock state for project ':'
 Persisted dependency lock state for project ':android'
 Persisted dependency lock state for project ':jvm'
 Persisted dependency lock state for project ':roborazzi'
 
-BUILD SUCCESSFUL in 6m 6s
+BUILD SUCCESSFUL in 5m 45s
 171 actionable tasks: 171 executed
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
@@ -499,18 +504,18 @@ Daemon will be stopped at the end of the build
 > Task :app:mapDebugSourceSetPaths
 > Task :app:generateDebugResources
 > Task :app:packageDebugResources
-> Task :app:mergeDebugResources
 > Task :app:createDebugCompatibleScreenManifests
 > Task :app:extractDeepLinksDebug
 > Task :app:parseDebugLocalResources
+> Task :app:mergeDebugResources
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
-> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
+> Task :app:processDebugManifestForPackage
 > Task :app:compressDebugAssets
 > Task :app:processDebugResources
 > Task :app:desugarDebugFileDependencies
@@ -520,12 +525,12 @@ Daemon will be stopped at the end of the build
 > Task :app:kspDebugKotlin
 > Task :app:mergeExtDexDebug
 > Task :app:mergeLibDexDebug
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
 
 > Task :app:stripDebugDebugSymbols
 Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libdatastore_shared_counter.so.
 
-> Task :app:validateSigningDebug
-> Task :app:writeDebugAppMetadata
 > Task :app:writeDebugSigningConfigVersions
 > Task :app:buildKotlinToolingMetadata
 > Task :app:preReleaseBuild UP-TO-DATE
@@ -580,26 +585,25 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:compressReleaseAssets
 > Task :app:extractReleaseVersionControlInfo
 > Task :app:processReleaseJavaRes
-> Task :app:optimizeReleaseResources
+> Task :app:mergeReleaseJavaResource
 > Task :app:collectReleaseDependencies
+> Task :app:optimizeReleaseResources
 > Task :app:sdkReleaseDependencyData
 > Task :app:writeReleaseAppMetadata
-> Task :app:mergeReleaseJavaResource
 > Task :app:writeReleaseSigningConfigVersions
 > Task :app:bundleDebugClassesToRuntimeJar
 > Task :app:preDebugUnitTestBuild UP-TO-DATE
-> Task :app:javaPreCompileDebugUnitTest
 > Task :app:bundleDebugClassesToCompileJar
+> Task :app:javaPreCompileDebugUnitTest
 > Task :app:packageDebugUnitTestForUnitTest
 > Task :app:kspDebugUnitTestKotlin
 > Task :app:generateDebugUnitTestConfig
 > Task :app:preDebugAndroidTestBuild SKIPPED
-> Task :app:mergeDexRelease
 > Task :app:compileDebugUnitTestKotlin
 > Task :app:checkDebugAndroidTestAarMetadata
 > Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
 > Task :app:processDebugUnitTestJavaRes
-> Task :app:compileReleaseArtProfile
+> Task :app:mergeDexRelease
 > Task :app:testDebugUnitTest
 > Task :app:generateDebugAndroidTestResValues
 > Task :app:mapDebugAndroidTestSourceSetPaths
@@ -613,14 +617,15 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :app:mergeDebugAndroidTestAssets
 > Task :app:compressDebugAndroidTestAssets
 > Task :app:desugarDebugAndroidTestFileDependencies
-> Task :app:packageRelease
-> Task :app:createReleaseApkListingFileRedirect
 > Task :app:processDebugAndroidTestResources
+> Task :app:compileReleaseArtProfile
 > Task :app:checkDebugAndroidTestDuplicateClasses
 > Task :app:lintVitalAnalyzeRelease
 > Task :app:kspDebugAndroidTestKotlin
 > Task :app:lintVitalReportRelease
+> Task :app:packageRelease
 > Task :app:lintVitalRelease
+> Task :app:createReleaseApkListingFileRedirect
 > Task :app:assembleRelease
 > Task :app:mergeLibDexDebugAndroidTest
 > Task :app:mergeDebugAndroidTestJniLibFolders
@@ -644,32 +649,32 @@ Unable to strip the following libraries, packaging them as they are: libandroidx
 > Task :benchmark:generateNonMinifiedBenchmarkResValues
 > Task :benchmark:mapNonMinifiedBenchmarkSourceSetPaths
 > Task :benchmark:generateNonMinifiedBenchmarkResources
+> Task :benchmark:mergeNonMinifiedBenchmarkResources
 > Task :benchmark:processNonMinifiedBenchmarkManifest
 > Task :benchmark:javaPreCompileNonMinifiedBenchmark
 > Task :benchmark:mergeNonMinifiedBenchmarkShaders
 > Task :benchmark:compileNonMinifiedBenchmarkShaders NO-SOURCE
+> Task :app:packageDebugAndroidTest
+> Task :app:createDebugAndroidTestApkListingFileRedirect
+> Task :app:assembleDebugAndroidTest
 > Task :benchmark:generateNonMinifiedBenchmarkAssets UP-TO-DATE
-> Task :benchmark:mergeNonMinifiedBenchmarkResources
 > Task :benchmark:mergeNonMinifiedBenchmarkAssets
 > Task :benchmark:processNonMinifiedBenchmarkResources
 > Task :benchmark:compressNonMinifiedBenchmarkAssets
 > Task :benchmark:checkNonMinifiedBenchmarkDuplicateClasses
-> Task :benchmark:compileNonMinifiedBenchmarkKotlin
 > Task :benchmark:desugarNonMinifiedBenchmarkFileDependencies
+> Task :benchmark:compileNonMinifiedBenchmarkKotlin
 > Task :benchmark:compileNonMinifiedBenchmarkJavaWithJavac NO-SOURCE
 > Task :benchmark:mergeLibDexNonMinifiedBenchmark
 > Task :benchmark:dexBuilderNonMinifiedBenchmark
 > Task :benchmark:mergeNonMinifiedBenchmarkGlobalSynthetics
-> Task :app:packageDebugAndroidTest
-> Task :app:createDebugAndroidTestApkListingFileRedirect
-> Task :app:assembleDebugAndroidTest
 > Task :benchmark:processNonMinifiedBenchmarkJavaRes
 > Task :benchmark:mergeNonMinifiedBenchmarkJniLibFolders
 > Task :benchmark:mergeProjectDexNonMinifiedBenchmark
 > Task :benchmark:validateSigningNonMinifiedBenchmark
 > Task :benchmark:writeNonMinifiedBenchmarkSigningConfigVersions
-> Task :benchmark:mergeNonMinifiedBenchmarkNativeLibs
 > Task :benchmark:mergeNonMinifiedBenchmarkJavaResource
+> Task :benchmark:mergeNonMinifiedBenchmarkNativeLibs
 
 > Task :benchmark:stripNonMinifiedBenchmarkDebugSymbols
 Unable to strip the following libraries, packaging them as they are: libbenchmarkNative.so, libtracing_perfetto.so.
@@ -678,12 +683,12 @@ Unable to strip the following libraries, packaging them as they are: libbenchmar
 > Task :benchmark:packageNonMinifiedBenchmark
 > Task :benchmark:createNonMinifiedBenchmarkApkListingFileRedirect
 > Task :benchmark:assembleNonMinifiedBenchmark
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787862444795.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787863561081.json
 Persisted dependency lock state for buildscript of project ':'
 Persisted dependency lock state for project ':app'
 Persisted dependency lock state for project ':benchmark'
 
-BUILD SUCCESSFUL in 3m 8s
+BUILD SUCCESSFUL in 3m 22s
 149 actionable tasks: 149 executed
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
@@ -712,35 +717,33 @@ Daemon will be stopped at the end of the build
 
 > Task :screenshot:testDebugUnitTest
 See the Paparazzi report at: file:///home/runner/work/Base-file/Base-file/android-build/paparazzi-smoke-test/screenshot/build/reports/paparazzi/debug/index.html
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787862633917.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787863764499.json
 Persisted dependency lock state for buildscript of project ':'
 Persisted dependency lock state for project ':screenshot'
 
-BUILD SUCCESSFUL in 55s
+BUILD SUCCESSFUL in 54s
 15 actionable tasks: 15 executed
 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
 Daemon will be stopped at the end of the build 
 > Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
 > Task :processResources NO-SOURCE
 
-> Task :compileKotlin
-e: The daemon has terminated unexpectedly on startup attempt #1 with error code: 0. The daemon process output:
-    1. Kotlin compile daemon is ready
-
 > Task :resolveQualityTools
 Resolved 67 Detekt/KtLint quality-tool artifacts
 
-> Task :compileJava NO-SOURCE
-> Task :classes UP-TO-DATE
 > Task :generateLicenseReport
 
 > Task :verifyLicenseReport
 Verified 1 generated dependency-license report files
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787862690160.json
+
+> Task :compileKotlin
+> Task :compileJava NO-SOURCE
+> Task :classes UP-TO-DATE
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787863819689.json
 Persisted dependency lock state for buildscript of project ':'
 Persisted dependency lock state for project ':'
 
-BUILD SUCCESSFUL in 32s
+BUILD SUCCESSFUL in 28s
 4 actionable tasks: 4 executed
 Resolved Gradle module cache size:
 1.3G	/tmp/base-file-gradle-home/caches/modules-2
@@ -872,12 +875,12 @@ Daemon will be stopped at the end of the build
 > Task :app:packageDebug UP-TO-DATE
 > Task :app:createDebugApkListingFileRedirect UP-TO-DATE
 > Task :app:assembleDebug UP-TO-DATE
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787862736732.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run-1787863862459.json
 
-BUILD SUCCESSFUL in 10s
+BUILD SUCCESSFUL in 11s
 35 actionable tasks: 35 up-to-date
 Packaging the audited toolchain for repository publication
-Local Maven repository: 1026 coordinates, 2365 files, 1267.4 MiB
-Tikaro coordinate audit: all 117 pinned direct coordinates are present in a 1026-coordinate offline graph
-Tikaro coordinate audit: all 80 pinned direct coordinates are present in a 1026-coordinate offline graph
-Mixed future-family version in /home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/android/gradle.lockfile: androidx.room:room-common:2.6.1, expected 2.7.2
+Local Maven repository: 1023 coordinates, 2356 files, 1267.0 MiB
+Tikaro coordinate audit: all 117 pinned direct coordinates are present in a 1023-coordinate offline graph
+Tikaro coordinate audit: all 80 pinned direct coordinates are present in a 1023-coordinate offline graph
+Mixed future-family version in /home/runner/work/Base-file/Base-file/android-build/future-stack-smoke-test/android/gradle.lockfile: com.google.code.gson:gson:2.10.1, expected 2.11.0
