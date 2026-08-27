@@ -1,0 +1,127 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../wire-runtime/4.9.7/wire-runtime-4.9.7.module",
+    "group": "com.squareup.wire",
+    "module": "wire-runtime",
+    "version": "4.9.7",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.9.10"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio",
+          "version": {
+            "requires": "3.7.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.9.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "wire-runtime-jvm-4.9.7.jar",
+          "url": "wire-runtime-jvm-4.9.7.jar",
+          "size": 252391,
+          "sha512": "4d3d1909edd4ef9b3cd418864efb4f08cd81ba7049047b47ae47c08e34006d11fec4efb18b2256afe646bc6737243a5db6e665e747aae300a049f2011c77fe9f",
+          "sha256": "1cf8ffc916f6fb1df161869c83c0ca4a543ad2764d54e6af9cb5de479058cf26",
+          "sha1": "e4b6ba4ab1e5360fea0280705db218f50e2c89de",
+          "md5": "ca5c225d16ec93711c3b5d8aea2e82b0"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.9.10"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio",
+          "version": {
+            "requires": "3.7.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.9.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "wire-runtime-jvm-4.9.7.jar",
+          "url": "wire-runtime-jvm-4.9.7.jar",
+          "size": 252391,
+          "sha512": "4d3d1909edd4ef9b3cd418864efb4f08cd81ba7049047b47ae47c08e34006d11fec4efb18b2256afe646bc6737243a5db6e665e747aae300a049f2011c77fe9f",
+          "sha256": "1cf8ffc916f6fb1df161869c83c0ca4a543ad2764d54e6af9cb5de479058cf26",
+          "sha1": "e4b6ba4ab1e5360fea0280705db218f50e2c89de",
+          "md5": "ca5c225d16ec93711c3b5d8aea2e82b0"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "wire-runtime-jvm-4.9.7-sources.jar",
+          "url": "wire-runtime-jvm-4.9.7-sources.jar",
+          "size": 83663,
+          "sha512": "1bdb618ab3bd648fc106d301c4eb56c251bc0acab54611c3cc15839c9c89d6cf5c806abf44884f50ab1f833d95764e821a2170766b9639e3de89369dec8af988",
+          "sha256": "1858e9f8d9ec5f6f70beba2eca31e65e8e9a6539fb208970d94fb877cae07f60",
+          "sha1": "a0306916ca521f2d56cf2d881f014ed6311ffdb7",
+          "md5": "8e3d403d9e0a689fa5f79363398f0fd2"
+        }
+      ]
+    }
+  ]
+}

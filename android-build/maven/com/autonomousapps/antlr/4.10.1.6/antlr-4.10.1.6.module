@@ -1,0 +1,78 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.autonomousapps",
+    "module": "antlr",
+    "version": "4.10.1.6",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "antlr-4.10.1.6.jar",
+          "url": "antlr-4.10.1.6.jar",
+          "size": 3859702,
+          "sha512": "5ff239adea2ceff952e0b47ba0ed816ba90905ecf6ff9bb530b7474550d2fb71df9cd9dbea79652b2469279f0fbaa286aa0b20965ec18f3bcf81194f3cdcf790",
+          "sha256": "77b538ef918a26fdf898d74a57dc29806d16b7699bf8c7406f6b99f3daf64926",
+          "sha1": "8a33e0d1664e24bcf6e2764a257278b19628d7a3",
+          "md5": "02abc96b4f90c2742ab4bfafe2621a4d"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "antlr-4.10.1.6-javadoc.jar",
+          "url": "antlr-4.10.1.6-javadoc.jar",
+          "size": 862333,
+          "sha512": "ccc2efb114a1d13c7718f033567ca4fd5d36f458e180c06399f5786e035a683fe7f4bf3b393a6a4080951e7e3312c7447bdaa7c90eac8ee098310b16a4360ddf",
+          "sha256": "f7165360bff3d0f2f25b7c48c5fc4a4dbe16938ffc021e097e0df3d2c58c2508",
+          "sha1": "db3001f9b78bef24d2a6856e07d29b03fdf138df",
+          "md5": "a4435607f92ede661b34073200bc7028"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "antlr-4.10.1.6-sources.jar",
+          "url": "antlr-4.10.1.6-sources.jar",
+          "size": 124479,
+          "sha512": "126a6135b9af4bcc5dbe2e1d07535f12545ebe2fbc7e84f65a36f3bfd6b043cc9a4fbcb931db486206f5349cfab20a38a223e15da853ae2f7ed8ccab59052ab2",
+          "sha256": "268a971d7c57259a0613025078399f72f5d1a292fad3d9eae2b0e5d14ffe2842",
+          "sha1": "d23cf93b7891ec3c5bdc189e7aff3836161b83b4",
+          "md5": "9c61c293549ae93f92d2b4550a8432f0"
+        }
+      ]
+    }
+  ]
+}

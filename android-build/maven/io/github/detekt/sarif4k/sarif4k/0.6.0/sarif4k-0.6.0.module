@@ -1,0 +1,285 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.detekt.sarif4k",
+    "module": "sarif4k",
+    "version": "0.6.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.6"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.4.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.23"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "sarif4k-metadata-0.6.0.jar",
+          "url": "sarif4k-0.6.0.jar",
+          "size": 19795,
+          "sha512": "7ac0dc660fceab18d6ee4fd3d71187c2eb359d02c40ad28b1fddc157e10082cd24b98f8f92ffdf7b8e2019136db1b87523e3864344d7c4b92d12ba279083fa76",
+          "sha256": "85587614d110e7749418d92b01c4df2e6d7c0fae1fef9e649e3bfa350e94cb11",
+          "sha1": "873a167b66b098d18b352bcd599c6a9e1825450e",
+          "md5": "4d140f0d3cb0ae27b8ec89564f2c335c"
+        }
+      ]
+    },
+    {
+      "name": "metadataSourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "sarif4k-kotlin-0.6.0-sources.jar",
+          "url": "sarif4k-0.6.0-sources.jar",
+          "size": 20041,
+          "sha512": "b7f144549f37b274e9761e685f92e17475409448daec11531a619b864a4af315b8c9315e4da68709bd262564de54af0312660e607e6877bfd0fa33361afdfabc",
+          "sha256": "6e612fbbe8c7596e77e120d5d8ad7cde93d49238b4f2070774ad1697ecba8022",
+          "sha1": "b31afe5df8db6724bdfe5be4adfb317bb72de398",
+          "md5": "98db690c8f754e287e7e37a59f0aa049"
+        }
+      ]
+    },
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../sarif4k-jvm/0.6.0/sarif4k-jvm-0.6.0.module",
+        "group": "io.github.detekt.sarif4k",
+        "module": "sarif4k-jvm",
+        "version": "0.6.0"
+      }
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../sarif4k-jvm/0.6.0/sarif4k-jvm-0.6.0.module",
+        "group": "io.github.detekt.sarif4k",
+        "module": "sarif4k-jvm",
+        "version": "0.6.0"
+      }
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../sarif4k-jvm/0.6.0/sarif4k-jvm-0.6.0.module",
+        "group": "io.github.detekt.sarif4k",
+        "module": "sarif4k-jvm",
+        "version": "0.6.0"
+      }
+    },
+    {
+      "name": "linuxX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "linux_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../sarif4k-linuxx64/0.6.0/sarif4k-linuxx64-0.6.0.module",
+        "group": "io.github.detekt.sarif4k",
+        "module": "sarif4k-linuxx64",
+        "version": "0.6.0"
+      }
+    },
+    {
+      "name": "linuxX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "linux_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../sarif4k-linuxx64/0.6.0/sarif4k-linuxx64-0.6.0.module",
+        "group": "io.github.detekt.sarif4k",
+        "module": "sarif4k-linuxx64",
+        "version": "0.6.0"
+      }
+    },
+    {
+      "name": "macosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../sarif4k-macosarm64/0.6.0/sarif4k-macosarm64-0.6.0.module",
+        "group": "io.github.detekt.sarif4k",
+        "module": "sarif4k-macosarm64",
+        "version": "0.6.0"
+      }
+    },
+    {
+      "name": "macosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../sarif4k-macosarm64/0.6.0/sarif4k-macosarm64-0.6.0.module",
+        "group": "io.github.detekt.sarif4k",
+        "module": "sarif4k-macosarm64",
+        "version": "0.6.0"
+      }
+    },
+    {
+      "name": "macosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../sarif4k-macosarm64/0.6.0/sarif4k-macosarm64-0.6.0.module",
+        "group": "io.github.detekt.sarif4k",
+        "module": "sarif4k-macosarm64",
+        "version": "0.6.0"
+      }
+    },
+    {
+      "name": "macosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../sarif4k-macosx64/0.6.0/sarif4k-macosx64-0.6.0.module",
+        "group": "io.github.detekt.sarif4k",
+        "module": "sarif4k-macosx64",
+        "version": "0.6.0"
+      }
+    },
+    {
+      "name": "macosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../sarif4k-macosx64/0.6.0/sarif4k-macosx64-0.6.0.module",
+        "group": "io.github.detekt.sarif4k",
+        "module": "sarif4k-macosx64",
+        "version": "0.6.0"
+      }
+    },
+    {
+      "name": "macosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../sarif4k-macosx64/0.6.0/sarif4k-macosx64-0.6.0.module",
+        "group": "io.github.detekt.sarif4k",
+        "module": "sarif4k-macosx64",
+        "version": "0.6.0"
+      }
+    },
+    {
+      "name": "mingwX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "mingw_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../sarif4k-mingwx64/0.6.0/sarif4k-mingwx64-0.6.0.module",
+        "group": "io.github.detekt.sarif4k",
+        "module": "sarif4k-mingwx64",
+        "version": "0.6.0"
+      }
+    },
+    {
+      "name": "mingwX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "mingw_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../sarif4k-mingwx64/0.6.0/sarif4k-mingwx64-0.6.0.module",
+        "group": "io.github.detekt.sarif4k",
+        "module": "sarif4k-mingwx64",
+        "version": "0.6.0"
+      }
+    }
+  ]
+}

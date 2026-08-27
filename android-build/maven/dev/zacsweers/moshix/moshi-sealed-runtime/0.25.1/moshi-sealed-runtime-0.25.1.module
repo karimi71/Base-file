@@ -1,0 +1,110 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.zacsweers.moshix",
+    "module": "moshi-sealed-runtime",
+    "version": "0.25.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.squareup.moshi",
+          "module": "moshi-adapters",
+          "version": {
+            "requires": "1.15.0"
+          }
+        },
+        {
+          "group": "com.squareup.moshi",
+          "module": "moshi",
+          "version": {
+            "requires": "1.15.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "moshi-sealed-runtime-0.25.1.jar",
+          "url": "moshi-sealed-runtime-0.25.1.jar",
+          "size": 11327,
+          "sha512": "ad74283405747e93c63da88fddb422ede3fb1daa949017207ccfac08e46d0cc3726cbfd074e31589087cd31cfca93f565ead0233f9a0eea7a5783ae98dbd2a95",
+          "sha256": "539e96751eb3c7b2f8c8ebb050210b92b6cd3d968831cd24f8ff8624d452a6bb",
+          "sha1": "8d6617e7038a63de219b8ae6050890a01427fbc1",
+          "md5": "8cc2a821d4342195bd2f88351492f1e9"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.squareup.moshi",
+          "module": "moshi-adapters",
+          "version": {
+            "requires": "1.15.0"
+          }
+        },
+        {
+          "group": "com.squareup.moshi",
+          "module": "moshi",
+          "version": {
+            "requires": "1.15.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "moshi-sealed-runtime-0.25.1.jar",
+          "url": "moshi-sealed-runtime-0.25.1.jar",
+          "size": 11327,
+          "sha512": "ad74283405747e93c63da88fddb422ede3fb1daa949017207ccfac08e46d0cc3726cbfd074e31589087cd31cfca93f565ead0233f9a0eea7a5783ae98dbd2a95",
+          "sha256": "539e96751eb3c7b2f8c8ebb050210b92b6cd3d968831cd24f8ff8624d452a6bb",
+          "sha1": "8d6617e7038a63de219b8ae6050890a01427fbc1",
+          "md5": "8cc2a821d4342195bd2f88351492f1e9"
+        }
+      ]
+    }
+  ]
+}

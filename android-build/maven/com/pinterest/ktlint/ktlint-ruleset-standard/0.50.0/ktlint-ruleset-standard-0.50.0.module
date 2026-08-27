@@ -1,0 +1,157 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.pinterest.ktlint",
+    "module": "ktlint-ruleset-standard",
+    "version": "0.50.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.1.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.pinterest.ktlint",
+          "module": "ktlint-cli-ruleset-core",
+          "version": {
+            "requires": "0.50.0"
+          }
+        },
+        {
+          "group": "com.pinterest.ktlint",
+          "module": "ktlint-rule-engine-core",
+          "version": {
+            "requires": "0.50.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ktlint-ruleset-standard-0.50.0.jar",
+          "url": "ktlint-ruleset-standard-0.50.0.jar",
+          "size": 811028,
+          "sha512": "774e41a7fafba2846d0ceb43c5de6b3da08a7a62afbe75cc39e347589f932049eaebe1201e485eaa5c1c0b8de145835e3ae0bf17199620510be8d560b6315939",
+          "sha256": "65a5ca34005ed2e54018a97f777ddc9a9e6e6d25a40a3004143fc451cf603e04",
+          "sha1": "458d3aace8c50daa0d3ac21b5d3747105e6ce8dd",
+          "md5": "d2d8b21f763f1502cab3928168f0b422"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.pinterest.ktlint",
+          "module": "ktlint-logger",
+          "version": {
+            "requires": "0.50.0"
+          }
+        },
+        {
+          "group": "com.pinterest.ktlint",
+          "module": "ktlint-cli-ruleset-core",
+          "version": {
+            "requires": "0.50.0"
+          }
+        },
+        {
+          "group": "com.pinterest.ktlint",
+          "module": "ktlint-rule-engine-core",
+          "version": {
+            "requires": "0.50.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ktlint-ruleset-standard-0.50.0.jar",
+          "url": "ktlint-ruleset-standard-0.50.0.jar",
+          "size": 811028,
+          "sha512": "774e41a7fafba2846d0ceb43c5de6b3da08a7a62afbe75cc39e347589f932049eaebe1201e485eaa5c1c0b8de145835e3ae0bf17199620510be8d560b6315939",
+          "sha256": "65a5ca34005ed2e54018a97f777ddc9a9e6e6d25a40a3004143fc451cf603e04",
+          "sha1": "458d3aace8c50daa0d3ac21b5d3747105e6ce8dd",
+          "md5": "d2d8b21f763f1502cab3928168f0b422"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ktlint-ruleset-standard-0.50.0-sources.jar",
+          "url": "ktlint-ruleset-standard-0.50.0-sources.jar",
+          "size": 156958,
+          "sha512": "94bce90c1c9be0c7fb1c6a8eb2b52eaf454411a33889fd11b3e97e4cf8a86117771bd4653d9a2c52b0022823547808ec4dd6174baf46bdfb4cb749c87d2ee4b8",
+          "sha256": "5ea3b39dfdfe13218f1cc431613b83aabb3729b328fdab8273f3913e5ba2d25b",
+          "sha1": "f96b2360b73d05c3c59627afc8d22ea1b6c5d433",
+          "md5": "39525754f43cf48cd18967767b7f582b"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ktlint-ruleset-standard-0.50.0-javadoc.jar",
+          "url": "ktlint-ruleset-standard-0.50.0-javadoc.jar",
+          "size": 1021831,
+          "sha512": "cb9d0d3bd6d51c157d716e0158ca721f7e12e654314653b2617323194c6c70b44be7a2259966b96cfbf3bc71a986ee55a9795fb5d9d4776c44b00fc28ba26829",
+          "sha256": "5d6d37180901c9f2656c9ab4f15dd758f48268360e637a2f69bb581def67cf5d",
+          "sha1": "ca6d2003aa3c58c01a4cf386bde5209c7ffe6367",
+          "md5": "c4f471af2c914228764ddc299c5b76e3"
+        }
+      ]
+    }
+  ]
+}

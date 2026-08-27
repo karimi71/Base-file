@@ -1,0 +1,125 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.squareup.leakcanary",
+    "module": "leakcanary-android-core",
+    "version": "2.14",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.squareup.leakcanary",
+          "module": "shark-android",
+          "version": {
+            "requires": "2.14"
+          }
+        },
+        {
+          "group": "com.squareup.leakcanary",
+          "module": "leakcanary-object-watcher-android-core",
+          "version": {
+            "requires": "2.14"
+          }
+        },
+        {
+          "group": "com.squareup.leakcanary",
+          "module": "leakcanary-object-watcher-android-androidx",
+          "version": {
+            "requires": "2.14"
+          }
+        },
+        {
+          "group": "com.squareup.leakcanary",
+          "module": "leakcanary-object-watcher-android-support-fragments",
+          "version": {
+            "requires": "2.14"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "leakcanary-android-core-2.14.aar",
+          "url": "leakcanary-android-core-2.14.aar",
+          "size": 641403,
+          "sha512": "ab9c618ec1835b1a27286cf2e4ae7b780ef66ce40028267e31f7960d9988cfb7d1f799339906a6694b2680cfc63964a4f6cf29c55d0a388cb62a6883f47c5a94",
+          "sha256": "204f16eb8620ec4aefa35b122afe977ace60d35f56376c07a3921cf9aa92127c",
+          "sha1": "f8ac71f6fd2f4dde905911a5d1edab7063337bfa",
+          "md5": "c15b1be12838355b8d7ecb05ceedb2c9"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.squareup.leakcanary",
+          "module": "shark-android",
+          "version": {
+            "requires": "2.14"
+          }
+        },
+        {
+          "group": "com.squareup.leakcanary",
+          "module": "leakcanary-object-watcher-android-core",
+          "version": {
+            "requires": "2.14"
+          }
+        },
+        {
+          "group": "com.squareup.leakcanary",
+          "module": "leakcanary-object-watcher-android-androidx",
+          "version": {
+            "requires": "2.14"
+          }
+        },
+        {
+          "group": "com.squareup.leakcanary",
+          "module": "leakcanary-object-watcher-android-support-fragments",
+          "version": {
+            "requires": "2.14"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.3.72"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "leakcanary-android-core-2.14.aar",
+          "url": "leakcanary-android-core-2.14.aar",
+          "size": 641403,
+          "sha512": "ab9c618ec1835b1a27286cf2e4ae7b780ef66ce40028267e31f7960d9988cfb7d1f799339906a6694b2680cfc63964a4f6cf29c55d0a388cb62a6883f47c5a94",
+          "sha256": "204f16eb8620ec4aefa35b122afe977ace60d35f56376c07a3921cf9aa92127c",
+          "sha1": "f8ac71f6fd2f4dde905911a5d1edab7063337bfa",
+          "md5": "c15b1be12838355b8d7ecb05ceedb2c9"
+        }
+      ]
+    }
+  ]
+}
