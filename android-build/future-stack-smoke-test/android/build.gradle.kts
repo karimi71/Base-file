@@ -78,6 +78,12 @@ dependencies {
     implementation("androidx.datastore:datastore:1.1.7")
     implementation("androidx.work:work-runtime-ktx:2.10.0")
     implementation("androidx.work:work-multiprocess:2.10.0")
+    constraints {
+        // WorkManager 2.10.0 declares Room 2.6.1; keep the future fixture's
+        // selected Room family aligned with its explicit 2.7.2 migration tests.
+        implementation("androidx.room:room-common:2.7.2")
+        implementation("androidx.room:room-runtime:2.7.2")
+    }
     implementation("androidx.sqlite:sqlite:2.5.2")
     implementation("androidx.sqlite:sqlite-ktx:2.5.2")
     implementation("androidx.sqlite:sqlite-framework:2.5.2")
