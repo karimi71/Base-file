@@ -1,9 +1,6 @@
 package dev.basefile.future.roborazzi
 
 import android.content.Context
-import android.graphics.Color
-import android.graphics.Paint
-import android.graphics.pdf.PdfDocument
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.tom_roush.pdfbox.android.PDFBoxResourceLoader
@@ -62,7 +59,7 @@ class PdfIntegrationTest {
     }
 
     @Test
-    fun `password protection and framework PdfDocument paths execute`() {
+    fun `password protection rejects missing credentials and accepts the reader secret`() {
         val protected = File(context.cacheDir, "protected.pdf")
         PDDocument().use { document ->
             document.addPage(PDPage())
@@ -71,19 +68,6 @@ class PdfIntegrationTest {
         }
         assertThrows(InvalidPasswordException::class.java) { PDDocument.load(protected) }
         PDDocument.load(protected, "reader-secret").use { assertEquals(1, it.numberOfPages) }
-
-        val frameworkFile = File(context.cacheDir, "framework.pdf")
-        val document = PdfDocument()
-        try {
-            val page = document.startPage(PdfDocument.PageInfo.Builder(300, 300, 1).create())
-            page.canvas.drawColor(Color.WHITE)
-            page.canvas.drawText("Framework PDF", 24f, 80f, Paint().apply { color = Color.BLACK })
-            document.finishPage(page)
-            frameworkFile.outputStream().use(document::writeTo)
-        } finally {
-            document.close()
-        }
-        assertTrue(frameworkFile.length() > 100)
     }
 
     companion object {

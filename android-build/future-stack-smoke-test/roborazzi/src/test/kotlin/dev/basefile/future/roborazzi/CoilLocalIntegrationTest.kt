@@ -48,14 +48,16 @@ class CoilLocalIntegrationTest {
             }
             .build()
         val svgRequest = ImageRequest.Builder(context)
-            .data(svg)
+            .data(svg.readBytes())
             .size(64, 64)
             .memoryCacheKey("local-svg")
             .build()
         assertTrue(loader.execute(svgRequest) is SuccessResult)
         val cached = loader.execute(svgRequest) as SuccessResult
         assertEquals(DataSource.MEMORY_CACHE, cached.dataSource)
-        assertTrue(loader.execute(ImageRequest.Builder(context).data(gif).size(16, 16).build()) is SuccessResult)
+        assertTrue(
+            loader.execute(ImageRequest.Builder(context).data(gif.readBytes()).size(16, 16).build()) is SuccessResult,
+        )
         loader.shutdown()
     }
 

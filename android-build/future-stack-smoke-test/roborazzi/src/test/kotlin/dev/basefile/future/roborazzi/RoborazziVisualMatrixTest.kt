@@ -71,7 +71,7 @@ class RoborazziVisualMatrixTest {
             filePath = "$name.png",
             roborazziOptions = RoborazziOptions(
                 compareOptions = RoborazziOptions.CompareOptions(
-                    changeThreshold = 0.001f,
+                    comparisonStyle = RoborazziOptions.CompareOptions.ComparisonStyle.Grid(),
                 ),
             ),
         )
