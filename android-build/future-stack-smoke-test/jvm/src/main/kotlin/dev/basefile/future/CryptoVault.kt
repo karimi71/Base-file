@@ -7,7 +7,6 @@ import com.google.crypto.tink.KeysetHandle
 import com.google.crypto.tink.config.TinkConfig
 import com.google.crypto.tink.aead.PredefinedAeadParameters
 import java.nio.file.Path
-import kotlin.io.path.toFile
 
 object CryptoVault {
     init {

@@ -60,6 +60,20 @@ test -s "$APK"
 "$ANDROID_HOME/build-tools/34.0.0/apksigner" verify --verbose --print-certs "$APK"
 sha256sum "$APK"
 
+# Resolve every future coordinate early so API/fixture regressions fail before
+# rebuilding the already-proven essential graph. This still shares one fresh
+# online cache for exact publication.
+gradle -p "$FUTURE_SMOKE" --no-daemon --stacktrace --write-locks \
+  resolveFutureCoordinates \
+  generateDependencyReports \
+  :jvm:test \
+  :jvm:verifyGeneratedSources \
+  :android:assembleDebug \
+  :android:assembleRelease \
+  :android:testDebugUnitTest \
+  :android:assembleDebugAndroidTest \
+  :roborazzi:recordRoborazziDebug
+
 # Resolve and execute the pinned Tikaro application, test, screenshot, benchmark,
 # and build-quality graphs. --write-locks records the exact family-wide choices
 # that the subsequent clean-room builds must reproduce without a network.
@@ -73,19 +87,6 @@ gradle -p "$PAPARAZZI_SMOKE" --no-daemon --stacktrace --write-locks \
   :screenshot:testDebugUnitTest
 gradle -p "$QUALITY_SMOKE" --no-daemon --stacktrace --write-locks \
   classes resolveQualityTools verifyLicenseReport
-
-# Resolve every future coordinate in isolation, execute host-capable behavior,
-# compile Android device tests, run R8, and record deterministic Roborazzi goldens.
-gradle -p "$FUTURE_SMOKE" --no-daemon --stacktrace --write-locks \
-  resolveFutureCoordinates \
-  generateDependencyReports \
-  :jvm:test \
-  :jvm:verifyGeneratedSources \
-  :android:assembleDebug \
-  :android:assembleRelease \
-  :android:testDebugUnitTest \
-  :android:assembleDebugAndroidTest \
-  :roborazzi:recordRoborazziDebug
 
 test -s "$TIKARO_SMOKE/app/build/outputs/apk/debug/app-debug.apk"
 test -s "$TIKARO_SMOKE/app/build/outputs/apk/release/app-release-unsigned.apk"
