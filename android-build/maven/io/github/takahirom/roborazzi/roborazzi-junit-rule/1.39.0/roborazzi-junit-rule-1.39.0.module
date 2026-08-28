@@ -1,0 +1,130 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.takahirom.roborazzi",
+    "module": "roborazzi-junit-rule",
+    "version": "1.39.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "roborazzi-junit-rule-1.39.0.aar",
+          "url": "roborazzi-junit-rule-1.39.0.aar",
+          "size": 24936,
+          "sha512": "e99af939d93cbfeafbec84f139719ef8ef02c7c09f2839eb8e0108f60e9d0078f0f3662396730c70618d0000553bbc4b7a929b770c02e29066eb49da7bc2acc9",
+          "sha256": "06f85c55b160cde419486ffab1975128b11b1b519760115a608055523b0e252c",
+          "sha1": "65376346f00a3df79b0f623513636c7d52bf9e2e",
+          "md5": "1bafff584205bbcb2ce9941b9c00311e"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.github.takahirom.roborazzi",
+          "module": "roborazzi",
+          "version": {
+            "requires": "1.39.0"
+          }
+        },
+        {
+          "group": "androidx.test.ext",
+          "module": "junit-ktx",
+          "version": {
+            "requires": "1.2.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "roborazzi-junit-rule-1.39.0.aar",
+          "url": "roborazzi-junit-rule-1.39.0.aar",
+          "size": 24936,
+          "sha512": "e99af939d93cbfeafbec84f139719ef8ef02c7c09f2839eb8e0108f60e9d0078f0f3662396730c70618d0000553bbc4b7a929b770c02e29066eb49da7bc2acc9",
+          "sha256": "06f85c55b160cde419486ffab1975128b11b1b519760115a608055523b0e252c",
+          "sha1": "65376346f00a3df79b0f623513636c7d52bf9e2e",
+          "md5": "1bafff584205bbcb2ce9941b9c00311e"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "roborazzi-junit-rule-1.39.0-sources.jar",
+          "url": "roborazzi-junit-rule-1.39.0-sources.jar",
+          "size": 3191,
+          "sha512": "85af93e940815e26a70d37280cbf101b0ee81b9a569151d41e807bfb9c1c9b10358c31e1668a04957367634d52ca13fd4365627fd19cbaa9ff8e73f0662bf615",
+          "sha256": "da0fb056b2c30df4589832aff2e386f6c1568589db14f0ef25b98cf79c41964e",
+          "sha1": "5b774c9646548283931a95ac31995520f9dd64f4",
+          "md5": "9db4e9b4262550dce8c07a03fb2ba93f"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "roborazzi-junit-rule-1.39.0-javadoc.jar",
+          "url": "roborazzi-junit-rule-1.39.0-javadoc.jar",
+          "size": 305497,
+          "sha512": "add07ceaa4265fb627ec95b593fabc13bfd92610320a033cdd44c4bd1281bb411bc5ddd409f7556721385dedfc3dfb549d54ce77a139fb66c8aa709351e86da0",
+          "sha256": "161df2f6c25cbb8e45dfdb19be944e4b707946256ddd34ccdad85cbc0d655f57",
+          "sha1": "df48c8458d2d1ae7dd972024a6e79bd2d6c36833",
+          "md5": "51051de930eee581d9cea82958f8eb9f"
+        }
+      ]
+    }
+  ]
+}

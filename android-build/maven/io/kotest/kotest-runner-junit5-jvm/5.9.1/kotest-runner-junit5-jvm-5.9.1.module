@@ -1,0 +1,274 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../kotest-runner-junit5/5.9.1/kotest-runner-junit5-5.9.1.module",
+    "group": "io.kotest",
+    "module": "kotest-runner-junit5",
+    "version": "5.9.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.7"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.kotest",
+          "module": "kotest-framework-api",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-common",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-framework-engine",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-framework-discovery",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-assertions-core",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-extensions",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-framework-concurrency",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.8.0"
+          }
+        },
+        {
+          "group": "org.junit.platform",
+          "module": "junit-platform-engine",
+          "version": {
+            "requires": "1.8.2"
+          }
+        },
+        {
+          "group": "org.junit.platform",
+          "module": "junit-platform-suite-api",
+          "version": {
+            "requires": "1.8.2"
+          }
+        },
+        {
+          "group": "org.junit.platform",
+          "module": "junit-platform-launcher",
+          "version": {
+            "requires": "1.8.2"
+          }
+        },
+        {
+          "group": "org.junit.jupiter",
+          "module": "junit-jupiter-api",
+          "version": {
+            "requires": "5.8.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.23"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotest-runner-junit5-jvm-5.9.1.jar",
+          "url": "kotest-runner-junit5-jvm-5.9.1.jar",
+          "size": 113420,
+          "sha512": "aa90deb4bfa71c14d3e1080f9fd87bd2547fef5b2be32349260626f8619080f7c0d649f8adb40dcb1e192a02fd5ae7edd4bf403e8785e2e72acaefb49a338169",
+          "sha256": "76957400399f55a24164581419f2a3d07f727c48b03dc3972e2576e18747ea22",
+          "sha1": "5f15e9222d18b848de3bd259f8a2527d8be7e20b",
+          "md5": "dbb7ba9046a88cb9ebe252268c4f7bb3"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.kotest",
+          "module": "kotest-framework-api",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-common",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-framework-engine",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-framework-discovery",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-assertions-core",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-extensions",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-framework-concurrency",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.8.0"
+          }
+        },
+        {
+          "group": "org.junit.platform",
+          "module": "junit-platform-engine",
+          "version": {
+            "requires": "1.8.2"
+          }
+        },
+        {
+          "group": "org.junit.platform",
+          "module": "junit-platform-suite-api",
+          "version": {
+            "requires": "1.8.2"
+          }
+        },
+        {
+          "group": "org.junit.platform",
+          "module": "junit-platform-launcher",
+          "version": {
+            "requires": "1.8.2"
+          }
+        },
+        {
+          "group": "org.junit.jupiter",
+          "module": "junit-jupiter-api",
+          "version": {
+            "requires": "5.8.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.23"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "version": {
+            "requires": "1.9.23"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotest-runner-junit5-jvm-5.9.1.jar",
+          "url": "kotest-runner-junit5-jvm-5.9.1.jar",
+          "size": 113420,
+          "sha512": "aa90deb4bfa71c14d3e1080f9fd87bd2547fef5b2be32349260626f8619080f7c0d649f8adb40dcb1e192a02fd5ae7edd4bf403e8785e2e72acaefb49a338169",
+          "sha256": "76957400399f55a24164581419f2a3d07f727c48b03dc3972e2576e18747ea22",
+          "sha1": "5f15e9222d18b848de3bd259f8a2527d8be7e20b",
+          "md5": "dbb7ba9046a88cb9ebe252268c4f7bb3"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "kotest-runner-junit5-jvm-5.9.1-sources.jar",
+          "url": "kotest-runner-junit5-jvm-5.9.1-sources.jar",
+          "size": 15279,
+          "sha512": "3388434af388e1c1385e1c09439404e140285c9dd3a696637432edfd290a80f36854289ab1fe62c2b0732d47467f447e334f8af1c24023edf810d873817ab942",
+          "sha256": "63516d8e747e75d3b4e363a5a0f9b71c93c9a47974c97876ded04b2eebc08fe0",
+          "sha1": "aae96beb1820cad1f6f7e6eca754a91d1af1e697",
+          "md5": "0edb961c57e414c7e52e8362c38a41d7"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,530 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.coil-kt.coil3",
+    "module": "coil-network-core",
+    "version": "3.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.12.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "io.coil-kt.coil3",
+          "module": "coil-core",
+          "version": {
+            "requires": "3.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "coil-network-core-metadata-3.1.0.jar",
+          "url": "coil-network-core-3.1.0.jar",
+          "size": 11935,
+          "sha512": "ecc7a7704ca76b63550a485db819cb48505ad85e79729c4db9b0d070951052a1985fcf05403755dcc2cfe879cd9139fe0de13bb64e7f36c09ae6a93ca86aa1cd",
+          "sha256": "6b3bea2b95ff06aab63cf4d98bc3077f5de1ebe25b77d164e5643a399e3ecafe",
+          "sha1": "cb11175f8150bc8c630ab69b729d2423ec858b66",
+          "md5": "7920a55831630b2b900b99f5ba39d547"
+        }
+      ]
+    },
+    {
+      "name": "metadataSourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "coil-network-core-kotlin-3.1.0-sources.jar",
+          "url": "coil-network-core-3.1.0-sources.jar",
+          "size": 11669,
+          "sha512": "7b27fe6bafa8add09dc32a0f2d9125204d994451ac83aacb9d46c4e6b46b27799bc4a57f51c683af27fd0546f312f98dd3b79ec35ea70fab719c0b2070a74688",
+          "sha256": "07c804bd6ffcd6e50866ca9fe3ea207c77aad274e6d34bec0a0568362ab999e8",
+          "sha1": "73db5bb7afe626638e41123946ab016303a9ea91",
+          "md5": "84ab66e800e6a74cc1978890a06fc3d9"
+        }
+      ]
+    },
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-android/3.1.0/coil-network-core-android-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-android",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-android/3.1.0/coil-network-core-android-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-android",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-android/3.1.0/coil-network-core-android-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-android",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-iosarm64/3.1.0/coil-network-core-iosarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-iosarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-iosarm64/3.1.0/coil-network-core-iosarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-iosarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-iosarm64/3.1.0/coil-network-core-iosarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-iosarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-iossimulatorarm64/3.1.0/coil-network-core-iossimulatorarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-iossimulatorarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-iossimulatorarm64/3.1.0/coil-network-core-iossimulatorarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-iossimulatorarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-iossimulatorarm64/3.1.0/coil-network-core-iossimulatorarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-iossimulatorarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-iosx64/3.1.0/coil-network-core-iosx64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-iosx64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-iosx64/3.1.0/coil-network-core-iosx64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-iosx64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-iosx64/3.1.0/coil-network-core-iosx64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-iosx64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "jsApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-js/3.1.0/coil-network-core-js-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-js",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "jsRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-js/3.1.0/coil-network-core-js-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-js",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "jsSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-js/3.1.0/coil-network-core-js-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-js",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-jvm/3.1.0/coil-network-core-jvm-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-jvm",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-jvm/3.1.0/coil-network-core-jvm-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-jvm",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-jvm/3.1.0/coil-network-core-jvm-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-jvm",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "macosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-macosarm64/3.1.0/coil-network-core-macosarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-macosarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "macosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-macosarm64/3.1.0/coil-network-core-macosarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-macosarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "macosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-macosarm64/3.1.0/coil-network-core-macosarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-macosarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "macosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-macosx64/3.1.0/coil-network-core-macosx64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-macosx64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "macosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-macosx64/3.1.0/coil-network-core-macosx64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-macosx64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "macosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-macosx64/3.1.0/coil-network-core-macosx64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-macosx64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "wasmJsApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.platform.type": "wasm",
+        "org.jetbrains.kotlin.wasm.target": "js"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-wasm-js/3.1.0/coil-network-core-wasm-js-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-wasm-js",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "wasmJsRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "wasm",
+        "org.jetbrains.kotlin.wasm.target": "js"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-wasm-js/3.1.0/coil-network-core-wasm-js-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-wasm-js",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "wasmJsSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "wasm",
+        "org.jetbrains.kotlin.wasm.target": "js"
+      },
+      "available-at": {
+        "url": "../../coil-network-core-wasm-js/3.1.0/coil-network-core-wasm-js-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-network-core-wasm-js",
+        "version": "3.1.0"
+      }
+    }
+  ]
+}

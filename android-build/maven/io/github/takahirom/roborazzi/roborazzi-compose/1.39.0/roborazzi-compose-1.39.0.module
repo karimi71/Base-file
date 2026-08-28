@@ -1,0 +1,123 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.takahirom.roborazzi",
+    "module": "roborazzi-compose",
+    "version": "1.39.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "roborazzi-compose-1.39.0.aar",
+          "url": "roborazzi-compose-1.39.0.aar",
+          "size": 51013,
+          "sha512": "3cec26a11f262c99b498e61367474c97fc1ac170de65bf5b8ee124bc02b4a310aa57a0807a94482aa669052906dbe54bc6424df86d0426d2a722cb4b17c7a085",
+          "sha256": "053385599ed48063ef421af93363fd979e98dcebaa26eb3a102a7d90979084eb",
+          "sha1": "d03b04bb28d083f23405285b151e8bcfcc8ceb95",
+          "md5": "98c4f00a5c40788db70482b5d5717af3"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.github.takahirom.roborazzi",
+          "module": "roborazzi",
+          "version": {
+            "requires": "1.39.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "roborazzi-compose-1.39.0.aar",
+          "url": "roborazzi-compose-1.39.0.aar",
+          "size": 51013,
+          "sha512": "3cec26a11f262c99b498e61367474c97fc1ac170de65bf5b8ee124bc02b4a310aa57a0807a94482aa669052906dbe54bc6424df86d0426d2a722cb4b17c7a085",
+          "sha256": "053385599ed48063ef421af93363fd979e98dcebaa26eb3a102a7d90979084eb",
+          "sha1": "d03b04bb28d083f23405285b151e8bcfcc8ceb95",
+          "md5": "98c4f00a5c40788db70482b5d5717af3"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "roborazzi-compose-1.39.0-sources.jar",
+          "url": "roborazzi-compose-1.39.0-sources.jar",
+          "size": 4704,
+          "sha512": "2fc391275a253584bfd8486f42d62ae508d732c6359d81fe4b07bf1fdb44e9e5f524e5cb094f99e0ef403435d9d4923882cfeccb7f4eef1b2a70afdd74a0c976",
+          "sha256": "ec3627a6c840c28b0e1cbb6575cabe28ab49183f91823117091a338a37c3dbd2",
+          "sha1": "2a317dbc042669be029d1a3a6ef63c07e7ba0643",
+          "md5": "5249eb0b2357ae4be27bcc0abdb51437"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "roborazzi-compose-1.39.0-javadoc.jar",
+          "url": "roborazzi-compose-1.39.0-javadoc.jar",
+          "size": 322480,
+          "sha512": "a4de6308b074601593dbd43e4a8022887b8769bfd8aaf2233e15254a600003900e20a96f512251c8a3992816caa3ffdafe8924e39ef62a6f2fa5a96111b9986a",
+          "sha256": "05960db55b82cc00a38d4f48140e64e7bc6585edf36d2a3740e69346c7737d4d",
+          "sha1": "8af8ac8b2caf723cf388623fd9620a3a7e0396d6",
+          "md5": "c9964beabcfa1ad715ff1c073391df7f"
+        }
+      ]
+    }
+  ]
+}

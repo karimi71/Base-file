@@ -1,0 +1,146 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "net.jqwik",
+    "module": "jqwik-time",
+    "version": "1.9.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.apiguardian",
+          "module": "apiguardian-api",
+          "version": {
+            "requires": "1.1.2"
+          }
+        },
+        {
+          "group": "net.jqwik",
+          "module": "jqwik-api",
+          "version": {
+            "requires": "1.9.2"
+          }
+        },
+        {
+          "group": "org.opentest4j",
+          "module": "opentest4j",
+          "version": {
+            "requires": "1.3.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "jqwik-time-1.9.2.jar",
+          "url": "jqwik-time-1.9.2.jar",
+          "size": 243399,
+          "sha512": "1329af090b8e8cfecbfd225ed405e2a300ed2928d022412b79c75b7c2e247dc8ecd747542e8bf4b56af117c1cdfd526111b2973db6ca9404c43757bd4028cff8",
+          "sha256": "3d5f67f87a7b305601a8aef6ec400df3ad400123af4e8459acf663126b08e05d",
+          "sha1": "0dcaed0b7110a26f3e0f89cbe3fc85828f6c1958",
+          "md5": "b27276a513ae26621566e7eec363335a"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.apiguardian",
+          "module": "apiguardian-api",
+          "version": {
+            "requires": "1.1.2"
+          }
+        },
+        {
+          "group": "net.jqwik",
+          "module": "jqwik-api",
+          "version": {
+            "requires": "1.9.2"
+          }
+        },
+        {
+          "group": "org.opentest4j",
+          "module": "opentest4j",
+          "version": {
+            "requires": "1.3.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "jqwik-time-1.9.2.jar",
+          "url": "jqwik-time-1.9.2.jar",
+          "size": 243399,
+          "sha512": "1329af090b8e8cfecbfd225ed405e2a300ed2928d022412b79c75b7c2e247dc8ecd747542e8bf4b56af117c1cdfd526111b2973db6ca9404c43757bd4028cff8",
+          "sha256": "3d5f67f87a7b305601a8aef6ec400df3ad400123af4e8459acf663126b08e05d",
+          "sha1": "0dcaed0b7110a26f3e0f89cbe3fc85828f6c1958",
+          "md5": "b27276a513ae26621566e7eec363335a"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "jqwik-time-1.9.2-javadoc.jar",
+          "url": "jqwik-time-1.9.2-javadoc.jar",
+          "size": 679983,
+          "sha512": "6cced65efee776b7df546031f772b9791397463a8fa6617626f58541fbf4f3a31d6d3123d93d2b837d549e0dd37c374e90a7152ac9dc3cdca4607e065d2963f0",
+          "sha256": "f5b6624c8f628dca034a56352161549649f3a508b2a152d44f2d4c496f239159",
+          "sha1": "c95aa25c3c1e3d42c130479a9597770eda0895fc",
+          "md5": "c5806fb691c75a5ea473e81ed1f8e8a7"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "jqwik-time-1.9.2-sources.jar",
+          "url": "jqwik-time-1.9.2-sources.jar",
+          "size": 81776,
+          "sha512": "c0cb89461f003cf908a7111a1926635d4082be0789f65456bb001f252baac7565f7a69250af631c736a7cbd9514783002fd128c43ff8c5884b45d120c17baa10",
+          "sha256": "0bb8d32b4f51f3b9cf3ad449ea803e0afddb7d97964c720bda180a44fe9ce02a",
+          "sha1": "bf9fac3dc1f3792a94aa533cb47bdedb37474056",
+          "md5": "b37e12bba2e8455c4277dfc2d4067558"
+        }
+      ]
+    }
+  ]
+}

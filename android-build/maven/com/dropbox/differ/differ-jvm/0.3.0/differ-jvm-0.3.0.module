@@ -1,0 +1,99 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../differ/0.3.0/differ-0.3.0.module",
+    "group": "com.dropbox.differ",
+    "module": "differ",
+    "version": "0.3.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "differ-jvm-0.3.0.jar",
+          "url": "differ-jvm-0.3.0.jar",
+          "size": 12549,
+          "sha512": "f10b482acdd315fdbe9b06b56eee3ec72cef4c5de36f421bb1b31f8dede6bd709a7a5866481d2ce79b648f479c021ca7377d02dccb53dc8f81c1ebe795340f8c",
+          "sha256": "d435ab1f4c5f25a51079c03bfa0052d9929471e3195719b0c3f449af7b4da246",
+          "sha1": "1fc0656a44bf48b466414a6167c675a1e84e4703",
+          "md5": "c970e74316e4c1c160bc9ef3aed90139"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "differ-jvm-0.3.0.jar",
+          "url": "differ-jvm-0.3.0.jar",
+          "size": 12549,
+          "sha512": "f10b482acdd315fdbe9b06b56eee3ec72cef4c5de36f421bb1b31f8dede6bd709a7a5866481d2ce79b648f479c021ca7377d02dccb53dc8f81c1ebe795340f8c",
+          "sha256": "d435ab1f4c5f25a51079c03bfa0052d9929471e3195719b0c3f449af7b4da246",
+          "sha1": "1fc0656a44bf48b466414a6167c675a1e84e4703",
+          "md5": "c970e74316e4c1c160bc9ef3aed90139"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "differ-jvm-0.3.0-sources.jar",
+          "url": "differ-jvm-0.3.0-sources.jar",
+          "size": 3249,
+          "sha512": "824d3f0afe6fc38ac7fb2bfac7408b6c46bcbaedab5969e5315589f08634cf8ef165e7fb96d907615320e150b013bb5ee7eb9d4a88e29e7d46977b08e4a593a7",
+          "sha256": "eb0608b2e572e204eef792b25b63b7b93ac0fe5c6d2536b14aa6dd3370446fde",
+          "sha1": "19dfb3a2eea5b6bb88ce32c9032c70953d597b9a",
+          "md5": "0b78bba24254cdd3426f87dd9e72f399"
+        }
+      ]
+    }
+  ]
+}

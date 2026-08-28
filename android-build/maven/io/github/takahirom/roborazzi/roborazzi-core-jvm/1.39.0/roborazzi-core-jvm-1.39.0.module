@@ -1,0 +1,134 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../roborazzi-core/1.39.0/roborazzi-core-1.39.0.module",
+    "group": "io.github.takahirom.roborazzi",
+    "module": "roborazzi-core",
+    "version": "1.39.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.dropbox.differ",
+          "module": "differ",
+          "version": {
+            "requires": "0.3.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "roborazzi-core-jvm.jar",
+          "url": "roborazzi-core-jvm-1.39.0.jar",
+          "size": 191289,
+          "sha512": "23ab50758ca34771e2ef12649ddd46e71a6209909be7f798e938e59d778f3d7c76fb9576befedce2604a13189546c60b9b7c339c5c22fbddd92434765343a127",
+          "sha256": "3471ec3d22e32a5ae49e3242563a2ec5915311f8d5c0a9bcfc11ac4430c84b67",
+          "sha1": "3ddef00d4b34d622fdc714a143b9cc3e581c7ab3",
+          "md5": "e458c10cb32d09ab0951068bc4755fa6"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.dropbox.differ",
+          "module": "differ",
+          "version": {
+            "requires": "0.3.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.6.3"
+          }
+        },
+        {
+          "group": "junit",
+          "module": "junit",
+          "version": {
+            "requires": "4.13.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-io-core",
+          "version": {
+            "requires": "0.3.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "roborazzi-core-jvm.jar",
+          "url": "roborazzi-core-jvm-1.39.0.jar",
+          "size": 191289,
+          "sha512": "23ab50758ca34771e2ef12649ddd46e71a6209909be7f798e938e59d778f3d7c76fb9576befedce2604a13189546c60b9b7c339c5c22fbddd92434765343a127",
+          "sha256": "3471ec3d22e32a5ae49e3242563a2ec5915311f8d5c0a9bcfc11ac4430c84b67",
+          "sha1": "3ddef00d4b34d622fdc714a143b9cc3e581c7ab3",
+          "md5": "e458c10cb32d09ab0951068bc4755fa6"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "roborazzi-core-jvm-sources.jar",
+          "url": "roborazzi-core-jvm-1.39.0-sources.jar",
+          "size": 26557,
+          "sha512": "06e0c2d1df0f61031a50d57a702a8a2f6ce33db7a69049d8694818a18cc788e7aa6d9eb3d2376ac479beeb49a9738310055291fe5eaa8cf358db8dc9045a54dd",
+          "sha256": "ecd71e0bf251fde2e9002beb90fdefa4d40c2daa8e0682a08e2c64b33ad815d7",
+          "sha1": "d1aafe998a1be22fce2e4eb926af1eaf94b52457",
+          "md5": "b7bb5d790daa04f07c76147b63477d6d"
+        }
+      ]
+    }
+  ]
+}

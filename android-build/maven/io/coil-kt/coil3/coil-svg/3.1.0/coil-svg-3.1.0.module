@@ -1,0 +1,541 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.coil-kt.coil3",
+    "module": "coil-svg",
+    "version": "3.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.12.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "io.coil-kt.coil3",
+          "module": "coil-core",
+          "version": {
+            "requires": "3.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.10"
+          }
+        },
+        {
+          "group": "org.jetbrains.skiko",
+          "module": "skiko",
+          "version": {
+            "requires": "0.8.18"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "coil-svg-metadata-3.1.0.jar",
+          "url": "coil-svg-3.1.0.jar",
+          "size": 9699,
+          "sha512": "59d8ae8ab7d252d6f96533915a2a338d03d610a5c06fe5317c4a256d1d093dd9a75a0f686d19ac529c02484b94422519ce1a0d034ca2d429c004eadb58b3b487",
+          "sha256": "cd4c404d0d5e024eeaedd5987c23156f7dba7db2cef67fe05ef13db0a16f1444",
+          "sha1": "ae1400a80e01042e228c64cd03643c72d0a905d6",
+          "md5": "37daf3954d18da118dd9bf97e7e2bafe"
+        }
+      ]
+    },
+    {
+      "name": "metadataSourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "coil-svg-kotlin-3.1.0-sources.jar",
+          "url": "coil-svg-3.1.0-sources.jar",
+          "size": 9042,
+          "sha512": "80e42ebfcfcaae9256976c68a5c4563c2ba085b5368b45cec9170a7c3b50fff8d9b3e7e8c9b1438ba5b33529ed70eb101aaff6b4ad255945f5bbfb2e64b5d05a",
+          "sha256": "7b4d113ce90348d3d3f244a2d8a481c64add2e2144ba94688896aebf489a5c68",
+          "sha1": "bb6649a9c37987cba8bd7b81b9e31168fbe0eeb1",
+          "md5": "2e7e7affd0981cd58ccaefcef6440bf1"
+        }
+      ]
+    },
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../coil-svg-android/3.1.0/coil-svg-android-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-android",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../coil-svg-android/3.1.0/coil-svg-android-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-android",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "android",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../coil-svg-android/3.1.0/coil-svg-android-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-android",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-svg-iosarm64/3.1.0/coil-svg-iosarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-iosarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-svg-iosarm64/3.1.0/coil-svg-iosarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-iosarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-svg-iosarm64/3.1.0/coil-svg-iosarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-iosarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-svg-iossimulatorarm64/3.1.0/coil-svg-iossimulatorarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-iossimulatorarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-svg-iossimulatorarm64/3.1.0/coil-svg-iossimulatorarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-iossimulatorarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-svg-iossimulatorarm64/3.1.0/coil-svg-iossimulatorarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-iossimulatorarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-svg-iosx64/3.1.0/coil-svg-iosx64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-iosx64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-svg-iosx64/3.1.0/coil-svg-iosx64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-iosx64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "iosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-svg-iosx64/3.1.0/coil-svg-iosx64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-iosx64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "jsApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../coil-svg-js/3.1.0/coil-svg-js-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-js",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "jsRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../coil-svg-js/3.1.0/coil-svg-js-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-js",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "jsSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../coil-svg-js/3.1.0/coil-svg-js-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-js",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../coil-svg-jvm/3.1.0/coil-svg-jvm-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-jvm",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../coil-svg-jvm/3.1.0/coil-svg-jvm-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-jvm",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../coil-svg-jvm/3.1.0/coil-svg-jvm-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-jvm",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "macosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-svg-macosarm64/3.1.0/coil-svg-macosarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-macosarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "macosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-svg-macosarm64/3.1.0/coil-svg-macosarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-macosarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "macosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-svg-macosarm64/3.1.0/coil-svg-macosarm64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-macosarm64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "macosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-svg-macosx64/3.1.0/coil-svg-macosx64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-macosx64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "macosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-svg-macosx64/3.1.0/coil-svg-macosx64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-macosx64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "macosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../coil-svg-macosx64/3.1.0/coil-svg-macosx64-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-macosx64",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "wasmJsApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.platform.type": "wasm",
+        "org.jetbrains.kotlin.wasm.target": "js"
+      },
+      "available-at": {
+        "url": "../../coil-svg-wasm-js/3.1.0/coil-svg-wasm-js-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-wasm-js",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "wasmJsRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "wasm",
+        "org.jetbrains.kotlin.wasm.target": "js"
+      },
+      "available-at": {
+        "url": "../../coil-svg-wasm-js/3.1.0/coil-svg-wasm-js-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-wasm-js",
+        "version": "3.1.0"
+      }
+    },
+    {
+      "name": "wasmJsSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "non-jvm",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "wasm",
+        "org.jetbrains.kotlin.wasm.target": "js"
+      },
+      "available-at": {
+        "url": "../../coil-svg-wasm-js/3.1.0/coil-svg-wasm-js-3.1.0.module",
+        "group": "io.coil-kt.coil3",
+        "module": "coil-svg-wasm-js",
+        "version": "3.1.0"
+      }
+    }
+  ]
+}

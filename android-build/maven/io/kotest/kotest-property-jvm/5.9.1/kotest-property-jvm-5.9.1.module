@@ -1,0 +1,162 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../kotest-property/5.9.1/kotest-property-5.9.1.module",
+    "group": "io.kotest",
+    "module": "kotest-property",
+    "version": "5.9.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.7"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.curious-odd-man",
+          "module": "rgxgen",
+          "version": {
+            "requires": "1.4"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-common",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-assertions-shared",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.23"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotest-property-jvm-5.9.1.jar",
+          "url": "kotest-property-jvm-5.9.1.jar",
+          "size": 2433123,
+          "sha512": "00159ebfbaa9ad408ecc9c0287e86b47e107da10e5272bb8cc86ab5c917974c2f982c37d07b0d7c441af5e1011337efa6406ed73e005b18c2e27547adff24a2a",
+          "sha256": "4d84f7acb063035668a35e68e7accd69d923a5dbb7c587ef160f49d7556d5eef",
+          "sha1": "54a1b9a75721c21269d992e2f3d91057b2aa5244",
+          "md5": "f5a1f8f4e3b572e7b43e72c5f6f5b470"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.github.curious-odd-man",
+          "module": "rgxgen",
+          "version": {
+            "requires": "1.4"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-common",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-assertions-shared",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.23"
+          }
+        },
+        {
+          "group": "io.github.java-diff-utils",
+          "module": "java-diff-utils",
+          "version": {
+            "requires": "4.12"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "version": {
+            "requires": "1.9.23"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.8.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotest-property-jvm-5.9.1.jar",
+          "url": "kotest-property-jvm-5.9.1.jar",
+          "size": 2433123,
+          "sha512": "00159ebfbaa9ad408ecc9c0287e86b47e107da10e5272bb8cc86ab5c917974c2f982c37d07b0d7c441af5e1011337efa6406ed73e005b18c2e27547adff24a2a",
+          "sha256": "4d84f7acb063035668a35e68e7accd69d923a5dbb7c587ef160f49d7556d5eef",
+          "sha1": "54a1b9a75721c21269d992e2f3d91057b2aa5244",
+          "md5": "f5a1f8f4e3b572e7b43e72c5f6f5b470"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "kotest-property-jvm-5.9.1-sources.jar",
+          "url": "kotest-property-jvm-5.9.1-sources.jar",
+          "size": 114592,
+          "sha512": "9783615cb1ff558112e630018dc4f6f8e294143edb8e3ccd979c07a1f8fa1ae195e2fda1164eeb75e67cc044431b15e01e5fe858ee83c48e220c4f3fee299350",
+          "sha256": "68ce466c603c78257424abc0d8005ef10f32dc0c0fa2eb33a9fca0fa373cbd3a",
+          "sha1": "7b7cdce83df8d49d4e541f344d929fe9cb9edb3c",
+          "md5": "2c4933def0e5cf1a59814e3a3e4c4e08"
+        }
+      ]
+    }
+  ]
+}

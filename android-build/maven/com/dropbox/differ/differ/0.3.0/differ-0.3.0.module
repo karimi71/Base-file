@@ -1,0 +1,425 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.dropbox.differ",
+    "module": "differ",
+    "version": "0.3.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.20"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "differ-metadata-0.3.0.jar",
+          "url": "differ-0.3.0.jar",
+          "size": 4411,
+          "sha512": "29ff1b384ef691b866fa7acaac838d2a985fc501538205cbe374e84e561790f729f40ddf727e572a4bc07c4747c0e88b11570d6fa5cd7dcfb9442a29482dba8c",
+          "sha256": "6e33e6932d71d71a796390fe9811ed90941ddd44c00e16c20f31184a05cfa91b",
+          "sha1": "146f3570e8cbb64622ef30bc70364d341b71e4cf",
+          "md5": "0dfc901d1aeb87596d365cecfa5aa0e7"
+        }
+      ]
+    },
+    {
+      "name": "metadataSourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "differ-kotlin-0.3.0-sources.jar",
+          "url": "differ-0.3.0-sources.jar",
+          "size": 3249,
+          "sha512": "824d3f0afe6fc38ac7fb2bfac7408b6c46bcbaedab5969e5315589f08634cf8ef165e7fb96d907615320e150b013bb5ee7eb9d4a88e29e7d46977b08e4a593a7",
+          "sha256": "eb0608b2e572e204eef792b25b63b7b93ac0fe5c6d2536b14aa6dd3370446fde",
+          "sha1": "19dfb3a2eea5b6bb88ce32c9032c70953d597b9a",
+          "md5": "0b78bba24254cdd3426f87dd9e72f399"
+        }
+      ]
+    },
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-iosarm64/0.3.0/differ-iosarm64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-iosarm64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "iosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-iosarm64/0.3.0/differ-iosarm64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-iosarm64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-iosarm64/0.3.0/differ-iosarm64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-iosarm64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-iossimulatorarm64/0.3.0/differ-iossimulatorarm64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-iossimulatorarm64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-iossimulatorarm64/0.3.0/differ-iossimulatorarm64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-iossimulatorarm64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-iossimulatorarm64/0.3.0/differ-iossimulatorarm64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-iossimulatorarm64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "iosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-iosx64/0.3.0/differ-iosx64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-iosx64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "iosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-iosx64/0.3.0/differ-iosx64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-iosx64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "iosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-iosx64/0.3.0/differ-iosx64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-iosx64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../differ-jvm/0.3.0/differ-jvm-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-jvm",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../differ-jvm/0.3.0/differ-jvm-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-jvm",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../differ-jvm/0.3.0/differ-jvm-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-jvm",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "linuxX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "linux_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-linuxx64/0.3.0/differ-linuxx64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-linuxx64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "linuxX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "linux_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-linuxx64/0.3.0/differ-linuxx64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-linuxx64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "macosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-macosarm64/0.3.0/differ-macosarm64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-macosarm64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "macosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-macosarm64/0.3.0/differ-macosarm64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-macosarm64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "macosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-macosarm64/0.3.0/differ-macosarm64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-macosarm64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "macosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-macosx64/0.3.0/differ-macosx64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-macosx64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "macosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-macosx64/0.3.0/differ-macosx64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-macosx64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "macosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-macosx64/0.3.0/differ-macosx64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-macosx64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "mingwX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "mingw_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-mingwx64/0.3.0/differ-mingwx64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-mingwx64",
+        "version": "0.3.0"
+      }
+    },
+    {
+      "name": "mingwX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "mingw_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../differ-mingwx64/0.3.0/differ-mingwx64-0.3.0.module",
+        "group": "com.dropbox.differ",
+        "module": "differ-mingwx64",
+        "version": "0.3.0"
+      }
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.takahirom.roborazzi",
+    "module": "roborazzi-core",
+    "version": "1.39.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "com.dropbox.differ",
+          "module": "differ",
+          "version": {
+            "requires": "0.3.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-io-core",
+          "version": {
+            "requires": "0.3.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "roborazzi-core-metadata.jar",
+          "url": "roborazzi-core-1.39.0.jar",
+          "size": 10167,
+          "sha512": "549b12339da8b9e3a9aeb1b01595a66aa101b0077ca222e6d3b8680643698eb8fb4a4dca07435e75c8712f80ea734367a52ac9311aabeb3d90de398650675ac2",
+          "sha256": "b7ed91afb9b7f44421b79dcfccefaa80a76c575d648037fbd0d65101909f3ac1",
+          "sha1": "bb1437d5a4ab07c2b690e6f38d1c0a4b1587e764",
+          "md5": "4bed63532dc34df8d92d80d7f1fba665"
+        }
+      ]
+    },
+    {
+      "name": "metadataSourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "roborazzi-core-kotlin-sources.jar",
+          "url": "roborazzi-core-1.39.0-sources.jar",
+          "size": 27264,
+          "sha512": "d775b64b862a53f34de88438172405ee0cdf559806220dd954383ae14f0f4af470b39f74eb50a6908decb690071ae30cb2f3efcac104cfdb10a0aaea76f09958",
+          "sha256": "710bb9fd6f5bd1d1393a93f72cac428e627007fcaec67163a9cfd7fbbd9df19b",
+          "sha1": "c23ab4873a0db48ada497b50c6b943824bd7455a",
+          "md5": "8ae10ae79a9f3392f9e51fe6f1951bc5"
+        }
+      ]
+    },
+    {
+      "name": "releaseApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../roborazzi-core-android/1.39.0/roborazzi-core-android-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-core-android",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "releaseRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../roborazzi-core-android/1.39.0/roborazzi-core-android-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-core-android",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "releaseSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "androidJvm"
+      },
+      "available-at": {
+        "url": "../../roborazzi-core-android/1.39.0/roborazzi-core-android-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-core-android",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-core-iosarm64/1.39.0/roborazzi-core-iosarm64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-core-iosarm64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-core-iosarm64/1.39.0/roborazzi-core-iosarm64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-core-iosarm64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-core-iosarm64/1.39.0/roborazzi-core-iosarm64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-core-iosarm64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-core-iossimulatorarm64/1.39.0/roborazzi-core-iossimulatorarm64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-core-iossimulatorarm64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-core-iossimulatorarm64/1.39.0/roborazzi-core-iossimulatorarm64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-core-iossimulatorarm64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-core-iossimulatorarm64/1.39.0/roborazzi-core-iossimulatorarm64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-core-iossimulatorarm64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-core-iosx64/1.39.0/roborazzi-core-iosx64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-core-iosx64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-core-iosx64/1.39.0/roborazzi-core-iosx64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-core-iosx64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-core-iosx64/1.39.0/roborazzi-core-iosx64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-core-iosx64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../roborazzi-core-jvm/1.39.0/roborazzi-core-jvm-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-core-jvm",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../roborazzi-core-jvm/1.39.0/roborazzi-core-jvm-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-core-jvm",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../roborazzi-core-jvm/1.39.0/roborazzi-core-jvm-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-core-jvm",
+        "version": "1.39.0"
+      }
+    }
+  ]
+}

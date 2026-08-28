@@ -1,0 +1,146 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "net.jqwik",
+    "module": "jqwik-web",
+    "version": "1.9.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.apiguardian",
+          "module": "apiguardian-api",
+          "version": {
+            "requires": "1.1.2"
+          }
+        },
+        {
+          "group": "net.jqwik",
+          "module": "jqwik-api",
+          "version": {
+            "requires": "1.9.2"
+          }
+        },
+        {
+          "group": "org.opentest4j",
+          "module": "opentest4j",
+          "version": {
+            "requires": "1.3.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "jqwik-web-1.9.2.jar",
+          "url": "jqwik-web-1.9.2.jar",
+          "size": 13350,
+          "sha512": "60cecfa9d34f3caa7813974b98d34986b7ed9c6a2bdb698b46881095e31e01684c5bb81d22881e92455db79e44dda6debced08f7992a066f8eddc2f0ba1e0b30",
+          "sha256": "4f5006f8dd93a13ca59ef92d5476b9aca1c479c0b6d0beb7c3e64970f6b7e632",
+          "sha1": "e7d0d77661626dd370e14d81155e8d6857750935",
+          "md5": "033d1cf23755addc46e5675a3b8b6e20"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.apiguardian",
+          "module": "apiguardian-api",
+          "version": {
+            "requires": "1.1.2"
+          }
+        },
+        {
+          "group": "net.jqwik",
+          "module": "jqwik-api",
+          "version": {
+            "requires": "1.9.2"
+          }
+        },
+        {
+          "group": "org.opentest4j",
+          "module": "opentest4j",
+          "version": {
+            "requires": "1.3.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "jqwik-web-1.9.2.jar",
+          "url": "jqwik-web-1.9.2.jar",
+          "size": 13350,
+          "sha512": "60cecfa9d34f3caa7813974b98d34986b7ed9c6a2bdb698b46881095e31e01684c5bb81d22881e92455db79e44dda6debced08f7992a066f8eddc2f0ba1e0b30",
+          "sha256": "4f5006f8dd93a13ca59ef92d5476b9aca1c479c0b6d0beb7c3e64970f6b7e632",
+          "sha1": "e7d0d77661626dd370e14d81155e8d6857750935",
+          "md5": "033d1cf23755addc46e5675a3b8b6e20"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "jqwik-web-1.9.2-javadoc.jar",
+          "url": "jqwik-web-1.9.2-javadoc.jar",
+          "size": 118985,
+          "sha512": "6a449abfe5ae590fe892d22934059571e5412a38ba25e6402ce1d02d0626d3921d37a8a625520e6148fb56a4ab6fa7f40d5669950df9cde08bdfbb2da9345420",
+          "sha256": "4acba9616ab54ca3261d13a262bbfdbd2ea5180da5161d4de42ec9d7307dc556",
+          "sha1": "fa32ec397d0192e5299e3a469c4e7bf80e9047c7",
+          "md5": "20c1ae0170fbb54a89e93295b54e6d23"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "jqwik-web-1.9.2-sources.jar",
+          "url": "jqwik-web-1.9.2-sources.jar",
+          "size": 7253,
+          "sha512": "638ef3115be1f325d9e06339b752654d402f7cf453bd254aca74a989859a19ee0ef34dcbe414555fe8b7febc4208d3b343cd769af6bb9c74b309ba7d728951b2",
+          "sha256": "f604fa56dbfa4485f4eafb7ada0e625eb301948f3fba594945bdeb866e61b5cf",
+          "sha1": "fb2a23fe486164a3af319d001a7142fad818b061",
+          "md5": "a397406bb5faaa24d3489b5b985c75d0"
+        }
+      ]
+    }
+  ]
+}

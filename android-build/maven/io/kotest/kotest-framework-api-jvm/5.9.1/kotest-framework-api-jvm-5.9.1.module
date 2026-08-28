@@ -1,0 +1,162 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../kotest-framework-api/5.9.1/kotest-framework-api-5.9.1.module",
+    "group": "io.kotest",
+    "module": "kotest-framework-api",
+    "version": "5.9.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.7"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.8.0"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-assertions-shared",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-common",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-test",
+          "version": {
+            "requires": "1.8.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.23"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotest-framework-api-jvm-5.9.1.jar",
+          "url": "kotest-framework-api-jvm-5.9.1.jar",
+          "size": 674244,
+          "sha512": "fd40183c19779d26b49463616c4cabc19ec9b73df6e4ff810932bfc0315150f70fd21b5d17df8e46a5f7a9c0ffb6d34aa1a7a3bd94d44d9ccee0a5e610965353",
+          "sha256": "d9244bc687c83822126725b3ca7676e456447a6051210e25175cf8ab20c0b423",
+          "sha1": "bfeb77c154a6938201e6d1490586484e405b4819",
+          "md5": "d044506ecce96db43b745e4e562e7347"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.8.0"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-assertions-shared",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-common",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-test",
+          "version": {
+            "requires": "1.8.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.23"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "version": {
+            "requires": "1.9.23"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotest-framework-api-jvm-5.9.1.jar",
+          "url": "kotest-framework-api-jvm-5.9.1.jar",
+          "size": 674244,
+          "sha512": "fd40183c19779d26b49463616c4cabc19ec9b73df6e4ff810932bfc0315150f70fd21b5d17df8e46a5f7a9c0ffb6d34aa1a7a3bd94d44d9ccee0a5e610965353",
+          "sha256": "d9244bc687c83822126725b3ca7676e456447a6051210e25175cf8ab20c0b423",
+          "sha1": "bfeb77c154a6938201e6d1490586484e405b4819",
+          "md5": "d044506ecce96db43b745e4e562e7347"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "kotest-framework-api-jvm-5.9.1-sources.jar",
+          "url": "kotest-framework-api-jvm-5.9.1-sources.jar",
+          "size": 115866,
+          "sha512": "b990f4bac8c6c023aa53c538c90bedb8bdfbc3abe1b5caf4febc71d9d7c39c15e5422e4347b77540a9033eface2fb54a29f3f59b1ad869087deadc3f62f987ca",
+          "sha256": "77565bd03fbe99ced39b9a275d14d669a739efb5169a52aec4dec0dd76af8e83",
+          "sha1": "6a2b3c0b2fd18644d7fecf5dc29abf2ed77b5633",
+          "md5": "e1fc1f798046c153effb0fd8c46fd74a"
+        }
+      ]
+    }
+  ]
+}

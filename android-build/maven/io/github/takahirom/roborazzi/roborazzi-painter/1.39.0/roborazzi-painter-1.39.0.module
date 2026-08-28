@@ -1,0 +1,275 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.takahirom.roborazzi",
+    "module": "roborazzi-painter",
+    "version": "1.39.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "io.github.takahirom.roborazzi",
+          "module": "roborazzi-core",
+          "version": {
+            "requires": "1.39.0"
+          }
+        },
+        {
+          "group": "com.dropbox.differ",
+          "module": "differ",
+          "version": {
+            "requires": "0.3.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "roborazzi-painter-metadata.jar",
+          "url": "roborazzi-painter-1.39.0.jar",
+          "size": 799,
+          "sha512": "505caeb4ec25660d33563ff2ce8eddb659fe98513e60869c2def592ae91aa426685abebeb7ecd80b6130258d9df646619856787ffc162c15c2baab12df479902",
+          "sha256": "6cd80307e8ae6e625fbf01260d4a1221bc822d7bb7f6b69ee3bc94dee8cd395f",
+          "sha1": "1695674fac96b9f3e3b307edb377c76e0b592dfc",
+          "md5": "1f1dc00a036b38ca1ec212c04d50b363"
+        }
+      ]
+    },
+    {
+      "name": "metadataSourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "roborazzi-painter-kotlin-sources.jar",
+          "url": "roborazzi-painter-1.39.0-sources.jar",
+          "size": 621,
+          "sha512": "32a0fcc796b1b173da0e81b921e31332acab011cf7e6d2b73423d0ac2930c8596b276d1ce7a9b56669c97cf2827ce013661926a95fa574cf68662d920c16ce13",
+          "sha256": "5b78946f7266417806f7669e9fa88f9513ee9bb12f573998aadf95d9357a1216",
+          "sha1": "b5619d51538262fda6d9bec229915740635c1b47",
+          "md5": "82daa512960cc7d2a4b01d71bf6b509c"
+        }
+      ]
+    },
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-painter-iosarm64/1.39.0/roborazzi-painter-iosarm64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-painter-iosarm64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-painter-iosarm64/1.39.0/roborazzi-painter-iosarm64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-painter-iosarm64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-painter-iosarm64/1.39.0/roborazzi-painter-iosarm64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-painter-iosarm64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-painter-iossimulatorarm64/1.39.0/roborazzi-painter-iossimulatorarm64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-painter-iossimulatorarm64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-painter-iossimulatorarm64/1.39.0/roborazzi-painter-iossimulatorarm64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-painter-iossimulatorarm64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-painter-iossimulatorarm64/1.39.0/roborazzi-painter-iossimulatorarm64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-painter-iossimulatorarm64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-painter-iosx64/1.39.0/roborazzi-painter-iosx64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-painter-iosx64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-painter-iosx64/1.39.0/roborazzi-painter-iosx64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-painter-iosx64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "iosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../roborazzi-painter-iosx64/1.39.0/roborazzi-painter-iosx64-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-painter-iosx64",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../roborazzi-painter-jvm/1.39.0/roborazzi-painter-jvm-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-painter-jvm",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../roborazzi-painter-jvm/1.39.0/roborazzi-painter-jvm-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-painter-jvm",
+        "version": "1.39.0"
+      }
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../roborazzi-painter-jvm/1.39.0/roborazzi-painter-jvm-1.39.0.module",
+        "group": "io.github.takahirom.roborazzi",
+        "module": "roborazzi-painter-jvm",
+        "version": "1.39.0"
+      }
+    }
+  ]
+}
