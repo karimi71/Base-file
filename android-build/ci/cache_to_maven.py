@@ -1,0 +1,133 @@
+#!/usr/bin/env python3
+"""Convert Gradle's exact files-2.1 set into a conventional local Maven repo."""
+from __future__ import annotations
+
+import hashlib
+import json
+import shutil
+import sys
+from pathlib import Path
+
+
+def digest(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def main() -> int:
+    if len(sys.argv) != 3:
+        print(f"usage: {sys.argv[0]} GRADLE_FILES_2_1 MAVEN_DEST", file=sys.stderr)
+        return 2
+    source = Path(sys.argv[1]).resolve()
+    destination = Path(sys.argv[2]).resolve()
+    if not source.is_dir():
+        raise SystemExit(f"Gradle module cache not found: {source}")
+    if destination.exists():
+        shutil.rmtree(destination)
+    destination.mkdir(parents=True)
+
+    coordinates: dict[tuple[str, str, str], set[str]] = {}
+    copied = 0
+    copied_bytes = 0
+    # Layout: group.id/artifact/version/content-hash/file
+    for group_dir in sorted(p for p in source.iterdir() if p.is_dir()):
+        for artifact_dir in sorted(p for p in group_dir.iterdir() if p.is_dir()):
+            for version_dir in sorted(p for p in artifact_dir.iterdir() if p.is_dir()):
+                coordinate = (group_dir.name, artifact_dir.name, version_dir.name)
+                target_dir = destination.joinpath(
+                    *group_dir.name.split("."), artifact_dir.name, version_dir.name
+                )
+                for cache_hash_dir in sorted(p for p in version_dir.iterdir() if p.is_dir()):
+                    for item in sorted(p for p in cache_hash_dir.iterdir() if p.is_file()):
+                        target = target_dir / item.name
+                        if target.exists():
+                            if digest(target) != digest(item):
+                                raise RuntimeError(
+                                    f"conflicting files for {coordinate}: {item.name}"
+                                )
+                            continue
+                        target_dir.mkdir(parents=True, exist_ok=True)
+                        shutil.copyfile(item, target)
+                        coordinates.setdefault(coordinate, set()).add(item.name)
+                        copied += 1
+                        copied_bytes += item.stat().st_size
+
+                # Gradle module metadata distinguishes a display `name` from the
+                # repository `url`. Gradle's cache keeps the response/display
+                # filename (for example `Turbine-jvm.jar`), while a file Maven
+                # repository must expose the exact relative URL path (for example
+                # `turbine-jvm-1.2.0.jar` or Guava's adjacent `-android` version).
+                # Materialize every such alias.
+                for module_file in sorted(target_dir.glob("*.module")) if target_dir.exists() else []:
+                    try:
+                        module_data = json.loads(module_file.read_text(encoding="utf-8"))
+                    except (json.JSONDecodeError, OSError, UnicodeDecodeError):
+                        continue
+                    for variant in module_data.get("variants", []):
+                        for declared_file in variant.get("files", []):
+                            cache_name = Path(str(declared_file.get("name", ""))).name
+                            declared_url = Path(str(declared_file.get("url", "")))
+                            if not cache_name or not declared_url.name or declared_url.is_absolute():
+                                continue
+                            cached_file = target_dir / cache_name
+                            url_file = (target_dir / declared_url).resolve()
+                            try:
+                                relative_url_file = url_file.relative_to(destination)
+                            except ValueError as error:
+                                raise RuntimeError(
+                                    f"metadata URL escapes Maven destination for {coordinate}: {declared_url}"
+                                ) from error
+                            if cached_file.resolve() == url_file or not cached_file.is_file():
+                                continue
+                            if url_file.exists():
+                                if digest(url_file) != digest(cached_file):
+                                    raise RuntimeError(
+                                        f"conflicting metadata URL alias for {coordinate}: {declared_url}"
+                                    )
+                                continue
+                            url_file.parent.mkdir(parents=True, exist_ok=True)
+                            shutil.copyfile(cached_file, url_file)
+                            relative_parts = relative_url_file.parts
+                            if len(relative_parts) < 4:
+                                raise RuntimeError(
+                                    f"cannot derive coordinate for metadata URL: {declared_url}"
+                                )
+                            url_coordinate = (
+                                ".".join(relative_parts[:-3]),
+                                relative_parts[-3],
+                                relative_parts[-2],
+                            )
+                            coordinates.setdefault(url_coordinate, set()).add(url_file.name)
+                            copied += 1
+                            copied_bytes += url_file.stat().st_size
+
+                # Google Maven sometimes serves an AAR with Content-Disposition
+                # `*-release.aar` while Maven/Gradle resolves the canonical URL
+                # `<artifact>-<version>.aar`. Gradle's cache keeps the response
+                # filename, so provide the canonical identical alias as well.
+                canonical_aar = target_dir / f"{artifact_dir.name}-{version_dir.name}.aar"
+                aar_files = sorted(target_dir.glob("*.aar")) if target_dir.exists() else []
+                if not canonical_aar.exists() and len(aar_files) == 1:
+                    shutil.copyfile(aar_files[0], canonical_aar)
+                    coordinates.setdefault(coordinate, set()).add(canonical_aar.name)
+                    copied += 1
+                    copied_bytes += canonical_aar.stat().st_size
+
+    manifest = destination / "BASE_FILE_COORDINATES.tsv"
+    with manifest.open("w", encoding="utf-8", newline="\n") as out:
+        out.write("group\tartifact\tversion\tfiles\n")
+        for coordinate, files in sorted(coordinates.items()):
+            out.write("\t".join((*coordinate, ",".join(sorted(files)))) + "\n")
+
+    print(
+        f"Local Maven repository: {len(coordinates)} coordinates, "
+        f"{copied} files, {copied_bytes / (1024 * 1024):.1f} MiB"
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

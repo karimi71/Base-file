@@ -1,0 +1,666 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.squareup.okio",
+    "module": "okio-bom",
+    "version": "3.9.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "platform",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencyConstraints": [
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-iosarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-iossimulatorarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-iosx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-js",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-jvm",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-linuxarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-linuxx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-macosarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-macosx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-mingwx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-tvosarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-tvossimulatorarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-tvosx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-wasmjs",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-wasmwasi",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-watchosarm32",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-watchosarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-watchosdevicearm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-watchossimulatorarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-watchosx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-assetfilesystem",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-jvm",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-js",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-iosx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-iosarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-iossimulatorarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-tvosx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-tvosarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-tvossimulatorarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-watchosarm32",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-watchosarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-watchosdevicearm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-watchosx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-watchossimulatorarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-linuxx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-linuxarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-macosx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-macosarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-mingwx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-wasmjs",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-nodefilesystem",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-wasifilesystem",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-wasifilesystem-wasmwasi",
+          "version": {
+            "requires": "3.9.0"
+          }
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "platform",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencyConstraints": [
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-iosarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-iossimulatorarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-iosx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-js",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-jvm",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-linuxarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-linuxx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-macosarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-macosx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-mingwx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-tvosarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-tvossimulatorarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-tvosx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-wasmjs",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-wasmwasi",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-watchosarm32",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-watchosarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-watchosdevicearm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-watchossimulatorarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-watchosx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-assetfilesystem",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-jvm",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-js",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-iosx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-iosarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-iossimulatorarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-tvosx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-tvosarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-tvossimulatorarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-watchosarm32",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-watchosarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-watchosdevicearm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-watchosx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-watchossimulatorarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-linuxx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-linuxarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-macosx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-macosarm64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-mingwx64",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-fakefilesystem-wasmjs",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-nodefilesystem",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-wasifilesystem",
+          "version": {
+            "requires": "3.9.0"
+          }
+        },
+        {
+          "group": "com.squareup.okio",
+          "module": "okio-wasifilesystem-wasmwasi",
+          "version": {
+            "requires": "3.9.0"
+          }
+        }
+      ]
+    }
+  ]
+}

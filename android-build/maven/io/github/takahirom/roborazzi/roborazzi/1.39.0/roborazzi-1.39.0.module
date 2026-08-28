@@ -1,0 +1,165 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.takahirom.roborazzi",
+    "module": "roborazzi",
+    "version": "1.39.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.github.takahirom.roborazzi",
+          "module": "roborazzi-core",
+          "version": {
+            "requires": "1.39.0"
+          }
+        },
+        {
+          "group": "com.dropbox.differ",
+          "module": "differ",
+          "version": {
+            "requires": "0.3.0"
+          }
+        },
+        {
+          "group": "androidx.test.espresso",
+          "module": "espresso-core",
+          "version": {
+            "requires": "3.5.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "roborazzi-1.39.0.aar",
+          "url": "roborazzi-1.39.0.aar",
+          "size": 63410,
+          "sha512": "755356a6561fcd354dd66d13caa51d5e1ec63306a19c501caa137b5592b4cc6b1dc129da2bd095d6a3347c8d449fd78c116bd6d1151e9ca9f358c44069267ce7",
+          "sha256": "e3cbbc7053474917b2132067b1fbf71bbfff2ee65a00b592f2eba444d37ccb39",
+          "sha1": "5ae9d02e266f5e1f7bc417b288a02e3bcdc030ba",
+          "md5": "091f9b467b014e6dccf89925f5319bbc"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.github.takahirom.roborazzi",
+          "module": "roborazzi-painter",
+          "version": {
+            "requires": "1.39.0"
+          }
+        },
+        {
+          "group": "io.github.takahirom.roborazzi",
+          "module": "roborazzi-core",
+          "version": {
+            "requires": "1.39.0"
+          }
+        },
+        {
+          "group": "com.dropbox.differ",
+          "module": "differ",
+          "version": {
+            "requires": "0.3.0"
+          }
+        },
+        {
+          "group": "androidx.test.espresso",
+          "module": "espresso-core",
+          "version": {
+            "requires": "3.5.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "roborazzi-1.39.0.aar",
+          "url": "roborazzi-1.39.0.aar",
+          "size": 63410,
+          "sha512": "755356a6561fcd354dd66d13caa51d5e1ec63306a19c501caa137b5592b4cc6b1dc129da2bd095d6a3347c8d449fd78c116bd6d1151e9ca9f358c44069267ce7",
+          "sha256": "e3cbbc7053474917b2132067b1fbf71bbfff2ee65a00b592f2eba444d37ccb39",
+          "sha1": "5ae9d02e266f5e1f7bc417b288a02e3bcdc030ba",
+          "md5": "091f9b467b014e6dccf89925f5319bbc"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "roborazzi-1.39.0-sources.jar",
+          "url": "roborazzi-1.39.0-sources.jar",
+          "size": 9336,
+          "sha512": "0331ab4885fd704b10c085891bbf3d61b8190676dd211e83fd2ea1eb13a8ba61945755aaa02031a8106274872e48a3a088ea30b6579984fb5f8ff68e7bc6eb2d",
+          "sha256": "6d47df00a399ed831e85bf1b97e34fbb086390a442943d070db954448bd6ab2f",
+          "sha1": "b5b783bb7385ecc64e1154a77ac7047a7159b7f9",
+          "md5": "330fadf1e7f6160b4795facdd8550898"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "roborazzi-1.39.0-javadoc.jar",
+          "url": "roborazzi-1.39.0-javadoc.jar",
+          "size": 337823,
+          "sha512": "0ed5c332e08efb4d266d427a237d54d10c9789f92b18bc1e578be50cdf80c09e260e13fab3cf8ee8f8aabf1d6d742b018943164c50accbcbfc5cf7aa77a83387",
+          "sha256": "0872907a096dcdf36483c2a75ab3d8030d1aa353e90664e50d25065436d1b3ac",
+          "sha1": "b5ed653976d727e81b45ed507f9e85b0099b32f8",
+          "md5": "f4abceaee3cdd679b13232790abae5d0"
+        }
+      ]
+    }
+  ]
+}

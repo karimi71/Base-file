@@ -1,0 +1,99 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../poko-annotations/0.15.3/poko-annotations-0.15.3.module",
+    "group": "dev.drewhamilton.poko",
+    "module": "poko-annotations",
+    "version": "0.15.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.7"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.24"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "poko-annotations-jvm-0.15.3.jar",
+          "url": "poko-annotations-jvm-0.15.3.jar",
+          "size": 2458,
+          "sha512": "0bcabc783305250ee2f90b323e7fb9210ce3f44fd3fd442ae4e416072efe5c668ea287fe3fe7418bd7358c86ef3b4df2cb84aef812fccce5e6d14f9add79d144",
+          "sha256": "3bcb96770ac52075c431201e29fd5e67924435555df22f5e5ab2602b7b773635",
+          "sha1": "9ad5e5b81d14caf06f29140e6f32ea06a41497b3",
+          "md5": "554c56459ca0655e2fb1bd0ec9653461"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.24"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "poko-annotations-jvm-0.15.3.jar",
+          "url": "poko-annotations-jvm-0.15.3.jar",
+          "size": 2458,
+          "sha512": "0bcabc783305250ee2f90b323e7fb9210ce3f44fd3fd442ae4e416072efe5c668ea287fe3fe7418bd7358c86ef3b4df2cb84aef812fccce5e6d14f9add79d144",
+          "sha256": "3bcb96770ac52075c431201e29fd5e67924435555df22f5e5ab2602b7b773635",
+          "sha1": "9ad5e5b81d14caf06f29140e6f32ea06a41497b3",
+          "md5": "554c56459ca0655e2fb1bd0ec9653461"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "poko-annotations-jvm-0.15.3-sources.jar",
+          "url": "poko-annotations-jvm-0.15.3-sources.jar",
+          "size": 2809,
+          "sha512": "fe9d680b373ead51295415d70160c35164bd40609fd93a31315d4131d8e28c92aa6db57a204c6874342f7b8b8386fad6e8d46b3a7715dfab7adaca88bbe6b4e1",
+          "sha256": "7a735dde85bad254b3b48a1e272de91640c80cf855fafbeee569ba66edeced6d",
+          "sha1": "21646c1cdea5fe1bad4634aa5e3d33cb5f4f5be4",
+          "md5": "e989b70fef1e1dd433377f6bf32012b4"
+        }
+      ]
+    }
+  ]
+}

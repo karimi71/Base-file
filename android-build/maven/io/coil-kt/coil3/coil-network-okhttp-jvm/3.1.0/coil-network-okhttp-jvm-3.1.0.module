@@ -1,0 +1,144 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../coil-network-okhttp/3.1.0/coil-network-okhttp-3.1.0.module",
+    "group": "io.coil-kt.coil3",
+    "module": "coil-network-okhttp",
+    "version": "3.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.12.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.coil-kt.coil3",
+          "module": "coil-core",
+          "version": {
+            "requires": "3.1.0"
+          }
+        },
+        {
+          "group": "io.coil-kt.coil3",
+          "module": "coil-network-core",
+          "version": {
+            "requires": "3.1.0"
+          }
+        },
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "okhttp",
+          "version": {
+            "requires": "4.12.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "coil-network-okhttp-jvm-3.1.0.jar",
+          "url": "coil-network-okhttp-jvm-3.1.0.jar",
+          "size": 19887,
+          "sha512": "a2ab790c22c23d73de06337dc16817b0f49bdb53611547fd8f078292120103064322c29dec552185e164bc495328a7168a79ab20b65c01a91991812617ad56b0",
+          "sha256": "7d27fe973a382a9bdb1eddbc5f4c33ecc22bec6e617d8c126f09e4287388b509",
+          "sha1": "e7dbaa82df49fa511e99631c41beb0f5c5d10eab",
+          "md5": "583d0aff81aa4a48c88db0bb32b455fc"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.coil-kt.coil3",
+          "module": "coil-core",
+          "version": {
+            "requires": "3.1.0"
+          }
+        },
+        {
+          "group": "io.coil-kt.coil3",
+          "module": "coil-network-core",
+          "version": {
+            "requires": "3.1.0"
+          }
+        },
+        {
+          "group": "com.squareup.okhttp3",
+          "module": "okhttp",
+          "version": {
+            "requires": "4.12.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "coil-network-okhttp-jvm-3.1.0.jar",
+          "url": "coil-network-okhttp-jvm-3.1.0.jar",
+          "size": 19887,
+          "sha512": "a2ab790c22c23d73de06337dc16817b0f49bdb53611547fd8f078292120103064322c29dec552185e164bc495328a7168a79ab20b65c01a91991812617ad56b0",
+          "sha256": "7d27fe973a382a9bdb1eddbc5f4c33ecc22bec6e617d8c126f09e4287388b509",
+          "sha1": "e7dbaa82df49fa511e99631c41beb0f5c5d10eab",
+          "md5": "583d0aff81aa4a48c88db0bb32b455fc"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "coil-network-okhttp-jvm-3.1.0-sources.jar",
+          "url": "coil-network-okhttp-jvm-3.1.0-sources.jar",
+          "size": 3263,
+          "sha512": "24d9851cdb95d623944e1cd234bc8d434bbfa310bf81d2f304f2ce05f1cd2259333c66e46bd30d0d66ad2e6c504b391fcef223508ad9a84ecb27e75813702b94",
+          "sha256": "352182780c2f1a6bbfe28c76348fde5bd6b6c41cdea88e0bbea26871b56a62bb",
+          "sha1": "473291c6ced65fe889b5f5533c59e2f8d23da9a2",
+          "md5": "03ee5506332d3b2624d8a9da9a9849ca"
+        }
+      ]
+    }
+  ]
+}

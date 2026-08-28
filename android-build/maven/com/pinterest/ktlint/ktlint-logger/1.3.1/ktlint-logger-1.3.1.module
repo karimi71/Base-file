@@ -1,0 +1,143 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.pinterest.ktlint",
+    "module": "ktlint-logger",
+    "version": "1.3.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.8"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.github.oshai",
+          "module": "kotlin-logging-jvm",
+          "version": {
+            "requires": "6.0.9"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.24"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ktlint-logger-1.3.1.jar",
+          "url": "ktlint-logger-1.3.1.jar",
+          "size": 4759,
+          "sha512": "d6f7447737c3e8c675166dd42c61ef3ece12162597d2a68157c72e67fc7699855dcd7a9cb15f9d5bac1770f7e15a54555a2eba0b39409746bd5e874eda7d9d6e",
+          "sha256": "ede9d48ce62e1fb1d6c4dd2a2ea95260a680baff5cfc9f9bb95e1dd1681f3bf4",
+          "sha1": "033fd36b333331cf99c8f44ebff24409aa89ba8c",
+          "md5": "4cc14dede3d868455638a32b64e66c90"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "dev.drewhamilton.poko",
+          "module": "poko-annotations",
+          "version": {
+            "requires": "0.15.3"
+          }
+        },
+        {
+          "group": "io.github.oshai",
+          "module": "kotlin-logging-jvm",
+          "version": {
+            "requires": "6.0.9"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.24"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ktlint-logger-1.3.1.jar",
+          "url": "ktlint-logger-1.3.1.jar",
+          "size": 4759,
+          "sha512": "d6f7447737c3e8c675166dd42c61ef3ece12162597d2a68157c72e67fc7699855dcd7a9cb15f9d5bac1770f7e15a54555a2eba0b39409746bd5e874eda7d9d6e",
+          "sha256": "ede9d48ce62e1fb1d6c4dd2a2ea95260a680baff5cfc9f9bb95e1dd1681f3bf4",
+          "sha1": "033fd36b333331cf99c8f44ebff24409aa89ba8c",
+          "md5": "4cc14dede3d868455638a32b64e66c90"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ktlint-logger-1.3.1-sources.jar",
+          "url": "ktlint-logger-1.3.1-sources.jar",
+          "size": 1863,
+          "sha512": "ec9cd925b77fbd4368df9ca59f66859f5f5a15fd532caa61fa4e3742df115d532828fbbca4e7ca590b4faea014e9f56fe7cfecd6807b69c2b16f7d087b218060",
+          "sha256": "57800678ea4cb838532c5094478694c6e67c7c48a3c211d21a3beb4b07634001",
+          "sha1": "24bf02261642c19878984d5b192066efe9a515d4",
+          "md5": "8b3ecc047d99b79e23fd4de90f0eac7d"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ktlint-logger-1.3.1-javadoc.jar",
+          "url": "ktlint-logger-1.3.1-javadoc.jar",
+          "size": 407348,
+          "sha512": "ca9c265d95336a26a0b746b144a07bf52efe108eb7a30a6e9e6d6700efeb359db4bf7ffdb4459d68ae0bed4c257f1f8b06206512815d5bc243cbd59f81a16773",
+          "sha256": "93c75200276d52b2a2cc9328252f103ca42a6988e18867fbbc86254d6780ca8b",
+          "sha1": "fa892c1577d9cae7fb22c47554ed52747bacd618",
+          "md5": "d6872ab062234eb2abb49aa8fab03139"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.autonomousapps",
+    "module": "graph-support",
+    "version": "0.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.7"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.google.guava",
+          "module": "guava",
+          "version": {
+            "requires": "33.1.0-jre"
+          },
+          "excludes": [
+            {
+              "group": "junit",
+              "module": "junit"
+            },
+            {
+              "group": "org.junit.vintage",
+              "module": "junit-vintage-engine"
+            }
+          ],
+          "reason": "Graphs"
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          },
+          "excludes": [
+            {
+              "group": "junit",
+              "module": "junit"
+            },
+            {
+              "group": "org.junit.vintage",
+              "module": "junit-vintage-engine"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "graph-support-0.3.jar",
+          "url": "graph-support-0.3.jar",
+          "size": 26669,
+          "sha512": "a003942169776117863905a6f76b7577d71ff0b20192c2acae7693272c0089fbff77a243a70c5656c460ccce924820eeeb308e1df9c55e3340ca9c6002cf4803",
+          "sha256": "25f3ede30ba31cfce2c10abe45fc4d0361b26b3826ade709fcfea5654d9be1ef",
+          "sha1": "efe100b5e3a5b53a1ab22bca53585f532f81f049",
+          "md5": "f3a37c39e8196535c19d47f7ec0d1392"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.google.guava",
+          "module": "guava",
+          "version": {
+            "requires": "33.1.0-jre"
+          },
+          "excludes": [
+            {
+              "group": "junit",
+              "module": "junit"
+            },
+            {
+              "group": "org.junit.vintage",
+              "module": "junit-vintage-engine"
+            }
+          ],
+          "reason": "Graphs"
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          },
+          "excludes": [
+            {
+              "group": "junit",
+              "module": "junit"
+            },
+            {
+              "group": "org.junit.vintage",
+              "module": "junit-vintage-engine"
+            }
+          ]
+        }
+      ],
+      "files": [
+        {
+          "name": "graph-support-0.3.jar",
+          "url": "graph-support-0.3.jar",
+          "size": 26669,
+          "sha512": "a003942169776117863905a6f76b7577d71ff0b20192c2acae7693272c0089fbff77a243a70c5656c460ccce924820eeeb308e1df9c55e3340ca9c6002cf4803",
+          "sha256": "25f3ede30ba31cfce2c10abe45fc4d0361b26b3826ade709fcfea5654d9be1ef",
+          "sha1": "efe100b5e3a5b53a1ab22bca53585f532f81f049",
+          "md5": "f3a37c39e8196535c19d47f7ec0d1392"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "graph-support-0.3-javadoc.jar",
+          "url": "graph-support-0.3-javadoc.jar",
+          "size": 261,
+          "sha512": "267a4aefe96715ba9b7fa980400b4d7dd2b0164986c8ec89a4afaec7d8b69dd9bed1dd39da221ed6b10a8d81b3d3b3345ff8038893af24eb2bdb4f9c5f89cddc",
+          "sha256": "b298553522a35da35884875643de9d98af8a9cfb7226280151cac72cffa896aa",
+          "sha1": "3d8e32298c71f534ee6db356a4fab732cf514769",
+          "md5": "a87606bf19351e6e9b772ccf07ce5c3a"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "graph-support-0.3-sources.jar",
+          "url": "graph-support-0.3-sources.jar",
+          "size": 6469,
+          "sha512": "81ce08b77c6c9ca77d5ad873076788c5469f0d88c53afd9d12bf157a78363cc8f9775ff60c54e2cfcdc2cf50b5e99bc1c004ee417d0d665f69ff91f5cfb45d4a",
+          "sha256": "8f8316e95be1a62fd15b140383ee22a928c73bf84db3bdaefabe5b3ec3f25869",
+          "sha1": "63c0fb9466a23ea5e2522d7c013564062480ab44",
+          "md5": "b4b3b3a0b3cbe9e595f35ab7515c611a"
+        }
+      ]
+    }
+  ]
+}

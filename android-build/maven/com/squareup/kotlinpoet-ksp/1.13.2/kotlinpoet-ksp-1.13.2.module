@@ -1,0 +1,96 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.squareup",
+    "module": "kotlinpoet-ksp",
+    "version": "1.13.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.1.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.squareup",
+          "module": "kotlinpoet",
+          "version": {
+            "requires": "1.13.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotlinpoet-ksp-1.13.2.jar",
+          "url": "kotlinpoet-ksp-1.13.2.jar",
+          "size": 36530,
+          "sha512": "896df77a9a9bc63203cca62486005ca7ebed91b53155add9dc4af9cab55ad6d09b4ef4d0bba0329f3c40b6a3b6e6dd9487987642184bce3166ea2f746b655bd0",
+          "sha256": "d1de5e3d6f7405dc10cb14a43f39400ba75604e1cf86da1fe08e9007a8a17d08",
+          "sha1": "5d4625569107a897ec43a1dd4c17521a510a444b",
+          "md5": "cfe08a368ab5cf5a04f296db28a48ea7"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.squareup",
+          "module": "kotlinpoet",
+          "version": {
+            "requires": "1.13.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.8.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotlinpoet-ksp-1.13.2.jar",
+          "url": "kotlinpoet-ksp-1.13.2.jar",
+          "size": 36530,
+          "sha512": "896df77a9a9bc63203cca62486005ca7ebed91b53155add9dc4af9cab55ad6d09b4ef4d0bba0329f3c40b6a3b6e6dd9487987642184bce3166ea2f746b655bd0",
+          "sha256": "d1de5e3d6f7405dc10cb14a43f39400ba75604e1cf86da1fe08e9007a8a17d08",
+          "sha1": "5d4625569107a897ec43a1dd4c17521a510a444b",
+          "md5": "cfe08a368ab5cf5a04f296db28a48ea7"
+        }
+      ]
+    }
+  ]
+}

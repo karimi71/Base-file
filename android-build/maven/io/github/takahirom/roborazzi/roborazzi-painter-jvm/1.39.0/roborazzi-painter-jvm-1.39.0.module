@@ -1,0 +1,134 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../roborazzi-painter/1.39.0/roborazzi-painter-1.39.0.module",
+    "group": "io.github.takahirom.roborazzi",
+    "module": "roborazzi-painter",
+    "version": "1.39.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.github.takahirom.roborazzi",
+          "module": "roborazzi-core",
+          "version": {
+            "requires": "1.39.0"
+          }
+        },
+        {
+          "group": "com.dropbox.differ",
+          "module": "differ",
+          "version": {
+            "requires": "0.3.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "roborazzi-painter-jvm.jar",
+          "url": "roborazzi-painter-jvm-1.39.0.jar",
+          "size": 60111,
+          "sha512": "8420a43f4d8e9e3c2faada96d17e905a8a2199f167456b9ba3956d670a8addf46d9eb4bea0f855de2c0e837a9dbb2fd2ad29980749ae4ba9fc9b416e0d184028",
+          "sha256": "06ba0337382333044c53385719029da5ceb924e9599e0f1b45d8681c92cf2d10",
+          "sha1": "82cb5bf92b2feffedb6eb030ecc4dfdfc9857dcd",
+          "md5": "0d8dc355030f9e56e3ab0f00dcb2247b"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.github.takahirom.roborazzi",
+          "module": "roborazzi-core",
+          "version": {
+            "requires": "1.39.0"
+          }
+        },
+        {
+          "group": "com.dropbox.differ",
+          "module": "differ",
+          "version": {
+            "requires": "0.3.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-io-core",
+          "version": {
+            "requires": "0.3.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "roborazzi-painter-jvm.jar",
+          "url": "roborazzi-painter-jvm-1.39.0.jar",
+          "size": 60111,
+          "sha512": "8420a43f4d8e9e3c2faada96d17e905a8a2199f167456b9ba3956d670a8addf46d9eb4bea0f855de2c0e837a9dbb2fd2ad29980749ae4ba9fc9b416e0d184028",
+          "sha256": "06ba0337382333044c53385719029da5ceb924e9599e0f1b45d8681c92cf2d10",
+          "sha1": "82cb5bf92b2feffedb6eb030ecc4dfdfc9857dcd",
+          "md5": "0d8dc355030f9e56e3ab0f00dcb2247b"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "roborazzi-painter-jvm-sources.jar",
+          "url": "roborazzi-painter-jvm-1.39.0-sources.jar",
+          "size": 17694,
+          "sha512": "e21968d1108a2f02e0efbec7e8ec87a9889711b2f5246349d80cedffdecc4ee698cb79bd02ed5e90baba2cd25e2d5cc449f26c9d11137680377513b94cc4bda4",
+          "sha256": "18b8b1c3ed34427dba0d2d71185ae4b862c0758c927d58b80dd85ab653682275",
+          "sha1": "b523b0d9b71c9381c9da37f7f7f9d4e68499f852",
+          "md5": "4b1a98eb594d1ac5ef34d2e2eb393d3a"
+        }
+      ]
+    }
+  ]
+}

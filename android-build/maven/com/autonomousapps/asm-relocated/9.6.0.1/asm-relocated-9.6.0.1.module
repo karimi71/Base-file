@@ -1,0 +1,78 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.autonomousapps",
+    "module": "asm-relocated",
+    "version": "9.6.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "asm-relocated-9.6.0.1.jar",
+          "url": "asm-relocated-9.6.0.1.jar",
+          "size": 177664,
+          "sha512": "cbae13b733b011779265d97274f842c1d407979a5a66e782b5e47a768eef7176713f4f677454eb02a199744c042844057cf33217da7a52d091579898d5cc1b1a",
+          "sha256": "22159a88f952421c6282bceaea06f909df65f8ba67df5bcfbb4586567fe60a00",
+          "sha1": "ece2def12d664fc62d056cd98780c8b0e10157fd",
+          "md5": "e500460ab40886de7575b0110db2001a"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "asm-relocated-9.6.0.1-javadoc.jar",
+          "url": "asm-relocated-9.6.0.1-javadoc.jar",
+          "size": 261,
+          "sha512": "f8ec7aa94b8385939923449d2166b62da4346bc4325e71b8705f395f2f47f2b52ab3153b2d9610a4b4a4b7affeff294ffc0f5eb8ca01e2333ca92baffee09b87",
+          "sha256": "b7bcc202c2f84664c4661ba2c8c82b0987bcf48c5aa20b5a3a55a3bb1983cc1c",
+          "sha1": "f7776ca8814db8de3101299ec86fde075f6c37cc",
+          "md5": "563099bd7a96510da7e09cf08b8023ca"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "asm-relocated-9.6.0.1-sources.jar",
+          "url": "asm-relocated-9.6.0.1-sources.jar",
+          "size": 261,
+          "sha512": "f8ec7aa94b8385939923449d2166b62da4346bc4325e71b8705f395f2f47f2b52ab3153b2d9610a4b4a4b7affeff294ffc0f5eb8ca01e2333ca92baffee09b87",
+          "sha256": "b7bcc202c2f84664c4661ba2c8c82b0987bcf48c5aa20b5a3a55a3bb1983cc1c",
+          "sha1": "f7776ca8814db8de3101299ec86fde075f6c37cc",
+          "md5": "563099bd7a96510da7e09cf08b8023ca"
+        }
+      ]
+    }
+  ]
+}

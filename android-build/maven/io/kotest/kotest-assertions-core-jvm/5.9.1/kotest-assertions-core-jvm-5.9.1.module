@@ -1,0 +1,148 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../kotest-assertions-core/5.9.1/kotest-assertions-core-5.9.1.module",
+    "group": "io.kotest",
+    "module": "kotest-assertions-core",
+    "version": "5.9.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.7"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.kotest",
+          "module": "kotest-assertions-shared",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.23"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotest-assertions-core-jvm-5.9.1.jar",
+          "url": "kotest-assertions-core-jvm-5.9.1.jar",
+          "size": 2215968,
+          "sha512": "8d354b25518e254fe024b9e5083286286d9849280976d07482fcf914633f6a276a0dfbfaf329e5f0086ab11ce9722c19d192c2b0434aaf5158632dc27aefcd36",
+          "sha256": "849060962848ab7da9c58f9bcacc770f2d7f1599d13d329b2586c2b0e0bd9a96",
+          "sha1": "d6f96b394f62aca42516da97f7d1c63927d8331e",
+          "md5": "f22b127ca7bbe0f7ef04ec7d587b08f1"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.kotest",
+          "module": "kotest-assertions-shared",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.23"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-jdk8",
+          "version": {
+            "requires": "1.8.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "version": {
+            "requires": "1.9.23"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-common",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-assertions-api",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.8.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotest-assertions-core-jvm-5.9.1.jar",
+          "url": "kotest-assertions-core-jvm-5.9.1.jar",
+          "size": 2215968,
+          "sha512": "8d354b25518e254fe024b9e5083286286d9849280976d07482fcf914633f6a276a0dfbfaf329e5f0086ab11ce9722c19d192c2b0434aaf5158632dc27aefcd36",
+          "sha256": "849060962848ab7da9c58f9bcacc770f2d7f1599d13d329b2586c2b0e0bd9a96",
+          "sha1": "d6f96b394f62aca42516da97f7d1c63927d8331e",
+          "md5": "f22b127ca7bbe0f7ef04ec7d587b08f1"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "kotest-assertions-core-jvm-5.9.1-sources.jar",
+          "url": "kotest-assertions-core-jvm-5.9.1-sources.jar",
+          "size": 151127,
+          "sha512": "f160292af3ea26599951e16efeeca0bc970e733fa34a7e61db2eb8cc2584459ecde77a1f1270ecf9a95fbe89ee1ca20cb15c1afeec7b97d0681763e736941a2b",
+          "sha256": "538737c8092aa24e4bde43896a684abd6a4e481f945088160bce807a06017664",
+          "sha1": "2cbb79758b60161bd5fa0e8aaac311d159b825d0",
+          "md5": "29af0778f650ee8dfcc23cfd7b07875c"
+        }
+      ]
+    }
+  ]
+}

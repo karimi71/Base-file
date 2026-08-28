@@ -1,0 +1,3 @@
+group	artifact	version	classifier	extension	host
+com.google.protobuf	protoc	4.29.3	linux-x86_64	exe	Linux x86_64
+com.google.protobuf	protoc	4.29.3	linux-aarch_64	exe	Linux aarch64

@@ -1,0 +1,135 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.gitlab.arturbosch.detekt",
+    "module": "detekt-formatting",
+    "version": "1.23.7",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "detekt-formatting-1.23.7.jar",
+          "url": "detekt-formatting-1.23.7.jar",
+          "size": 1303694,
+          "sha512": "438d1b2135496c6562e27add20468738a55607f3567e2d4d2bedab6a2f69c8ef6ef67cc4a0061eb3905ea4ed7811d7d9b06a9061f274b61713c447996cc0cba8",
+          "sha256": "b231d1346137c7eb73cb63953a7c56e78783987ca4fdda3c5f7bf8fccdfc8e02",
+          "sha1": "1a3f08d759566c6084c25a09d7052ead53ac747b",
+          "md5": "85f9248967927875201f15b5bc03df60"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.pinterest.ktlint",
+          "module": "ktlint-ruleset-standard",
+          "version": {
+            "requires": "0.50.0"
+          },
+          "excludes": [
+            {
+              "group": "org.jetbrains.kotlin",
+              "module": "*"
+            }
+          ]
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.0.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "detekt-formatting-1.23.7.jar",
+          "url": "detekt-formatting-1.23.7.jar",
+          "size": 1303694,
+          "sha512": "438d1b2135496c6562e27add20468738a55607f3567e2d4d2bedab6a2f69c8ef6ef67cc4a0061eb3905ea4ed7811d7d9b06a9061f274b61713c447996cc0cba8",
+          "sha256": "b231d1346137c7eb73cb63953a7c56e78783987ca4fdda3c5f7bf8fccdfc8e02",
+          "sha1": "1a3f08d759566c6084c25a09d7052ead53ac747b",
+          "md5": "85f9248967927875201f15b5bc03df60"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "detekt-formatting-1.23.7-sources.jar",
+          "url": "detekt-formatting-1.23.7-sources.jar",
+          "size": 60175,
+          "sha512": "6665d05868011cf2f9bfcffad6e795e8d55c6daf5748c6578091af68321507ebade4a83aa90965f7fe3bad04a147adfc724cae8dfd12170e0b6ba94caaf9e941",
+          "sha256": "5e5dd0a69bee7900c483907c2dbd0946e2a55e965c4bd9202875994312e5fc2a",
+          "sha1": "03493a29091e9400788516c85f3a14a60a715010",
+          "md5": "68684a788732fb04d367900e361c4c33"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "detekt-formatting-1.23.7-javadoc.jar",
+          "url": "detekt-formatting-1.23.7-javadoc.jar",
+          "size": 303,
+          "sha512": "cd553b2b994a64c68ade0de67c73759f2292bea891d449a697e5a511d1346f57263a8ecf868a6978a9e58833e18902c0cd2595531136ae6f872319f83f4212f5",
+          "sha256": "0c25303e14bb4ba8b25a4577d3bb4be1f76051542220fa4cf284c41040722561",
+          "sha1": "6c2eb715e40b8b746d9cd565d3bf95e84ce785f7",
+          "md5": "001df3635dbf60e3c7cfb0aedd17dd0c"
+        }
+      ]
+    }
+  ]
+}

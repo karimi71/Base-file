@@ -1,0 +1,120 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../kotest-framework-concurrency/5.9.1/kotest-framework-concurrency-5.9.1.module",
+    "group": "io.kotest",
+    "module": "kotest-framework-concurrency",
+    "version": "5.9.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.7"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.23"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotest-framework-concurrency-jvm-5.9.1.jar",
+          "url": "kotest-framework-concurrency-jvm-5.9.1.jar",
+          "size": 46416,
+          "sha512": "c9b4e1c3e51f3e8eb467b278ba1da80689901dbdd7b64388d124cd918220204f525bbd2a1fbaaf0363d75a08f0e62c2909e6eb49c51c6bef65a6751abda990d1",
+          "sha256": "079b718a72c075e7429873b3f951a85513a8036c5e3a76ddde871610f29b77b5",
+          "sha1": "1894037af8f2588154dd7d0ad96cdac85aced37b",
+          "md5": "1f0f0adcf315b4a3ec38b5f66dd749aa"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.23"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.8.0"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-common",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "io.kotest",
+          "module": "kotest-framework-api",
+          "version": {
+            "requires": "5.9.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotest-framework-concurrency-jvm-5.9.1.jar",
+          "url": "kotest-framework-concurrency-jvm-5.9.1.jar",
+          "size": 46416,
+          "sha512": "c9b4e1c3e51f3e8eb467b278ba1da80689901dbdd7b64388d124cd918220204f525bbd2a1fbaaf0363d75a08f0e62c2909e6eb49c51c6bef65a6751abda990d1",
+          "sha256": "079b718a72c075e7429873b3f951a85513a8036c5e3a76ddde871610f29b77b5",
+          "sha1": "1894037af8f2588154dd7d0ad96cdac85aced37b",
+          "md5": "1f0f0adcf315b4a3ec38b5f66dd749aa"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "kotest-framework-concurrency-jvm-5.9.1-sources.jar",
+          "url": "kotest-framework-concurrency-jvm-5.9.1-sources.jar",
+          "size": 6167,
+          "sha512": "0c97ee9e703ff5cc9327d518fb39234c17372e0c6b0669cd2f1d9fb0b70b866a552ae880d06fc44a9e16d0228a8f2a2e45ad56a1912e5c2b42cc0d9f6ba85496",
+          "sha256": "6efd4ee1f10b57751f26e5add31abcd3f505a9231372b9c949d9ec9f90b6bdc3",
+          "sha1": "ec18b6e56b2a7bbb78167e1a9c5398e0d08362a7",
+          "md5": "51ea2dea3028dac614928c1adccacdb6"
+        }
+      ]
+    }
+  ]
+}

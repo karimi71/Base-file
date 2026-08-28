@@ -1,0 +1,137 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.coil-kt.coil3",
+    "module": "coil-video",
+    "version": "3.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.12.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.coil-kt.coil3",
+          "module": "coil-core",
+          "version": {
+            "requires": "3.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "coil-video-3.1.0.aar",
+          "url": "coil-video-3.1.0.aar",
+          "size": 20815,
+          "sha512": "27596c9d2e2b0adfaa349e8879c71ce0a90cd620c37d3fb979b8b3ec727e5503d5d3e62965dc666493441294927a05e6911f7477070758c44b95e193852eac45",
+          "sha256": "ad9fb3d9bd2d2b489df2d528486e67abe2826c3395f277d15846ef747db072d1",
+          "sha1": "f2d49fe40f1ddb80190b8152223c221cb7aea1d7",
+          "md5": "c108be59339206470f7441a066a1c018"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.15.0"
+          }
+        },
+        {
+          "group": "io.coil-kt.coil3",
+          "module": "coil-core",
+          "version": {
+            "requires": "3.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "coil-video-3.1.0.aar",
+          "url": "coil-video-3.1.0.aar",
+          "size": 20815,
+          "sha512": "27596c9d2e2b0adfaa349e8879c71ce0a90cd620c37d3fb979b8b3ec727e5503d5d3e62965dc666493441294927a05e6911f7477070758c44b95e193852eac45",
+          "sha256": "ad9fb3d9bd2d2b489df2d528486e67abe2826c3395f277d15846ef747db072d1",
+          "sha1": "f2d49fe40f1ddb80190b8152223c221cb7aea1d7",
+          "md5": "c108be59339206470f7441a066a1c018"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "coil-video-3.1.0-sources.jar",
+          "url": "coil-video-3.1.0-sources.jar",
+          "size": 7193,
+          "sha512": "c87bc4dd2905ff6c1c8ecfa1eb530558577063664ea8512b1d4b4ef1d46501557bb1695a70cde28d70f8bd435fb66328f3ffb55461731f6276f866519c1a0af4",
+          "sha256": "1365982ab054c48a98b32991f50a3f4535df9a56836636ff194600bddf165dc7",
+          "sha1": "086a3da07a7eb61c25da30633612d82513e9bc00",
+          "md5": "1fea37fcdbf9c5ea5e046635927826b3"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "coil-video-3.1.0-javadoc.jar",
+          "url": "coil-video-3.1.0-javadoc.jar",
+          "size": 285735,
+          "sha512": "08e0915af2b9046312dcabf8424b7e4ec6ff4daddcf5319a3bd3db7c707f5d53fc3a226b05ae8491516dbf97da4ab62038e4256478fea9dd880934fb44243429",
+          "sha256": "2118c7f99dca7ba662efd67dff6c6b3e19b92787a77e807f0284809037869b99",
+          "sha1": "0796b8487284ce6a94ea7a8c02fef9941a684e46",
+          "md5": "cdf4272524f757a70794d1b688c1cacc"
+        }
+      ]
+    }
+  ]
+}

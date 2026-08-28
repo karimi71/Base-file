@@ -1,0 +1,144 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.takahirom.roborazzi",
+    "module": "roborazzi-accessibility-check",
+    "version": "1.39.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.google.android.apps.common.testing.accessibility.framework",
+          "module": "accessibility-test-framework",
+          "version": {
+            "requires": "4.1.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "roborazzi-accessibility-check-1.39.0.aar",
+          "url": "roborazzi-accessibility-check-1.39.0.aar",
+          "size": 23275,
+          "sha512": "fa78411f188ae4c677b109b6f4d360cf97043d3659c3cfaf93ee769695ba26fa625e80e2ae2ff9d794e5d5d625e243398069ae97c38819b88da36bf6a31b78fc",
+          "sha256": "fefaf02b90ff2f6c5703f0da3c4c49429c07b0982e3ad7e60b97cfd3378a76b6",
+          "sha1": "a0540be7a44d19691ae4732724e776dd7682fd85",
+          "md5": "0031ad100a84afcc169ff5375e341bf9"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.github.takahirom.roborazzi",
+          "module": "roborazzi-junit-rule",
+          "version": {
+            "requires": "1.39.0"
+          }
+        },
+        {
+          "group": "io.github.takahirom.roborazzi",
+          "module": "roborazzi",
+          "version": {
+            "requires": "1.39.0"
+          }
+        },
+        {
+          "group": "com.google.android.apps.common.testing.accessibility.framework",
+          "module": "accessibility-test-framework",
+          "version": {
+            "requires": "4.1.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "roborazzi-accessibility-check-1.39.0.aar",
+          "url": "roborazzi-accessibility-check-1.39.0.aar",
+          "size": 23275,
+          "sha512": "fa78411f188ae4c677b109b6f4d360cf97043d3659c3cfaf93ee769695ba26fa625e80e2ae2ff9d794e5d5d625e243398069ae97c38819b88da36bf6a31b78fc",
+          "sha256": "fefaf02b90ff2f6c5703f0da3c4c49429c07b0982e3ad7e60b97cfd3378a76b6",
+          "sha1": "a0540be7a44d19691ae4732724e776dd7682fd85",
+          "md5": "0031ad100a84afcc169ff5375e341bf9"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "roborazzi-accessibility-check-1.39.0-sources.jar",
+          "url": "roborazzi-accessibility-check-1.39.0-sources.jar",
+          "size": 3444,
+          "sha512": "530c2f3ed9355cf28cffd4e45f5876b373baaa442c174b699b5adfc85865df7062ef9ea42583bc9a20a1eb3ea765e14d6b151a29361fbfdd35ae43b6c228c8f7",
+          "sha256": "ea43d031408da3aead3271e517fc0b6534df3e6214c529d206c924f0b71917f4",
+          "sha1": "877f520cf0676813245b38cf88b43f77cb34ea5f",
+          "md5": "d5b6a49832797582b2d628a371ab7f05"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "roborazzi-accessibility-check-1.39.0-javadoc.jar",
+          "url": "roborazzi-accessibility-check-1.39.0-javadoc.jar",
+          "size": 286754,
+          "sha512": "514c3aab0d37a85f45eb0e03755d665d6addba35cb6a65d09dc08b657d519fa4fe02f809491792e6175fd8b31200a72cf0329b77ab3a1a93421dff0490d61fe2",
+          "sha256": "01a5eebb1e854d60011dd2fc64d6ac71969c4f278f2401d6eb9afc2221113627",
+          "sha1": "68de499d948ace2fbd0044fcbeb2b4b506f670ba",
+          "md5": "42d5a0a133441ee7bc12414dbfa7847e"
+        }
+      ]
+    }
+  ]
+}

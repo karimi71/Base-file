@@ -1,0 +1,167 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "net.jqwik",
+    "module": "jqwik-engine",
+    "version": "1.9.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.10.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.apiguardian",
+          "module": "apiguardian-api",
+          "version": {
+            "requires": "1.1.2"
+          }
+        },
+        {
+          "group": "net.jqwik",
+          "module": "jqwik-api",
+          "version": {
+            "requires": "1.9.2"
+          }
+        },
+        {
+          "group": "org.opentest4j",
+          "module": "opentest4j",
+          "version": {
+            "requires": "1.3.0"
+          }
+        },
+        {
+          "group": "org.junit.platform",
+          "module": "junit-platform-commons",
+          "version": {
+            "requires": "1.11.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "jqwik-engine-1.9.2.jar",
+          "url": "jqwik-engine-1.9.2.jar",
+          "size": 877086,
+          "sha512": "a306213e3092356aa09bad00e6c0106c2734524631e4caa0922ada15a5a9519116df7890677460e438258980ae92b009d072a973c7b7b63303d05f4b36faca4e",
+          "sha256": "623d105e90cd94b688baaa527bd0c4e284001c07c1f53e3b9a2db179ea57a70a",
+          "sha1": "02bd027f39b65a7c8585f6b06c25bb7ea5b0f4e6",
+          "md5": "d1213c0681b31bbacc40c7b9024ffcdb"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.junit.platform",
+          "module": "junit-platform-engine",
+          "version": {
+            "requires": "1.11.3"
+          }
+        },
+        {
+          "group": "org.apiguardian",
+          "module": "apiguardian-api",
+          "version": {
+            "requires": "1.1.2"
+          }
+        },
+        {
+          "group": "net.jqwik",
+          "module": "jqwik-api",
+          "version": {
+            "requires": "1.9.2"
+          }
+        },
+        {
+          "group": "org.opentest4j",
+          "module": "opentest4j",
+          "version": {
+            "requires": "1.3.0"
+          }
+        },
+        {
+          "group": "org.junit.platform",
+          "module": "junit-platform-commons",
+          "version": {
+            "requires": "1.11.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "jqwik-engine-1.9.2.jar",
+          "url": "jqwik-engine-1.9.2.jar",
+          "size": 877086,
+          "sha512": "a306213e3092356aa09bad00e6c0106c2734524631e4caa0922ada15a5a9519116df7890677460e438258980ae92b009d072a973c7b7b63303d05f4b36faca4e",
+          "sha256": "623d105e90cd94b688baaa527bd0c4e284001c07c1f53e3b9a2db179ea57a70a",
+          "sha1": "02bd027f39b65a7c8585f6b06c25bb7ea5b0f4e6",
+          "md5": "d1213c0681b31bbacc40c7b9024ffcdb"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "jqwik-engine-1.9.2-javadoc.jar",
+          "url": "jqwik-engine-1.9.2-javadoc.jar",
+          "size": 1262346,
+          "sha512": "cc85a0005596b5ff5a3acd22ca562569e7a8b7f8e54fccc91e61c4742a005dc35643d940b1b2e498ee04b987938163d004fc2892a90f0be79e08fea3008ffafb",
+          "sha256": "efb275c361dd98eff2f88cd30050f2409efbdcdf74174e95068708cc224ab825",
+          "sha1": "bf029bb56221e3ae75ad9324b784c69841c44505",
+          "md5": "c9e76800841fad9fb867b20ed4c2b5c5"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "jqwik-engine-1.9.2-sources.jar",
+          "url": "jqwik-engine-1.9.2-sources.jar",
+          "size": 362820,
+          "sha512": "0e86211c3c27c5c4c02a198400f3a73a57ded2493bb6cfaccf5cedaefe3ab8c3dd32550490714ffab22e9d74658b703928287dd3a8c9d6422342bfe953c79da6",
+          "sha256": "56ab98bb17fa2ef3e67e941fae019d0a25aa570494470976af6e37e02fb519da",
+          "sha1": "7cc83e637da5ad12f1f6bd0a2bcaa30b4a1d747f",
+          "md5": "289fa31dfd22f2762be966cd5c1607fa"
+        }
+      ]
+    }
+  ]
+}

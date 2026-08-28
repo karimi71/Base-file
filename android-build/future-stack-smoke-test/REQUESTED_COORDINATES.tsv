@@ -1,0 +1,81 @@
+group	artifact	version	purpose
+com.android.tools	desugar_jdk_libs	2.1.5	Core-library desugaring runtime
+androidx.sqlite	sqlite	2.5.2	SQLite API
+androidx.sqlite	sqlite-ktx	2.5.2	SQLite Kotlin extensions
+androidx.sqlite	sqlite-framework	2.5.2	Framework driver
+androidx.sqlite	sqlite-bundled	2.5.2	Bundled host/native driver
+androidx.datastore	datastore	1.1.7	DataStore API
+androidx.datastore	datastore-core	1.1.7	DataStore core
+androidx.datastore	datastore-core-okio	1.1.7	Okio storage
+com.google.protobuf	protobuf-javalite	4.29.3	Lite Java runtime
+com.google.protobuf	protobuf-kotlin-lite	4.29.3	Lite Kotlin runtime
+com.google.protobuf	protoc	4.29.3	Pinned compiler executable
+com.google.protobuf	protobuf-gradle-plugin	0.9.4	Gradle implementation
+com.google.protobuf	com.google.protobuf.gradle.plugin	0.9.4	Official plugin marker
+io.mockk	mockk	1.13.13	MockK multiplatform facade
+io.mockk	mockk-jvm	1.13.13	MockK JVM facade
+io.mockk	mockk-android	1.13.13	MockK Android facade
+io.mockk	mockk-dsl	1.13.13	MockK DSL metadata
+io.mockk	mockk-dsl-jvm	1.13.13	MockK JVM DSL
+io.mockk	mockk-core	1.13.13	MockK core metadata
+io.mockk	mockk-core-jvm	1.13.13	MockK JVM core
+io.mockk	mockk-agent	1.13.13	MockK agent metadata
+io.mockk	mockk-agent-jvm	1.13.13	MockK JVM agent
+io.mockk	mockk-agent-android	1.13.13	MockK Android agent
+io.mockk	mockk-agent-api	1.13.13	MockK agent API metadata
+io.mockk	mockk-agent-api-jvm	1.13.13	MockK JVM agent API
+org.junit.jupiter	junit-jupiter	5.11.4	Jupiter aggregate
+org.junit.jupiter	junit-jupiter-api	5.11.4	Jupiter API
+org.junit.jupiter	junit-jupiter-params	5.11.4	Parameterized tests
+org.junit.jupiter	junit-jupiter-engine	5.11.4	Jupiter engine
+org.junit.vintage	junit-vintage-engine	5.11.4	JUnit 4 compatibility engine
+org.junit.platform	junit-platform-commons	1.11.4	Platform commons
+org.junit.platform	junit-platform-engine	1.11.4	Platform engine
+org.junit.platform	junit-platform-launcher	1.11.4	Platform launcher
+org.junit.platform	junit-platform-suite-api	1.11.4	Platform suite API
+org.junit.platform	junit-platform-suite-engine	1.11.4	Platform suite engine
+de.mannodermaus.gradle.plugins	android-junit5	1.11.2.0	Android JUnit 5 implementation
+de.mannodermaus.android-junit5	de.mannodermaus.android-junit5.gradle.plugin	1.11.2.0	Official Android JUnit 5 marker
+io.github.takahirom.roborazzi	roborazzi	1.39.0	Roborazzi core
+io.github.takahirom.roborazzi	roborazzi-compose	1.39.0	Compose capture
+io.github.takahirom.roborazzi	roborazzi-junit-rule	1.39.0	Automatic capture rule
+io.github.takahirom.roborazzi	roborazzi-accessibility-check	1.39.0	Accessibility checks
+io.github.takahirom.roborazzi	roborazzi-gradle-plugin	1.39.0	Gradle implementation
+io.github.takahirom.roborazzi	io.github.takahirom.roborazzi.gradle.plugin	1.39.0	Official plugin marker
+io.coil-kt.coil3	coil-bom	3.1.0	Coil aligned platform
+io.coil-kt.coil3	coil	3.1.0	Coil singleton loader
+io.coil-kt.coil3	coil-core	3.1.0	Coil core
+io.coil-kt.coil3	coil-compose	3.1.0	Compose integration
+io.coil-kt.coil3	coil-compose-core	3.1.0	Compose core integration
+io.coil-kt.coil3	coil-svg	3.1.0	SVG decoder
+io.coil-kt.coil3	coil-gif	3.1.0	Animated image decoder
+io.coil-kt.coil3	coil-video	3.1.0	Video frame decoder
+io.coil-kt.coil3	coil-network-core	3.1.0	Network abstraction
+io.coil-kt.coil3	coil-network-okhttp	3.1.0	OkHttp networking fixture
+io.coil-kt.coil3	coil-test	3.1.0	Deterministic loader tests
+com.google.crypto.tink	tink	1.15.0	Tink JVM
+com.google.crypto.tink	tink-android	1.15.0	Tink Android
+androidx.security	security-crypto	1.1.0-alpha06	Encrypted Android storage
+androidx.security	security-crypto-ktx	1.1.0-alpha06	Security Crypto Kotlin API
+com.tom-roush	pdfbox-android	2.0.27.0	PDFBox Android
+org.jetbrains.kotlinx	kotlinx-datetime	0.6.1	Datetime metadata
+org.jetbrains.kotlinx	kotlinx-datetime-jvm	0.6.1	Datetime JVM runtime
+com.squareup.moshi	moshi	1.15.2	Moshi core
+com.squareup.moshi	moshi-kotlin	1.15.2	Moshi Kotlin reflection
+com.squareup.moshi	moshi-kotlin-codegen	1.15.2	Moshi KSP processor
+com.google.code.gson	gson	2.11.0	Gson compatibility
+androidx.compose.material	material-icons-extended	1.7.6	Extended Compose icons
+androidx.work	work-multiprocess	2.10.0	Remote workers
+androidx.test.espresso	espresso-accessibility	3.6.1	Espresso accessibility bridge
+com.google.android.apps.common.testing.accessibility.framework	accessibility-test-framework	4.1.1	ATF implementation
+io.kotest	kotest-runner-junit5	5.9.1	Kotest JUnit engine
+io.kotest	kotest-property	5.9.1	Kotest property testing
+net.jqwik	jqwik	1.9.2	Jqwik property engine
+androidx.room	room-runtime	2.7.2	Room runtime
+androidx.room	room-ktx	2.7.2	Room Kotlin API
+androidx.room	room-compiler	2.7.2	Room KSP processor
+androidx.room	room-testing	2.7.2	Migration testing
+org.robolectric	robolectric	4.14.1	Android 15 host runtime
+org.robolectric	android-all-instrumented	15-robolectric-12650502-i7	Preinstrumented SDK 35 runtime
+com.github.jk1	gradle-license-report	2.9	License Report implementation
+com.github.jk1.dependency-license-report	com.github.jk1.dependency-license-report.gradle.plugin	2.9	Official License Report marker

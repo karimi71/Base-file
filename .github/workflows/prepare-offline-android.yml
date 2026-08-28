@@ -1,0 +1,54 @@
+# Copy this file verbatim to .github/workflows/prepare-offline-android.yml.
+# It is intentionally kept here as the reviewed source of the workflow because
+# the Arena GitHub App cannot itself create files under .github/workflows.
+name: Prepare offline Android toolchain
+
+on:
+  # A push trigger is required because the Arena GitHub App cannot dispatch
+  # workflows. Changing trigger-mode starts a run on the session branch.
+  push:
+    branches:
+      - arena/01a03d9c-base-file
+    paths:
+      - .github/workflows/prepare-offline-android.yml
+      - android-build/ci/trigger-mode
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Preparation mode"
+        required: true
+        default: audit
+        type: choice
+        options:
+          - audit
+          - publish
+
+permissions:
+  contents: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      # The runner context is unavailable while job-level env is evaluated.
+      GRADLE_USER_HOME: /tmp/base-file-gradle-home
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+          cache-disabled: true
+
+      - name: Prepare and verify toolchain
+        shell: bash
+        run: bash android-build/ci/prepare-toolchain.sh "${{ inputs.mode }}"

@@ -1,0 +1,659 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.squareup.wire",
+    "module": "wire-runtime",
+    "version": "4.9.7",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "metadataApiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "dependencies": [
+        {
+          "group": "com.squareup.okio",
+          "module": "okio",
+          "version": {
+            "requires": "3.7.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-common",
+          "version": {
+            "requires": "1.9.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "wire-runtime-metadata-4.9.7.jar",
+          "url": "wire-runtime-4.9.7.jar",
+          "size": 23227,
+          "sha512": "69351d8ffdfd34b5bb7ad1eeb7c93c764b84fed9d6e80ad93a8443f47b1bfa66ab432c05049df7ec80e50ce6d4d23fd413175d0b849ae95e20fb0a7a2148698b",
+          "sha256": "fe90fa43c562f8f791387f450d0a564075ea4e8ec5d8e5acb5f87256fcef6fe6",
+          "sha1": "68d7a699cfb70e492b939eadb88110680c10252f",
+          "md5": "3e094ea71cf388f3bfef138ee8f7147c"
+        }
+      ]
+    },
+    {
+      "name": "metadataSourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.platform.type": "common"
+      },
+      "files": [
+        {
+          "name": "wire-runtime-kotlin-4.9.7-sources.jar",
+          "url": "wire-runtime-4.9.7-sources.jar",
+          "size": 65946,
+          "sha512": "5b4d0f2f37fef198beac50f6ae12a94316b872d82bbfbdd5d28c98839089a3447bfdf96d894f203c1918773eac00678afc7b28dd61c646a0e6c002b51b711044",
+          "sha256": "a403e3eded5d8a5ef2bdc9128fd17c52541aeffe956e60eb688ccdf43b3496b9",
+          "sha1": "bba510c49f504b65a64f29e661a5dabab3fc02d1",
+          "md5": "62b643744d200b510fd68825596d07e2"
+        }
+      ]
+    },
+    {
+      "name": "iosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-iosarm64/4.9.7/wire-runtime-iosarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-iosarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "iosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-iosarm64/4.9.7/wire-runtime-iosarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-iosarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "iosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-iosarm64/4.9.7/wire-runtime-iosarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-iosarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-iossimulatorarm64/4.9.7/wire-runtime-iossimulatorarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-iossimulatorarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-iossimulatorarm64/4.9.7/wire-runtime-iossimulatorarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-iossimulatorarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "iosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-iossimulatorarm64/4.9.7/wire-runtime-iossimulatorarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-iossimulatorarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "iosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-iosx64/4.9.7/wire-runtime-iosx64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-iosx64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "iosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-iosx64/4.9.7/wire-runtime-iosx64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-iosx64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "iosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "ios_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-iosx64/4.9.7/wire-runtime-iosx64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-iosx64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "jsApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-js/4.9.7/wire-runtime-js-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-js",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "jsRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-js/4.9.7/wire-runtime-js-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-js",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "jsSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.js.compiler": "ir",
+        "org.jetbrains.kotlin.platform.type": "js"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-js/4.9.7/wire-runtime-js-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-js",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-jvm/4.9.7/wire-runtime-jvm-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-jvm",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-jvm/4.9.7/wire-runtime-jvm-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-jvm",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-jvm/4.9.7/wire-runtime-jvm-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-jvm",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "linuxArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "linux_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-linuxarm64/4.9.7/wire-runtime-linuxarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-linuxarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "linuxArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "linux_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-linuxarm64/4.9.7/wire-runtime-linuxarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-linuxarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "linuxX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "linux_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-linuxx64/4.9.7/wire-runtime-linuxx64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-linuxx64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "linuxX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "linux_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-linuxx64/4.9.7/wire-runtime-linuxx64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-linuxx64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "macosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-macosarm64/4.9.7/wire-runtime-macosarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-macosarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "macosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-macosarm64/4.9.7/wire-runtime-macosarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-macosarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "macosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-macosarm64/4.9.7/wire-runtime-macosarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-macosarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "macosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-macosx64/4.9.7/wire-runtime-macosx64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-macosx64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "macosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-macosx64/4.9.7/wire-runtime-macosx64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-macosx64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "macosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "macos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-macosx64/4.9.7/wire-runtime-macosx64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-macosx64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "mingwX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "mingw_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-mingwx64/4.9.7/wire-runtime-mingwx64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-mingwx64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "mingwX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "mingw_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-mingwx64/4.9.7/wire-runtime-mingwx64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-mingwx64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "tvosArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-tvosarm64/4.9.7/wire-runtime-tvosarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-tvosarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "tvosArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "tvos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-tvosarm64/4.9.7/wire-runtime-tvosarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-tvosarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "tvosArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-tvosarm64/4.9.7/wire-runtime-tvosarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-tvosarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "tvosSimulatorArm64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-tvossimulatorarm64/4.9.7/wire-runtime-tvossimulatorarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-tvossimulatorarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "tvosSimulatorArm64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "tvos_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-tvossimulatorarm64/4.9.7/wire-runtime-tvossimulatorarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-tvossimulatorarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "tvosSimulatorArm64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_simulator_arm64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-tvossimulatorarm64/4.9.7/wire-runtime-tvossimulatorarm64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-tvossimulatorarm64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "tvosX64ApiElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-api",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-tvosx64/4.9.7/wire-runtime-tvosx64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-tvosx64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "tvosX64SourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "kotlin-runtime",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-tvosx64/4.9.7/wire-runtime-tvosx64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-tvosx64",
+        "version": "4.9.7"
+      }
+    },
+    {
+      "name": "tvosX64MetadataElements-published",
+      "attributes": {
+        "artifactType": "org.jetbrains.kotlin.klib",
+        "org.gradle.category": "library",
+        "org.gradle.usage": "kotlin-metadata",
+        "org.jetbrains.kotlin.native.target": "tvos_x64",
+        "org.jetbrains.kotlin.platform.type": "native"
+      },
+      "available-at": {
+        "url": "../../wire-runtime-tvosx64/4.9.7/wire-runtime-tvosx64-4.9.7.module",
+        "group": "com.squareup.wire",
+        "module": "wire-runtime-tvosx64",
+        "version": "4.9.7"
+      }
+    }
+  ]
+}

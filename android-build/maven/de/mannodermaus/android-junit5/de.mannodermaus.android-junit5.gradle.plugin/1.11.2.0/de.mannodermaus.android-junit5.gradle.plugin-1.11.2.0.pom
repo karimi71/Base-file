@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.mannodermaus.android-junit5</groupId>
+  <artifactId>de.mannodermaus.android-junit5.gradle.plugin</artifactId>
+  <version>1.11.2.0</version>
+  <packaging>pom</packaging>
+  <url>https://github.com/mannodermaus/android-junit5</url>
+  <licenses>
+    <license>
+      <name>Apache-2.0</name>
+      <url>https://github.com/mannodermaus/android-junit5/blob/main/LICENSE</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <id>mannodermaus</id>
+      <name>Marcel Schnelle</name>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:mannodermaus/android-junit5.git</connection>
+    <developerConnection>scm:git:ssh://github.com/mannodermaus/android-junit5.git</developerConnection>
+    <url>https://github.com/mannodermaus/android-junit5/tree/main</url>
+  </scm>
+  <name>android-junit5</name>
+  <description>Unit Testing with JUnit 5 for Android.</description>
+  <dependencies>
+    <dependency>
+      <groupId>de.mannodermaus.gradle.plugins</groupId>
+      <artifactId>android-junit5</artifactId>
+      <version>1.11.2.0</version>
+    </dependency>
+  </dependencies>
+</project>

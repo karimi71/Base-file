@@ -1,0 +1,131 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "dev.zacsweers.moshix",
+    "module": "moshi-sealed-reflect",
+    "version": "0.25.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "com.squareup.moshi",
+          "module": "moshi",
+          "version": {
+            "requires": "1.15.0"
+          }
+        },
+        {
+          "group": "com.squareup.moshi",
+          "module": "moshi-adapters",
+          "version": {
+            "requires": "1.15.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "moshi-sealed-reflect-0.25.1.jar",
+          "url": "moshi-sealed-reflect-0.25.1.jar",
+          "size": 10565,
+          "sha512": "1cc4f53a41745f6b48c5e2963b6ef066a4bef273126ffd3f17a34cd82f46b09baa81025a15acd9dc2386855f65babf91a1627d994b255b3c51e28a83c44f229c",
+          "sha256": "2f32778e065f9dd4d9bb59cc66176328263aca1e3db7d6ce4b1a949b754f8aa5",
+          "sha1": "ec6c2382e3e85646c3b0879f43663bb6beb01da0",
+          "md5": "a34c45bc3373b8c92eb49e8e60deae5a"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "dev.zacsweers.moshix",
+          "module": "moshi-sealed-runtime",
+          "version": {
+            "requires": "0.25.1"
+          }
+        },
+        {
+          "group": "com.squareup",
+          "module": "kotlinpoet",
+          "version": {
+            "requires": "1.15.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "version": {
+            "requires": "1.9.21"
+          }
+        },
+        {
+          "group": "com.squareup.moshi",
+          "module": "moshi",
+          "version": {
+            "requires": "1.15.0"
+          }
+        },
+        {
+          "group": "com.squareup.moshi",
+          "module": "moshi-adapters",
+          "version": {
+            "requires": "1.15.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.21"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "moshi-sealed-reflect-0.25.1.jar",
+          "url": "moshi-sealed-reflect-0.25.1.jar",
+          "size": 10565,
+          "sha512": "1cc4f53a41745f6b48c5e2963b6ef066a4bef273126ffd3f17a34cd82f46b09baa81025a15acd9dc2386855f65babf91a1627d994b255b3c51e28a83c44f229c",
+          "sha256": "2f32778e065f9dd4d9bb59cc66176328263aca1e3db7d6ce4b1a949b754f8aa5",
+          "sha1": "ec6c2382e3e85646c3b0879f43663bb6beb01da0",
+          "md5": "a34c45bc3373b8c92eb49e8e60deae5a"
+        }
+      ]
+    }
+  ]
+}

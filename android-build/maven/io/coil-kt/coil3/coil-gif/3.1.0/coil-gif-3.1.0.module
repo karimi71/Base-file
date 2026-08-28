@@ -1,0 +1,144 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.coil-kt.coil3",
+    "module": "coil-gif",
+    "version": "3.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.12.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.coil-kt.coil3",
+          "module": "coil-core",
+          "version": {
+            "requires": "3.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "coil-gif-3.1.0.aar",
+          "url": "coil-gif-3.1.0.aar",
+          "size": 39190,
+          "sha512": "a89461a94ff4372f92511656b61df4cfa201453d1def35b142520fbbc2db8a0ab5cdf0fdc2a44398178934ffe998964ce44aaf734b399bd4eae56f15a40763a8",
+          "sha256": "bf2c0d7e2fccffdcdd780862418fd68a478c4c2dc1631886d97efef2114b10a5",
+          "sha1": "f1151b9b3448bc660c0724a75270b064d9b373bd",
+          "md5": "1502e0076679922dcafa7962cd8e80c2"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.15.0"
+          }
+        },
+        {
+          "group": "androidx.vectordrawable",
+          "module": "vectordrawable-animated",
+          "version": {
+            "requires": "1.2.0"
+          }
+        },
+        {
+          "group": "io.coil-kt.coil3",
+          "module": "coil-core",
+          "version": {
+            "requires": "3.1.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.1.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "coil-gif-3.1.0.aar",
+          "url": "coil-gif-3.1.0.aar",
+          "size": 39190,
+          "sha512": "a89461a94ff4372f92511656b61df4cfa201453d1def35b142520fbbc2db8a0ab5cdf0fdc2a44398178934ffe998964ce44aaf734b399bd4eae56f15a40763a8",
+          "sha256": "bf2c0d7e2fccffdcdd780862418fd68a478c4c2dc1631886d97efef2114b10a5",
+          "sha1": "f1151b9b3448bc660c0724a75270b064d9b373bd",
+          "md5": "1502e0076679922dcafa7962cd8e80c2"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "coil-gif-3.1.0-sources.jar",
+          "url": "coil-gif-3.1.0-sources.jar",
+          "size": 12070,
+          "sha512": "a17b8f914d2d9e852822edecf1cf27d0ea7bc485558d3528166c81679e67fa06db7cc017572c01a03395500723ce730de313838953dfb1e985ed010039b2d904",
+          "sha256": "2ee4ffec649ab1e0c290f2340dbfab7053aae519a3daa174f4c56fc52d3cb330",
+          "sha1": "58975afb11873ebae4d0dacd6cd59dc3a0fe71ae",
+          "md5": "1e8bf0f2131a4e3fd7f31bde3a959b5b"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "coil-gif-3.1.0-javadoc.jar",
+          "url": "coil-gif-3.1.0-javadoc.jar",
+          "size": 319420,
+          "sha512": "cbf62d260c55a49ac2966a8ee7591d2dafe273df6978553e15c0e805b1c58813833a3b7c44254444cfda9b0a12572bdd236c2f43d36fb227178421d65b975384",
+          "sha256": "95d8065ddb6cbec1c2a32119fa97a614abde19085fe61df93f4954fbbf60e5fc",
+          "sha1": "c442e977d7a43258fc294359805d8258bb72ed22",
+          "md5": "8aa27f031d319a41d79c8b9d495751e1"
+        }
+      ]
+    }
+  ]
+}

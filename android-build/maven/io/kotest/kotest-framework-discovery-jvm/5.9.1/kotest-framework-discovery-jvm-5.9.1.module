@@ -1,0 +1,127 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../kotest-framework-discovery/5.9.1/kotest-framework-discovery-5.9.1.module",
+    "group": "io.kotest",
+    "module": "kotest-framework-discovery",
+    "version": "5.9.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.7"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.kotest",
+          "module": "kotest-common",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.23"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotest-framework-discovery-jvm-5.9.1.jar",
+          "url": "kotest-framework-discovery-jvm-5.9.1.jar",
+          "size": 52624,
+          "sha512": "1dd6320d29b2fc8edce7838bea2ce1fe7bf8ec07a7a7ee02ea5914947e90e9dcedf805a3c39cc06a8bbf066abe38854a3819ae78aa4005e3806cca26a061a89c",
+          "sha256": "9a28a214d915db44796f065c1cffbbb3c236b89b6a6b38395058d80ab83e8203",
+          "sha1": "fc078e0e728072a1342e5da4a7910feaf86dc7fd",
+          "md5": "c00c104d231e2ccd2194bc14688d319a"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.kotest",
+          "module": "kotest-common",
+          "version": {
+            "requires": "5.9.1"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.23"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "version": {
+            "requires": "1.9.23"
+          }
+        },
+        {
+          "group": "io.github.classgraph",
+          "module": "classgraph",
+          "version": {
+            "requires": "4.8.172"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotest-framework-discovery-jvm-5.9.1.jar",
+          "url": "kotest-framework-discovery-jvm-5.9.1.jar",
+          "size": 52624,
+          "sha512": "1dd6320d29b2fc8edce7838bea2ce1fe7bf8ec07a7a7ee02ea5914947e90e9dcedf805a3c39cc06a8bbf066abe38854a3819ae78aa4005e3806cca26a061a89c",
+          "sha256": "9a28a214d915db44796f065c1cffbbb3c236b89b6a6b38395058d80ab83e8203",
+          "sha1": "fc078e0e728072a1342e5da4a7910feaf86dc7fd",
+          "md5": "c00c104d231e2ccd2194bc14688d319a"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "kotest-framework-discovery-jvm-5.9.1-sources.jar",
+          "url": "kotest-framework-discovery-jvm-5.9.1-sources.jar",
+          "size": 5545,
+          "sha512": "8a5d8c395fed25d444acd6b8c4304519fbfcce872f4edc34296aceba94c365df0a4daa6e573cf592e869f360fa4c0546e4ea6aa865e94f3e0cb4fbe70199156b",
+          "sha256": "a90f1fe79816679c056646b338b6e4dc11cc467e347570d90f1815e2ed3d7c6f",
+          "sha1": "32e381a181dc7781fbe3911073841612fd404a69",
+          "md5": "86c9d1c01344bf2551e83d9bc3eeec95"
+        }
+      ]
+    }
+  ]
+}

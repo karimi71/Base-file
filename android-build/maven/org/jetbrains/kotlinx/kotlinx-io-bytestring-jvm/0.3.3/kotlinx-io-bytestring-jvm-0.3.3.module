@@ -1,0 +1,99 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../kotlinx-io-bytestring/0.3.3/kotlinx-io-bytestring-0.3.3.module",
+    "group": "org.jetbrains.kotlinx",
+    "module": "kotlinx-io-bytestring",
+    "version": "0.3.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotlinx-io-bytestring-jvm-0.3.3.jar",
+          "url": "kotlinx-io-bytestring-jvm-0.3.3.jar",
+          "size": 19601,
+          "sha512": "f56e3f752988281e6bb7ef6f0fe41ad49cf3803076b34ceb1ea68a307cf9f4230ca977efccf1f9db8c39b2c19b81aee1073c38c5e3205cbf25597b456405ab74",
+          "sha256": "39b9ca08fee784b894021f9370951e6e7fe8fee5f34b253177a757115303347f",
+          "sha1": "aaa11306c241f7ab75346f03c3849cf5f5c308f5",
+          "md5": "8fe53a2538aa051a608aa85e9abebcd8"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "kotlinx-io-bytestring-jvm-0.3.3.jar",
+          "url": "kotlinx-io-bytestring-jvm-0.3.3.jar",
+          "size": 19601,
+          "sha512": "f56e3f752988281e6bb7ef6f0fe41ad49cf3803076b34ceb1ea68a307cf9f4230ca977efccf1f9db8c39b2c19b81aee1073c38c5e3205cbf25597b456405ab74",
+          "sha256": "39b9ca08fee784b894021f9370951e6e7fe8fee5f34b253177a757115303347f",
+          "sha1": "aaa11306c241f7ab75346f03c3849cf5f5c308f5",
+          "md5": "8fe53a2538aa051a608aa85e9abebcd8"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "kotlinx-io-bytestring-jvm-0.3.3-sources.jar",
+          "url": "kotlinx-io-bytestring-jvm-0.3.3-sources.jar",
+          "size": 11515,
+          "sha512": "764274da89ae1223fec17d7f551ecf9b6e24759aaf34d7e88a25d4bac452e10e29758930efb72986979b3acbfc66dba372200142e2e4163268734bd4f151d844",
+          "sha256": "7ea53a3ed19a52199c1b311f88095497269d4ad2ef7c730827bbfb50df112459",
+          "sha1": "3ae10b03af5fb33ae9a082eb2d8cbc5a24b6110f",
+          "md5": "fe86588bc6792029e496e9aef259cb27"
+        }
+      ]
+    }
+  ]
+}

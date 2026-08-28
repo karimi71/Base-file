@@ -1,0 +1,42 @@
+// SPDX-License-Identifier: Apache-2.0
+// Injected by build-compose-apk.sh. --offline is still the hard network guard.
+def repositoryPath = System.getProperty("basefile.repo")
+if (repositoryPath == null || repositoryPath.isBlank()) {
+    throw new GradleException("Missing -Dbasefile.repo=<local Maven repository>")
+}
+def offlineRepository = new File(repositoryPath)
+if (!offlineRepository.isDirectory()) {
+    throw new GradleException("Offline Maven repository does not exist: ${offlineRepository}")
+}
+
+def useOnlyLocalRepository = { repositories ->
+    repositories.clear()
+    repositories.maven { repo ->
+        repo.name = "BaseFileOffline"
+        repo.url = offlineRepository.toURI()
+        repo.metadataSources {
+            gradleMetadata()
+            mavenPom()
+            artifact()
+        }
+    }
+}
+
+beforeSettings { settings ->
+    useOnlyLocalRepository(settings.pluginManagement.repositories)
+    useOnlyLocalRepository(settings.dependencyResolutionManagement.repositories)
+}
+
+settingsEvaluated { settings ->
+    // A settings script may have added google()/mavenCentral() after
+    // beforeSettings. Replace them again before project dependency resolution.
+    useOnlyLocalRepository(settings.pluginManagement.repositories)
+    settings.dependencyResolutionManagement.repositoriesMode.set(
+        org.gradle.api.initialization.resolve.RepositoriesMode.PREFER_SETTINGS
+    )
+    useOnlyLocalRepository(settings.dependencyResolutionManagement.repositories)
+}
+
+gradle.beforeProject { project ->
+    useOnlyLocalRepository(project.buildscript.repositories)
+}

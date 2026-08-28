@@ -1,0 +1,27 @@
+# Offline toolchain extraction/cache
+android-build/.cache/
+# Reconstructed from committed, SHA-256-verified Git-safe chunks on demand.
+android-build/maven/org/robolectric/android-all-instrumented/**/*.jar
+android-build/maven/org/robolectric/nativeruntime-dist-compat/**/*.jar
+android-build/.gradle-home/
+
+# Gradle/Android/Python build output
+.gradle/
+**/.gradle/
+**/.kotlin/
+**/build/
+# Maven group com.android.tools.build maps to a legitimate /build/ path.
+!android-build/maven/**/build/
+!android-build/maven/**/build/**
+__pycache__/
+*.py[cod]
+# jqwik's serialized local run database is generated test state, not evidence.
+**/.jqwik-database
+local.properties
+
+# Generated signing material must never be committed
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key

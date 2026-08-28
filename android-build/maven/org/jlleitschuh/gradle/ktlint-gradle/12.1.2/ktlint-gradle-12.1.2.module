@@ -1,0 +1,84 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "org.jlleitschuh.gradle",
+    "module": "ktlint-gradle",
+    "version": "12.1.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "ktlint-gradle-12.1.2.jar",
+          "url": "ktlint-gradle-12.1.2.jar",
+          "size": 2293036,
+          "sha512": "23ec8e12d00120a8dee0bde89ddd9260812fbe4813734fbe57aca7cc35717c18588c2fa431cee08599fab214875b30034c38e01b70894d06bf5da0711602d9c1",
+          "sha256": "8a1dcadb7087be4beb158e4cf77cc4d430084382ac8a5d8c3706ac620a7b329c",
+          "sha1": "4769e37dd0c27cf32698a798069b915c6066c3f2",
+          "md5": "ac47e400e9e24d88ad8ccda916398da1"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "ktlint-gradle-12.1.2.jar",
+          "url": "ktlint-gradle-12.1.2.jar",
+          "size": 2293036,
+          "sha512": "23ec8e12d00120a8dee0bde89ddd9260812fbe4813734fbe57aca7cc35717c18588c2fa431cee08599fab214875b30034c38e01b70894d06bf5da0711602d9c1",
+          "sha256": "8a1dcadb7087be4beb158e4cf77cc4d430084382ac8a5d8c3706ac620a7b329c",
+          "sha1": "4769e37dd0c27cf32698a798069b915c6066c3f2",
+          "md5": "ac47e400e9e24d88ad8ccda916398da1"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ktlint-gradle-12.1.2.jar",
+          "url": "ktlint-gradle-12.1.2.jar",
+          "size": 2293036,
+          "sha512": "23ec8e12d00120a8dee0bde89ddd9260812fbe4813734fbe57aca7cc35717c18588c2fa431cee08599fab214875b30034c38e01b70894d06bf5da0711602d9c1",
+          "sha256": "8a1dcadb7087be4beb158e4cf77cc4d430084382ac8a5d8c3706ac620a7b329c",
+          "sha1": "4769e37dd0c27cf32698a798069b915c6066c3f2",
+          "md5": "ac47e400e9e24d88ad8ccda916398da1"
+        }
+      ]
+    }
+  ]
+}
