@@ -29,7 +29,7 @@ selection reasons, and conflict-resolution decisions.
 | 6 | Roborazzi `1.39.0` | Compose captures execute with Robolectric 4.14.1, Android 15 SDK 35, and native graphics. Six golden variants, verify mode, intentional mismatch output, Grid comparison style, and reports are checked. Paparazzi 1.3.5 remains unchanged. |
 | 7 | Coil 3 `3.1.0` | Core/Compose/SVG/GIF/video/network/test modules resolve. Host Android tests decode local SVG/GIF, prove a memory-cache hit and cancellation, and use a fake network-shaped request with zero network I/O. OkHttp/Okio are audited transitives. |
 | 8 | Tink/Tink Android `1.15.0`, Security Crypto/KTX `1.1.0-alpha06` | JVM tests create and encrypt a persisted keyset and reject ciphertext/context tampering. A host Android test executes authenticated migration ordering; the Android source contains an `EncryptedSharedPreferences` migration entry point. Security Crypto remains fixture-only alpha software. |
-| 9 | PDFBox Android `2.0.27.0` | API-35 host Android tests initialize resources, create/load/inspect/render a PDF, exercise password protection, reject truncated input, and execute framework `PdfDocument`. |
+| 9 | PDFBox Android `2.0.27.0` | API-35 host Android tests initialize resources, create/load/inspect/render a PDF, exercise password protection, and reject truncated input. |
 | 10 | kotlinx-datetime `0.6.1` metadata/JVM | Oslo DST arithmetic and kotlinx.serialization round-trip execute. |
 | 11 | Moshi/core/Kotlin/codegen `1.15.2`, Gson `2.11.0` | KSP generates and compiles `GeneratedProfileJsonAdapter`; generated Moshi and Gson round-trips execute. |
 | 12 | Material Icons Extended `1.7.6` | Extended PDF/calendar icons compile and render in Compose Roborazzi goldens and the Android APK. |
@@ -59,18 +59,20 @@ misrepresenting host compilation as device runtime evidence.
 ## Strict-offline contract
 
 `verify-future-stack.sh` starts with a separate empty Gradle user home, injects
-only `android-build/maven`, passes `--offline`, and runs catalog/classifier
-resolution, code generation, JVM tests, Android debug/release/R8, instrumentation
-compilation, Roborazzi verify/compare, and the license task. Network-capable Coil
-classes are constructed only in fixtures; all image test data is local or fake.
+only `android-build/maven`, passes `--offline`, normalizes locks against that
+final local metadata, and runs catalog/classifier resolution, code generation,
+JVM tests, Android debug/release/R8, instrumentation compilation, Roborazzi
+verify/compare, and the license task. Network-capable Coil classes are constructed
+only in fixtures; all image test data is local or fake.
 
-The official preinstrumented Robolectric Android-15 JAR is larger than GitHub's
-single-file limit. `ci/split_maven_artifacts.py` stores it as 64 MiB binary parts
-and records the original relative path, byte size, and SHA-256 in
-`maven/BASE_FILE_SPLIT_ARTIFACTS.tsv`. `prepare-offline-toolchain.sh` reconstructs
-it byte-for-byte and rejects any size/hash mismatch before Gradle runs. All
-committed parts are covered by `SHA256SUMS.txt`; this is lossless packaging, not a
-placeholder or synthetic substitute.
+The official preinstrumented Robolectric Android-15 and native-runtime JARs are
+larger than GitHub's single-file limit. `ci/split_maven_artifacts.py` stores them
+as 64 MiB binary parts and records each original relative path, byte size, and
+SHA-256 in `maven/BASE_FILE_SPLIT_ARTIFACTS.tsv`.
+`prepare-offline-toolchain.sh` reconstructs them byte-for-byte and rejects any
+size/hash mismatch before Gradle runs. All committed parts are covered by
+`SHA256SUMS.txt`; this is lossless packaging, not a placeholder or synthetic
+substitute.
 
 Base-file supports Linux x86_64 as its executable build host. The additional
 Linux aarch64 protoc classifier is included because it was explicitly requested.

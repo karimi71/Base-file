@@ -348,8 +348,9 @@ if [[ "$MODE" == publish ]]; then
 6. \`apksigner verify\` accepted both Gradle-signed debug APKs. A clean unsigned
    release APK was also aligned with \`zipalign\`, signed explicitly with a
    one-day ephemeral CI key, and verified.
-7. Gradle lockfiles were generated online, then all fixtures were rebuilt with
-   network repositories removed, \`--offline\`, and an initially empty cache.
+7. Gradle lockfiles were generated online, normalized against the final local
+   Maven metadata, then all fixtures were rebuilt with network repositories removed,
+   \`--offline\`, and an initially empty cache.
 8. The ephemeral JKS/password were deleted and never added to Git. Coordinate,
    SHA-256, provenance, license, and embedded NOTICE inventories were regenerated.
 9. Proto DataStore executed migration, restart persistence, and corruption recovery;

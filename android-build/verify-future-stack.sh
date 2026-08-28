@@ -62,18 +62,30 @@ run_offline_gradle() {
         "$@"
 }
 
-run_offline_gradle "$FUTURE_SMOKE" resolveFutureCoordinates generateDependencyReports
-run_offline_gradle "$FUTURE_SMOKE" :jvm:test :jvm:verifyGeneratedSources
-run_offline_gradle "$FUTURE_SMOKE" \
+# Normalize locks against the final converted Maven metadata while the cache is
+# still empty. This catches and records POM/module variant differences between
+# the public repositories and the packaged local repository (notably Android
+# instrumentation configurations) without allowing any network access.
+run_offline_gradle "$FUTURE_SMOKE" --write-locks resolveFutureCoordinates generateDependencyReports
+run_offline_gradle "$FUTURE_SMOKE" --write-locks :jvm:test :jvm:verifyGeneratedSources
+run_offline_gradle "$FUTURE_SMOKE" --write-locks \
     :android:assembleDebug \
     :android:assembleRelease \
     :android:testDebugUnitTest \
     :android:assembleDebugAndroidTest
-run_offline_gradle "$FUTURE_SMOKE" :roborazzi:verifyRoborazziDebug
-run_offline_gradle "$FUTURE_SMOKE" \
+run_offline_gradle "$FUTURE_SMOKE" --write-locks :roborazzi:verifyRoborazziDebug
+run_offline_gradle "$FUTURE_SMOKE" --write-locks \
     -Dbasefile.roborazzi.variant=mismatch \
     :roborazzi:compareRoborazziDebug
 run_offline_gradle "$QUALITY_SMOKE" classes resolveQualityTools verifyLicenseReport
+
+mapfile -t normalized_future_locks < <(find "$FUTURE_SMOKE" -name gradle.lockfile -type f | LC_ALL=C sort)
+python3 "$TOOL_DIR/ci/verify_future_coordinates.py" \
+    "$FUTURE_SMOKE/REQUESTED_COORDINATES.tsv" \
+    "$FUTURE_SMOKE/NATIVE_CLASSIFIERS.tsv" \
+    "$MAVEN_REPO/BASE_FILE_COORDINATES.tsv" \
+    "$MAVEN_REPO" \
+    "${normalized_future_locks[@]}"
 
 DEBUG_APK="$FUTURE_SMOKE/android/build/outputs/apk/debug/android-debug.apk"
 RELEASE_APK="$FUTURE_SMOKE/android/build/outputs/apk/release/android-release-unsigned.apk"
