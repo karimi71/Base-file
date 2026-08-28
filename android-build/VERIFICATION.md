@@ -56,9 +56,10 @@
     2.5.2 with constraints/cascade/downgrade rejection, local Coil decode,
     cache/cancellation/no-network behavior, PDF creation/load/render/password/corrupt
     handling, and authenticated preference migration.
-13. Robolectric's official Android 15 runtime exceeded GitHub's single-file limit;
-    it was losslessly split into committed chunks and was reconstructed with its
-    original recorded SHA-256 before the empty-cache offline build.
+13. Robolectric's official Android 15 and native runtime JARs exceeded GitHub's
+    single-file limit; both were losslessly split into committed chunks and
+    reconstructed with their original recorded SHA-256 values before the
+    empty-cache offline build.
 
 Minimal Compose debug APK SHA-256 (CI output, not committed): `8f266c4ee21e5dda620194e48f07607586ac3ef7a6056266947b78b632af9cf7`
 

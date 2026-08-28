@@ -208,9 +208,9 @@ if [[ "$MODE" == publish ]]; then
     "$ROOT/android-build/licenses/MAVEN_ARTIFACTS.tsv" \
     "$ROOT/android-build/licenses/THIRD_PARTY_NOTICES.txt"
 
-  # The official Robolectric API-35 runtime is about 199 MiB. Preserve it
-  # losslessly as Git-safe 64 MiB chunks, with original size and SHA-256 in a
-  # committed reconstruction manifest. prepare-offline-toolchain restores it.
+  # Two official Robolectric runtime JARs exceed GitHub's blob limit. Preserve
+  # them losslessly as Git-safe chunks, with original sizes and SHA-256 values
+  # in a committed reconstruction manifest. prepare-offline-toolchain restores them.
   python3 "$ROOT/android-build/ci/split_maven_artifacts.py" split \
     "$ROOT/android-build/maven"
 
@@ -371,9 +371,10 @@ if [[ "$MODE" == publish ]]; then
     $SQLITE_VERSION with constraints/cascade/downgrade rejection, local Coil decode,
     cache/cancellation/no-network behavior, PDF creation/load/render/password/corrupt
     handling, and authenticated preference migration.
-13. Robolectric's official Android 15 runtime exceeded GitHub's single-file limit;
-    it was losslessly split into committed chunks and was reconstructed with its
-    original recorded SHA-256 before the empty-cache offline build.
+13. Robolectric's official Android 15 and native runtime JARs exceeded GitHub's
+    single-file limit; both were losslessly split into committed chunks and
+    reconstructed with their original recorded SHA-256 values before the
+    empty-cache offline build.
 
 Minimal Compose debug APK SHA-256 (CI output, not committed): \`$DEBUG_SHA\`
 

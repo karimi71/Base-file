@@ -1,23 +1,22 @@
 # SHA-256 checksums for every committed toolchain file (text and binary).
 # Paths are relative to android-build/. Generated deterministically.
-164b8e4a3c76196cecf17aeec22e148c942e1deef070e300adb77c8b60734465  ./ADDED_FILES.txt
+1cef551e972fcd59d9cb06ae18be6b68d8623031631966e997128b309a0d7280  ./ADDED_FILES.txt
 4c5c890d822c0b6b0ea5eba9553c3644eb6375dcd2578b3704d4361152eb715b  ./FUTURE_STACK.md
 32bfaed1344bdf5efff77e52566082bb83e4ce160aec57d23f03c5005c48f6d2  ./PROVENANCE.md
 f7ac0ea43b5a2a00b584f740a3cad66089f8b97ec271fc4ed9b5725e875674c6  ./TIKARO_STACK.md
-db347dca7dbb72e7fb7b99e4b48d2e0280846350b626c9747c4867fd81e3e378  ./VERIFICATION.md
+f65c31843a4b2ae527dd459f57642acc8849657e080bb899d2a299fb8a4eecf7  ./VERIFICATION.md
 e4dff6060827a3e401bce376e47916f2f93a89602af54973ffd3fdfc2528be3f  ./aapt2
 6cea1df3efb77103ac3e2beb9bf4718964b0e0869ab16d39d29d5cbae1c147ad  ./android-34.jar
 e76fb7007e6af88d069b3cce4870977ce4ce912f666f56ae74874a08ecb0a26a  ./build-compose-apk.sh
 2d4ad908faea64047c1cc9cb747e6aa667c6ab192e09607bd16b67246a8cd6ae  ./bundletool.jar
 9bfaed0eed81b324aa75450c14ca0c979e6015e16bf70bec38f74e1357544350  ./ci/cache_to_maven.py
 66d854707115258a597c17316ff0030fc38467415ba7db40370adad6775ee56e  ./ci/generate_legal_inventory.py
-d0e6319abe3565fbcaa281cad11218b3d65032ab5b7b0a16adf9e2a3cfcee803  ./ci/prepare-toolchain.sh
+d7bebb190570a5a8b73a31dcc712ef6c55254c6e84b8c92995240415244ea6f3  ./ci/prepare-toolchain.sh
 5fdcd1465bf551139e4ca315e70e3c397579ff686a4fb122f519d719cb6e5de7  ./ci/split_maven_artifacts.py
 ebc932c2a0e236411196649f160b7a9dca70d7c1bf92ebc0ce9861cf0d415859  ./ci/trigger-mode
 e7a8d6b9707d16a2ecd6c050e783b84aa3c6eb6f244308ec9e42691b3b5a3610  ./ci/verify_future_coordinates.py
 4708f32eb45bb0043ce7a696ce8c670ed432a28998353e66dc43c6dd86c30b83  ./ci/verify_requested_coordinates.py
 2b0089d097dfb17afaf76e4e4e886b399d92289edcea9203d67ed291a2a11fd8  ./ci/workflow-template.yml
-50283f80ef63011828658694d3ed4f5c438c870abfae6a6a62e9736a5a2e4630  ./compose-smoke-test/.kotlin/errors/errors-1787883719404.log
 4929b7555c488ce65b715e73875bd04babdc23e206ae37b92ff78254e19cddcf  ./compose-smoke-test/app/build.gradle.kts
 daddbc488cfa8f76f2d14f4edbd1ef7f069605f73727f0d23fb672856e57bf4c  ./compose-smoke-test/app/src/main/AndroidManifest.xml
 ab611fefc1064681ee474b1ad41d97be57febf617f86f0780c6203bf5a8cde23  ./compose-smoke-test/app/src/main/java/io/github/karimi71/basefile/smoke/MainActivity.kt
@@ -48,7 +47,6 @@ c413d580d89dd467037ae2cbff1c3450214b856b805e90abbd3926717e322d4e  ./future-stack
 70b514cd6896a4063d6643ae17ac5e5b8fafb5585d1f41fe7e94eb409497247e  ./future-stack-smoke-test/build.gradle.kts
 21bb79b0e26ea8966d68bcc7e1cac906d720dc28d1878b669dd3f9a53f8476a6  ./future-stack-smoke-test/gradle.lockfile
 ab225c92de84b79bbcbf95f578040d06bce4e85712fa9b67c6fb9685c8f5fd4a  ./future-stack-smoke-test/gradle.properties
-c4fb4c4feb09b15b40b6334bccfac10657db63fc94b0043b35cc7173b43993bd  ./future-stack-smoke-test/jvm/.jqwik-database
 6ee4a688df9cccbd55acd0f02a6db876af3ed642f6f2604fff34073148ffaca3  ./future-stack-smoke-test/jvm/build.gradle.kts
 a3ab42998d2989e6dd766849f50d1baab5492a74549db88bf5e716b7e33b0155  ./future-stack-smoke-test/jvm/gradle.lockfile
 edc544d0e7d4374fb110d93fb09d932f9ca9f8de89812d0737f3be109fc47b92  ./future-stack-smoke-test/jvm/src/main/kotlin/dev/basefile/future/CryptoVault.kt
@@ -2726,7 +2724,6 @@ daa0fb1f32ba7ea85a07ef6302ab3d58c3407d7fd2aa03ec132cb9e38e8d9849  ./paparazzi-sm
 9a3fcd6a494d7792d078137f24f81d1856edb0514ded512d631a9a1d8b47e387  ./paparazzi-smoke-test/screenshot/src/test/java/io/github/karimi71/basefile/paparazzi/PaparazziComposeTest.kt
 1d5b8985f2a34b556e7aaf5d240521f80646a73c45cd07876a938f2bb980f5f1  ./paparazzi-smoke-test/settings.gradle.kts
 998086cad0e204b3631ca26e2b25a0ff87622d2b88fcb7324552b1f13bdc5f19  ./prepare-offline-toolchain.sh
-a277fc017ef0fe051ad1166574a57a04857c6d5460ad1d0dd1dbe2d5d7ca145f  ./quality-smoke-test/.kotlin/errors/errors-1787885147996.log
 95711b5443c604ddde3305668bedd4afb3e429ebe6b02990d4fd94422df17977  ./quality-smoke-test/build.gradle.kts
 3abaa6b1b53dcf3a3161f27b6c5e3105653fc2dfb716d6490e8e7f4b224abfdf  ./quality-smoke-test/gradle.lockfile
 0b46e44a39febb52910d17be6aab9776e299789bc140b70d31d57446df9f9f32  ./quality-smoke-test/gradle.properties
@@ -2735,7 +2732,6 @@ a277fc017ef0fe051ad1166574a57a04857c6d5460ad1d0dd1dbe2d5d7ca145f  ./quality-smok
 c5767f6caf1585af187aa4f0ae4afb9053495e22cdfb4cef9f931135a19dad0d  ./sdk/android-sdk-build-tools-34.0.0.tar.xz
 dc0249115c485e2d9c3c69544c017aff866b2658acfe0f2acb83886e49e152ed  ./sdk/android-sdk-platform-35.tar.xz
 f4762305e1c3a2dbce4cca00d9785ab71f583302b87a28e23545e3ac04ee99a7  ./sdk/framework-res-api35.apk
-50283f80ef63011828658694d3ed4f5c438c870abfae6a6a62e9736a5a2e4630  ./tikaro-stack-smoke-test/.kotlin/errors/errors-1787884598790.log
 1394d7ade9485051102e3705240a7f9a79b92545ba1dbfbebb0e5a678f164de4  ./tikaro-stack-smoke-test/REQUESTED_COORDINATES.tsv
 7c35aad48b0cff679d3e695e7153626e23cd5ecaf2f4a45bbef69ab689030e52  ./tikaro-stack-smoke-test/app/build.gradle.kts
 83391855e50841a74bb01cf1b216ec691d3eef9a3967f18c9070277107085324  ./tikaro-stack-smoke-test/app/gradle.lockfile
@@ -2760,7 +2756,7 @@ ac5586bb77286e75ddcb4f60f7e38cff853c6bddd1b5117188837e024ecd0d6c  ./tikaro-stack
 e416a7ec03afaf55014180968c747f065b1eece728f3d0eb9b5bee82a173434f  ./tikaro-stack-smoke-test/gradle.properties
 b594acbfdd79da29b96edf544642e2d2411f1ee6035e6afeb5c0cad81de3d3b9  ./tikaro-stack-smoke-test/settings.gradle.kts
 5adb62698f7fd78f8becce3364d041cc93643bfb62de85176aad72118d775b83  ./update-added-files.sh
-ef45da537a42dee516e16ba602327d185aeec9f1ee21eaeb2e93d1c8f9d8d808  ./update-checksums.sh
+1c9656c3448fb691c432d07fd7dfa50a2bc9da9a50378bb4d10ac7a282beb7e6  ./update-checksums.sh
 8fafbad43d6dfac4fa5160db895effbf03e9e1da3ff6645db9327def1acdb907  ./verify-future-stack.sh
 4fd1645a70e914b3e8185c0b675b83b089b7ae3bfa22df6f85f137b4e5fcfba2  ./verify-offline-toolchain.sh
 b2034759686de63c1a08f6e9211ff64242cfc487f4236f78a20a97ca8b61b068  ./verify-tikaro-stack.sh

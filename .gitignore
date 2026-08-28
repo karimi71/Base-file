@@ -2,6 +2,7 @@
 android-build/.cache/
 # Reconstructed from committed, SHA-256-verified Git-safe chunks on demand.
 android-build/maven/org/robolectric/android-all-instrumented/**/*.jar
+android-build/maven/org/robolectric/nativeruntime-dist-compat/**/*.jar
 android-build/.gradle-home/
 
 # Gradle/Android/Python build output
@@ -14,6 +15,8 @@ android-build/.gradle-home/
 !android-build/maven/**/build/**
 __pycache__/
 *.py[cod]
+# jqwik's serialized local run database is generated test state, not evidence.
+**/.jqwik-database
 local.properties
 
 # Generated signing material must never be committed

@@ -44,7 +44,6 @@ android-build/future-stack-smoke-test/android/src/test/kotlin/dev/basefile/futur
 android-build/future-stack-smoke-test/build.gradle.kts
 android-build/future-stack-smoke-test/gradle.lockfile
 android-build/future-stack-smoke-test/gradle.properties
-android-build/future-stack-smoke-test/jvm/.jqwik-database
 android-build/future-stack-smoke-test/jvm/build.gradle.kts
 android-build/future-stack-smoke-test/jvm/gradle.lockfile
 android-build/future-stack-smoke-test/jvm/src/main/kotlin/dev/basefile/future/CryptoVault.kt

@@ -16,9 +16,14 @@ trap 'rm -f "$tmp"' EXIT
     find . -type f \
         ! -path './SHA256SUMS.txt' \
         ! -path './ci/LAST_RUN.log' \
-        ! -path './.cache/*' \
+        ! -path '*/.cache/*' \
         \( ! -path '*/build/*' -o -path './maven/*' \) \
         ! -path '*/.gradle/*' \
+        ! -path '*/.gradle-home/*' \
+        ! -path '*/.kotlin/*' \
+        ! -path '*/.jqwik-database' \
+        ! -path '*/.jqwik-database/*' \
+        ! -path '*/local.properties' \
         -print0 \
         | LC_ALL=C sort -z \
         | xargs -0 sha256sum
