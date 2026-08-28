@@ -1,7 +1,7 @@
 # Offline verification report
 
-- GitHub Actions run: https://github.com/karimi71/Base-file/actions/runs/33087119777
-- Source revision: 9d55d01e01c8796fb85998e859a935be4bc1e447
+- GitHub Actions run: https://github.com/karimi71/Base-file/actions/runs/33135578071
+- Source revision: 1d08cb33d424995634c825e39126fd99dbc58ec2
 - Runner: ubuntu-24.04 / Linux x86_64
 - Gradle: 8.9
 - Android Gradle Plugin: 8.7.3
@@ -11,7 +11,9 @@
 - Compose BOM: 2024.12.01 (UI/Foundation/Runtime 1.7.6; Material3 1.3.1)
 - Android SDK: Platform 35; Build Tools 34.0.0
 - Dependency mode: local file Maven repository plus Gradle `--offline`, starting with an empty Gradle user home
-- Pinned Tikaro direct coordinates: 117; complete selected Maven graph: 729 coordinates
+- Pinned Tikaro direct coordinates: 117; isolated future coordinates: 80; complete selected Maven graph: 1007 coordinates
+- Future pins: SQLite 2.5.2; protobuf/protoc 4.29.3; MockK 1.13.13; JUnit Jupiter 5.11.4 / Platform 1.11.4
+- Rendering/image/security pins: Roborazzi 1.39.0; Coil 3.1.0; Tink 1.15.0; PDFBox Android 2.0.27.0
 
 ## Results
 
@@ -22,24 +24,50 @@
 3. Tikaro JVM tests executed with Coroutines Test, Truth, and Turbine. Its AndroidX
    Test/Compose/Espresso/UI Automator APK and Macrobenchmark APK were compiled;
    device-only tests were not executed on the host-only runner.
-4. Paparazzi 1.3.5 rendered the Compose screenshot test on the JVM,
-   proving compatibility with AGP 8.7.3. Detekt, Ktlint,
-   and Dependency Analysis plugins loaded, and their pinned engines resolved.
+4. Paparazzi 1.3.5 remained intact and rendered its Compose test.
+   Detekt, Ktlint, Dependency Analysis, and Gradle License Report 2.9
+   loaded; the license task generated a non-empty report containing a real dependency.
 5. The Tikaro release APK contains `assets/dexopt/baseline.prof`; the Benchmark
    and Baseline Profile plugin graph is available offline. Runtime profile capture
    itself requires a physical or managed Android device.
 6. `apksigner verify` accepted both Gradle-signed debug APKs. A clean unsigned
    release APK was also aligned with `zipalign`, signed explicitly with a
    one-day ephemeral CI key, and verified.
-7. Gradle lockfiles were generated online, then all fixtures were rebuilt with
-   network repositories removed, `--offline`, and an initially empty cache.
+7. Gradle lockfiles were generated online, normalized against the final local
+   Maven metadata, then all fixtures were rebuilt with network repositories removed,
+   `--offline`, and an initially empty cache.
 8. The ephemeral JKS/password were deleted and never added to Git. Coordinate,
    SHA-256, provenance, license, and embedded NOTICE inventories were regenerated.
+9. Proto DataStore executed migration, restart persistence, and corruption recovery;
+   protoc generated lite Java/Kotlin sources and both Linux native classifiers resolved.
+   Moshi KSP generated an adapter. Bundled SQLite executed transaction, persistence,
+   uniqueness, foreign-key, and cascade behavior. JUnit 5, MockK, Kotest, jqwik,
+   datetime serialization, Gson/Moshi, and Tink AEAD/keyset tests all ran on Java 17.
+10. The isolated Android fixture built debug, minified release through R8, and a
+    device-test APK with core desugaring, Coil modules, Security Crypto, PDFBox,
+    extended Material icons, and WorkManager multiprocess. Instrumentation code was
+    compiled but not device-executed on this host-only runner.
+11. Roborazzi 1.39.0 with Robolectric 4.14.1 / API 35 native
+    graphics recorded and verified 6 Compose goldens covering
+    light, dark, RTL, large-font, and long-data variants. An intentional mismatch
+    produced Grid-style comparison PNG/JSON/report evidence.
+12. Host Android integration tests ran real ATF 4.1.1
+    checks and suppression, Room 2.7.2 migration over SQLite framework
+    2.5.2 with constraints/cascade/downgrade rejection, local Coil decode,
+    cache/cancellation/no-network behavior, PDF creation/load/render/password/corrupt
+    handling, and authenticated preference migration.
+13. Robolectric's official Android 15 runtime exceeded GitHub's single-file limit;
+    it was losslessly split into committed chunks and was reconstructed with its
+    original recorded SHA-256 before the empty-cache offline build.
 
-Minimal Compose debug APK SHA-256 (CI output, not committed): `a96e4f90c5d29fd82e34457a9b1dc552702392e1cd986e20607f571b89772d87`
+Minimal Compose debug APK SHA-256 (CI output, not committed): `8f266c4ee21e5dda620194e48f07607586ac3ef7a6056266947b78b632af9cf7`
 
-Tikaro stack debug APK SHA-256 (CI output, not committed): `526a7c47f243d96537cc16de4786d8f2dd30d53bcee551e1101731f96ff9c8f1`
+Tikaro stack debug APK SHA-256 (CI output, not committed): `7f29173c5136259d51d3ffd8a721745b320ff6ccd3e2b6c6caa64af08c194c3d`
 
-Explicitly signed test APK SHA-256 (CI output, not committed): `3c2348b1a8811f0cdb6df3ee36f2917524d147723a876d826ff5091787993adc`
+Future fixture debug APK SHA-256 (CI output, not committed): `9e67379bab3bf947f23f8cbfb1e8931a1579010b232a67f0ce8a79e8431c811d`
 
-Ephemeral signer certificate SHA-256: `966ae9f059e0857c75f54f38e405d4164323cdabdcc8d5003f8e9b73b4bd0de7`
+Future fixture R8 release APK SHA-256 (CI output, not committed): `eae6b951ef6b0d8516e723e7f0c90599e4bcac4a900eaf8bf9342b6629cb013d`
+
+Explicitly signed test APK SHA-256 (CI output, not committed): `e1d824ac699672f38d12cb6a47e5f2ddfde6b27333f6883b543de194a246c737`
+
+Ephemeral signer certificate SHA-256: `0fce15de0065423b9852f19251a0323ad5096356e6887c954c067b0eb4cb37b3`
